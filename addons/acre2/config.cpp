@@ -16,7 +16,7 @@ class cfgPatches {
 #include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
 #include "autotest.hpp"
-#include "display3den.hpp"
+#include "display3DEN.hpp"
 
 class acre_sys_spectator_RscRadios;
 class acre_sys_spectator_RscSpeaking;
