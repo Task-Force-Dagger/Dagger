@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="TFD">
+    <Package name="Role">
+        <Key ID="STR_TFD_role_medic">
+            <English>Medic</English>
+            <English>Medic</English>
+            <Czech>Zdravotník</Czech>
+            <French>Médecin</French>
+            <German>Medizinisch</German>
+            <Italian>Medico</Italian>
+            <Polish>Medyk</Polish>
+            <Portuguese>Médico</Portuguese>
+            <Russian>Медик</Russian>
+            <Spanish>Médico</Spanish>
+        </Key>
+        <Key ID="STR_TFD_role_srmedic">
+            <English>Lead Medic, Doctor</English>
+            <English>Lead Medic, Doctor</English>
+            <Czech>Vedoucí medik, doktor</Czech>
+            <French>Médecin en chef, Médecin</French>
+            <German>Leitender Sanitäter, Arzt</German>
+            <Italian>Medico capo, Medico</Italian>
+            <Polish>Główny medyk, lekarz</Polish>
+            <Portuguese>Médico Líder, Doutor</Portuguese>
+            <Russian>Ведущий медик, Врач</Russian>
+            <Spanish>Médico principal, médico</Spanish>
+        </Key>
+        <Key ID="STR_TFD_role_eng">
+            <English>Engineer</English>
+            <English>Engineer</English>
+            <Czech>Inženýr</Czech>
+            <French>Engineer</French>
+            <German>Ingenieur</German>
+            <Italian>Ingegnere</Italian>
+            <Polish>Engenheiro</Polish>
+            <Portuguese>Engenheiro</Portuguese>
+            <Russian>Инженер</Russian>
+            <Spanish>Ingeniero</Spanish>
+        </Key>
+        <Key ID="STR_TFD_role_sreng">
+            <English>Lead Engineer, EOD</English>
+            <English>Lead Engineer, EOD</English>
+            <Czech>Vedoucí inženýr, EOD</Czech>
+            <French>Lead Engineer, EOD</French>
+            <GermanLeitender>Ingenieur, EOD</German>
+            <Italian>Ingegnere capo, EOD</Italian>
+            <Polish>Główny inżynier, EOD</Polish>
+            <Portuguese>Engenheiro Líder, EOD</Portuguese>
+            <Russian>Ведущий инженер, EOD</Russian>
+            <Spanish>Ingeniero Líder, EOD</Spanish>
+        </Key>
+        <Key ID="STR_TFD_role_comm">
+            <English>Communications</English>
+            <English>Communications</English>
+            <Czech>Komunikace</Czech>
+            <French>Communications</French>
+            <German>Kommunikationen</German>
+            <Italian>Comunicazioni</Italian>
+            <Polish>Komunikacji</Polish>
+            <Portuguese>Comunicações</Portuguese>
+            <Russian>Связь</Russian>
+            <Spanish>Comunicaciones</Spanish>
+        </Key>
+        <Key ID="STR_TFD_role_srcomm">
+            <English>Lead Communications, JFIRE</English>
+            <English>Lead Communications, JFIRE</English>
+            <Czech>Olověná komunikace, JFIRE</Czech>
+            <French>Lead Communications, JFIRE</French>
+            <German>Lead Communications, JFIRE</German>
+            <Italian>Lead Communications, JFIRE</Italian>
+            <Polish>Komunikacja ołowiu, JFIRE</Polish>
+            <Portuguese>Comunicações líderes, JFIRE</Portuguese>
+            <Russian>Ведущий специалист по коммуникациям, JFIRE</Russian>
+            <Spanish>Comunicaciones principales, JFIRE</Spanish>
+        </Key>
+    </Package>
+</Project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="TFD">
+    <Package name="Difficulty">
+        <Key ID="STR_TFD_Difficulty_DifficultyName">
+            <English>6thSFG</English>
+        </Key>
+        <Key ID="STR_TFD_Difficulty_DifficultyDescription">
+            <English>Custom Task Force Dagger settings.</English>
+            <Polish>Własne ustawienia Task Force Dagger.</Polish>
+        </Key>
+    </Package>
+</Project>

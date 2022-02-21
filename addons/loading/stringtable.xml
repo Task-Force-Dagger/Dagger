@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="TFD">
+    <Package name="Loading">
+        <Key ID="STR_TFD_Loading_Author">
+            <Original>Author: %1</Original>
+            <Polish>Autor: %1</Polish>
+        </Key>
+    </Package>
+</Project>

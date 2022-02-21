@@ -1,0 +1,1 @@
+#include "\z\tfd\addons\nightvision\script_component.hpp"

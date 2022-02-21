@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="TFD">
+    <Package name="Bodybag">
+        <Key ID="STR_TFD_Bodybag_DestroyChance">
+            <Original>Item Destroy Chance</Original>
+            <German>Wahrscheinlichkeit Gegenstand zu zerstören</German>
+            <French>Chance de destruction d'objets</French>
+        </Key>
+        <Key ID="STR_TFD_Bodybag_DestroyChanceDesc">
+            <Original>Destroy chance of each item when placing a unit into a bodybag.</Original>
+            <German>Wahrscheinlichkeit eines jeden Gegenstandes zerstört zu werden, wenn eine Einheit in einen Leichensack gepackt wird.</German>
+            <French>La chance de destruction de chaque objet quand une unité est placée dans un sac mortuaire.</French>
+        </Key>
+    </Package>
+</Project>

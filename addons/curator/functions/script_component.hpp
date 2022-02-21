@@ -1,0 +1,1 @@
+#include "\z\tfd\addons\curator\script_component.hpp"
