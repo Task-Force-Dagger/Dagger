@@ -2,7 +2,7 @@
 //with uiNameSpace do { RadioChannels_script = compile preprocessFileLineNumbers "RadioChannels.sqf"; }; with uiNameSpace do { BabelSettings_script = compile preprocessFileLineNumbers "BabelSettings.sqf"; };
 params ["_mode",["_params",[]]];
 
-#include "\a3\3den\UI\dikCodes.inc"
+#include "\a3\3DEN\UI\dikCodes.inc"
 //ret = (get3denSelected "Object" select 0) set3denAttribute ["TFD_Channellist","1"];
 //set3denAttributes [[get3denSelected "Object","TFD_Channelset",[1,2,3]]];
 
@@ -164,7 +164,7 @@ switch _mode do {
             _ctrlTree tvSetValue [_location, BabelLang_data pushBack _unit];            
             private _icon = getText (configFile >> "CfgVehicleIcons" >> getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "icon"));
             if (_icon == "") then {
-                _icon = "\a3\3den\Data\Cfg3den\Object\iconPlayer_ca.paa"; //default player icon
+                _icon = "\a3\3DEN\Data\Cfg3den\Object\iconPlayer_ca.paa"; //default player icon
             };
             _ctrlTree tvSetPicture [_location, _icon];
             _ctrlTree tvSetPictureColor [_location, _color];

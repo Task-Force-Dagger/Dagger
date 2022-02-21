@@ -2,7 +2,7 @@
 
 params ["_mode",["_params",[]]];
 
-#include "\a3\3den\UI\dikCodes.inc"
+#include "\a3\3DEN\UI\dikCodes.inc"
 
 // with uiNamespace do {     set3denMissionAttributes [["tfdMissionAcreAttributes","TFD_AcreSettings",str RadioChannelArray]];    };
 // with uiNamespace do {     set3denMissionAttributes [["tfdMissionAcreAttributes","TFD_AcreSettings","[]"]];    };
@@ -366,7 +366,7 @@ switch _mode do {
             _ctrlTree tvSetValue [_location, RadioNetworkChannel_data pushBack _unit];            
             private _icon = getText (configFile >> "CfgVehicleIcons" >> getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "icon"));
             if (_icon == "") then {
-                _icon = "\a3\3den\Data\Cfg3den\Object\iconPlayer_ca.paa"; //default player icon
+                _icon = "\a3\3DEN\Data\Cfg3den\Object\iconPlayer_ca.paa"; //default player icon
             };
             _ctrlTree tvSetPicture [_location,_icon];
             _ctrlTree tvSetPictureColor [_location, _color];
@@ -683,7 +683,7 @@ switch _mode do {
                 private _unitIdx = _ctrlTree tvAdd [ [_sideIdx, _factionIdx, _grpIdx], _roleDesc];
                 private _icon = getText (configFile >> "CfgVehicleIcons" >> getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "icon"));
                 if (_icon == "") then {
-                    _icon = "\a3\3den\Data\Cfg3den\Object\iconPlayer_ca.paa"; //default player icon
+                    _icon = "\a3\3DEN\Data\Cfg3den\Object\iconPlayer_ca.paa"; //default player icon
                 };
                 _ctrlTree tvSetPicture [[_sideIdx, _factionIdx, _grpIdx, _unitIdx],_icon];
                 _ctrlTree tvSetPictureColor [[_sideIdx, _factionIdx, _grpIdx, _unitIdx], _color];
