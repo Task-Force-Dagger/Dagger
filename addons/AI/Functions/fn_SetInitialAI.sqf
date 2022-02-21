@@ -1,7 +1,6 @@
 // not documented: postInit function
 
-if (!isserver) exitwith {};
-{
+if (!isserver) exitwith {}; {
     _class = typeOf (_x);
 
     _result  = call {
@@ -16,8 +15,7 @@ if (!isserver) exitwith {};
             [_Group, true] remoteExec ["enableDynamicSimulation",2];
         };
 
-        if (_class isKindOf "AllVehicles") exitWith {
-            {
+        if (_class isKindOf "AllVehicles") exitWith { {
                 [_x, "TFD Default"] remoteExec ["tfd_fnc_SetUnitSkill",2];
             } forEach crew _x;
             [group _x , true] remoteExec ["enableDynamicSimulation",2]; 

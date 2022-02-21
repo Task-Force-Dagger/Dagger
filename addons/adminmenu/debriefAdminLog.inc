@@ -13,8 +13,7 @@
     };
 */
 
-class tfd_adminlog
-{
+class tfd_adminlog {
     title = "TFD Log";
     variable = "TFD_adminmenu_debrief";
 };

@@ -15,13 +15,11 @@ if (isNil QGVAR(lastFactionSelection)) then {GVAR(lastFactionSelection) = [0,0];
 // Propogate the list of dead players.
 if (!isMultiplayer) then {
     GVAR(spectatorList) append allUnits;  
-} else {
-    {
+} else { {
         if (isPlayer _x) then { //not all of them will be players.
             GVAR(spectatorList) pushBack _x;
         };
-    } forEach ([0,0,0] nearEntities ["tfd_spectator_unit",500]);
-    {
+    } forEach ([0,0,0] nearEntities ["tfd_spectator_unit",500]); {
         if (!alive _x) then { //not all of them will be players.
             GVAR(spectatorList) pushBackUnique _x;  
         };
@@ -37,8 +35,7 @@ private _index = -1;
 // Handle all the factions
 
 // Build up a pool of who is using what faction from assign gear.
-private _playerFactions = [] call CBA_fnc_hashCreate;
-{
+private _playerFactions = [] call CBA_fnc_hashCreate; {
     private _faction = _x getVariable ["tfd_assignGear_faction",""];
     if (_faction != "") then {
         if ([_playerFactions,_faction] call CBA_fnc_hashHasKey) then {
@@ -51,8 +48,7 @@ private _playerFactions = [] call CBA_fnc_hashCreate;
 } forEach (allPlayers);
 
 if (count _missionConfig > 0) then {
-    private _players = 0;
-    {
+    private _players = 0; {
         private _factionName = (toLower(configName _x));
             if ([_playerFactions,_factionName] call CBA_fnc_hashHasKey) then {
             _players = _players + ([_playerFactions,_factionName] call CBA_fnc_hashGet);
@@ -68,8 +64,7 @@ if (count _missionConfig > 0) then {
 };
 
 private _factionCategories = [];
-private _factionCategoryPlayerCounts = [];
-{
+private _factionCategoryPlayerCounts = []; {
     private _category = getText (_x >> "category");
     if (_category isEqualTo "") then {_category = "Other";};
     private _configName = toLower (configName _x);
@@ -90,13 +85,11 @@ private _factionCategoryPlayerCounts = [];
     };
 } forEach (configProperties [configFile >> "CfgLoadouts", "isClass _x"]);
 
-// Combine array for sorting.
-{ _factionCategories set [_forEachIndex,[_x,_factionCategoryPlayerCounts select _forEachIndex]]} forEach _factionCategories;
+// Combine array for sorting. { _factionCategories set [_forEachIndex,[_x,_factionCategoryPlayerCounts select _forEachIndex]]} forEach _factionCategories;
 
 // Sort Alphabetically.
 _factionCategories sort true;
-
-{
+ {
     _x params ["_factionName","_players"];
     private _displayText = _factionName;
     if (_players > 0) then {
@@ -143,8 +136,7 @@ if (lbSize _control > 0) then {
 
 /* Fill Side selection */
 
-private _west = 0; private _east = 0; private _resistance = 0; private _civilian = 0;
-{
+private _west = 0; private _east = 0; private _resistance = 0; private _civilian = 0; {
     switch (side _x) do {
         case blufor: {_west = _west + 1;};
         case opfor: {_east = _east + 1;};
@@ -193,8 +185,7 @@ _control ctrlAddEventHandler ["LBSelChanged",{GVAR(selectedSide) = (_this select
 
 // Marker Type
 _control = (_display displayCtrl IDC_TFD_ADMINMENU_RESP_MARKERTYPE);
-lbClear _control;
-{
+lbClear _control; {
     private _idx = _control lbAdd (_x select 1);
     _markerImg = (_x select 0);
     if (_markerImg != "") then {
@@ -224,8 +215,7 @@ if (!isNil QGVAR(MarkerIdx)) then {
 
 // Marker Colours
 _control = (_display displayCtrl IDC_TFD_ADMINMENU_RESP_MARKERCOLOUR);
-lbClear _control;
-{
+lbClear _control; {
     private _idx = _control lbAdd (_x select 1);
     _control lbSetColor [_idx,(_x select 0)];
 } forEach [
@@ -280,13 +270,11 @@ if (!isNil QGVAR(respawnGroupMarkerCheckBoxVal)) then {
     private _deadList = [];
     if (!isMultiplayer) then {
         _deadList append allUnits;
-    } else {
-        {
+    } else { {
             if (isPlayer _x) then { //not all of them will be players.
                 _deadList pushBack _x;  
             };
-        } forEach ([0,0,0] nearEntities ["tfd_spectator_unit",500]);
-        {
+        } forEach ([0,0,0] nearEntities ["tfd_spectator_unit",500]); {
             if (!alive _x) then { //not all of them will be players.
                 _deadList pushBackUnique _x;
             };

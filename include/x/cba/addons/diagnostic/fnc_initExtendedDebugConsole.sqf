@@ -18,8 +18,7 @@ _debugConsole ctrlCommit 0;
 
 // --- adjust positions of all but a few controls
 #define EXCLUDE [0, IDC_RSCDEBUGCONSOLE_LINK, IDC_RSCDEBUGCONSOLE_TITLE, IDC_RSCDEBUGCONSOLE_EXPRESSIONBACKGROUND, IDC_RSCDEBUGCONSOLE_EXPRESSIONTEXT, IDC_RSCDEBUGCONSOLE_EXPRESSION, IDC_RSCDEBUGCONSOLE_EXPRESSIONOUTPUT, IDC_RSCDEBUGCONSOLE_EXPRESSIONOUTPUTBACKGROUND]
-
-{
+ {
     if (ctrlParentControlsGroup _x == _debugConsole && {!(ctrlIDC _x in EXCLUDE)}) then {
         private _position = ctrlPosition _x;
         _position set [1, (_position select 1) + safezoneH - 25 * GUI_GRID_H];
@@ -74,8 +73,7 @@ _position set [3, safezoneH - 18.25 * GUI_GRID_H];
 _expressionBackground ctrlSetPosition _position;
 _expressionBackground ctrlCommit 0;
 
-// --- EXPRESSION box output
-{
+// --- EXPRESSION box output {
     private _expressionOutput = _display displayCtrl _x;
 
     _position = ctrlPosition _expressionOutput;
@@ -219,8 +217,7 @@ FUNC(nextStatement) = {
     _nextButton ctrlEnable (_statementIndex > 0);
 };
 
-// remove forced pause for watch fields
-{
+// remove forced pause for watch fields {
     (_display displayCtrl _x) ctrlAddEventHandler ["SetFocus", {
         _this spawn {
             isNil {

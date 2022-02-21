@@ -22,7 +22,5 @@ params ["_vehicle"];
 
 private _vehicleRole = assignedVehicleRole ACE_player;
 
-(_vehicle isKindOf "Air") &&
-{driver _vehicle == ACE_player ||
-    { (_vehicleRole select 0) isEqualTo "Turret" && {(_vehicleRole select 1) in (allTurrets _vehicle)} }
+(_vehicle isKindOf "Air") && {driver _vehicle == ACE_player || { (_vehicleRole select 0) isEqualTo "Turret" && {(_vehicleRole select 1) in (allTurrets _vehicle)} }
 }

@@ -23,8 +23,7 @@ if ([_unit] call FUNC(chestpack) isEqualTo "") exitWith {0};
 
 _items = [_unit] call FUNC(chestpackItems);
 _mass = 0;
-
-{
+ {
     private _itemMass = _x call FUNC(itemMass);
     _mass = _mass + _itemMass;
 } forEach _items;

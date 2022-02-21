@@ -2,8 +2,7 @@
 
 if (!isServer || {!EGVAR(common,aceTowing)}) exitWith {};
 
-if (GVAR(addToHeavyDutyVehicles)) then {
-    {
+if (GVAR(addToHeavyDutyVehicles)) then { {
         [_x, "initPost", {
             params ["_vehicle"];
             _vehicle addItemCargoGlobal ["ACE_rope12", 2];

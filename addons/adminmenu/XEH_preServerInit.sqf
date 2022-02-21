@@ -1,8 +1,7 @@
 #include "\z\tfd\addons\adminmenu\script_component.hpp"
 
 [ // Emit new log messages to admins
-    QGVAR(serverLog),
-    {
+    QGVAR(serverLog), {
         private _targets = (allPlayers select {[_x] call FUNC(isAuthorized)});
         if (isServer && !hasInterface) then {
             GVAR(logEntries) pushBack _this;
@@ -17,8 +16,7 @@
 ] call CBA_fnc_addEventHandler;
 
 [ // Resync log
-    QGVAR(resyncLog),
-    {
+    QGVAR(resyncLog), {
         _this publicVariableClient QGVAR(logEntries);
 
         LOG_1("Resynchronized server log to client %1",_this);

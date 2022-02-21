@@ -97,8 +97,7 @@ _diaryRecord append [""];
 
 
 if (typeName _sharedWith == "STRING") then {
-    _recipients = [];
-    {
+    _recipients = []; {
         if (side _x == west && {_x getVariable ["TFD_section", "Command"] == _sharedWith}) then {
             _recipients pushBackUnique _x;
         };
@@ -117,8 +116,7 @@ _object setVariable ["RscAttributeOwners", [_sharedWith], true];
 if (_notifySide) then {
     [
         _object,
-        "IntelObjectFound",
-        {
+        "IntelObjectFound", {
             params[ "", "_foundBy" ];
             [format ["Intel collected by %1", name _foundBy], [1, -0.2], "#339900", 0.5] call TFD_fnc_dynamicText;
         }

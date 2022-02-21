@@ -17,8 +17,7 @@
 
 params ["_unit", "_weapon", ["_primaryAmmo", 6], ["_additionalAmmo", 3]];
 
-private _weaponCfg = configFile >> "CfgWeapons" >> _weapon;
-{
+private _weaponCfg = configFile >> "CfgWeapons" >> _weapon; {
     if (_x == "this") then {
         private _primaryMag = selectRandom (_weaponCfg call CBA_fnc_compatibleMagazines);
         _unit addWeaponItem [_weapon, _primaryMag];

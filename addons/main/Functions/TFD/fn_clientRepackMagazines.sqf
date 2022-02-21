@@ -16,15 +16,7 @@ __________________________________________________________/*/
 
 _unit = _this;
 if (
-    (!(_unit isEqualType objNull)) ||
-    {(!(alive _unit))} ||
-    {(!(_unit isKindOf 'Man'))} ||
-    {(!local _unit)} ||
-    {(underwater _unit)} ||
-    {(captive _unit)} ||
-    {(!((lifeState _unit) in ['HEALTHY','INJURED']))} ||
-    {((magazinesAmmoFull _unit) isEqualTo [])} ||
-    {(!isNil {_unit getVariable 'QS_unit_repackingMagazines'})}
+    (!(_unit isEqualType objNull)) || {(!(alive _unit))} || {(!(_unit isKindOf 'Man'))} || {(!local _unit)} || {(underwater _unit)} || {(captive _unit)} || {(!((lifeState _unit) in ['HEALTHY','INJURED']))} || {((magazinesAmmoFull _unit) isEqualTo [])} || {(!isNil {_unit getVariable 'QS_unit_repackingMagazines'})}
 ) exitWith {
     diag_log '***** QS Mag Repack ***** Log ***** Repack failed *****';
 };
@@ -41,8 +33,7 @@ if (isNull (objectParent _unit)) then {
     _unit playActionNow 'Medic';
 };
 private _magazineTypes = [];
-private _data1 = [];
-{
+private _data1 = []; {
     if ((_x select 3) in [-1,1,2]) then {
         _data1 pushBack _x;
     };
@@ -52,8 +43,7 @@ if (_data1 isEqualTo []) exitWith {_unit setVariable ['QS_unit_repackingMagazine
 private _i = 0;
 private _magazineClass = '';
 private _magazineAmmoCount = 0;
-private _magazineAmmoCapacity = 0;
-{
+private _magazineAmmoCapacity = 0; {
     _magazineClass = _x select 0;
     _magazineAmmoCount = _x select 1;
     _magazineAmmoCapacity = getNumber (configFile >> 'CfgMagazines' >> _magazineClass >> 'count');
@@ -74,8 +64,7 @@ private _magazineAmmoCapacity = 0;
 if (_data2 isEqualTo []) exitWith {_unit setVariable ['QS_unit_repackingMagazines',nil,FALSE];};
 private _totalAmmoCountForMagazine = 0;
 private _magazineCountArray = [];
-_i = 0;
-{
+_i = 0; {
     _magazineClass = _x select 0;
     _magazineAmmoCapacity = _x select 1;
     _magazineCountArray = _x select 2;
@@ -90,8 +79,7 @@ if (_data2 isEqualTo []) exitWith {_unit setVariable ['QS_unit_repackingMagazine
 private _addMagazineArray = [];
 private _magazineAmmoCountTotal = 0;
 private _magazineAmmoCapacity_moving = 0;
-private _currentMagIndex = 0;
-{
+private _currentMagIndex = 0; {
     _magazineClass = _x select 0;
     _magazineAmmoCapacity = _x select 1;
     _magazineAmmoCountTotal = _x select 2;
@@ -113,15 +101,13 @@ if (!((handgunWeapon _unit) isEqualTo '')) then {
     _unit removeHandgunItem ((handgunMagazine _unit) select 0);
 };
 _currentMagazines = magazines _unit;
-if (!(_currentMagazines isEqualTo [])) then {
-    {
+if (!(_currentMagazines isEqualTo [])) then { {
         if (_x in _magazineTypes) then {
             _unit removeMagazine _x;
         };
     } count _currentMagazines;
 };
-if (_addMagazineArray isEqualTo []) exitWith {_unit setVariable ['QS_unit_repackingMagazines',nil,FALSE];};
-{
+if (_addMagazineArray isEqualTo []) exitWith {_unit setVariable ['QS_unit_repackingMagazines',nil,FALSE];}; {
     if ((_x select 1) > 0) then {
         _unit addMagazine _x;
     };

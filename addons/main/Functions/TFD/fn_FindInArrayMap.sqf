@@ -22,8 +22,7 @@ Author:
 params ["_map", "_id", "_default"];
 
 private _value = nil;
-
-{
+ {
     if ((_x select 0) isEqualTo _id) then {
         _value = (_x select 1);
     };

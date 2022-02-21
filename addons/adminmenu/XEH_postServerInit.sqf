@@ -35,8 +35,7 @@ if (isTFD) then {
 
 
     // Setup units.
-    private _oldGroups = [];
-    {
+    private _oldGroups = []; {
         private _unit = _x;
         _oldGroups pushBackUnique (group _unit);
 
@@ -57,8 +56,7 @@ if (isTFD) then {
 
     } forEach _hunters;
 
-    // Cleanup groups no longer used.
-    {
+    // Cleanup groups no longer used. {
         if (count (units _x) == 0) then {deleteGroup _x;};
     } forEach (_oldGroups - [grpNull]);
 

@@ -39,8 +39,7 @@ _prefix = toUpper _prefix;
 diag_log text format ["[%1] (%2) ERROR: %3 %4:%5", _prefix, _component, _title, _file, _lineNum];
 
 private _lines = [_message, "\n"] call CBA_fnc_split;
-
-{
+ {
     diag_log text format ["            %1", _x];
 } forEach _lines;
 
@@ -57,8 +56,7 @@ private _compose = [lineBreak, parseText format [
     "<img align='center' size='1.65' image='\a3\3DEN\Data\Displays\Display3DEN\EntityMenu\functions_ca.paa' /><t align='center' size='1.65'>[%1] (%2) %3<\t>",
     _prefix, _component, _title
 ], lineBreak];
-
-{
+ {
     _compose append [lineBreak, format ["            %1", _x]];
 } forEach _lines;
 

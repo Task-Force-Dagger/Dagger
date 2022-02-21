@@ -23,15 +23,13 @@ _class = _module getVariable "classname";
 _items = call compile format ["[%1]",_module getVariable "items"];
 _mags = call compile format ["[%1]",_module getVariable "mags"];
 _code = compile (_module getVariable "code");
-
-{
+ {
     private _unit = _x;
 
     //add chestpack
     [_unit,_class] call FUNC(addChestpack);
 
-    //add items
-    {
+    //add items {
         if (typeName _x isEqualTo "STRING") then {
             [_unit,_x] call FUNC(addItemToChestpack);
         } else {
@@ -41,8 +39,7 @@ _code = compile (_module getVariable "code");
         };
     } forEach _items;
 
-    //add magazines
-    {
+    //add magazines {
         [_unit,(_x select 0),(_x select 1)] call FUNC(addMagToChestpack);
     } forEach _mags;
 

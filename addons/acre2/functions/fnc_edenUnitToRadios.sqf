@@ -74,8 +74,7 @@ if (GVAR(giveMissingRadios)) then {
         private _usedRadioIndexs = []; // Used for tracking colours, so that we know which ones we have already used.
 
         private _isGroupLeader = (leader _unitGroup == _unit);
-        private _radioPresetSetting = _networksWithRadioChannels select _ourPresetIndex;
-        {
+        private _radioPresetSetting = _networksWithRadioChannels select _ourPresetIndex; {
             _x params ["", "", "_radio", ["_chanConditions",[]]];
 
             private _unitOnThisChannel = false;
@@ -86,16 +85,14 @@ if (GVAR(giveMissingRadios)) then {
                 if (_isGroupLeader && {_forEachIndex in _groupVarLeaderChannelList}) exitWith { _unitOnThisChannel = true; };
             };
             if (_unitOnThisChannel) then {
-                private _radioList = [_radio];
-                {
+                private _radioList = [_radio]; {
                     _x params ["_innerRadioList"];
                     if (_radio in _innerRadioList) exitWith {
                         _radioList = _innerRadioList;
                     };
                 } forEach GVAR(radioCoreSettings);
                 
-                private _radioFndIdx = -1;
-                {
+                private _radioFndIdx = -1; {
                     if (_radioFndIdx != -1) exitWith {};
                     private _radioID = _forEachIndex;
                     if (!(_radioID in _usedRadioIndexs)) then {

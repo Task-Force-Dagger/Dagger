@@ -22,8 +22,7 @@ if(isPlayer _patient) then {
     private _ketCount = 0;
     private _adjustments = _patient getVariable ["ACE_medical_medications",[]]; 
     if (_adjustments isNotEqualTo []) then { 
-        private _deleted = false; 
-        {  
+        private _deleted = false;  {  
             _x params ["_medication"];  
             if(_medication == "Ketamine_200mg" ) then {
                 _ketCount = _ketCount + 10;  

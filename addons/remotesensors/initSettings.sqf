@@ -5,8 +5,7 @@
     [LSTRING(Enabled), LSTRING(Enabled_Description)],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
         if (isServer || {!hasInterface}) exitWith {
             INFO("Server or HC, skipping");
         };

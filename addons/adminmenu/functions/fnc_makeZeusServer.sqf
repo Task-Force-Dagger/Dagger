@@ -6,8 +6,7 @@ params ["_unit"];
 if (isNull _unit) exitWith {};
 if (!isNull (getAssignedCuratorLogic _unit)) exitWith {}; // already is a curator
 
-private _isValidCurator = false;
-{
+private _isValidCurator = false; {
     _isValidCurator = false;
     if (_x getVariable [QGVAR(zeus), false]) then {
         if (isNull (getAssignedCuratorUnit _x)) then {
@@ -32,8 +31,7 @@ if (!_isValidCurator) then {
     _curator setVariable [QGVAR(zeus), true, true];
     _curator setVariable ["showNotification", false, true];
 
-    _curator setCuratorWaypointCost 0;
-    {
+    _curator setCuratorWaypointCost 0; {
         _curator setCuratorCoef [_x, 0];
     } forEach ["place","edit","delete","destroy","group","synchronize"];
 

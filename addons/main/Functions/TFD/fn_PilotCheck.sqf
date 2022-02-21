@@ -34,8 +34,7 @@ switch (TFD_Main_MaydayAccess) do {
             if (_unit call _fnc_checkAccess) then {
 
                 // check for emergency takeover of controls
-                private _handle = [
-                    {
+                private _handle = [ {
                         params ["_args", "_handle"];
                         _args params ["_unit", "_vehicle"];
 

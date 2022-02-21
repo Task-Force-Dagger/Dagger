@@ -50,11 +50,7 @@ Examples:
             "Unlock Car",
             "",
             "true",
-            "true",
-            {hint "Unlocking Car!";},
-            {hint "Still unlocking Car!";},
-            {hint "Car unlocked!";},
-            {hint "Couldn't unlock Car!";},
+            "true", {hint "Unlocking Car!";}, {hint "Still unlocking Car!";}, {hint "Car unlocked!";}, {hint "Couldn't unlock Car!";},
             [],
             14,
             true,
@@ -120,8 +116,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
     _action = [
         _id,
         _title,
-        _icon,
-        {
+        _icon, {
             params ["_target", "_caller", "_arguments"];
 
             _arguments params [
@@ -141,8 +136,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 
             [
                 _duration,
-                [_args, _codeCompleted, _codeInterrupted, _remove, _target, _caller, _id],
-                {
+                [_args, _codeCompleted, _codeInterrupted, _remove, _target, _caller, _id], {
                     (_this select 0) params [
                         "_parameters",
                         "_codeCompleted",
@@ -159,8 +153,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
                     if (_remove) then {
                         [_target,0,["ACE_MainActions", _id]] call ace_interact_menu_fnc_removeActionFromObject;
                     };
-                },
-                {
+                }, {
                     (_this select 0) params [
                         "_parameters",
                         "_codeCompleted",
@@ -178,8 +171,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
             ] call ace_common_fnc_progressBar;
 
         },
-        _conditionShow,
-        {},
+        _conditionShow, {},
         [_args, _conditionProgress, _codeStart, _codeProgress, _codeCompleted, _codeInterrupted, _id, _removeCompleted, _duration, _progressTitle]
     ] call ace_interact_menu_fnc_createAction;
 
@@ -196,8 +188,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
         _icon,
         _icon,
         _conditionShow,
-        _conditionProgress,
-        {
+        _conditionProgress, {
             params ["_target", "_caller", "_actionId", "_arguments"];
 
             _arguments params [
@@ -209,8 +200,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
             ];
 
             [_target, _caller, _args] call _codeStart;
-        },
-        {
+        }, {
             params ["_target", "_caller", "_actionId", "_arguments"];
 
             _arguments params [
@@ -222,8 +212,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
             ];
 
             [_target, _caller, _args] call _codeProgress;
-        },
-        {
+        }, {
             params ["_target", "_caller", "_actionId", "_arguments"];
 
             _arguments params [
@@ -235,8 +224,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
             ];
 
             [_target, _caller, _args] call _codeCompleted;
-        },
-        {
+        }, {
             params ["_target", "_caller", "_actionId", "_arguments"];
 
             _arguments params [

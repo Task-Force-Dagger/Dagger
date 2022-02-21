@@ -250,11 +250,9 @@ if !(_infList isEqualTo []) then {
         );
         _units append _garrisonedUnits;
 
-        private _grps = [];
-        { _grps pushBackUnique (group _x); nil } count _units;
+        private _grps = []; { _grps pushBackUnique (group _x); nil } count _units;
 
-        // tag groups
-        { _x setGroupIdGlobal [format["%1_gar%2", _grpPrefix, _forEachIndex]]; } forEach _grps;
+        // tag groups { _x setGroupIdGlobal [format["%1_gar%2", _grpPrefix, _forEachIndex]]; } forEach _grps;
     };
 } else {
     if (_AIReporting && { _GarrisonedGroupsMax >0 }) exitwith {systemchat format ["TFD: INFO: %1 no Infantry Teams to select from. Step skipped.",_FactionName]};
@@ -473,8 +471,7 @@ if !(_vehHeavyList isEqualTo []) then {
 
 ///////////////////////////////////////////////////////////
 // RANDOM VEHS
-///////////////////////////////////////////////////////////
-{_vehRandList append _x} foreach [_vehAAList, _vehMrapList, _vehLightList, _vehHeavyList];
+/////////////////////////////////////////////////////////// {_vehRandList append _x} foreach [_vehAAList, _vehMrapList, _vehLightList, _vehHeavyList];
 
 if !(_vehRandList isEqualTo []) then {
 
@@ -502,21 +499,18 @@ if !(_vehRandList isEqualTo []) then {
         };
     };
 };
-
-{
+ {
     if !(dynamicSimulationEnabled (group _x)) then {
         (group _x) enableDynamicSimulation true;
     };
     _x  disableAI "AUTOCOMBAT";
 } forEach _units;
-
-{
+ {
     if !(dynamicSimulationEnabled (group _x)) then {
         (group _x) enableDynamicSimulation true;
     };
 } forEach _vehicles;
-
-{
+ {
     _x addCuratorEditableObjects [_units, false];
     _x addCuratorEditableObjects [_vehicles, true];
 } forEach allCurators;

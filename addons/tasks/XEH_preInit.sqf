@@ -13,8 +13,7 @@ if (isServer) then {
     private _cfgTasks = missionConfigFile >> "CfgTasks";
     private _tag = getTextRaw (_cfgTasks >> "tag");
 
-    // Load tasks from config
-    {
+    // Load tasks from config {
         private _taskConfigName = configName _x;
         private _taskNamespace = [_x] call EFUNC(common,readConfigToNamespace);
         _taskNamespace setVariable ["taskConfigName", _taskConfigName];

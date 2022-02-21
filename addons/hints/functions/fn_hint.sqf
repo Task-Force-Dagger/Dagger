@@ -190,8 +190,7 @@ if (_text isEqualTo "") exitWith {};
     };
     
     if (count _queue > 0) then {
-        _activeNotifications = 0;
-        {
+        _activeNotifications = 0; {
             _ctrlContent = _x select 0;
             _ctrlBar = _x select 1;
             if (!isNull _ctrlContent && !isNull _ctrlBar) then {

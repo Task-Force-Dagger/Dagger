@@ -26,8 +26,7 @@
 #define Z1 [ARR_3(0,0,-RANGE)]
 #define Z2 [ARR_3(0,0,RANGE)]
 
-#define ICON "\a3\ui_f\data\map\Markers\Military\dot_ca.paa"
-{
+#define ICON "\a3\ui_f\data\map\Markers\Military\dot_ca.paa" {
     drawLine3D [_x modelToWorld X1, _x modelToWorld X2, COLX];
     drawLine3D [_x modelToWorld Y1, _x modelToWorld Y2, COLY];
     drawLine3D [_x modelToWorld Z1, _x modelToWorld Z2, COLZ];
@@ -41,14 +40,11 @@
 
 } forEach ((all3denEntities select 3) select {_x isKindOf QGVAR(hideMapObjects)});
 
-if (current3denOperation == "MoveItems" || current3denOperation == "RotateItems") then {
-    {
+if (current3denOperation == "MoveItems" || current3denOperation == "RotateItems") then { {
         _x removeAllEventHandlers "UnregisteredFromWorld3den";
-        _x addEventHandler ["UnregisteredFromWorld3den", {
-            { _x hideObjectGlobal false } forEach ((_this select 0) getVariable [QGVAR(intersections),[]]);
+        _x addEventHandler ["UnregisteredFromWorld3den", { { _x hideObjectGlobal false } forEach ((_this select 0) getVariable [QGVAR(intersections),[]]);
         }];
-
-        { _x hideObjectGlobal false } forEach (_x getVariable [QGVAR(intersections),[]]);
+ { _x hideObjectGlobal false } forEach (_x getVariable [QGVAR(intersections),[]]);
 
         private _ints = [];
         _ints append lineIntersectsObjs [AGLToASL(_x modelToWorld X1), AGLToASL(_x modelToWorld X2), objNull, _x, true, 32];
@@ -58,7 +54,6 @@ if (current3denOperation == "MoveItems" || current3denOperation == "RotateItems"
         _ints = _ints select { !(_x in (all3denEntities select 0))};
         _ints = _ints arrayIntersect _ints;
 
-        _x setVariable [QGVAR(intersections),_ints];
-        { _x hideObjectGlobal true } forEach _ints;
+        _x setVariable [QGVAR(intersections),_ints]; { _x hideObjectGlobal true } forEach _ints;
     } forEach ((get3denSelected "Logic") select {_x isKindOf QGVAR(hideMapObjects)});
 };

@@ -30,8 +30,7 @@ if (_oldUnitdata isEqualType []) then {
     // Re-enable other text/marker channels
     private _radioChannelIndexSpectator = missionNamespace getVariable [QEGVAR(spectator,radioChannel), -1];
     if (_radioChannelIndexSpectator != -1) then {
-        _radioChannelIndexSpectator radioChannelRemove [player];
-        {
+        _radioChannelIndexSpectator radioChannelRemove [player]; {
             _x enableChannel true;
         } forEach [1,2,3,4,5];
     };

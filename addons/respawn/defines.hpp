@@ -92,8 +92,7 @@
 //Base Classes//
 ////////////////
 
-class respawnMenu_RscText
-{
+class respawnMenu_RscText {
     idc = -1;
     type = 0; //%CT_STATIC
     style = 0;//ST_MULTI;
@@ -111,8 +110,7 @@ class respawnMenu_RscText
     w = 0;
 };
 
-class respawnMenu_RscCheckBox
-{
+class respawnMenu_RscCheckBox {
     idc = -1;
     type = 77;
     style = 0;//ST_MULTI;
@@ -156,8 +154,7 @@ class respawnMenu_RscCheckBox
     w = 0;
 };
 
-class respawnMenu_RscCombo
-{
+class respawnMenu_RscCombo {
     idc = -1;
     type = 4; //%CT_STATIC
     style = 0;//ST_MULTI;
@@ -207,8 +204,7 @@ class respawnMenu_RscCombo
     };
 };
 
-class respawnMenu_RscPicture
-{
+class respawnMenu_RscPicture {
     idc = -1;
     type = CT_STATIC;
     style = ST_PICTURE;
@@ -226,8 +222,7 @@ class respawnMenu_RscPicture
     h = 0.15;
 };
 
-class respawnMenu_RscButton
-{
+class respawnMenu_RscButton {
     type = CT_BUTTON;
     text = "";
     colorText[] = {1,1,1,.9};
@@ -257,8 +252,7 @@ class respawnMenu_RscButton
     borderSize = 0;
 };
 
-class respawnMenu_RscFrame
-{
+class respawnMenu_RscFrame {
     type = CT_STATIC;
     idc = -1;
     style =  ST_BACKGROUND;//ST_FRAME;
@@ -270,8 +264,7 @@ class respawnMenu_RscFrame
     text = "";
 };
 
-class respawnMenu_Box
-{
+class respawnMenu_Box {
     type = CT_STATIC;
     idc = -1;
     style = ST_CENTER;
@@ -324,8 +317,7 @@ class respawnMenu_RscListBox {
     autoScrollRewind = 0;
 };
 
-class respawnMenu_RscEdit
-{
+class respawnMenu_RscEdit {
      type = CT_EDIT;
      style = ST_LEFT+ST_FRAME;
      x = 0;

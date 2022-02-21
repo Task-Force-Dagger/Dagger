@@ -28,14 +28,12 @@ private _countdownTime = _controller getVariable [QGVAR(countdownTime), COUNTDOW
 private _mode = _controller getVariable [QGVAR(mode), MODE_DEFAULT];
 private _triggers = (_targets select 0) getVariable [QGVAR(triggers), []];
 
-// Prepare targets
-{
+// Prepare targets {
     _x setDamage 0;
     [_x, 1] call FUNC(animateTarget); // Down
 } forEach (_targets + _targetsInvalid);
 
-// Set variables
-{
+// Set variables {
     _x setVariable [QGVAR(running), true, true];
     _x setVariable [QGVAR(starter), ACE_player, true];
 } forEach _controllers;
@@ -98,8 +96,7 @@ if (_mode > 1) then {
         GVAR(firedEHid) = ACE_player addEventHandler ["Fired", { GVAR(maxScore) = GVAR(maxScore) + 1; }];
     };
 
-    if (_mode == 4) then {
-        {
+    if (_mode == 4) then { {
             _x enableSimulation true;
         } forEach _triggers;
 
@@ -113,8 +110,7 @@ if (_mode > 1) then {
 // Public API event
 [QGVAR(started), [_controller, _name, _mode, _targets, _targetsInvalid]] call CBA_fnc_localEvent;
 
-// Countdown timer notifications
-{
+// Countdown timer notifications {
     _x params ["_execTime", "_textCountdown"];
 
     [{
@@ -164,8 +160,7 @@ if (_mode > 1) then {
 
     // Prepare target pop-up handling
     GVAR(firstRun) = true;
-
-    {
+ {
         _x setVariable [QGVAR(stayDown), true, true]; // Disable automatic pop-ups
 
         // Pop up all targets in Rampage mode

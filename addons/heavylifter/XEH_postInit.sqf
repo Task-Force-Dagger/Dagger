@@ -8,8 +8,7 @@ addMissionEventHandler ["Draw3D", {
     drawIcon3D ["", [0.5, 0.5, 1, 1], ASLtoAGL getPosASL cursorObject, 0.5, 0.5, 0, format ["%1 = %2", typeOf cursorObject, _attachPos], 0.5, 0.025, "TahomaB"];
     drawIcon3D ["", [0.5, 0.5, 1, 1], cursorObject modelToWorldVisual (getCenterOfMass cursorObject), 0.5, 0.5, 0, "Center", 0.5, 0.025, "TahomaB"]; // Centre of mass
     if !(_attachPos isEqualTo []) then {
-        (boundingBoxReal GVAR(testHelper)) params ["_box0", "_box1"];
-        {
+        (boundingBoxReal GVAR(testHelper)) params ["_box0", "_box1"]; {
             _x params ["_start", "_end"];
             drawLine3D [cursorObject modelToWorldVisual _start, cursorObject modelToWorldVisual _end, [0, 255, 255, 1]]; // Center - Cyan
             drawLine3D [(cursorObject modelToWorldVisual _start) vectorDiff _attachPos, (cursorObject modelToWorldVisual _end) vectorDiff _attachPos, [255, 0, 0, 1]]; // Config - Red

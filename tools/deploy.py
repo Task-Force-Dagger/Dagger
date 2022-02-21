@@ -17,8 +17,7 @@ from github import Github, InputGitAuthor
 
 TRANSLATIONISSUE = 367
 TRANSLATIONBODY = """**[ACE3 Translation Guide](http://ace3mod.com/wiki/development/how-to-translate-ace3.html)**
-
-{}
+ {}
 """
 
 DEPENDENCIESPATH = "docs/_includes/dependencies_list.md"

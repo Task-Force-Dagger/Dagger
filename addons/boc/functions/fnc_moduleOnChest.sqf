@@ -21,15 +21,13 @@ private ["_backpackClass","_delay","_units"];
 _backpackClass = _module getVariable "classname";
 _delay = _module getVariable "delay";
 _units = [];
-
-{
+ {
     _units pushBackUnique _x;
 } forEach _syncedUnits;
 
 [_units,_backpackClass,_delay] spawn {
     params ["_units","_backpackClass","_delay"];
-    sleep _delay;
-    {
+    sleep _delay; {
         if !((backpack _x) isEqualTo "") then {
             [_x] call FUNC(actionOnChest);
         };

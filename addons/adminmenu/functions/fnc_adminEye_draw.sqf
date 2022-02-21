@@ -3,8 +3,7 @@
 disableSerialization;
 params["_fullmapWindow"];
 
-// Render Triggers
-{
+// Render Triggers {
     (triggerArea _x) params ["_a","_b","_angle","_isRectangle","_c"];
     private _pos = getPos _x;
 
@@ -48,8 +47,7 @@ params["_fullmapWindow"];
     _fullmapWindow drawIcon ["\a3\ui_f\data\map\markers\military\flag_ca.paa",_color,_pos,19,19,getDir (vehicle _x),"",0];
 } forEach GVAR(Triggers);
 
-// Wave Spawners
-{
+// Wave Spawners {
     private _pos = getPos _x;
 
     //background
@@ -73,8 +71,7 @@ params["_fullmapWindow"];
 
     //Render linked units of selected wave spawner.
     if (GVAR(adminEyeSelectedObj) isEqualTo _x) then {
-        private _data = _x getVariable [QEGVAR(ai,waveAdminData), []];
-        {
+        private _data = _x getVariable [QEGVAR(ai,waveAdminData), []]; {
             _x params ["_type", "_entityPos", "_dir"];
             private _icon = getText (configfile >> "CfgVehicles" >> _type >> "icon");
             _fullmapWindow drawLine [_pos, _entityPos, [1, 1, 0, 0.4]];
@@ -83,8 +80,7 @@ params["_fullmapWindow"];
     };
 
     _fullmapWindow drawIcon ["#(argb,8,8,3)color(0,0,0,0)",[1,1,1,1],_pos, 26, 26,0,_text,2,0.035,'PuristaSemibold','right'];
-
-    {
+ {
         private _color = [0,0,1,0.3];
         if (GVAR(adminEyeSelectedObj) isEqualTo _x) then {
             _color = [1,0,0,0.3];
@@ -93,8 +89,7 @@ params["_fullmapWindow"];
     } forEach (synchronizedObjects _x);
 } forEach GVAR(WaveSpawners);
 
-//Garrison.
-{
+//Garrison. {
     private _pos = getPos _x;
 
 
@@ -115,8 +110,7 @@ params["_fullmapWindow"];
     //Text.
     _fullmapWindow drawIcon ["#(argb,8,8,3)color(0,0,0,0)",[1,1,1,1],_pos, 26, 26,0,_text,2,0.035,'PuristaSemibold','right'];
 
-    //Render synchoncized
-    {
+    //Render synchoncized {
         private _color = [0,0,1,0.3];
         if (GVAR(adminEyeSelectedObj) isEqualTo _x) then {
             _color = [1,0,0,0.3];
@@ -125,12 +119,10 @@ params["_fullmapWindow"];
     } forEach (synchronizedObjects _x);
 } forEach GVAR(Garrison);
 
-// Units
-{
+// Units {
     if(alive _x) then {
 
-        if(vehicle _x != _x && crew (vehicle _x) select 0 == _x || vehicle _x == _x) then
-        {
+        if(vehicle _x != _x && crew (vehicle _x) select 0 == _x || vehicle _x == _x) then {
             private _icon = (vehicle _x getVariable ["f_cam_icon",""]);
             if(_icon == "") then {
                 _icon = getText (configfile >> "CfgVehicles" >> typeOf (vehicle _x) >> "icon");
@@ -171,8 +163,7 @@ params["_fullmapWindow"];
 
 } forEach allUnits;
 
-//TODO - Spectator map already has markers without having to render them manually like this.
-{
+//TODO - Spectator map already has markers without having to render them manually like this. {
     private _markerShape = markerShape _x;
     private _markerPos = getMarkerPos _x;
     private _markerSize = getMarkerSize _x;

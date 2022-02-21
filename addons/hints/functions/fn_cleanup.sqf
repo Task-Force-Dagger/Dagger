@@ -23,13 +23,11 @@ if (Not hasInterface) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 private ["_queue", "_Content", "_ColorBar"];
-
-{
+ {
     
     _queue = _x;
     
-    if (count _queue > 0) then {
-        {
+    if (count _queue > 0) then { {
             _Content = _x select 0;
             _ColorBar = _x select 1;
             ctrlDelete _Content;

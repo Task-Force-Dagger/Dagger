@@ -28,8 +28,7 @@ if (_type == 28) then {
         };
 
         GVAR(respawnGuiParameters) params ["_faction", "_groupName", "_markerType", "_markerColor", "_markerName"];
-
-        {
+ {
             _x params ["_rankIdx","_obj", "_roleIdx"];
             _x set [2,(respawnMenuRoles select _roleIdx) select 0];
         } forEach GVAR(selectedRespawnGroup);

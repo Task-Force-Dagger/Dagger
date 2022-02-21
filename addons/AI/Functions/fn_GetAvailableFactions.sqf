@@ -25,8 +25,7 @@ if !(_sides isEqualType []) then {
 };
 
 private _factions = [];
-
-{
+ {
     private _side = _x;
     private _sideFactions = [];
     private _sideVar = format ["tfd_AvailableFactions_%1", _side];

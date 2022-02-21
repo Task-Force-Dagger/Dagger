@@ -7,14 +7,12 @@ private _ctrlSpectatorListBox = (_display displayCtrl IDC_TFD_ADMINMENU_RESP_SPE
 
 
 
-lbClear _ctrlSpectatorListBox;
-{
+lbClear _ctrlSpectatorListBox; {
     private _found = false;
     private _deadPlayer = _x;
 
 
-    //Check if already selected and thus in the selected respawn listBox.
-    {
+    //Check if already selected and thus in the selected respawn listBox. {
         if (_deadPlayer == (_x select 1)) exitWith {
             _found = true;  
         };

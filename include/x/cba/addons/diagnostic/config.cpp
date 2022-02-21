@@ -23,8 +23,7 @@ class CfgPatches {
 		versionAr[] = {3,15,1,200418};
 	};
 };
-class CfgFunctions
-{
+class CfgFunctions {
 	class CBA
 	{
 		class Diagnostic
@@ -81,22 +80,19 @@ class CfgFunctions
 		};
 	};
 };
-class Extended_PreStart_EventHandlers
-{
+class Extended_PreStart_EventHandlers {
 	class cba_diagnostic
 	{
 		init = "call compile preprocessFileLineNumbers '\x\cba\addons\diagnostic\XEH_preStart.sqf'";
 	};
 };
-class Extended_PreInit_EventHandlers
-{
+class Extended_PreInit_EventHandlers {
 	class cba_diagnostic
 	{
 		init = "call compile preprocessFileLineNumbers '\x\cba\addons\diagnostic\XEH_preInit.sqf'";
 	};
 };
-class Extended_DisplayLoad_EventHandlers
-{
+class Extended_DisplayLoad_EventHandlers {
 	class RscDisplayDebugPublic
 	{
 		cba_diagnostic_extendedDebug = "_this call (uiNamespace getVariable 'cba_diagnostic_fnc_initExtendedDebugConsole')";
@@ -113,8 +109,7 @@ class Extended_DisplayLoad_EventHandlers
 		cba_diagnostic_targetDebug = "_this call (uiNamespace getVariable 'cba_diagnostic_fnc_initTargetDebugConsole')";
 	};
 };
-class Cfg3DEN
-{
+class Cfg3DEN {
 	class Mission
 	{
 		class Scenario
@@ -143,8 +138,7 @@ class Cfg3DEN
 	};
 };
 class ctrlMenuStrip;
-class Display3DEN
-{
+class Display3DEN {
 	class Controls
 	{
 		class MenuStrip: ctrlMenuStrip
@@ -168,8 +162,7 @@ class Display3DEN
 	};
 };
 class RscStructuredText;
-class RscTitles
-{
+class RscTitles {
 	class cba_diagnostic_Error
 	{
 		idd = -1;
@@ -195,8 +188,7 @@ class RscTitles
 	};
 };
 class RscEdit;
-class cba_diagnostic_watchInput: RscEdit
-{
+class cba_diagnostic_watchInput: RscEdit {
 	autocomplete = "scripting";
 	shadow = 0;
 	font = "EtelkaMonospacePro";
@@ -206,8 +198,7 @@ class cba_diagnostic_watchInput: RscEdit
 	h = "1 * ((((safezoneW / safezoneH) min 1.2)/ 1.2)/ 25)";
 	sizeEx = "0.7 * ((((safezoneW / safezoneH) min 1.2)/ 1.2)/ 25)";
 };
-class cba_diagnostic_watchOutput: RscEdit
-{
+class cba_diagnostic_watchOutput: RscEdit {
 	lineSpacing = 1;
 	style = 512;
 	shadow = 0;

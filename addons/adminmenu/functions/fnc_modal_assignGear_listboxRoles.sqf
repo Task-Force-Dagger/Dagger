@@ -16,8 +16,7 @@ private _roles = ("true" configClasses _factionConfig) apply {[format ["%1 [%2]"
 _roles sort true;
 private _rolesSimple = _roles apply {_x select 1};
 private _tickCheckbox = false;
-
-{
+ {
     (_x getVariable [QGVAR(association), [objNull, controlNull]]) params ["_player", "_ctrlComboRole"];
 
     private _playerRole = toLower (_player getVariable [QEGVAR(assigngear,role), ""]);
@@ -29,8 +28,7 @@ private _tickCheckbox = false;
     while {(count _roles) < (lbSize _ctrlComboRole)} do {
         _ctrlComboRole lbDelete ((lbSize _ctrlComboRole) - 1);
     };
-
-    {
+ {
         if (_forEachIndex >= (lbSize _ctrlComboRole)) then {
             _ctrlComboRole lbAdd (_x select 0);
         } else {

@@ -18,8 +18,7 @@
 params ["_target"];
 
 private _anims = _target call FUNC(getTargetAnimations);
-
-{
+ {
     if (_target animationPhase _x > 0) exitWith {
         true
     };

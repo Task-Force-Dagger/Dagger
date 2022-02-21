@@ -61,14 +61,12 @@ if (_units isEqualTo []) exitWith { [] };
 
 private _failed = [_pos, nil, _units, _radius, _AIOB_Positioning, true, _maxFill, _excludes] call DERP_fnc_AIOccupyBuilding;
 
-// Remove any non-garrisoned units
-{ deleteVehicle _x; } forEach _failed;
+// Remove any non-garrisoned units { deleteVehicle _x; } forEach _failed;
 _allUnits = _units - _failed;
 
 // Set Skill
 [_allUnits, _skill] call tfd_fnc_setUnitSkill;
 
-// Add units to zeus
-{_x addCuratorEditableObjects [_allUnits, false];} forEach allCurators;
+// Add units to zeus {_x addCuratorEditableObjects [_allUnits, false];} forEach allCurators;
 
 _allUnits;

@@ -19,7 +19,6 @@
 params ["_target", "_state"];
 
 private _anims = _target call FUNC(getTargetAnimations);
-//TRACE_3("Animate",_target,_state,_anims);
-{
+//TRACE_3("Animate",_target,_state,_anims); {
     _target animate [_x, _state];
 } forEach _anims;

@@ -19,8 +19,7 @@
  */
 
 params ["_name", "_controllers", "_duration", "_targets"];
-
-{
+ {
     _x setVariable [QGVAR(duration), _duration, true];
 } forEach _controllers;
 

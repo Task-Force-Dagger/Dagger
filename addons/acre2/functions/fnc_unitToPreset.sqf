@@ -26,8 +26,7 @@ if (is3den) then {
 
 private _networksWithRadioChannels = getMissionConfigValue ['TFD_AcreSettings', []];
 if (_networksWithRadioChannels isEqualType "") then { _networksWithRadioChannels = call compile _networksWithRadioChannels};
-
-{
+ {
     private _radioPresetSetting = _x;
     private _radioPresetIdx = _forEachIndex;
     _radioPresetSetting params ["_conditions"];

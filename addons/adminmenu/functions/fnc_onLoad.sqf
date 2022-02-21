@@ -3,8 +3,7 @@
 disableSerialization;
 params ["_display"];
 uiNamespace setVariable [QGVAR(display), _display];
-
-{
+ {
     (_display displayCtrl _x) ctrlEnable false;
     (_display displayCtrl _x) ctrlShow false;
 } forEach IDCS_TFD_ADMINMENU_UTIL;
@@ -60,8 +59,7 @@ if (alive player) then {
 
 // Player Management tab
 
-private _ctrlFilterSide = _display displayCtrl IDC_TFD_ADMINMENU_PMAN_FILTER_SIDE;
-{
+private _ctrlFilterSide = _display displayCtrl IDC_TFD_ADMINMENU_PMAN_FILTER_SIDE; {
     _x params ["_icon", "_text"];
     _ctrlFilterSide lbAdd _text;
     _ctrlFilterSide lbSetPicture [_forEachIndex, _icon];
@@ -80,8 +78,7 @@ _ctrlFilterSide ctrlAddEventHandler ["LBSelChanged", {
     _display call FUNC(playerManagement_updateList);
 }];
 
-private _ctrlFilterState = _display displayCtrl IDC_TFD_ADMINMENU_PMAN_FILTER_STATE;
-{
+private _ctrlFilterState = _display displayCtrl IDC_TFD_ADMINMENU_PMAN_FILTER_STATE; {
     _ctrlFilterState lbAdd _x;
 } forEach ["Alive and Dead", "Alive", "Dead"];
 _ctrlFilterState lbSetCurSel 0;

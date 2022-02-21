@@ -1,8 +1,7 @@
 #include "\z\tfd\addons\adminmenu\script_component.hpp"
 
 systemChat "[TFD Admin Menu] Quick Respawn:";
-private _str = "";
-{
+private _str = ""; {
     _str = _str + format ["[%1: %2]", name _x, str ((_x getVariable [QEGVAR(spectator,unitData), false]) isEqualType [])];
 
     [QGVAR(quickRespawn), 0, _x] call CBA_fnc_targetEvent;

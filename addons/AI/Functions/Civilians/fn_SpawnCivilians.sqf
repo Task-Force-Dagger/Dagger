@@ -135,11 +135,9 @@ if !(_pedPool isEqualTo []) then {
 
         _units append _garrisonedUnits;
 
-        private _grps = [];
-        { _grps pushBackUnique (group _x); nil } count _units;
+        private _grps = []; { _grps pushBackUnique (group _x); nil } count _units;
 
-        // tag groups
-        { _x setGroupIdGlobal [format["%1_gar%2", _grpPrefix, _forEachIndex]]; } forEach _grps;
+        // tag groups { _x setGroupIdGlobal [format["%1_gar%2", _grpPrefix, _forEachIndex]]; } forEach _grps;
     };
 } else {
     if (_AIReporting && { _garrisonsMax > 0 }) exitwith {systemchat format ["TFD: INFO: %1 no Civilian peds to select from. Step skipped.",_faction]};
@@ -240,21 +238,18 @@ if !(_motPool isEqualTo []) then {
 };
 
 // Set up dynamic sim and curator stuff
-
-{
+ {
     if !(dynamicSimulationEnabled (group _x)) then {
         (group _x) enableDynamicSimulation true;
     };
     _x  disableAI "AUTOCOMBAT";
 } forEach _units;
-
-{
+ {
     if !(dynamicSimulationEnabled (group _x)) then {
         (group _x) enableDynamicSimulation true;
     };
 } forEach _vehicles;
-
-{
+ {
     _x addCuratorEditableObjects [_units, false];
     _x addCuratorEditableObjects [_vehicles, true];
 } forEach allCurators;

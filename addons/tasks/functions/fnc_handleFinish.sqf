@@ -27,8 +27,7 @@ private _conditionEventsFinish = _taskNamespace getVariable [format ["conditionE
 private _conditionEventsEmpty = _conditionEventsFinish isEqualTo [];
 
 if (!_conditionEventsEmpty) then {
-    // Create EventHandler for all events
-    {
+    // Create EventHandler for all events {
         [_x, {
             _thisArgs params ["_taskNamespace", "_finishType", "_callbackFunction"];
             // Remove EH so it can be triggered only once for given task.

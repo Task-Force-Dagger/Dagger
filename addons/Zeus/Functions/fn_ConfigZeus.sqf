@@ -38,8 +38,7 @@ _object addEventHandler [
                 [_Group, true] remoteExec ["enableDynamicSimulation",2];
             };
 
-            if (_class isKindOf "AllVehicles") exitWith {
-                {
+            if (_class isKindOf "AllVehicles") exitWith { {
                     [_x, "TFD Default"] remoteExec ["tfd_fnc_SetUnitSkill",2];
                 } forEach crew _entity;
                 [group _entity , true] remoteExec ["enableDynamicSimulation",2];

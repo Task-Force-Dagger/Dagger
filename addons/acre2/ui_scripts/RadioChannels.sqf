@@ -49,8 +49,7 @@ fn_removeGroupFromChannel = {
         _value = _value - [_curSel];
         _group set3denAttribute ["TFD_Channellist",str _value];
     };
-    // do units
-    {
+    // do units {
         [_channel, _x] call fn_removeUnitFromChannel;
     } forEach (units _group);
 };
@@ -64,11 +63,9 @@ fn_networkTreeHandleKey = {
     private _thing = RadioNetwork_data select (_ctrlTree tvValue _location);
 
     if (_thing isEqualType west) then {
-        private _sideNum = _thing call TFD_common_fnc_sideToNum;
-        {
+        private _sideNum = _thing call TFD_common_fnc_sideToNum; {
             private _channel = _x;
-            _channel params ["_condition"];
-            {
+            _channel params ["_condition"]; {
                 if (_x isEqualTo _thing) then {
                     _condition set [_forEachIndex,-1];
                 };
@@ -80,8 +77,7 @@ fn_networkTreeHandleKey = {
             } forEach _condition;
             _channel set [0,_condition - [-1]];
         } forEach RadioChannelArray;
-        //nullify all attributes
-        {
+        //nullify all attributes {
             set3denAttributes [[units _x, "TFD_Network", -1], [[_x],"TFD_Network", -1]];
             set3denAttributes [[units _x, "TFD_Channellist", "[]"], [[_x],"TFD_Channellist", "[]"], [[_x],"TFD_ChannellistLeader", "[]"]];
         } forEach (cacheAllPlayerGroups select {side _x == _thing});
@@ -99,14 +95,12 @@ fn_networkTreeHandleKey = {
         
         private _sideNum = getNumber (configfile >> "CfgFactionClasses" >> _thing >> "side");
         private _side = _sideNum call TFD_common_fnc_numToSide;
-
-        {
+ {
             private _channel = _x;
             _channel params ["_condition"];
             _channel set [0,_condition - [_thing,_side]];
         } forEach RadioChannelArray;
-        //nullify all attributes
-        {
+        //nullify all attributes {
             set3denAttributes [[units _x, "TFD_Network", -1], [[_x],"TFD_Network", -1]];
             set3denAttributes [[units _x, "TFD_Channellist", "[]"], [[_x],"TFD_Channellist", "[]"], [[_x],"TFD_ChannellistLeader", "[]"]];
         } forEach (cacheAllPlayerGroups select {(faction (leader _x)) == _thing});
@@ -123,8 +117,7 @@ fn_networkTreeHandleKey = {
     if (_thing isEqualType grpNull) then {
         private _faction = toLower (faction (leader _thing));
         private _sideNum = getNumber (configfile >> "CfgFactionClasses" >> _faction >> "side");
-        private _side = _sideNum call TFD_common_fnc_numToSide;
-        {
+        private _side = _sideNum call TFD_common_fnc_numToSide; {
             private _channel = _x;
             _channel params ["_condition"];
             _channel set [0,_condition - [_faction, _side]];
@@ -138,8 +131,7 @@ fn_networkTreeHandleKey = {
     if (_thing isEqualType objNull) then {
         private _faction = toLower (faction (leader (group _thing)));
         private _sideNum = getNumber (configfile >> "CfgFactionClasses" >> _faction >> "side");
-        private _side = _sideNum call TFD_common_fnc_numToSide;
-        {
+        private _side = _sideNum call TFD_common_fnc_numToSide; {
             private _channel = _x;
             _channel params ["_condition"];
             _channel set [0,_condition - [_faction, _side]];
@@ -184,18 +176,14 @@ switch _mode do {
             //RadioChannelArray = call compile ("tfdMissionAcreAttributes" get3denMissionAttribute "TFD_AcreSettings");
         };
 
-        //Deserialize: Convert nums to side from
-        {
+        //Deserialize: Convert nums to side from {
             private _network = _x;
-            _network params ["_conditions", "_channels"];
-            {
+            _network params ["_conditions", "_channels"]; {
                 if (_x isEqualType 0) then {
                     _conditions set [_forEachIndex,(_x call TFD_common_fnc_numToSide)];
                 };
-            } forEach (_conditions);
-            {
-                private _condition = _x select 3; // condition
-                {
+            } forEach (_conditions); {
+                private _condition = _x select 3; // condition {
                     if (_x isEqualType 0) then {
                         _condition set [_forEachIndex,(_x call TFD_common_fnc_numToSide)];
                     };
@@ -220,11 +208,9 @@ switch _mode do {
         _ctrlTree = _ctrlGroup controlsGroupCtrl 189438;
         _ctrlTree ctrladdeventhandler ["keyDown",{with uinamespace do {['keydown',[RadioChannels_ctrlGroup,_this select 1,_this select 2,_this select 3],objnull] call RadioChannels_script;};}];
 
-        
-        {
+         {
             (_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
-        } forEach (EDIT_CHANNEL_IDCS);
-        {
+        } forEach (EDIT_CHANNEL_IDCS); {
             (_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
         } forEach (BEHIND_EDIT_CHANNELS_IDCS);
         
@@ -285,18 +271,14 @@ switch _mode do {
     };
     case "attributeSave": {
     
-        private _array = + (uiNamespace getVariable "RadioChannelArray");
-        {
+        private _array = + (uiNamespace getVariable "RadioChannelArray"); {
             private _network = _x;
-            _network params ["_conditions", "_channels"];
-            {
+            _network params ["_conditions", "_channels"]; {
                 if (_x isEqualType east) then {
                     _conditions set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                 };
-            } forEach (_conditions);
-            {
-                private _condition = _x select 3; // condition
-                {
+            } forEach (_conditions); {
+                private _condition = _x select 3; // condition {
                     if (_x isEqualType east) then {
                         _condition set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                     };
@@ -317,8 +299,7 @@ switch _mode do {
         if (RadioCurrentNetwork < count RadioChannelArray) then {
             (RadioChannelArray select RadioCurrentNetwork) params ["","_channels"];
             _ctrlChannelList lnbSetColumnsPos [0,0.005,0.33];
-            
-            {
+             {
                 _hasChannels = true;
                 _x params ["_shortName", "_longName", "_radioClassname", "_condition", "_shared"];
 
@@ -448,8 +429,7 @@ switch _mode do {
             };
             
             
-            private _gaveSomeoneARadio = false;
-            {
+            private _gaveSomeoneARadio = false; {
                 if ([_ctrlTree, _location, _giveRadio, _x] call fn_channelTreeProcessUnit != 3) then { 
                     _gaveSomeoneARadio = true;
                 };
@@ -497,8 +477,7 @@ switch _mode do {
             private _factionImg = getText (configfile >> "CfgFactionClasses" >> _faction >> "icon");
             _ctrlTree tvSetPicture [_location, _factionImg];
             
-            private _gaveSomeoneARadio = false;            
-            {
+            private _gaveSomeoneARadio = false;             {
                 if ([_ctrlTree, _location, _giveRadio, _x] call fn_channelTreeProcessGroup != 3) then {
                     _gaveSomeoneARadio = true;
                 };
@@ -522,8 +501,7 @@ switch _mode do {
             _returnCode
         };
         
-        private _sides = [];
-        {
+        private _sides = []; {
             private _condition = _x;
             if (_x isEqualType east) then {    
                 private _side = _x;
@@ -540,12 +518,10 @@ switch _mode do {
                     };
                     
                     //Collect factions for side.
-                    _factions = [];
-                    {
+                    _factions = []; {
                         _factions pushBackUnique (toLower (faction (leader _x)));
                     } forEach (cacheAllPlayerGroups select {(side _x) == _side});
-                    private _gaveSomeoneARadio = false;
-                    {
+                    private _gaveSomeoneARadio = false; {
                         if ([_ctrlTree, _location, _giveRadio, _x] call fn_channelTreeProcessFaction != 3) then { _gaveSomeoneARadio = true; };
                     } forEach _factions;
                     
@@ -567,15 +543,13 @@ switch _mode do {
             };
         } forEach _conditions;
 
-        
-        {
+         {
             private _group = _x;
             if (_sides find (side _group) == -1) then {
                 if (_sides find (toLower faction (leader _group)) == -1) then {
                     if (((_group get3denAttribute "TFD_Network") select 0) == RadioCurrentNetwork) then {
                         [_ctrlTree, [], false, _x] call fn_channelTreeProcessGroup;
-                    } else {
-                        {
+                    } else { {
                             if (((_x get3denAttribute "TFD_Network") select 0) == RadioCurrentNetwork) then {
                                 [_ctrlTree, [], false, _x] call fn_channelTreeProcessUnit;
                             };
@@ -598,19 +572,16 @@ switch _mode do {
         RadioNetwork_data = [];
         
         _sides = [];
-        _factions = [];
-        {
+        _factions = []; {
             private _group = _x;
             private _side = (side _x);
             private _color = _side call TFD_common_fnc_sideToColor;
             
             private _sideIdx = _sides find _side;
             private _networkNumber = -1;
-            scopeName "condSideSearch";
-            {
+            scopeName "condSideSearch"; {
                 _x params ["_condition"];
-                private _sideNum = _forEachIndex;
-                {
+                private _sideNum = _forEachIndex; {
                     if (_side isEqualTo _x) then {
                         _networkNumber = _sideNum;
                         breakTo "condSideSearch";
@@ -644,11 +615,9 @@ switch _mode do {
             private _factionIdx = _sideFactions find _faction;
             
             
-            if (_networkNumber == -1) then {
-                {
+            if (_networkNumber == -1) then { {
                     _x params ["_condition"];
-                    private _sideNum = _forEachIndex;
-                    {
+                    private _sideNum = _forEachIndex; {
                         if (_faction isEqualTo _x) then {
                             _networkNumber = _sideNum;
                             breakTo "condSideSearch"; // quits to main scope not a problem.
@@ -698,8 +667,7 @@ switch _mode do {
                 };
             };
             
-            private _preUnitNetworkNumber = _networkNumber;
-            {
+            private _preUnitNetworkNumber = _networkNumber; {
                 _networkNumber = _preUnitNetworkNumber;
                 
                 private _roleDesc = ((_x get3denAttribute "description") select 0);
@@ -751,8 +719,7 @@ switch _mode do {
             _radioChannels deleteAt _curSel;
             // Update all channel lists for units/groups on same preset.
             private _units = allUnits select {([_x] call TFD_acre2_fnc_unitToPreset) == RadioCurrentNetwork};
-            private _groups = []; {_groups pushBackUnique (group _x);} forEach _units;
-            {
+            private _groups = []; {_groups pushBackUnique (group _x);} forEach _units; {
                 private _entity = _x;
                 private _list = (_entity get3denAttribute "TFD_Channellist") params [["_value",[]]];
                 if (_value isEqualType "") then {
@@ -769,8 +736,7 @@ switch _mode do {
                 };
                 _entity set3denAttribute ["TFD_Channellist",str _value];
             } forEach (_units + _groups);
-            // Cycle through groups to remove leader.
-            {
+            // Cycle through groups to remove leader. {
                 private _entity = _x;
                 private _list = (_entity get3denAttribute "TFD_ChannellistLeader") params [["_value",[]]];
                 if (_value isEqualType "") then {
@@ -795,11 +761,9 @@ switch _mode do {
     case "channelAddClick": {
         with uiNamespace do {
             if (RadioCurrentNetwork >= count RadioChannelArray) exitWith {};
-            
-            {
+             {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
-            } forEach (EDIT_CHANNEL_IDCS);
-            {
+            } forEach (EDIT_CHANNEL_IDCS); {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
             
@@ -819,11 +783,9 @@ switch _mode do {
                                 
             private _radioChannels = (RadioChannelArray select RadioCurrentNetwork) select 1;
             (_radioChannels select _curSel) params ["_shortName", "_longName", "_radio", "", "_shared"];
-            
-            {
+             {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
-            } forEach (EDIT_CHANNEL_IDCS);
-            {
+            } forEach (EDIT_CHANNEL_IDCS); {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
             
@@ -859,22 +821,18 @@ switch _mode do {
                 _radioChannels pushBack _newChanData;
             };
             
-            ["refreshChannelList"] call RadioChannels_script;
-            {
+            ["refreshChannelList"] call RadioChannels_script; {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
-            } forEach (EDIT_CHANNEL_IDCS);
-            {
+            } forEach (EDIT_CHANNEL_IDCS); {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
             ["save"] call RadioChannels_script;
         };
     };
     case "channelDelClickCancel": {
-        with uiNamespace do {
-            {
+        with uiNamespace do { {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
-            } forEach (EDIT_CHANNEL_IDCS);
-            {
+            } forEach (EDIT_CHANNEL_IDCS); {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
         };
@@ -952,8 +910,7 @@ switch _mode do {
                 _radioChannel set [3,_condition - [_entity]];
                 if (_entity isEqualType east) then {
                     //Find and remove matching faction groups
-                    private _sideNum = _entity call TFD_common_fnc_sideToNum;
-                    {
+                    private _sideNum = _entity call TFD_common_fnc_sideToNum; {
                         if (_x isEqualType "") then {
                             if (_sideNum == getNumber (configfile >> "CfgFactionClasses" >> _x >> "side")) then {
                                 _radioChannel set [3,_condition - [_x]];
@@ -961,14 +918,12 @@ switch _mode do {
                         };
                     } forEach (_condition);
                 
-                    //remove groups
-                    {
+                    //remove groups {
                         [_curSel, _x] call fn_removeGroupFromChannel;
                     } forEach (allGroups select {side _x == _entity});
                 };
                 //Also remove faction.
-                if (_entity isEqualType "") then {
-                    {
+                if (_entity isEqualType "") then { {
                         [_curSel, _x] call fn_removeGroupFromChannel;
                     } forEach (allGroups select {faction (leader _x) == _entity});
                 };
@@ -989,18 +944,14 @@ switch _mode do {
     case "save": {
         //RadioChannelArray
 
-        private _array = + (uiNamespace getVariable "RadioChannelArray");
-        {
+        private _array = + (uiNamespace getVariable "RadioChannelArray"); {
             private _network = _x;
-            _network params ["_conditions", "_channels"];
-            {
+            _network params ["_conditions", "_channels"]; {
                 if (_x isEqualType east) then {
                     _conditions set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                 };
-            } forEach (_conditions);
-            {
-                private _condition = _x select 3; // condition
-                {
+            } forEach (_conditions); {
+                private _condition = _x select 3; // condition {
                     if (_x isEqualType east) then {
                         _condition set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                     };

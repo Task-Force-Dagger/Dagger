@@ -93,7 +93,7 @@ class Ketamine_6mg {
     effectTime = 30;
 };
 
-class Ketamine_200mg : Ketamine_6mg {
+class Ketamine_200mg: Ketamine_6mg {
     painReduce=50;
     hrIncreaseLow[]={15,25};
     hrIncreaseNormal[]={15,35};
@@ -108,7 +108,7 @@ class Ketamine_200mg : Ketamine_6mg {
     effectTime = 30;
 };
 
-class Tetra : PainKillers {
+class Tetra: PainKillers {
     painReduce=0;
     hrIncreaseLow[]={0,0};
     hrIncreaseNormal[]={0,0};
@@ -117,18 +117,18 @@ class Tetra : PainKillers {
     viscosityChange=0;
 };
 
-class paracetamol : PainKillers {
+class paracetamol: PainKillers {
     painReduce=2;
     timeInSystem=1200;
     maxDose=15;
     inCompatableMedication[]={};
 };
-class paracetamol_half : paracetamol {
+class paracetamol_half: paracetamol {
     painReduce=1;
 };
-class paracetamol_quarter : paracetamol {
+class paracetamol_quarter: paracetamol {
     painReduce=0.5;
 };
-class paracetamol_nil : paracetamol {
+class paracetamol_nil: paracetamol {
     painReduce=0;
 };

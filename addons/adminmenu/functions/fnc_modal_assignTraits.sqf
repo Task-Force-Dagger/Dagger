@@ -16,8 +16,7 @@ private _ctrlComboTraitX = 0.5 * _ctrlGrpWidth;
 private _ctrlComboTraitY = 2.2 * TFD_ADMINMENU_STD_HEIGHT;
 private _ctrlComboTraitW = 0.5 * _ctrlGrpWidth;
 private _traitComboCtrls = [];
-
-{
+ {
     private _ctrlLineY = _ctrlComboTraitY + _forEachIndex * (1.1 * TFD_ADMINMENU_STD_HEIGHT);
 
     private _ctrlComboTraitLabel = _display ctrlCreate [QGVAR(RscTextLarge), -1, _ctrlGroup];
@@ -62,8 +61,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick", {
     private _valueEng = _comboEng lbValue lbCurSel _comboEng;
     private _valueExp = _comboExp lbValue lbCurSel _comboExp;
     private _valueUAV = _comboUAV lbValue lbCurSel _comboUAV;
-
-    {
+ {
         if (_valueMed != -1) then {
             _x setUnitTrait ["medic", _valueMed > 0];
             _x setVariable ["ace_medical_medicClass", _valueMed, true];

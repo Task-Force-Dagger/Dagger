@@ -15,8 +15,7 @@ _objectASL = AGLToASL (_object modelToWorldVisual (getCenterOfMass _object)); \
 _surfaceIntersectStartASL = [_positionAGL select 0, _positionAGL select 1, (_objectASL select 2) + 1]; \
 _surfaceIntersectEndASL = [_positionAGL select 0, _positionAGL select 1, (_objectASL select 2) - 5]; \
 _surfaces = lineIntersectsSurfaces [_surfaceIntersectStartASL, _surfaceIntersectEndASL, _object, objNull, true, 5]; \
-_returnSurfaceASL = AGLToASL _positionAGL; \
-{ \
+_returnSurfaceASL = AGLToASL _positionAGL; \ { \
     scopeName "surfaceLoop"; \
     if( isNull (_x select 2) ) then { \
         _returnSurfaceASL = _x select 0; \
@@ -403,16 +402,13 @@ SA_Take_Tow_Ropes = {
 SA_Pickup_Tow_Ropes = {
     params ["_vehicle","_player"];
     if(local _vehicle) then {
-        private ["_attachedObj","_helper"];
-        {
-            _attachedObj = _x;
-            {
+        private ["_attachedObj","_helper"]; {
+            _attachedObj = _x; {
                 _attachedObj ropeDetach _x;
             } forEach (_vehicle getVariable ["SA_Tow_Ropes",[]]);
             deleteVehicle _attachedObj;
         } forEach ropeAttachedObjects _vehicle;
-        _helper = "Land_Can_V2_F" createVehicle position _player;
-        {
+        _helper = "Land_Can_V2_F" createVehicle position _player; {
             [_helper, [0, 0, 0], [0,0,-1]] ropeAttachTo _x;
             _helper attachTo [_player, [-0.1, 0.1, 0.15], "Pelvis"];
         } forEach (_vehicle getVariable ["SA_Tow_Ropes",[]]);
@@ -430,8 +426,7 @@ SA_Drop_Tow_Ropes = {
     if(local _vehicle) then {
         private ["_helper"];
         _helper = (_player getVariable ["SA_Tow_Ropes_Pick_Up_Helper", objNull]);
-        if(!isNull _helper) then {
-            {
+        if(!isNull _helper) then { {
                 _helper ropeDetach _x;
             } forEach (_vehicle getVariable ["SA_Tow_Ropes",[]]);
             detach _helper;
@@ -451,8 +446,7 @@ SA_Put_Away_Tow_Ropes = {
         _existingTowRopes = _vehicle getVariable ["SA_Tow_Ropes",[]];
         if(count _existingTowRopes > 0) then {
             _this call SA_Pickup_Tow_Ropes;
-            _this call SA_Drop_Tow_Ropes;
-            {
+            _this call SA_Drop_Tow_Ropes; {
                 ropeDestroy _x;
             } forEach _existingTowRopes;
             _vehicle setVariable ["SA_Tow_Ropes",nil,true];
@@ -665,8 +659,7 @@ SA_TOW_SUPPORTED_VEHICLES = [
 SA_Is_Supported_Vehicle = {
     params ["_vehicle","_isSupported"];
     _isSupported = false;
-    if(not isNull _vehicle) then {
-        {
+    if(not isNull _vehicle) then { {
             if(_vehicle isKindOf _x) then {
                 _isSupported = true;
             };
@@ -691,8 +684,7 @@ SA_Is_Supported_Cargo = {
     params ["_vehicle","_cargo"];
     private ["_canTow"];
     _canTow = false;
-    if(not isNull _vehicle && not isNull _cargo) then {
-        {
+    if(not isNull _vehicle && not isNull _cargo) then { {
             if(_vehicle isKindOf (_x select 0)) then {
                 if(_cargo isKindOf (_x select 2)) then {
                     if( (toUpper (_x select 1)) == "CAN_TOW" ) then {
@@ -762,14 +754,11 @@ SA_Add_Player_Tow_Actions = {
 
 SA_Find_Nearby_Tow_Vehicles = {
     private ["_nearVehicles","_nearVehiclesWithTowRopes","_vehicle","_ends","_end1","_end2"];
-    _nearVehicles = [];
-    {
+    _nearVehicles = []; {
         _nearVehicles append  (position player nearObjects [_x, 30]);
     } forEach (missionNamespace getVariable ["SA_TOW_SUPPORTED_VEHICLES_OVERRIDE",SA_TOW_SUPPORTED_VEHICLES]);
-    _nearVehiclesWithTowRopes = [];
-    {
-        _vehicle = _x;
-        {
+    _nearVehiclesWithTowRopes = []; {
+        _vehicle = _x; {
             _ends = ropeEndPosition _x;
             if(count _ends == 2) then {
                 _end1 = _ends select 0;

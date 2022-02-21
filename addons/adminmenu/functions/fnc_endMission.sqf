@@ -7,8 +7,7 @@ params ["_display"];
 
 // Populate mission ending list
 private _endingList = (_display displayCtrl IDC_TFD_ADMINMENU_ENDM_LIST);
-if ((lbSize _endingList) == 0) then {
-    {
+if ((lbSize _endingList) == 0) then { {
         private _title = getText (_x >> "title");
 
         private _extra = getText (_x >> "description");

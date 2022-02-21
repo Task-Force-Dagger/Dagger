@@ -10,8 +10,7 @@ if (isMultiplayer) then {
                 GVAR(fps) = round diag_fps;
 
                 private _allGroups = allGroups;
-                private _headlessString = format["Server: %1",{groupOwner _x == 2} count _allGroups];
-                {
+                private _headlessString = format["Server: %1",{groupOwner _x == 2} count _allGroups]; {
                     private _headless = _x;
                     private _headlessClientId = owner _headless;
                     if (_headlessClientId != 2) then { // not server.
@@ -24,8 +23,7 @@ if (isMultiplayer) then {
                 } forEach (entities "HeadlessClient_F");
                 GVAR(headlessInfo) = _headlessString;
 
-
-                {
+ {
                     _x publicVariableClient QGVAR(fps);
                     _x publicVariableClient QGVAR(headlessInfo);
                 } forEach GVAR(activeClients);

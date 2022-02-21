@@ -18,17 +18,14 @@ switch _input do {
         // Rank: Int (0-6), Object: Player, Role: Int (0 -> count respawnMenuRoles)
         
         // Propogate the list of dead players.
-        if (!isMultiplayer) then {
-            {
+        if (!isMultiplayer) then { {
                 GVAR(deadPlayerList) pushBack _x;  
             } forEach allUnits;
-        } else {
-            {
+        } else { {
                 if (isPlayer _x) then { //not all of them will be players.
                     GVAR(deadPlayerList) pushBack _x;  
                 };
-            } forEach ([0,0,0] nearEntities ["tfd_spectator_unit",500]);
-            {
+            } forEach ([0,0,0] nearEntities ["tfd_spectator_unit",500]); {
                 if (!alive _x) then { //not all of them will be players.
                     GVAR(deadPlayerList) pushBackUnique _x;  
                 };
@@ -43,8 +40,7 @@ switch _input do {
         // Handle all the factions
 
         // Build up a pool of who is using what faction from assign gear.
-        private _playerFactions = [] call CBA_fnc_hashCreate;
-        {
+        private _playerFactions = [] call CBA_fnc_hashCreate; {
             private _faction = _x getVariable ["tfd_assignGear_faction",""];
             if (_faction != "") then {
                 if ([_playerFactions,_faction] call CBA_fnc_hashHasKey) then {
@@ -57,8 +53,7 @@ switch _input do {
         } forEach (allPlayers);
 
         if (count _missionConfig > 0) then {
-            private _players = 0;
-            {
+            private _players = 0; {
                 private _factionName = (toLower(configName _x));
                  if ([_playerFactions,_factionName] call CBA_fnc_hashHasKey) then {
                     _players = _players + ([_playerFactions,_factionName] call CBA_fnc_hashGet);
@@ -74,8 +69,7 @@ switch _input do {
         };
 
         private _factionCategories = [];
-        private _factionCategoryPlayerCounts = [];
-        {
+        private _factionCategoryPlayerCounts = []; {
             private _category = getText (_x >> "category");
             if (_category isEqualTo "") then {_category = "Other";};
             private _configName = toLower (configName _x);
@@ -96,13 +90,11 @@ switch _input do {
             };
         } forEach (configProperties [configFile >> "CfgLoadouts", "isClass _x"]);
 
-        // Combine array for sorting.
-        { _factionCategories set [_forEachIndex,[_x,_factionCategoryPlayerCounts select _forEachIndex]]} forEach _factionCategories;
+        // Combine array for sorting. { _factionCategories set [_forEachIndex,[_x,_factionCategoryPlayerCounts select _forEachIndex]]} forEach _factionCategories;
 
         // Sort Alphabetically.
         _factionCategories sort true;
-
-        {
+ {
             _x params ["_factionName","_players"];
             private _displayText = _factionName;
             if (_players > 0) then {
@@ -148,8 +140,7 @@ switch _input do {
         
         /* Fill Side selection */
         
-        private _west = 0; private _east = 0; private _resistance = 0; private _civilian = 0;
-        {
+        private _west = 0; private _east = 0; private _resistance = 0; private _civilian = 0; {
             switch (side _x) do {
                 case blufor: {_west = _west + 1;};
                 case opfor: {_east = _east + 1;};
@@ -181,12 +172,10 @@ switch _input do {
         
         //Default Rank listbox
         _control = (RESPAWN_DISPLAY displayCtrl 26897);
-        
-        {
+         {
             _control lbAdd _x;
         } forEach ["Pvt.", "Cpl.", "Sgt.", "Lt.", "Cpt.", "Mjr.", "Col."];
-
-        {
+ {
             _control lbSetPicture [_forEachIndex, "\A3\Ui_f\data\GUI\Cfg\Ranks\" + _x];
         } forEach ["private_gs.paa", "corporal_gs.paa", "sergeant_gs.paa", "lieutenant_gs.paa", "captain_gs.paa", "major_gs.paa", "colonel_gs.paa"];
         
@@ -195,8 +184,7 @@ switch _input do {
         (RESPAWN_DISPLAY displayCtrl 26895) ctrlSetText format["Players in Spectator: %1",count GVAR(deadPlayerList)];
         
         // Marker Type
-        _control = (RESPAWN_DISPLAY displayCtrl 26900);
-        {
+        _control = (RESPAWN_DISPLAY displayCtrl 26900); {
             private _idx = _control lbAdd (_x select 1);
             _markerImg = (_x select 0);
             if (_markerImg != "") then {
@@ -212,8 +200,7 @@ switch _input do {
         };
         
         // Marker Colours
-        _control = (RESPAWN_DISPLAY displayCtrl 26901);
-        {
+        _control = (RESPAWN_DISPLAY displayCtrl 26901); {
             private _idx = _control lbAdd (_x select 1);
             _control lbSetColor [_idx,(_x select 0)];
         } forEach GVAR(respawnMenuMarkerColours);
@@ -261,17 +248,14 @@ switch _input do {
             //Recompute who is alive and Dead.
             
             private _deadList = [];
-            if ((!isMultiplayer) or (isMultiplayer and isServer)) then {
-                {
+            if ((!isMultiplayer) or (isMultiplayer and isServer)) then { {
                     _deadList pushBack _x;  
                 } forEach allUnits;
-            } else {
-                {
+            } else { {
                     if (isPlayer _x) then { //not all of them will be players.
                         _deadList pushBack _x;  
                     };
-                } forEach ([0,0,0] nearEntities ["tfd_spectator_unit",500]);
-                {
+                } forEach ([0,0,0] nearEntities ["tfd_spectator_unit",500]); {
                     if (!alive _x) then { //not all of them will be players.
                         _deadList pushBackUnique _x;
                     };
@@ -307,8 +291,7 @@ switch _input do {
         private _factions = [];
 
         /* Fill Faction categories */
-        private _playerFactions = [] call CBA_fnc_hashCreate;
-        {
+        private _playerFactions = [] call CBA_fnc_hashCreate; {
             private _faction = _x getVariable ["tfd_assignGear_faction",""];
             if (_faction != "") then {
                 if ([_playerFactions,_faction] call CBA_fnc_hashHasKey) then {
@@ -321,15 +304,13 @@ switch _input do {
         } forEach (allPlayers);
 
         if (_activeFactionCategory == "mission") then {
-            // use missionConfigFile
-            {
+            // use missionConfigFile {
                 private _factionName = (toLower(configName _x));
                 _factions pushBackUnique [getText(_x >> "displayName"),_factionName];
             } forEach (configProperties [missionConfigFile >> "CfgLoadouts","isClass _x"]);
 
         } else {
-            // Then configFile
-            {
+            // Then configFile {
                 private _category = toLower (getText (_x >> "category"));
                 if (_category == "") then {_category = "Other";};
                 if (_activeFactionCategory == _category) then {
@@ -341,8 +322,7 @@ switch _input do {
 
         //Alphabetical sort.
         _factions sort true;
-
-        {
+ {
             _x params ["_displayName","_configName"];
             private _players = 0;
             // Mission factioni class overrides so show 0 if configFile class is of same name.
@@ -381,8 +361,7 @@ switch _input do {
 
         private _control = (RESPAWN_DISPLAY displayCtrl 26896); /* Role control */ 
         lbClear _control;
-        respawnMenuRoles = [];
-        {
+        respawnMenuRoles = []; {
             private _displayName = getText(_x >> "displayName");
             private _index = _control lbAdd _displayName;
             private _configName = (configName _x);
@@ -399,12 +378,10 @@ switch _input do {
         ["refreshAliveListBox"] call FUNC(handleRespawnUI);
     };
     case "refreshDeadListBox": {
-        lbClear _ctrlDeadListBox;
-        {
+        lbClear _ctrlDeadListBox; {
             private _found = false;
             private _deadPlayer = _x;
-            //Check if already selected and thus in the selected respawn listBox.
-            {
+            //Check if already selected and thus in the selected respawn listBox. {
                 if (_deadPlayer == (_x select 1)) exitWith {
                     _found = true;  
                 };
@@ -418,8 +395,7 @@ switch _input do {
         } forEach GVAR(deadPlayerList);
     };
     case "refreshAliveListBox": {    
-        lbClear _ctrlGroupListBox;
-        {
+        lbClear _ctrlGroupListBox; {
             _x params ["_rankIdx","_obj", "_roleIdx"];
             private _name = _obj getVariable ["tfd_spectator_name",name _obj];
             private _idx = _ctrlGroupListBox lbAdd format["%1 - %2", _name, (respawnMenuRoles select _roleIdx) select 1];
@@ -442,8 +418,7 @@ switch _input do {
     case "respawnMenuAddAction" : {        
         private _selection = _ctrlDeadListBox lbText (lbCurSel _ctrlDeadListBox);
         
-        private _obj = objNull;
-        {
+        private _obj = objNull; {
             private _name = _x getVariable ["tfd_spectator_name",name _x];
             if (_selection == _name) exitWith {
                 _obj = _x;
@@ -591,8 +566,7 @@ switch _input do {
                 };
                 
                 GVAR(respawnGuiParameters) params ["_faction", "_groupName", "_markerType", "_markerColor", "_markerName"];
-                
-                {
+                 {
                     _x params ["_rankIdx","_obj", "_roleIdx"];
                     _x set [2,(respawnMenuRoles select _roleIdx) select 0];
                 } forEach GVAR(selectedRespawnGroup);

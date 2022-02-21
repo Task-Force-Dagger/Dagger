@@ -1,7 +1,6 @@
 if (!hasInterface) exitwith {};
 
-fnc_removeString =
-{
+fnc_removeString = {
   params ["_from", "_to", "_string"];
   _stringArray = _string splitString "";
 
@@ -12,8 +11,7 @@ fnc_removeString =
   _returnMe
 };
 
-fnc_loadSettings =
-{
+fnc_loadSettings = {
 
   _nc_settings = profileNamespace getVariable "nc_settings";
 
@@ -25,8 +23,7 @@ fnc_loadSettings =
   _returnMe;
 };
 
-fnc_saveSettings =
-{
+fnc_saveSettings = {
 
   params ["_ncX", "_ncY","_ncW","_ncSpan","_ncType","_ncFontSize","_ncAlpha","_ncAlphaNr","_ncFontOption","_ncInvert","_ncShadow","_ncMarkerVisibility","_ncMarkerY","_ncFontOptionNr","_ncColorNr","_ncTypeNr","_ncColorCustom","_ncColor"];
 
@@ -35,8 +32,7 @@ fnc_saveSettings =
 
 };
 
-fnc_showSettings =
-{
+fnc_showSettings = {
 
   disableSerialization;
 
@@ -196,8 +192,7 @@ fnc_showSettings =
       case ("RscCombo"): {
         _ctrl = _display ctrlCreate [_type, _idc];
         _func = compile ((_x select 4) select 1);
-        for "_i" from 0 to (count ((_x select 4) select 0)-1) do
-        {
+        for "_i" from 0 to (count ((_x select 4) select 0)-1) do {
           _lbItem = ((_x select 4) select 0) select _i;
           _index = _ctrl lbAdd _lbItem;
         };
@@ -237,8 +232,7 @@ fnc_showSettings =
   } forEach nc_dialog_controls;
 };
 
-fnc_showCompass =
-{
+fnc_showCompass = {
 
   disableSerialization;
 
@@ -290,8 +284,7 @@ fnc_showCompass =
     _compassNeedle = ((uiNamespace getVariable "RscTitleDisplayEmpty") displayCtrl 3399);
     _compassNeedle ctrlSetPosition [nc_barOffsetX - (0.1/2),nc_barOffsetY,0.1,0.015 * safezoneH];
     _compassNeedle ctrlCommit 0;
-
-    {
+ {
       _ctrl = _x select 0;
       _pos = (_x select 1) / 100;
       _degreeControl = ((uiNamespace getVariable "RscTitleDisplayEmpty") displayCtrl _ctrl);
@@ -307,8 +300,7 @@ fnc_showCompass =
       _degreeControl ctrlCommit 0;
     } forEach compass_pos;
 
-
-    {
+ {
       _ctrl  = _x select 0;
       _marker = _x select 1;
       _ctrl2 = _ctrl + 100;
@@ -345,8 +337,7 @@ fnc_showCompass =
   waitUntil {ncMarkerVisibility == 1;};
 
   while {true} do {
-    /// create user array [marker]
-    {
+    /// create user array [marker] {
       if !(_x in currentMarkers) then {
         _a = toArray _x;
         _a resize 15;
@@ -356,8 +347,7 @@ fnc_showCompass =
       };
     } forEach allMapMarkers;
     ///
-    /// create double array ([marker], [idc,marker])
-    {
+    /// create double array ([marker], [idc,marker]) {
       if !(_x in currentMarkers) then {
         _display = uiNamespace getVariable "RscTitleDisplayEmpty";
         _index = allUserMarkers find _x;
@@ -384,14 +374,12 @@ fnc_showCompass =
     } forEach allUserMarkers;
     ///
 
-    /// delete IF marker from [idc,marker] aint alive anymore
-    {
+    /// delete IF marker from [idc,marker] aint alive anymore {
       if !(_x in allMapMarkers) then {
         allUserMarkers = allUserMarkers - [_x];
         currentMarkers = currentMarkers - [_x];
       };
-    } forEach allUserMarkers;
-    {
+    } forEach allUserMarkers; {
       if !((_x select 1) in allUserMarkers) then {
         _display = uiNamespace getVariable "RscTitleDisplayEmpty";
         ctrlDelete (_display displayCtrl (_x select 0));
@@ -404,8 +392,7 @@ fnc_showCompass =
   };
 };
 
-fnc_compileCompass =
-{
+fnc_compileCompass = {
 
   /// coordinates of compass angles
   compass_pos = [
@@ -515,12 +502,10 @@ fnc_compileCompass =
     _arrayIndex = _i;//_compassType find _x;
 
     nc_sizeX = 0.65 * _ncFontSize;
-    if (_arrayIndex % 6 == 3) then
-    {
+    if (_arrayIndex % 6 == 3) then {
       nc_sizeX = 1 * _ncFontSize;
     };
-    if (_arrayIndex % 6 == 0) then
-    {
+    if (_arrayIndex % 6 == 0) then {
       nc_sizeX = 0.8 * _ncFontSize;
     };
     _edit = _display ctrlCreate ["RscStructuredText", _idc];
@@ -543,8 +528,7 @@ fnc_compileCompass =
 waitUntil {!isNull player};
 [] spawn fnc_showCompass;
 
-[] spawn
-{
+[] spawn {
  while {true} do
  {
    waitUntil {!isNull (findDisplay 49)};

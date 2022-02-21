@@ -47,12 +47,9 @@ if (isNull _unit) exitWith {};
     
     [
         2,
-        [],
-        { TFD_MEDICAL_SUPPLIES_UNPACK_SUCCESS = true; },
-        { TFD_MEDICAL_SUPPLIES_UNPACK_FAILURE = true; },
+        [], { TFD_MEDICAL_SUPPLIES_UNPACK_SUCCESS = true; }, { TFD_MEDICAL_SUPPLIES_UNPACK_FAILURE = true; },
         localize "Unpack Mead Kit....",
-
-        {true},
+ {true},
         ["isNotInside", "isNotSitting", "isNotSwimming"]
     ] call ACE_common_fnc_progressBar;
     

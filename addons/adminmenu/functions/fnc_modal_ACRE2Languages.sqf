@@ -21,8 +21,7 @@ if (count acre_sys_core_languages == 0) exitWith {
 
 private _langY = 2.1 * TFD_ADMINMENU_STD_HEIGHT;
 private _langComboCtrls = [];
-
-{
+ {
     _x params ["_key", "_name"];
 
     private _ctrlLabelName = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGroup];
@@ -57,8 +56,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick", {
     private _langComboCtrls = _ctrlButton getVariable [QGVAR(association), []];
     private _langsToAdd = [];
     private _langsToRemove = [];
-
-    {
+ {
         private _lang = _x getVariable [QGVAR(association), ""];
 
         switch (_x lbValue lbCurSel _x) do {

@@ -31,8 +31,7 @@ if ((group player isNotEqualTo _oldGroup) && {!isNull _oldGroup}) then {
     [player] join _oldGroup;
 };
 
-// execute custom save handlers
-{
+// execute custom save handlers {
     _x params ["_fnc_load", "_data"];
     [player, _data] call _fnc_load;
 } forEach (GVAR(savegameData) select 4);

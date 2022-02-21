@@ -18,15 +18,12 @@ private _output = [];
 // https://github.com/CBATeam/CBA_A3/wiki/Name-Groups-in-Lobby
 if ([[1,1,0]] call FUNC(checkTFDVersion)) then {
     // Find groups with playableUnits
-    private _groups = [];
-    {_groups pushBackUnique (group _x);} forEach playableUnits;
+    private _groups = []; {_groups pushBackUnique (group _x);} forEach playableUnits;
 
-    private _outputGroups = [];
-    {
+    private _outputGroups = []; {
         private _group = _x;
         private _descriptions = [];
-        private _skip = false;
-        {
+        private _skip = false; {
             private _description = (_x get3denAttribute "description") select 0;
             if (_description find "@" != -1) exitWith {_skip = true};
             _descriptions pushBack _description;
@@ -34,8 +31,7 @@ if ([[1,1,0]] call FUNC(checkTFDVersion)) then {
         if (!_skip) then {
             _descriptions = _descriptions apply {(/*toLower*/ _x) splitString " "};
             if (count (units _group) > 1) then {
-                private _common = _descriptions select 0;
-                {
+                private _common = _descriptions select 0; {
                     // Ensure common is not more tokens than the present description.
                     _common resize ((count _x) min (count _common));
                     for "_idx2" from 0 to (count _common -1) do {
@@ -55,15 +51,13 @@ if ([[1,1,0]] call FUNC(checkTFDVersion)) then {
 
     if (count _outputGroups > 0) then {
         _output pushBack [1,"Some groups do not have a slotting screen name:"];
-        private _string = "";
-        {
+        private _string = ""; {
             _string = _string + ((side _x) call BIS_fnc_sideName) + " - " + groupID _x + ", ";
         } forEach _outputGroups;
         _output pushBack [1,format ["groups (%1): %2",count _outputGroups,_string]];
     };
 } else {
-    private _units = (playableUnits + [player]);
-    {
+    private _units = (playableUnits + [player]); {
         private _desc = (_x get3denAttribute "description") # 0;
 
         if (_desc isEqualTo "") then {

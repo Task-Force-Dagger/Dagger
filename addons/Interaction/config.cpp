@@ -1,9 +1,7 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-    class TFD_Interaction
-    {
+class CfgPatches {
+    class TFD_Interaction {
         author = AUTHOR;
         name = NAME;
         url = URL;

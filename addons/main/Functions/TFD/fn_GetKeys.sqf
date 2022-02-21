@@ -19,8 +19,7 @@ Author:
 params ["_map"];
 
 private _keys = [];
-
-{
+ {
     _keys pushBack (_x select 0);
 } forEach _map;
 

@@ -100,8 +100,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
  [_object, _AvailableBackpacks, true] call BIS_fnc_addVirtualBackpackCargo;
  [_object, _AvailableMagazines, true] call BIS_fnc_addVirtualMagazineCargo;
 };
-
-{
+ {
  _x addCuratorEditableObjects [[_object], false];
 } forEach allCurators;
 

@@ -19,8 +19,7 @@
  */
 
 params ["_name", "_controllers", "_countdownTime", "_targets"];
-
-{
+ {
     _x setVariable [QGVAR(countdownTime), _countdownTime, true];
 } forEach _controllers;
 

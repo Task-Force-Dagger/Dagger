@@ -5,8 +5,7 @@ params ["_display"];
 
 private _ctrlGroupListBox = (_display displayCtrl IDC_TFD_ADMINMENU_RESP_GROUPLIST);
 lbClear _ctrlGroupListBox;
-
-{
+ {
     _x params ["_rankIdx","_obj", "_roleIdx"];
     private _name = _obj getVariable ["tfd_spectator_name",name _obj];
     private _idx = _ctrlGroupListBox lbAdd format["%1 - %2", _name, (respawnMenuRoles select _roleIdx) select 1];

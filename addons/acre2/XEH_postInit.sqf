@@ -9,8 +9,7 @@ GVAR(languagesTable) = [];
 
 if (getMissionConfigValue ['TFD_AcreBabelEnabled',false]) then {
     TFD_BabelArray = getMissionConfigValue ["TFD_AcreBabelSettings",[]];
-    if (TFD_BabelArray isEqualType "") then { TFD_BabelArray = call compile TFD_BabelArray; };
-    {
+    if (TFD_BabelArray isEqualType "") then { TFD_BabelArray = call compile TFD_BabelArray; }; {
         _x params ["_langName"];
         private _langId = format["tw_lang%1", _forEachIndex];
         private _entry = [_langId, _langName];
@@ -43,13 +42,11 @@ if (_tfdNetworkEnabled) then {
         GVAR(channelFrequencyOffsets) = [];
 
         if (!isNil QGVAR(networksWithRadioChannels)) then {
-            private _sharedRadioChannelListing = [];
-            {
+            private _sharedRadioChannelListing = []; {
                 GVAR(channelFrequencyOffsets) pushBack (random 1);
 
                 //Loop through the channels and find the shared channels so they also have randomized freqs.
-                _x params ["", "_channels"];
-                {
+                _x params ["", "_channels"]; {
                     _x params ["_shortName", "", "_radio", "", "_shared"];
                     if (_shared) then { // is special channel
                         private _coreRadioIdx = GVAR(radioCoreSettings) findIf {_radio in (_x select 0)};
@@ -124,12 +121,10 @@ if (hasInterface) then {
         params ["_display"];
 
         [
-            _display,
-            {
+            _display, {
                 // Return target unit.
                 missionNamespace getVariable [QEGVAR(spectator,target), objNull];
-            },
-            {missionNamespace getVariable [QEGVAR(spectator,showUI), false] && {missionNamespace getVariable [QGVAR(showSpectatorRadios), false]}}
+            }, {missionNamespace getVariable [QEGVAR(spectator,showUI), false] && {missionNamespace getVariable [QGVAR(showSpectatorRadios), false]}}
         ] call acre_sys_spectator_fnc_initDisplay;
 
         private _control = _display displayCtrl SPECTATOR_IDC_RADIO_INFO;

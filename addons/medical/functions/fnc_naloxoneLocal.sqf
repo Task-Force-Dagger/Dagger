@@ -9,8 +9,7 @@ if (!alive _patient) exitWith {};
 if (!local _patient) exitWith {};
 _adjustments = _patient getVariable ["ACE_medical_medications",[]]; 
 if (_adjustments isNotEqualTo []) then { 
-     private _deleted = false; 
-    {  
+     private _deleted = false;  {  
         _x params ["_medication", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust"];  
         if(_medication == "Fentanyl" || _medication == "Morphine" || _medication == "TFD_Morphine") then {
             _deleted = true;  

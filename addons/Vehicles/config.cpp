@@ -1,9 +1,7 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-    class TFD_Vehicles
-    {
+class CfgPatches {
+    class TFD_Vehicles {
         author = AUTHOR;
         name = NAME;
         url = URL;
@@ -16,13 +14,10 @@ class CfgPatches
     };
 };
 
-class CfgVehicles
-{
+class CfgVehicles {
     class Logic;
-    class Module_F: Logic
-    {
-        class AttributesBase
-        {
+    class Module_F: Logic {
+        class AttributesBase {
             class Default;
             class Edit;
             class Combo;
@@ -32,8 +27,7 @@ class CfgVehicles
             class Units;
         };
 
-        class ModuleDescription
-        {
+        class ModuleDescription {
             class AnyBrain;
         };
     };

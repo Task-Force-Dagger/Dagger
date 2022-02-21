@@ -42,8 +42,7 @@
         ], 
         3
     ],
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -58,8 +57,7 @@
         localize "STR_TFD_Hints_CBA_Category_core"
     ],
     [5,30,15,0],
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -74,8 +72,7 @@
         localize "STR_TFD_Hints_CBA_Category_core"
     ],
     [0,9,3,0],
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -90,8 +87,7 @@
         localize "STR_TFD_Hints_CBA_Category_core"
     ],
     [0.0,0.8,0.4,2],
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -116,8 +112,7 @@
         ], 
         1
     ],
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 // -------------------------------------------------------------------------------------------------
@@ -134,8 +129,7 @@
         localize "STR_TFD_Hints_CBA_Category_Colors"
     ],
     [0.000,0.000,0.000,0.5],
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -150,8 +144,7 @@
         localize "STR_TFD_Hints_CBA_Category_Colors"
     ],
     [0.000,0.824,0.000,1],
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -166,8 +159,7 @@
         localize "STR_TFD_Hints_CBA_Category_Colors"
     ],
     [0.824,0.824,0.000,1],
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -182,8 +174,7 @@
         localize "STR_TFD_Hints_CBA_Category_Colors"
     ],
     [0.824,0.000,0.000,1],
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 // -------------------------------------------------------------------------------------------------
@@ -200,8 +191,7 @@
         localize "STR_TFD_Hints_CBA_Category_Options"
     ],
     true,
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -216,8 +206,7 @@
         localize "STR_TFD_Hints_CBA_Category_Options"
     ],
     true,
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 // -------------------------------------------------------------------------------------------------

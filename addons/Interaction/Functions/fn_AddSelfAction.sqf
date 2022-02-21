@@ -30,8 +30,7 @@ Examples:
         [
             player,
             "HealUp",
-            "Heal Up",
-            {hint "Fully healed!";},
+            "Heal Up", {hint "Fully healed!";},
             [],
             "true",
             true
@@ -75,8 +74,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
     _action = [
         _id,
         _title,
-        "",
-        {
+        "", {
             params ["_target", "_caller", "_arguments"];
             _arguments params ["_code", "_args", "_id",  "_remove"];
 
@@ -86,8 +84,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
                 [_target,0,["ACE_MainActions", _id]] call ace_interact_menu_fnc_removeActionFromObject;
             };
         },
-        _condition,
-        {},
+        _condition, {},
         [_statement, _args, _id, _removeCompleted],
         ""
     ] call ace_interact_menu_fnc_createAction;
@@ -100,8 +97,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
     _condition = [_condition, "_player", "_this", nil, false] call TFD_fnc_FindReplaceString;
 
     _player addAction [
-        _title,
-        {
+        _title, {
             params ["_target", "_caller", "_actionId", "_arguments"];
             _arguments params ["_code", "_args",  "_remove"];
 

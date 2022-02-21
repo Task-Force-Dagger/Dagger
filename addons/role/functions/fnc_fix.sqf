@@ -30,14 +30,11 @@ if (isDedicated) exitWith {};
 private _TFDFIX = [
     "TFDfix",
     "FIX Perms",
-    "",
-    {
+    "", {
         player call TFD_role_fnc_role;
         // player call TFD_role_fnc_drongo;
         player call TFD_rank_fnc_rank;
-    },
-    {true},
-    {},
+    }, {true}, {},
     [_area]
 ] call ACE_interact_menu_fnc_createAction;
 

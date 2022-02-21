@@ -22,8 +22,7 @@ private _pfhRefresh = [{
     _ctrlCurators ctrlSetTooltip _curatorNames;
 
     private _liveUnits = allUnits;
-    private _spectatorUnits = (entities QEGVAR(spectator,unit)) select {isPlayer _x};
-    {
+    private _spectatorUnits = (entities QEGVAR(spectator,unit)) select {isPlayer _x}; {
         _x params ["_ai", "_players", "_spectators", "_total"];
         private _side = [blufor, opfor, resistance, civilian] select _forEachIndex;
         private _sideUnits = _liveUnits select {(side _x) isEqualTo _side};

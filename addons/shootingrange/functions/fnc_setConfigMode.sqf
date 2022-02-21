@@ -20,8 +20,7 @@
  */
 
 params ["_name", "_controller", "_controllers", "_mode", "_targets"];
-
-{
+ {
     _x setVariable [QGVAR(mode), _mode, true];
 } forEach _controllers;
 

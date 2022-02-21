@@ -17,7 +17,7 @@ class larynxtubus {
     displayName = "Insert Advanced Airway";
     displayNameProgress = "Inserting i-Gel...";
 };
-class Guedeltubus:larynxtubus {
+class Guedeltubus: larynxtubus {
     displayName = "Insert Basic Airway";
     displayNameProgress = "Inserting NPA...";
 };

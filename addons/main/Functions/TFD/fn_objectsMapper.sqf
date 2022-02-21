@@ -38,18 +38,15 @@ private ["_newObjs"];
 private ["_cfgObjectComps", "_script"];
 _cfgObjectComps = configFile >> "CfgObjectCompositions";
 
-if ((typeName _objs) == (typeName "")) then 
-{
+if ((typeName _objs) == (typeName "")) then  {
     //Composition class was given
     _script = getText(_cfgObjectComps >> _objs >> "objectScript");
     _objs = [];
 } 
-else 
-{
+else  {
     private ["_testSample"];
     _testSample = _objs select 0;
-    if ((typeName _testSample) != (typeName [])) then 
-    {
+    if ((typeName _testSample) != (typeName [])) then  {
         //Tag list was given
         private ["_queryTags"];
         _queryTags = +_objs;
@@ -59,15 +56,13 @@ else
         private ["_candidates"];
         _candidates = [];
         
-        for "_i" from 0 to ((count _cfgObjectComps) - 1) do 
-        {
+        for "_i" from 0 to ((count _cfgObjectComps) - 1) do  {
             private ["_candidate", "_candidateTags"];
             _candidate = _cfgObjectComps select _i;
             _candidateTags = getArray(_candidate >> "tags");
             
             //Are all tags in this candidate?
-            if (({_x in _candidateTags} count _queryTags) == (count _queryTags)) then 
-            {
+            if (({_x in _candidateTags} count _queryTags) == (count _queryTags)) then  {
                 _candidates = _candidates + [getText(_candidate >> "objectScript")];
             };
         };
@@ -78,8 +73,7 @@ else
 };
 
 //If the object array is in a script, call it
-if (!isNil "_script") then 
-{
+if (!isNil "_script") then  {
     _objs = call (compile (preprocessFileLineNumbers _script));
 };
 
@@ -94,8 +88,7 @@ _posY = _pos select 1;
 
 //Function to multiply a [2, 2] matrix by a [2, 1] matrix
 private ["_multiplyMatrixFunc"];
-_multiplyMatrixFunc =
-{
+_multiplyMatrixFunc = {
     private ["_array1", "_array2", "_result"];
     _array1 = _this select 0;
     _array2 = _this select 1;
@@ -108,11 +101,9 @@ _multiplyMatrixFunc =
 
     _result
 };
-
-{
+ {
     //Check randomizer for each object
-    if ((random 1) > _rdm) then 
-    {
+    if ((random 1) > _rdm) then  {
         private ["_type", "_relPos", "_azimuth", "_fuel", "_damage", "_orientation", "_varName", "_init", "_simulation", "_ASL", "_newObj"];
         _type = _x select 0;
         _relPos = _x select 1;
@@ -155,17 +146,13 @@ _multiplyMatrixFunc =
         //If fuel and damage were grabbed, map them
         if (!isNil "_fuel") then {_newObj setFuel _fuel};
         if (!isNil "_damage") then {_newObj setDamage _damage;};
-        if (!isNil "_orientation") then 
-        {
-            if ((count _orientation) > 0) then 
-            {
+        if (!isNil "_orientation") then  {
+            if ((count _orientation) > 0) then  {
                 ([_newObj] + _orientation) call BIS_fnc_setPitchBank;
             };
         };
-        if (!isNil "_varName") then 
-        {
-            if (_varName != "") then 
-            {
+        if (!isNil "_varName") then  {
+            if (_varName != "") then  {
                 _newObj setVehicleVarName _varName;
                 call (compile (_varName + " = _newObj;"));
             };

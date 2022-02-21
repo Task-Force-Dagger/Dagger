@@ -17,14 +17,10 @@ params [
          ((side group _player) in (_target getvariable ['RscAttributeOwners',[west,east,resistance,civilian]])) ||
          (((group _player) getVariable ['TFD_section','Command']) in (_target getVariable ['RscAttributeOwners',['Command']]))
      }",
-    "true",
-    { [format["<t color='#FFBB00' size = '.5'>You're collecting %1.</t>",(_this select 2) select 0],-1,0.8,5,2,0,789] spawn BIS_fnc_dynamicText;},
-    {},
-    {
+    "true", { [format["<t color='#FFBB00' size = '.5'>You're collecting %1.</t>",(_this select 2) select 0],-1,0.8,5,2,0,789] spawn BIS_fnc_dynamicText;}, {}, {
         _this spawn TFD_fnc_RunIntelAction;
         [format["<t color='#339900' size = '.5'>You've collected %1.</t>",(_this select 2) select 0],-1,0.8,5,2,0,789] spawn BIS_fnc_dynamicText;
-    },
-    {[format["<t color='#cc3232' size = '.5'>You've stopped collecting %1.</t>",(_this select 2) select 0],-1,0.8,5,2,0,789] spawn BIS_fnc_dynamicText;},
+    }, {[format["<t color='#cc3232' size = '.5'>You've stopped collecting %1.</t>",(_this select 2) select 0],-1,0.8,5,2,0,789] spawn BIS_fnc_dynamicText;},
     [_itemName],
     5,
     true,

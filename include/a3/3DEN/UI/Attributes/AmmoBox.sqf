@@ -8,8 +8,7 @@
 
 params ["_mode", "_params"];
 
-switch _mode do 
-{
+switch _mode do  {
 	case "onLoad": 
 	{	
 		//--- Selected ammobox

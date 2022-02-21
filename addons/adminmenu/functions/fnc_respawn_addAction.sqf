@@ -6,8 +6,7 @@ params ["_display"];
 private _ctrlSpectatorListBox = (_display displayCtrl IDC_TFD_ADMINMENU_RESP_SPECTATORLIST);
 
 private _selection = _ctrlSpectatorListBox lbText (lbCurSel _ctrlSpectatorListBox);
-private _obj = objNull;
-{
+private _obj = objNull; {
     private _name = _x getVariable ["tfd_spectator_name",name _x];
     if (_selection == _name) exitWith {
         _obj = _x;

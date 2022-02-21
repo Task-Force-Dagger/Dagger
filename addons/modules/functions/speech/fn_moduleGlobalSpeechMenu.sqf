@@ -49,16 +49,12 @@ private _holdIcon = "\z\tfd\addons\modules\data\gui\holdAction_speech_ca.paa";
     _holdIcon,
     _holdIcon,
     "(_this distance _target < 2.5) && (alive _target) && !(_target getVariable ['ACE_isUnconscious', false]) && !(_target getVariable ['tfd_speak3d', false]) && !(_target getVariable ['tfd_playedOnce', false])",
-    "(_caller distance _target < 2.5) && (alive _target) && !(_target getVariable ['ACE_isUnconscious', false]) && !(_target getVariable ['tfd_speak3d', false]) && !(_target getVariable ['tfd_playedOnce', false])",
-    {},
-    {},
-    {
+    "(_caller distance _target < 2.5) && (alive _target) && !(_target getVariable ['ACE_isUnconscious', false]) && !(_target getVariable ['tfd_speak3d', false]) && !(_target getVariable ['tfd_playedOnce', false])", {}, {}, {
         params ["_target", "_caller", "_actionId", "_params"];
         if (((_params select 0) getVariable ["enabled", 0]) > 0) then {
             [(_params select 0), _caller, _target] remoteExecCall ["TFD_fnc_moduleGlobalSpeechPlay", _target];
         };
-    },
-    {},
+    }, {},
     [_logic],
     1,
     999,

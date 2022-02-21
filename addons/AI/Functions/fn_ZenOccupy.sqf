@@ -96,8 +96,7 @@ switch (_mode) do {
     };
 };
 
-_buildingPosArray = [];
-{
+_buildingPosArray = []; {
     _buildingPositions = 0;
     for "_i" from 0 to 100 do {
         if ((_x buildingPos _buildingPositions) isEqualTo [0,0,0]) exitWith {};

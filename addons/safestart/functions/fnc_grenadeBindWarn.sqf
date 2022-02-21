@@ -33,9 +33,7 @@ private _fnc_secondWarning = {
         [
             LLSTRING(ThrowBind_Title),
             LLSTRING(ThrowBind_Warn2),
-            false,
-            {},
-            {
+            false, {}, {
                 params ["", "_confirm"];
                 if (_confirm isEqualTo CONFIRMED) exitWith {
                     // Open rebinding screen
@@ -63,8 +61,7 @@ private _fnc_secondWarning = {
     [
         LLSTRING(ThrowBind_Title),
         _warnMessage,
-        false,
-        {},
+        false, {},
         _this
     ] call EFUNC(common,modal);
 }, _fnc_secondWarning] call CBA_fnc_waitUntilAndExecute;

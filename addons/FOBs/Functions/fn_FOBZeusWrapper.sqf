@@ -46,15 +46,13 @@ private _dialogResult = [
     format ["Create Portable FOB - %1", _name],
     [
         ["COMBO", "Type", _fobs]
-    ],
-    {
+    ], {
         params ["_results", "_args"];
         _results params ["_fob"];
         _args params ["_hoveredEntity", "_size"];
 
         [_hoveredEntity, _fob, _size] remoteExec ["TFD_fnc_createPortableFOB", 2];
-    },
-    {},
+    }, {},
     [_hoveredEntity, _size]
 ] call zen_dialog_fnc_create;
 

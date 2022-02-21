@@ -26,8 +26,7 @@ switch _mode do {
         };
         
         lnbclear _ctrlList;
-        _ctrlList lnbSetColumnsPos [0.1,0.2];
-        {
+        _ctrlList lnbSetColumnsPos [0.1,0.2]; {
             _weaponCfg = configfile >> "cfgWeapons" >> _x;
             _displayName = gettext (_weaponCfg >> "displayName");
             _picture = gettext (_weaponCfg >> "picture");
@@ -53,8 +52,7 @@ switch _mode do {
             TFD_AcreAddRadioActions_Array pushBackUnique _radio;
         };
         lnbclear _ctrlList;
-        _ctrlList lnbSetColumnsPos [0.1,0.2];
-        {
+        _ctrlList lnbSetColumnsPos [0.1,0.2]; {
             _weaponCfg = configfile >> "cfgWeapons" >> _x;
             _displayName = gettext (_weaponCfg >> "displayName");
             _picture = gettext (_weaponCfg >> "picture");

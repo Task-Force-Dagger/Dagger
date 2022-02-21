@@ -13,8 +13,7 @@ if (!isMultiplayer) then {
 };
 
 private _newPlayers = [];
-
-{
+ {
     private _addPlayer = [true, alive _x, !alive _x] param [_filterState];
 
     private _isSpectator = _x isKindOf QEGVAR(spectator,unit);

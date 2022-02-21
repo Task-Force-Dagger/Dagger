@@ -26,8 +26,7 @@ if (!isNull _counterDisplay) then {
 
     if (ctrlText _counterTxtCtrl == COUNTER_TEXT_DISABLED) exitWith {
         LOG("Respawn disabled, hidding counter");
-
-        {
+ {
             _x ctrlSetFade 1;
             _x ctrlCommit 0;
         } forEach [_counterTxtCtrl, _counterBgCtrl, _counterBg2Ctrl];
@@ -50,8 +49,7 @@ if (!isNull _counterDisplay) then {
         };
 
         private _fade = ctrlFade _gameTimeCtrl;
-
-        {
+ {
             _x ctrlSetFade _fade;
             _x ctrlCommit 0;
         } forEach _counterCtrls;

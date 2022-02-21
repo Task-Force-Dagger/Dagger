@@ -18,7 +18,4 @@
 
 params ["_controller", "_target"];
 
-(_controller getVariable [QGVAR(running), false]) &&
-{(_controller getVariable [QGVAR(starter), objNull]) in thisList} &&
-{!isNil QGVAR(targetGroup) && {_target in GVAR(targetGroup)}} &&
-{GVAR(firstRun)}
+(_controller getVariable [QGVAR(running), false]) && {(_controller getVariable [QGVAR(starter), objNull]) in thisList} && {!isNil QGVAR(targetGroup) && {_target in GVAR(targetGroup)}} && {GVAR(firstRun)}

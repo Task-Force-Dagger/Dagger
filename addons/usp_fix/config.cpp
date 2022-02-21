@@ -11,7 +11,7 @@ class CfgPatches {
         /* Require CBA and all components below */
         requiredAddons[] = {
             "USP_Gear_Head",
-			"USP_Gear_Pack"
+            "USP_Gear_Pack"
         };
         VERSION_CONFIG;
     };

@@ -48,15 +48,13 @@ private _dialogResult = [
         ["EDIT", "Max. Vehicle Patrols", ["0"]],
         ["EDIT", "Min. Parked Vehicles", ["0"]],
         ["EDIT", "Max. Parked Vehicles", ["0"]]
-    ],
-    {
+    ], {
         params ["_results", "_args"];
 
         _args params ["_pos"];
 
         _procResults = [];
-
-        {
+ {
             _value = _x;
 
             // Process number inputs and make sure they're integers
@@ -92,8 +90,7 @@ private _dialogResult = [
             [_vehPatrolsMin, _vehPatrolsMax],
             [_vehParkedMin, _vehParkedMax]
         ] remoteExec ["tfd_fnc_SpawnCivilians", 2];
-    },
-    {},
+    }, {},
     [_pos]
 ] call zen_dialog_fnc_create;
 

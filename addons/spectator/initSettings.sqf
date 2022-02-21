@@ -4,8 +4,7 @@
     [LSTRING(Enabled), LSTRING(Enabled_Description)],
     COMPONENT_NAME,
     false,
-    1,
-    {[_this] call FUNC(toggle)}
+    1, {[_this] call FUNC(toggle)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -14,8 +13,7 @@
     [LSTRING(AllowUnconscious), LSTRING(AllowUnconscious_Description)],
     [COMPONENT_NAME, LSTRING(Unconscious)],
     false,
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -33,8 +31,7 @@
     [LSTRING(Sides), LSTRING(Sides_Description)],
     COMPONENT_NAME,
     [[0, 1, 2], [LSTRING(Friendly), LSTRING(Own), "str_all_voices"], 0],
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -43,8 +40,7 @@
     [LSTRING(Sides), LSTRING(Sides_Description)],
     [COMPONENT_NAME, LSTRING(Unconscious)],
     [[0, 1, 2], [LSTRING(Friendly), LSTRING(Own), "str_all_voices"], 0],
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -53,8 +49,7 @@
     [LSTRING(CivilianSide), LSTRING(CivilianSide_Description)],
     COMPONENT_NAME,
     false,
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -63,8 +58,7 @@
     [LSTRING(CivilianSide), LSTRING(CivilianSide_Description)],
     [COMPONENT_NAME, LSTRING(Unconscious)],
     false,
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -73,8 +67,7 @@
     [LSTRING(AllowAI), LSTRING(AllowAI_Description)],
     COMPONENT_NAME,
     false,
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -83,8 +76,7 @@
     [LSTRING(AllowAI), LSTRING(AllowAI_Description)],
     [COMPONENT_NAME, LSTRING(Unconscious)],
     false,
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -93,8 +85,7 @@
     [LSTRING(FreeCamera), LSTRING(FreeCamera_Description)],
     COMPONENT_NAME,
     false,
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -103,8 +94,7 @@
     [LSTRING(FreeCamera), LSTRING(FreeCamera_Description)],
     [COMPONENT_NAME, LSTRING(Unconscious)],
     false,
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -113,8 +103,7 @@
     [LSTRING(TPPCamera), LSTRING(TPPCamera_Description)],
     COMPONENT_NAME,
     false,
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;
 
 [
@@ -123,6 +112,5 @@
     [LSTRING(TPPCamera), LSTRING(TPPCamera_Description)],
     [COMPONENT_NAME, LSTRING(Unconscious)],
     false,
-    1,
-    {[_this] call FUNC(restart)}
+    1, {[_this] call FUNC(restart)}
 ] call CBA_fnc_addSetting;

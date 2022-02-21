@@ -152,8 +152,7 @@ switch _mode do {
                 
                 private _inRange = true;
                 if (_maxDistance > 0) then {
-                    _inRange = false;
-                    {
+                    _inRange = false; {
                         if ((_x distance _source) < _maxDistance) then {_inRange = true;};
                     } forEach _allPlayers;
                 };

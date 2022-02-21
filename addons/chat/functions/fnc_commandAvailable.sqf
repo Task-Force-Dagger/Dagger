@@ -36,8 +36,7 @@ switch (_var) do {
     };
     case 2: { // Available during safestart and after respawning
         if (
-            CURUNIT getVariable [QGVARMAIN(lastRespawn), 0] < time - 300 &&
-            {!(call EFUNC(safestart,isActive))}
+            CURUNIT getVariable [QGVARMAIN(lastRespawn), 0] < time - 300 && {!(call EFUNC(safestart,isActive))}
         ) exitWith {
             systemChat FORMAT_1("TFD: %1 is only available during Safe Start and within 5 minutes of respawn.", _command);
             _enabled = false;

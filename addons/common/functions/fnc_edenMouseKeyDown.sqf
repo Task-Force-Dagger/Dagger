@@ -31,12 +31,9 @@ if (!(typeOf _building isEqualTo "") && {count (_building buildingPos -1) > 0}) 
         private _bbx = [_pos1 select 0,_pos2 select 0];
         private _bby = [_pos1 select 1,_pos2 select 1];
         private _bbz = [_pos1 select 2,_pos2 select 2];
-        private _ret = [];
-        {
-            private _y = _x;
-            {
-                private _z = _x;
-                {
+        private _ret = []; {
+            private _y = _x; {
+                private _z = _x; {
                     _ret pushBack (_building modelToWorldVisual [_x,_y,_z]);
                 } forEach _bbx;
             } forEach _bbz;
@@ -57,8 +54,7 @@ if (!(typeOf _building isEqualTo "") && {count (_building buildingPos -1) > 0}) 
 
 private _validIdxs = _building getVariable [QGVAR(validIdxs),[]];
 if ((count _validIdxs == 0) || {diag_frameno % 15 == 0}) then { // Also recalc every 15 frames, also seems to randomize order?
-    _validIdxs = [];
-    {
+    _validIdxs = []; {
         // Check for obstruction //TODO Zsorting?
         // Care about nearby objects except the building itself and the currently selected eden objects.
         // Lags for buildings with >10 positions
@@ -80,14 +76,12 @@ if (GVAR(posIdxs) isEqualTo [] || {(count GVAR(posIdxs)) != count (_validIdxs)})
 };
 
 // Draw positions.
-if (0 in GVAR(mouseKeysPressed) && (current3denOperation == "MoveItems")) then { // if dragging group
-    {
+if (0 in GVAR(mouseKeysPressed) && (current3denOperation == "MoveItems")) then { // if dragging group {
         private _color = if !(_forEachIndex in _validIdxs) then {[0.75,0.75,0.75,0.75]} else {[1,1,1,1]};
         if (((GVAR(posIdxs) find _forEachIndex) <= (count MANOBJECTS - 1)) && {(GVAR(posIdxs) find _forEachIndex) != -1}) then {_color = [1,0.15,0.15,1]};
         drawIcon3D ["\a3\ui_f\data\map\Markers\Military\dot_ca.paa",_color,_x,1,1,0,str _forEachIndex,2]
     } forEach _positions;
-} else {
-    {
+} else { {
         private _color = if !(_forEachIndex in _validIdxs) then {[0.75,0.75,0.75,0.75]} else {[1,1,1,1]};
         drawIcon3D ["\a3\ui_f\data\map\Markers\Military\dot_ca.paa",_color,_x,1,1,0,str _forEachIndex,2]
     } forEach _positions;

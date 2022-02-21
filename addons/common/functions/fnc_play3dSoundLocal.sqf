@@ -61,8 +61,7 @@ if (_pitch <= 0) then {_pitch = 1;};
 private _soundArray = _object getVariable ["TFD_sound3d", []];
 private _soundInUse = false;
 
-if (count _soundArray > 0) then {
-    {
+if (count _soundArray > 0) then { {
         if ((_x select 0) == _soundClass) then {
             _soundInUse = true;
         };

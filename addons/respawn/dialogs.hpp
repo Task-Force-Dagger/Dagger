@@ -36,32 +36,28 @@ class respawnMenuDialog {
     class controlsBackground {};
     class objects {};
     class controls { 
-        class respawnGroupFrame: respawnMenu_RscFrame
-        {
+        class respawnGroupFrame: respawnMenu_RscFrame {
             idc = -1;
             x = 0.238065 * safezoneW + safezoneX;
             y = 0.3174 * safezoneH + safezoneY;
             w = 0.510469 * safezoneW;
             h = 0.484 * safezoneH;
         };
-        class deadPlayersListBox: respawnMenu_RscListbox
-        {
+        class deadPlayersListBox: respawnMenu_RscListbox {
             idc = 26891;
             x = 0.25147 * safezoneW + safezoneX;
             y = 0.401 * safezoneH + safezoneY;
             w = 0.139219 * safezoneW;
             h = 0.308 * safezoneH;
         };
-        class groupListBox: respawnMenu_RscListbox
-        {
+        class groupListBox: respawnMenu_RscListbox {
             idc = 26892;
             x = 0.468031 * safezoneW + safezoneX;
             y = 0.401 * safezoneH + safezoneY;
             w = 0.20625 * safezoneW;
             h = 0.308 * safezoneH;
         };
-        class waveRespawnTitle: respawnMenu_RscText
-        {
+        class waveRespawnTitle: respawnMenu_RscText {
             idc = 1000;
             text = "Wave Respawn Tool";
             x = 0.247344 * safezoneW + safezoneX;
@@ -69,8 +65,7 @@ class respawnMenuDialog {
             w = 0.128906 * safezoneW;
             h = 0.044 * safezoneH;
         };
-        class respawnMenuAddButton: respawnMenu_RscButton
-        {
+        class respawnMenuAddButton: respawnMenu_RscButton {
             idc = 1600;
             text = "Add";
             x = 0.407199 * safezoneW + safezoneX;
@@ -79,8 +74,7 @@ class respawnMenuDialog {
             h = 0.055 * safezoneH;
             action="['respawnMenuAddAction'] spawn tfd_respawn_fnc_handleRespawnUI";
         };
-        class respawnMenuRemoveButton: respawnMenu_RscButton
-        {
+        class respawnMenuRemoveButton: respawnMenu_RscButton {
             idc = 1601;
             text = "Remove";
             x = 0.407199 * safezoneW + safezoneX;
@@ -89,8 +83,7 @@ class respawnMenuDialog {
             h = 0.055 * safezoneH;
             action="['respawnMenuRemoveAction'] spawn tfd_respawn_fnc_handleRespawnUI";
         };
-        class respawnMenuSpawnButton: respawnMenu_RscButton
-        {
+        class respawnMenuSpawnButton: respawnMenu_RscButton {
             idc = 1602;
             text = "Spawn Group";
             x = 0.641268 * safezoneW + safezoneX;
@@ -99,8 +92,7 @@ class respawnMenuDialog {
             h = 0.044 * safezoneH;
             action="['respawnMenuRespawnAction'] spawn tfd_respawn_fnc_handleRespawnUI";
         };
-        class respawnMenuChangeRoleButton: respawnMenu_RscButton
-        {
+        class respawnMenuChangeRoleButton: respawnMenu_RscButton {
             idc = 1603;
             text = "Cycle Role";
             x = 0.684594 * safezoneW + safezoneX;
@@ -109,8 +101,7 @@ class respawnMenuDialog {
             h = 0.055 * safezoneH;
             action="['respawnMenuChangeRoleAction'] spawn tfd_respawn_fnc_handleRespawnUI";
         };
-        class respawnMenuChangeRankButton: respawnMenu_RscButton
-        {
+        class respawnMenuChangeRankButton: respawnMenu_RscButton {
             idc = 1604;
             text = "Cycle Rank";
             x = 0.684594 * safezoneW + safezoneX;
@@ -119,8 +110,7 @@ class respawnMenuDialog {
             h = 0.055 * safezoneH;
             action="['respawnMenuChangeRankAction'] spawn tfd_respawn_fnc_handleRespawnUI";
         };
-        class respawnMenuGroupNameText: respawnMenu_RscEdit
-        {
+        class respawnMenuGroupNameText: respawnMenu_RscEdit {
             idc = 26898;
             text = "INSERT_GROUP_NAME";
             x = 0.469062 * safezoneW + safezoneX;
@@ -128,8 +118,7 @@ class respawnMenuDialog {
             w = 0.108281 * safezoneW;
             h = 0.033 * safezoneH;
         };
-        class respawnMenuMarkerName: respawnMenu_RscEdit
-        {
+        class respawnMenuMarkerName: respawnMenu_RscEdit {
             idc = 26899;
             text = "INSERT_MARKER_NAME";
             x = 0.376269 * safezoneW + safezoneX;
@@ -137,8 +126,7 @@ class respawnMenuDialog {
             w = 0.108281 * safezoneW;
             h = 0.033 * safezoneH;
         };
-        class respawnMenuGroupMarkerCheckbox: respawnMenu_RscCheckbox
-        {
+        class respawnMenuGroupMarkerCheckbox: respawnMenu_RscCheckbox {
             idc = 26903;
             text = "Give group Marker";
             x = 0.352548 * safezoneW + safezoneX;
@@ -147,8 +135,7 @@ class respawnMenuDialog {
             h = 0.022 * safezoneH;
             action = "['respawnMenuToggleGroupCheckbox'] spawn tfd_respawn_fnc_handleRespawnUI";
         };
-        class respawnMenuSpawnMarkerText: respawnMenu_RscText
-        {
+        class respawnMenuSpawnMarkerText: respawnMenu_RscText {
             idc = 1003;
             text = "Spawn with Marker?";
             x = 0.253548 * safezoneW + safezoneX;
@@ -157,8 +144,7 @@ class respawnMenuDialog {
             h = 0.044 * safezoneH;
         };
 
-        class respawnMenuPlayersText: respawnMenu_RscText
-        {
+        class respawnMenuPlayersText: respawnMenu_RscText {
             idc = 26895;
             text = "Players in Spectator: 0";
             x = 0.2525 * safezoneW + safezoneX;
@@ -166,8 +152,7 @@ class respawnMenuDialog {
             w = 0.108281 * safezoneW;
             h = 0.033 * safezoneH;
         };
-        class respawnMenuCloseButton: respawnMenu_RscButton
-        {
+        class respawnMenuCloseButton: respawnMenu_RscButton {
             idc = 26904;
             text = "Close";
             x = 0.716563 * safezoneW + safezoneX;
@@ -176,8 +161,7 @@ class respawnMenuDialog {
             h = 0.022 * safezoneH;
             action = "closeDialog 26893";
         };
-        class respawnMenuRscComboRole: respawnMenu_RscCombo
-        {
+        class respawnMenuRscComboRole: respawnMenu_RscCombo {
             idc = 26896;
             text = "Role";
             x = 0.396792 * safezoneW + safezoneX;
@@ -185,8 +169,7 @@ class respawnMenuDialog {
             w = 0.0670312 * safezoneW;
             h = 0.022 * safezoneH;
         };
-        class respawnMenuRscComboRank: respawnMenu_RscCombo
-        {
+        class respawnMenuRscComboRank: respawnMenu_RscCombo {
             idc = 26897;
             text = "Rank";
             x = 0.396792 * safezoneW + safezoneX;
@@ -195,8 +178,7 @@ class respawnMenuDialog {
             h = 0.022 * safezoneH;
         };
         //Marker combo boxs
-        class RscCombo_2103: respawnMenu_RscCombo
-        {
+        class RscCombo_2103: respawnMenu_RscCombo {
             idc = 26900;
             text = "Side";
             x = 0.493103 * safezoneW + safezoneX;
@@ -204,8 +186,7 @@ class respawnMenuDialog {
             w = 0.0567187 * safezoneW;
             h = 0.022 * safezoneH;
         };
-        class RscCombo_2104: respawnMenu_RscCombo
-        {
+        class RscCombo_2104: respawnMenu_RscCombo {
             idc = 26901;
             text = "Side";
             x = 0.569973 * safezoneW + safezoneX;
@@ -213,8 +194,7 @@ class respawnMenuDialog {
             w = 0.0567187 * safezoneW;
             h = 0.022 * safezoneH;
         };
-        class respawnMenuVOIP: respawnMenu_RscButton
-        {
+        class respawnMenuVOIP: respawnMenu_RscButton {
             idc = 26927;
             text = "Toggle Spectator VOIP";
             x = 0.365937 * safezoneW + safezoneX;
@@ -224,8 +204,7 @@ class respawnMenuDialog {
             tooltip = "Toggles the spectator channel for you (ACRE/TFAR), so that you can talk to dead players if alive.";
             action = "['toggleSpectator'] spawn tfd_respawn_fnc_handleRespawnUI";
         };
-        class respawnMenuFactionCategoryCombo: respawnMenu_RscCombo
-        {
+        class respawnMenuFactionCategoryCombo: respawnMenu_RscCombo {
             idc = 26894;
             text = "FactionCategory"; /*Formerly side */
             x = 0.5825 * safezoneW + safezoneX;
@@ -233,8 +212,7 @@ class respawnMenuDialog {
             w = 0.0876563 * safezoneW;
             h = 0.022 * safezoneH;
         };
-        class respawnMenuFactionCombo: respawnMenu_RscCombo
-        {
+        class respawnMenuFactionCombo: respawnMenu_RscCombo {
             idc = 26928;
             text = "Faction";
             x = 0.5825 * safezoneW + safezoneX;
@@ -242,8 +220,7 @@ class respawnMenuDialog {
             w = 0.0876563 * safezoneW;
             h = 0.022 * safezoneH;
         };
-        class respawnMenuSideCombo: respawnMenu_RscCombo
-        {
+        class respawnMenuSideCombo: respawnMenu_RscCombo {
             idc = 26929;
             text = "Side";
             x = 0.675312 * safezoneW + safezoneX;
@@ -264,8 +241,7 @@ class respawnMenuMapDialog {
     class objects { 
     };
     class controls { 
-        class FullRespawnMap : RscMapControl
-        {
+        class FullRespawnMap: RscMapControl {
             idc = 26902;
             type = 100;
             x = 0 * safezoneW + safezoneX;

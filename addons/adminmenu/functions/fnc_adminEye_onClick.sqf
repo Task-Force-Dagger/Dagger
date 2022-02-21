@@ -8,8 +8,7 @@ private _mousePos = [_x,_y];
 
 
 if (_type == 0) then { // left click
-    GVAR(adminEyeSelectedObj) = objNull;
-    {
+    GVAR(adminEyeSelectedObj) = objNull; {
         private _pos = (position _x);
         if (_mousePos distance (_fullmapWindow posWorldToScreen _pos) < 0.1) exitWith {
             
@@ -18,8 +17,7 @@ if (_type == 0) then { // left click
         };
 
     } forEach GVAR(Triggers);
-
-    {
+ {
         private _pos = (position _x);
         if (_mousePos distance (_fullmapWindow posWorldToScreen _pos) < 0.1) exitWith {
             GVAR(adminEyeSelectedObj) = _x;

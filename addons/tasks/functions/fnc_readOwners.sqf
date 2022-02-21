@@ -18,8 +18,7 @@
 params ["_taskOwnersRaw"];
 
 private _taskOwners = [];
-
-{
+ {
     // If "All" keyword is used just return [true]
     if (_x isEqualTo "All" || {_x isEqualTo "true"}) exitWith {_taskOwners = [true]};
     // Check if side was given

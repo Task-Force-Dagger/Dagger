@@ -33,15 +33,13 @@ if (isNil "_prefix") then {
 };
 
 // Config File
-_cf = configFile >> "CfgFunctions"; { _cf = _cf >> _x } forEach _path;
-{
+_cf = configFile >> "CfgFunctions"; { _cf = _cf >> _x } forEach _path; {
     _ret pushBackUnique format["%1%2", _prefix, configName _x];
     nil
 } count ("true" configClasses _cf);
 
 // Mission Config File
-_cf = missionConfigFile >> "CfgFunctions"; { _cf = _cf >> _x } forEach _path;
-{
+_cf = missionConfigFile >> "CfgFunctions"; { _cf = _cf >> _x } forEach _path; {
     _ret pushBackUnique format["%1%2", _prefix, configName _x];
     nil
 } count ("true" configClasses _cf);

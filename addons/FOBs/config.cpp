@@ -1,9 +1,7 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-    class TFD_FOBs
-    {
+class CfgPatches {
+    class TFD_FOBs {
         author = AUTHOR;
         name = NAME;
         url = URL;

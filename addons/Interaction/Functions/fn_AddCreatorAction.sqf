@@ -25,9 +25,7 @@ Examples:
 [
     "MissionStart",
     "Start Mission",
-    "",
-    {hint "Mission started!";},
-    {true},
+    "", {hint "Mission started!";}, {true},
     ["ExampleActions"]
 ] call TFD_fnc_AddCreatorAction;
     (end)

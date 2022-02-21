@@ -15,13 +15,11 @@
 params [["_arr",[],[[]]]];
 
 // Look up in missionConfigFile first
-private _path = missionConfigFile;
-{_path = _path >> _x} forEach _this;
+private _path = missionConfigFile; {_path = _path >> _x} forEach _this;
 
 // If there was no corresponding entry in the missionConfig, try configFile
 if (configName _path isEqualTo "") then {
-    _path = configFile;
-    {_path = _path >> _x} forEach _this;
+    _path = configFile; {_path = _path >> _x} forEach _this;
 };
 
 // Get value from path

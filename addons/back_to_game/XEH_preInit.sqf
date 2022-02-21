@@ -18,9 +18,7 @@ if (isServer) then {
 };
 
 if (EGVAR(common,aceHearing)) then {
-    [
-        {_this getVariable ["ACE_hasEarPlugsIn", false]},
-        {
+    [ {_this getVariable ["ACE_hasEarPlugsIn", false]}, {
             params ["_player", "_hasEarPlugsIn"];
             _player setVariable ["ACE_hasEarPlugsIn", _hasEarPlugsIn, true];
         }

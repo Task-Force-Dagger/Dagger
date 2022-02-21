@@ -855,14 +855,10 @@ Author:
 #define COMPILE_FILE2_CFG(var1) COMPILE_FILE2_CFG_SYS('var1')
 
 
-#define VERSIONING_SYS(var1) class CfgSettings \
-{ \
-    class CBA \
-    { \
-        class Versioning \
-        { \
-            class var1 \
-            { \
+#define VERSIONING_SYS(var1) class CfgSettings \ { \
+    class CBA \ { \
+        class Versioning \ { \
+            class var1 \ { \
             }; \
         }; \
     }; \
@@ -1030,12 +1026,9 @@ Author:
 #define QQEFUNC(var1,var2) QUOTE(QEFUNC(var1,var2))
 
 #ifndef PRELOAD_ADDONS
-    #define PRELOAD_ADDONS class CfgAddons \
-{ \
-    class PreloadAddons \
-    { \
-        class ADDON \
-        { \
+    #define PRELOAD_ADDONS class CfgAddons \ { \
+    class PreloadAddons \ { \
+        class ADDON \ { \
             list[]={ QUOTE(ADDON) }; \
         }; \
     }; \
@@ -1411,8 +1404,7 @@ Author:
     Spooner
 ------------------------------------------- */
 #define ASSERT_TRUE(CONDITION,MESSAGE) \
-    if (not (CONDITION)) then \
-    { \
+    if (not (CONDITION)) then \ { \
         ASSERTION_ERROR('Assertion (CONDITION) failed!\n\n' + (MESSAGE)); \
     }
 
@@ -1433,8 +1425,7 @@ Author:
     Spooner
 ------------------------------------------- */
 #define ASSERT_FALSE(CONDITION,MESSAGE) \
-    if (CONDITION) then \
-    { \
+    if (CONDITION) then \ { \
         ASSERTION_ERROR('Assertion (not (CONDITION)) failed!\n\n' + (MESSAGE)) \
     }
 
@@ -1457,8 +1448,7 @@ Author:
     Spooner
 ------------------------------------------- */
 #define ASSERT_OP(A,OPERATOR,B,MESSAGE) \
-    if (not ((A) OPERATOR (B))) then \
-    { \
+    if (not ((A) OPERATOR (B))) then \ { \
         ASSERTION_ERROR('Assertion (A OPERATOR B) failed!\n' + 'A: ' + (str (A)) + '\n' + 'B: ' + (str (B)) + "\n\n" + (MESSAGE)); \
     }
 
@@ -1480,8 +1470,7 @@ Author:
     Spooner
 ------------------------------------------- */
 #define ASSERT_DEFINED(VARIABLE,MESSAGE) \
-    if (isNil VARIABLE) then \
-    { \
+    if (isNil VARIABLE) then \ { \
         ASSERTION_ERROR('Assertion (VARIABLE is defined) failed!\n\n' + (MESSAGE)); \
     }
 
@@ -1509,12 +1498,10 @@ Author:
     Killswitch
 ------------------------------------------- */
 #define TEST_TRUE(CONDITION, MESSAGE) \
-    if (CONDITION) then \
-    { \
+    if (CONDITION) then \ { \
         TEST_SUCCESS('(CONDITION)'); \
     } \
-    else \
-    { \
+    else \ { \
         TEST_FAIL('(CONDITION) ' + (MESSAGE)); \
     }
 
@@ -1536,12 +1523,10 @@ Author:
     Killswitch
 ------------------------------------------- */
 #define TEST_FALSE(CONDITION, MESSAGE) \
-    if (not (CONDITION)) then \
-    { \
+    if (not (CONDITION)) then \ { \
         TEST_SUCCESS('(not (CONDITION))'); \
     } \
-    else \
-    { \
+    else \ { \
         TEST_FAIL('(not (CONDITION)) ' + (MESSAGE)); \
     }
 
@@ -1565,12 +1550,10 @@ Author:
     Killswitch
 ------------------------------------------- */
 #define TEST_OP(A,OPERATOR,B,MESSAGE) \
-    if ((A) OPERATOR (B)) then \
-    { \
+    if ((A) OPERATOR (B)) then \ { \
         TEST_SUCCESS('(A OPERATOR B)') \
     } \
-    else \
-    { \
+    else \ { \
         TEST_FAIL('(A OPERATOR B)') \
     };
 
@@ -1625,12 +1608,10 @@ Author:
     Killswitch
 ------------------------------------------- */
 #define TEST_DEFINED(VARIABLE,MESSAGE) \
-    if (not isNil VARIABLE) then \
-    { \
+    if (not isNil VARIABLE) then \ { \
         TEST_SUCCESS('(' + VARIABLE + ' is defined)'); \
     } \
-    else \
-    { \
+    else \ { \
         TEST_FAIL('(' + VARIABLE + ' is not defined)' + (MESSAGE)); \
     }
 

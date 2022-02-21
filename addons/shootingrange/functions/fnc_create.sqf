@@ -69,8 +69,7 @@ if (_mode == 4 && {count _triggerMarkers < count _targetsInvalid}) exitWith {
 if (_defaultCountdownTime < COUNTDOWNTIME_LOWEST) then {
     WARNING_1("Default Countdown Time field/argument is below 5! Value set to default. (%1)",_name);
     _defaultCountdownTime = COUNTDOWNTIME_DEFAULT;
-};
-{
+}; {
     if (_x < COUNTDOWNTIME_LOWEST) then {
         WARNING_1("Countdown Times field/argument contains a value below 5! Removed value. (%1)",_name);
         _countdownTimes deleteAt _forEachIndex;
@@ -141,8 +140,7 @@ _targets = _targets select { !isNull _x };
 TRACE_2("Targets All",_targetsAll,_targets);
 
 
-// Set up default configuration and interactions
-{
+// Set up default configuration and interactions {
     _x setVariable [QGVAR(targets), _targets];
     _x setVariable [QGVAR(targetsInvalid), _targetsInvalid];
     if (_x getVariable [QGVAR(duration), 0] == 0) then {
@@ -166,10 +164,7 @@ TRACE_2("Targets All",_targetsAll,_targets);
     private _actionRange = [
         QGVAR(Range),
         format ["%1%2", localize LSTRING(Range), _name],
-        "",
-        {true},
-        {!((_this select 2) getVariable [QGVAR(running), false])},
-        {},
+        "", {true}, {!((_this select 2) getVariable [QGVAR(running), false])}, {},
         _x
     ] call ACEFUNC(interact_menu,createAction);
 
@@ -177,10 +172,7 @@ TRACE_2("Targets All",_targetsAll,_targets);
     private _actionStop = [
         QGVAR(RangeStop),
         format ["%1 %2%3", localize LSTRING(Stop), localize LSTRING(Range), _name],
-        "",
-        {(_this select 2) call FUNC(stop)},
-        {((_this select 2) select 0) getVariable [QGVAR(running), false]},
-        {},
+        "", {(_this select 2) call FUNC(stop)}, {((_this select 2) select 0) getVariable [QGVAR(running), false]}, {},
         [_x, _controllers, _name, _targets]
     ] call ACEFUNC(interact_menu,createAction);
 
@@ -192,10 +184,7 @@ TRACE_2("Targets All",_targetsAll,_targets);
     private _actionStart = [
         QGVAR(RangeStart),
         localize LSTRING(Start),
-        "",
-        {(_this select 2) call FUNC(start)},
-        {true},
-        {},
+        "", {(_this select 2) call FUNC(start)}, {true}, {},
         [_x, _controllers, _name, _targets, _targetsInvalid]
     ] call ACEFUNC(interact_menu,createAction);
 
@@ -206,10 +195,7 @@ TRACE_2("Targets All",_targetsAll,_targets);
     private _actionConfig = [
         QGVAR(RangeConfig),
         localize LSTRING(Configure),
-        "",
-        {true},
-        {true},
-        {},
+        "", {true}, {true}, {},
         [_x]
     ] call ACEFUNC(interact_menu,createAction);
 
@@ -218,10 +204,7 @@ TRACE_2("Targets All",_targetsAll,_targets);
     private _actionCheckConfig = [
         QGVAR(RangeConfigCheck),
         localize LSTRING(Check),
-        "",
-        {(_this select 2) call FUNC(checkConfig)},
-        {true},
-        {},
+        "", {(_this select 2) call FUNC(checkConfig)}, {true}, {},
         [_x, _name, _targets]
     ] call ACEFUNC(interact_menu,createAction);
 
@@ -230,10 +213,7 @@ TRACE_2("Targets All",_targetsAll,_targets);
     private _actionConfigDuration = [
         QGVAR(RangeConfigDuration),
         localize LSTRING(Duration),
-        "",
-        {true},
-        {((_this select 2) select 1) getVariable [QGVAR(mode), MODE_DEFAULT] in [1, 2, 5]},
-        {(_this select 2) call FUNC(addConfigDurations)},
+        "", {true}, {((_this select 2) select 1) getVariable [QGVAR(mode), MODE_DEFAULT] in [1, 2, 5]}, {(_this select 2) call FUNC(addConfigDurations)},
         [_name, _x, _controllers, _durations, _targets]
     ] call ACEFUNC(interact_menu,createAction);
 
@@ -242,10 +222,7 @@ TRACE_2("Targets All",_targetsAll,_targets);
     private _actionConfigTargetAmount = [
         QGVAR(RangeConfigTargetAmount),
         localize LSTRING(TargetAmount),
-        "",
-        {true},
-        {((_this select 2) select 1) getVariable [QGVAR(mode), MODE_DEFAULT] == 3},
-        {(_this select 2) call FUNC(addConfigTargetAmounts)},
+        "", {true}, {((_this select 2) select 1) getVariable [QGVAR(mode), MODE_DEFAULT] == 3}, {(_this select 2) call FUNC(addConfigTargetAmounts)},
         [_name, _x, _controllers, _targetAmounts, _targets]
     ] call ACEFUNC(interact_menu,createAction);
 
@@ -255,10 +232,7 @@ TRACE_2("Targets All",_targetsAll,_targets);
         private _actionConfigPauseDuration = [
             QGVAR(RangeConfigPauseDuration),
             localize LSTRING(PauseDuration),
-            "",
-            {true},
-            {((_this select 2) select 1) getVariable [QGVAR(mode), MODE_DEFAULT] == 1},
-            {(_this select 2) call FUNC(addConfigPauseDurations)},
+            "", {true}, {((_this select 2) select 1) getVariable [QGVAR(mode), MODE_DEFAULT] == 1}, {(_this select 2) call FUNC(addConfigPauseDurations)},
             [_name, _x, _controllers, _pauseDurations, _targets]
         ] call ACEFUNC(interact_menu,createAction);
 
@@ -268,10 +242,7 @@ TRACE_2("Targets All",_targetsAll,_targets);
     private _actionConfigCountdownTime = [
         QGVAR(RangeConfigCountdownTime),
         localize LSTRING(CountdownTime),
-        "",
-        {true},
-        {true},
-        {(_this select 2) call FUNC(addConfigCountdownTimes)},
+        "", {true}, {true}, {(_this select 2) call FUNC(addConfigCountdownTimes)},
         [_name, _x, _controllers, _countdownTimes, _targets]
     ] call ACEFUNC(interact_menu,createAction);
 
@@ -281,50 +252,35 @@ TRACE_2("Targets All",_targetsAll,_targets);
         private _actionConfigMode = [
             QGVAR(RangeConfigMode),
             localize LSTRING(Mode),
-            "",
-            {true},
-            {true},
-            {},
+            "", {true}, {true}, {},
             []
         ] call ACEFUNC(interact_menu,createAction);
 
         private _actionConfigModeTime = [
             QGVAR(RangeConfigModeTime),
             localize LSTRING(Timed),
-            "",
-            {(_this select 2) call FUNC(setConfigMode)},
-            {true},
-            {},
+            "", {(_this select 2) call FUNC(setConfigMode)}, {true}, {},
             [_name, _x, _controllers, 1, _targets]
         ] call ACEFUNC(interact_menu,createAction);
 
         private _actionConfigModeHitTimeLimited = [
             QGVAR(RangeConfigModeHitTimeLimited),
             localize LSTRING(HitTimeLimit),
-            "",
-            {(_this select 2) call FUNC(setConfigMode)},
-            {true},
-            {},
+            "", {(_this select 2) call FUNC(setConfigMode)}, {true}, {},
             [_name, _x, _controllers, 2, _targets]
         ] call ACEFUNC(interact_menu,createAction);
 
         private _actionConfigModeHitTargetLimited = [
             QGVAR(RangeConfigModeHitTargetLimited),
             localize LSTRING(HitTargetLimit),
-            "",
-            {(_this select 2) call FUNC(setConfigMode)},
-            {true},
-            {},
+            "", {(_this select 2) call FUNC(setConfigMode)}, {true}, {},
             [_name, _x, _controllers, 3, _targets]
         ] call ACEFUNC(interact_menu,createAction);
 
         private _actionConfigModeRampage = [
             QGVAR(RangeConfigModeRampage),
             localize LSTRING(Rampage),
-            "",
-            {(_this select 2) call FUNC(setConfigMode)},
-            {true},
-            {},
+            "", {(_this select 2) call FUNC(setConfigMode)}, {true}, {},
             [_name, _x, _controllers, 5, _targets]
         ] call ACEFUNC(interact_menu,createAction);
 
@@ -343,8 +299,7 @@ if (_mode == 4) then {
     // Prepare target groups
     [_targetsAll, _targetsInvalid, _triggerMarkers] call FUNC(setTargetGroups);
 
-    // Set up triggers
-    {
+    // Set up triggers {
         if !(_x in _triggerMarkersSet) then {
             private _trigger = _x;
 
@@ -378,8 +333,7 @@ if (_mode == 4) then {
 };
 
 
-// Set up targets
-{
+// Set up targets {
     _x setVariable [QGVAR(targets), _targets];
     _x setVariable [QGVAR(targetsInvalid), _targetsInvalid];
     _x setVariable [QGVAR(controllers), _controllers];

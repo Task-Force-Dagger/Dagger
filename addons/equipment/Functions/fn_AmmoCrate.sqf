@@ -20,8 +20,7 @@ if (_canBeReFreshed) then {_isUnlimited =true};
 _PlayableUnits = [player];
 if (isMultiplayer) then {_PlayableUnits = playableUnits};
 ///get all weapons in all weapons slots for all playable units
-_allPlayerWeapons = [];
-{
+_allPlayerWeapons = []; {
 _mainWeapon = (getUnitloadout _x select 0) select 0;
 _launcher = (getUnitloadout _x select 1) select 0;
 _handGun = (getUnitloadout _x select 2) select 0;
@@ -33,8 +32,7 @@ if(!isNil "_handGun") then {_allPlayerWeapons pushBackUnique _handGun};
 
 
 //get all fitting munitions for said weapons
-_allMagazinesType = [];
-{
+_allMagazinesType = []; {
 private ["_uniquemags","_magazineTypeS"];
 
 //_uniquemags = [];
@@ -52,8 +50,7 @@ _magazineTypeS = getarray (configfile >> "CfgWeapons" >> _x >>"magazines");
 
 //Fills box with given content
 
-//systemChat format ["Weps %1 Mags %2 Box %3", str _allPlayerWeapons, str _allMagazinesType, str _box];
-{
+//systemChat format ["Weps %1 Mags %2 Box %3", str _allPlayerWeapons, str _allMagazinesType, str _box]; {
 _do= _box addMagazineCargoGlobal [_x, _Ammount];
 1
 } forEach _allMagazinesType;

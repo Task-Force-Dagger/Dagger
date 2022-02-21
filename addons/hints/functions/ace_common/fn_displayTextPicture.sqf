@@ -33,8 +33,7 @@ if (_hint_enabled && _hint_option_ace) then {
  
  if (typeName _text != "TEXT") then {
   if (_text isEqualType []) then {
-   if (count _text > 0) then {
-    {
+   if (count _text > 0) then { {
      if (_x isEqualType "" && {isLocalized _x}) then {
       _text set [_forEachIndex, localize _x];
      };

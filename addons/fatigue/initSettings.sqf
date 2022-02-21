@@ -4,8 +4,7 @@
     [LSTRING(High_Jog_Coef_Enabled), LSTRING(High_Jog_Coef_Enabled_Description)],
     COMPONENT_NAME,
     false,
-    1,
-    {[_this] call FUNC(toggleHighJogFactor)}
+    1, {[_this] call FUNC(toggleHighJogFactor)}
 ] call CBA_fnc_addSetting;
 
 [

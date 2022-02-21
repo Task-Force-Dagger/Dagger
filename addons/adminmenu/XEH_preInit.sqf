@@ -7,8 +7,7 @@
 GVAR(logEntries) = [];
 
 [ // Handle new log messages
-    QGVAR(log),
-    {
+    QGVAR(log), {
         params [
             ["_time", CBA_missionTime, [-1]],
             ["_text","",[""]],

@@ -55,8 +55,7 @@ _ctrlButton ctrlAddEventHandler ["buttonClick", {
             0
         };
 
-        if (_target isEqualTo -1) then {
-            {
+        if (_target isEqualTo -1) then { {
                 _x call _code;
             } forEach GVAR(utilityData);
         } else {
@@ -67,8 +66,7 @@ _ctrlButton ctrlAddEventHandler ["buttonClick", {
                 }] remoteExec ["call", GVAR(utilityData)];
             } else {
                 [[GVAR(utilityData), compile _editText], {
-                    params ["_players", "_code"];
-                    {
+                    params ["_players", "_code"]; {
                         _x call _code;
                     } forEach _players;
                 }] remoteExec ["call", _target];

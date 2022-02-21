@@ -34,8 +34,7 @@ if (!hasinterface) exitwith {};
 [
     _object,
     format ["t1_cas_action_%1", round (random 10000)],
-    "<t color='#e74c3c'>T1 Casualty</t>",
-    {
+    "<t color='#e74c3c'>T1 Casualty</t>", {
         params ["_target", "_caller", "_arguments"];
 
         for "_i" from 1 to 6 do {
@@ -58,8 +57,7 @@ if (!hasinterface) exitwith {};
 [
     _object,
     format ["t2_cas_action_%1", round (random 10000)],
-    "<t color='#f1c40f'>T2 Casualty</t>",
-    {
+    "<t color='#f1c40f'>T2 Casualty</t>", {
         params ["_target", "_caller", "_arguments"];
         for "_i" from 1 to 3 do {
             [_target, 0.7, selectRandom (_arguments select 0), selectRandom (_arguments select 1)] remoteExecCall ["ace_medical_fnc_addDamageToUnit", 0];
@@ -81,8 +79,7 @@ if (!hasinterface) exitwith {};
 [
     _object,
     format ["t3_cas_action_%1", round (random 10000)],
-    "<t color='#27ae60'>T3 Casualty</t>",
-    {
+    "<t color='#27ae60'>T3 Casualty</t>", {
         params ["_target", "_caller", "_arguments"];
 
         for "_i" from 1 to 2 do {
@@ -103,8 +100,7 @@ if (!hasinterface) exitwith {};
 [
     _object,
     format ["reset_cas_action_%1", round (random 10000)],
-    "<t color='#666666'>Reset Casualty</t>",
-    {
+    "<t color='#666666'>Reset Casualty</t>", {
         params ["_target", "_caller", "_arguments"];
         [_target] remoteExecCall ["ace_medical_treatment_fnc_fullHealLocal", _target];
         _target disableAI "MOVE";

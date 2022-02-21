@@ -46,8 +46,7 @@ fn_removeGroupFromLang = {
         _value = _value - [_curSel];
         _group set3denAttribute ["TFD_BabelLanguages",str _value];
     };
-    // do units
-    {
+    // do units {
         [_channel, _x] call fn_removeUnitFromLang;
     } forEach (units _group);
 };
@@ -68,10 +67,8 @@ switch _mode do {
                 ["Greek",[resistance]]
             ];
         } else {
-            //Deserialize number to side.
-            {
-                _x params ["","_conditions"];
-                {
+            //Deserialize number to side. {
+                _x params ["","_conditions"]; {
                     if (_x isEqualType 0) then {
                         _conditions set [_forEachIndex, (_x call TFD_common_fnc_numToSide)];
                     };
@@ -88,11 +85,9 @@ switch _mode do {
         _ctrlGroup ctrladdeventhandler ["setfocus",{with uinamespace do {BabelSettings_ctrlGroup = _this select 0;};}];
         _ctrlGroup ctrladdeventhandler ["killfocus",{with uinamespace do {BabelSettings_ctrlGroup = nil;};}];
         
-                
-        {
+                 {
             (_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
-        } forEach (EDIT_CHANNEL_IDCS);
-        {
+        } forEach (EDIT_CHANNEL_IDCS); {
             (_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
         } forEach (BEHIND_EDIT_CHANNELS_IDCS);
         
@@ -103,10 +98,8 @@ switch _mode do {
         //Attribute loading is done in onLoad instead.
     };
     case "attributeSave": {
-        private _array = + (uiNamespace getVariable "BabelArray");
-        {
-            _x params ["","_conditions"];
-            {
+        private _array = + (uiNamespace getVariable "BabelArray"); {
+            _x params ["","_conditions"]; {
                 if (_x isEqualType east) then {
                     _conditions set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                 };
@@ -123,8 +116,7 @@ switch _mode do {
         private _ctrlLangList = BabelSettings_ctrlGroup controlsGroupCtrl 101;
         _ctrlLangList lnbSetColumnsPos [0,5,5];
         
-        lnbClear _ctrlLangList;
-        {
+        lnbClear _ctrlLangList; {
             _x params ["_name"];
             _ctrlLangList lnbaddrow [_name, "", ""];
         } forEach BabelArray;
@@ -228,8 +220,7 @@ switch _mode do {
                 };
             };            
             
-            private _hasSpeaker = false;
-            {
+            private _hasSpeaker = false; {
                 if ([_ctrlTree, _location, _doSpeak, _x] call fn_langTreeProcessUnit != 3) then { 
                     _hasSpeaker = true;
                 };
@@ -271,8 +262,7 @@ switch _mode do {
             private _factionImg = getText (configfile >> "CfgFactionClasses" >> _faction >> "icon");
             _ctrlTree tvSetPicture [_location, _factionImg];
             
-            private _hasSpeaker = false;            
-            {
+            private _hasSpeaker = false;             {
                 if ([_ctrlTree, _location, _doSpeak, _x] call fn_langTreeProcessGroup != 3) then {
                     _hasSpeaker = true;
                 };
@@ -297,8 +287,7 @@ switch _mode do {
         };
         
         
-        private _sides = []; {_sides pushBackUnique (side _x);} forEach cacheAllPlayerGroups;
-        {
+        private _sides = []; {_sides pushBackUnique (side _x);} forEach cacheAllPlayerGroups; {
             private _side = _x;
             private _doSpeak = false;
             private _location = [(_ctrlTree tvAdd [[], _side call TFD_common_fnc_sideToString])];
@@ -310,12 +299,10 @@ switch _mode do {
             };
             
             //Collect factions for side.
-            _factions = [];
-            {
+            _factions = []; {
                 _factions pushBackUnique (toLower (faction (leader _x)));
             } forEach (cacheAllPlayerGroups select {(side _x) == _side});
-            private _hasSpeaker = false;
-            {
+            private _hasSpeaker = false; {
                 if ([_ctrlTree, _location, _doSpeak, _x] call fn_langTreeProcessFaction != 3) then { _hasSpeaker = true; };
             } forEach _factions;
             
@@ -344,11 +331,9 @@ switch _mode do {
         };
     };
     case "langAddClick": {
-        with uiNamespace do {
-            {
+        with uiNamespace do { {
                 (BabelSettings_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
-            } forEach (EDIT_CHANNEL_IDCS);
-            {
+            } forEach (EDIT_CHANNEL_IDCS); {
                 (BabelSettings_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
             
@@ -364,11 +349,9 @@ switch _mode do {
                                 
             private _languages = (BabelArray select _curSel);
             _languages params ["_name"];
-            
-            {
+             {
                 (BabelSettings_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
-            } forEach (EDIT_CHANNEL_IDCS);
-            {
+            } forEach (EDIT_CHANNEL_IDCS); {
                 (BabelSettings_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
             
@@ -393,22 +376,18 @@ switch _mode do {
                 BabelArray pushBack [ctrlText (BabelSettings_ctrlGroup controlsGroupCtrl 313206),[]];
             };
             
-            ["refreshLangList"] call BabelSettings_script;
-            {
+            ["refreshLangList"] call BabelSettings_script; {
                 (BabelSettings_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
-            } forEach (EDIT_CHANNEL_IDCS);
-            {
+            } forEach (EDIT_CHANNEL_IDCS); {
                 (BabelSettings_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
             ["save"] call BabelSettings_script;
         };
     };
     case "languageDelClickCancel": {
-        with uiNamespace do {
-            {
+        with uiNamespace do { {
                 (BabelSettings_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
-            } forEach (EDIT_CHANNEL_IDCS);
-            {
+            } forEach (EDIT_CHANNEL_IDCS); {
                 (BabelSettings_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
         };
@@ -458,8 +437,7 @@ switch _mode do {
                 _langEntry set [1,_condition - [_entity]];
                 if (_entity isEqualType east) then {
                     //Find and remove matching faction groups
-                    private _sideNum = _entity call TFD_common_fnc_sideToNum;
-                    {
+                    private _sideNum = _entity call TFD_common_fnc_sideToNum; {
                         if (_x isEqualType "") then {
                             if (_sideNum == getNumber (configfile >> "CfgFactionClasses" >> _x >> "side")) then {
                                 _langEntry set [1,_condition - [_x]];
@@ -467,14 +445,12 @@ switch _mode do {
                         };
                     } forEach (_condition);
                 
-                    //remove groups
-                    {
+                    //remove groups {
                         [_curSel, _x] call fn_removeGroupFromLang;
                     } forEach (allGroups select {side _x == _entity});
                 };
                 //Also remove faction.
-                if (_entity isEqualType "") then {
-                    {
+                if (_entity isEqualType "") then { {
                         [_curSel, _x] call fn_removeUnitFromLang;
                     } forEach (allGroups select {faction (leader _x) == _entity});
                 };
@@ -494,10 +470,8 @@ switch _mode do {
     
     case "save": {
         //RadioChannelArray
-        private _array = + (uiNamespace getVariable "BabelArray");
-        {
-            _x params ["","_conditions"];
-            {
+        private _array = + (uiNamespace getVariable "BabelArray"); {
+            _x params ["","_conditions"]; {
                 if (_x isEqualType east) then {
                     _conditions set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                 };

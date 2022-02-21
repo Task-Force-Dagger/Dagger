@@ -40,8 +40,7 @@ private _lifter = createVehicle ["O_Heli_Transport_04_F", [0, 0, 0], [], 0, "NON
 
 private _modifyClasses = [];
 private _baseClasses = [];
-private _sourcePatches = [];
-{
+private _sourcePatches = []; {
     if (getNumber (_x >> "scope") == 2 && {getArray (_x >> QGVAR(attachPos)) isEqualTo []}) then {
         // Check if it can be slingloaded by default
         private _vehicle = createVehicle [configName _x, [0, 0, 0], [], 0, "NONE"];
@@ -78,13 +77,11 @@ deleteVehicle _lifter;
 
 // Generate config
 private _nl = toString [13, 10];
-"ace_clipboard" callExtension format ["class CfgVehicles {%1", _nl];
-{
+"ace_clipboard" callExtension format ["class CfgVehicles {%1", _nl]; {
     "ace_clipboard" callExtension format ["    class %2;%1", _nl, configName _x];
     false
 } count _baseClasses;
-"ace_clipboard" callExtension _nl;
-{
+"ace_clipboard" callExtension _nl; {
     _x params ["_class", "_parent", "_attachPos"];
     "ace_clipboard" callExtension format [
         "    class %2: %3 {%1        GVAR(attachPos)[] = {%4, %5, %6};%1    };%1",
@@ -94,8 +91,7 @@ private _nl = toString [13, 10];
 } count _modifyClasses;
 "ace_clipboard" callExtension format ["};%1", _nl];
 
-"ace_clipboard" callExtension format ["%1        requiredAddons[] = {%1", _nl];
-{
+"ace_clipboard" callExtension format ["%1        requiredAddons[] = {%1", _nl]; {
     if (_forEachIndex + 1 < count _sourcePatches) then {
         "ace_clipboard" callExtension format ['            "%2",%1', _nl, _x];
     } else {

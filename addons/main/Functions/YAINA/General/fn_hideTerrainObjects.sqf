@@ -34,19 +34,16 @@ params ["_pos", "_radius", ["_excludes", []], ["_types", CATEGORIES, [[]]]];
 if !(isServer) exitWith {};
 
 
-private _clearTypes  = [];
-{
+private _clearTypes  = []; {
     _id = CATEGORIES find _x;
-    if (_id isEqualTo -1) exitWith { _clearTypes pushBackUnique _x; };
-    {
+    if (_id isEqualTo -1) exitWith { _clearTypes pushBackUnique _x; }; {
         _clearTypes pushBackUnique _x;
         true;
     } count (CATEGORY_COMP select _id);
 } forEach _types;
 
 private _hide = nearestTerrainObjects [_pos, _clearTypes, _radius, false, true];
-
-{
+ {
     if !(_x in _excludes) then {
         _x hideObjectGlobal true;
         _x allowDamage false;

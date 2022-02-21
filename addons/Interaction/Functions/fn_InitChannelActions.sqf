@@ -3,13 +3,10 @@ if !(hasinterface && (isClass (configFile >> "CfgPatches" >> "ace_main"))) exitW
 [
     "ChannelActions",
     "Channel Actions",
-    "",
-    {diag_log "Running channel actions parent";},
-    {true},
+    "", {diag_log "Running channel actions parent";}, {true},
     []
 ] call TFD_fnc_AddCreatorAction;
-
-{
+ {
     _channelID = _forEachIndex;
     _channelName = _x;
 

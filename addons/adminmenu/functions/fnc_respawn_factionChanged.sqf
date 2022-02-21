@@ -16,8 +16,7 @@ call {
 
 private _control = (_display displayCtrl IDC_TFD_ADMINMENU_RESP_ROLECOMBO); /* Role control */ 
 lbClear _control;
-respawnMenuRoles = [];
-{
+respawnMenuRoles = []; {
     private _displayName = getText(_x >> "displayName");
     private _index = _control lbAdd _displayName;
     private _configName = (configName _x);

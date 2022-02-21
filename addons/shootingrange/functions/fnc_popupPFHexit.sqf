@@ -49,8 +49,7 @@ if (_mode > 1) then {
         GVAR(firedEHid) = nil;
     };
 
-    if (_mode == 4) then {
-        {
+    if (_mode == 4) then { {
             _x enableSimulation false;
         } forEach _triggers;
 

@@ -39,9 +39,7 @@ _cueCardsData = [
 _parentAction = [
     "CueCardAction",
     "Cue Cards",
-    "",
-    {diag_log "running parent action"},
-    {true}
+    "", {diag_log "running parent action"}, {true}
 ] call ace_interact_menu_fnc_createAction;
 
 [player, 1, ["ACE_SelfActions"], _parentAction] call ace_interact_menu_fnc_addActionToObject;
@@ -50,8 +48,7 @@ _parentAction = [
 _npAction = [
     "openNotepad",
     "Open Notepad",
-    "", // see if this looks nice or not TODO
-    {
+    "", // see if this looks nice or not TODO {
             _this spawn {
             params ["_target", "_caller"];
 
@@ -61,17 +58,14 @@ _npAction = [
             ([] call bis_fnc_displayMission) createdisplay "RscNotepad";
             [missionnamespace,"cueCardShown",[_target] + ["Notepad"]] spawn bis_fnc_callScriptedEventHandler;
         };
-    },
-    {true},
-    {},
+    }, {true}, {},
     [],
     ""
 ] call ace_interact_menu_fnc_createAction;
 
 [player, 1, ["ACE_SelfActions", "CueCardAction"], _npAction] call ace_interact_menu_fnc_addActionToObject;
 
-// Add Cue Card Actions
-{
+// Add Cue Card Actions {
 
     _x params [
         "_texture",
@@ -86,8 +80,7 @@ _npAction = [
     _action = [
         _id,
         _title,
-        _texture, // see if this looks nice or not TODO
-        {
+        _texture, // see if this looks nice or not TODO {
             _this spawn {
                 params ["_target", "_caller", "_data"];
 
@@ -99,9 +92,7 @@ _npAction = [
                 ([] call bis_fnc_displayMission) createdisplay "NotepadDialog";
                 [missionnamespace,"cueCardShown",[_target] + _data] spawn bis_fnc_callScriptedEventHandler;
             };
-        },
-        {true},
-        {},
+        }, {true}, {},
         _x,
         ""
     ] call ace_interact_menu_fnc_createAction;

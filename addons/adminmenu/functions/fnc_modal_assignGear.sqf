@@ -58,8 +58,7 @@ GVAR(utility_assigngear_rolectrls) = [];
 private _ctrlLabelPlayerW = 0.4 * _ctrlGrpRolesWidth;
 private _ctrlComboRoleX = 0.5 * _ctrlGrpRolesWidth;
 private _ctrlComboRoleW = (0.5 * _ctrlGrpRolesWidth) - TFD_ADMINMENU_STD_WIDTH;
-private _ctrlCheckChangeX = _ctrlGrpRolesWidth - TFD_ADMINMENU_STD_WIDTH;
-{
+private _ctrlCheckChangeX = _ctrlGrpRolesWidth - TFD_ADMINMENU_STD_WIDTH; {
     private _ctrlLineY = _forEachIndex * (1.1 * TFD_ADMINMENU_STD_HEIGHT);
 
     private _ctrlLabelPlayer = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGrpRoles];
@@ -94,8 +93,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick", {
     (_ctrlButton getVariable [QGVAR(association), [controlNull, controlNull]]) params ["_ctrlCheckFaction", "_ctrlComboFaction"];
     private _setFaction = cbChecked _ctrlCheckFaction;
     private _selectedFaction = _ctrlComboFaction lbData (lbCurSel _ctrlComboFaction);
-
-    {
+ {
         (_x getVariable [QGVAR(association), [objNull, controlNull]]) params ["_player", "_ctrlComboRole"];
 
         private _playerRole = _player getVariable [QEGVAR(assignGear,role), ""];

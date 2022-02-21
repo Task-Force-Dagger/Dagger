@@ -2,8 +2,7 @@
 
 if (!isServer) exitWith {};
 
-private _adminId = -1;
-{
+private _adminId = -1; {
     if (admin owner _x > 0) exitWith {
         _adminId = owner _x;
     };

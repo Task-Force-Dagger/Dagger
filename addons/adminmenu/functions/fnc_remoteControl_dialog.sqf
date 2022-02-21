@@ -12,8 +12,7 @@ private _dialogPosition = ctrlPosition _ctrlBackground;
 
 private _ctrlList = _display ctrlCreate [QGVAR(RscListBox), -1];
 _ctrlList ctrlSetPosition [(_dialogPosition # 0) + 0.1 * TFD_ADMINMENU_STD_WIDTH, (_dialogPosition # 1) + 0.1 * TFD_ADMINMENU_STD_HEIGHT, (_dialogPosition # 2) - (0.2 * TFD_ADMINMENU_STD_WIDTH), (_dialogPosition # 3) - (0.2 * TFD_ADMINMENU_STD_HEIGHT)];
-_ctrlList ctrlCommit 0;
-{
+_ctrlList ctrlCommit 0; {
     private _name = _x # 1;
     private _turretPath = _x # 3;
     if !(_turretPath isEqualTo [] || _turretPath isEqualTo [-1]) then {

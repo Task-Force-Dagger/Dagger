@@ -15,8 +15,7 @@ Author:
 ---------------------------------------------------------------------------- */
 
 diag_log "[TFD Adminmenu] Printing complete log to RPT";
-
-{
+ {
     _x params [
         ["_time",CBA_missionTime,[-1]],
         ["_text","",[""]],

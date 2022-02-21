@@ -47,8 +47,7 @@ if (local _unit) then {
         _Traits
     };
 
-    if !(_TraitsArray isEqualTo []) then {
-        {
+    if !(_TraitsArray isEqualTo []) then { {
             _unit setUnitTrait [_x, true, true];
         } forEach _TraitsArray;
     };

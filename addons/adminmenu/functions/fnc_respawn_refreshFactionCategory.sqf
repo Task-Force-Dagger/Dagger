@@ -12,8 +12,7 @@ private _activeFactionCategory = GVAR(currentFactionCategory);
 private _factions = [];
 
 /* Fill Faction categories */
-private _playerFactions = [] call CBA_fnc_hashCreate;
-{
+private _playerFactions = [] call CBA_fnc_hashCreate; {
     private _faction = _x getVariable ["tfd_assignGear_faction",""];
     if (_faction != "") then {
         if ([_playerFactions,_faction] call CBA_fnc_hashHasKey) then {
@@ -26,15 +25,13 @@ private _playerFactions = [] call CBA_fnc_hashCreate;
 } forEach allPlayers;
 
 if (_activeFactionCategory == "mission") then {
-    // use missionConfigFile
-    {
+    // use missionConfigFile {
         private _factionName = (toLower(configName _x));
         _factions pushBackUnique [getText(_x >> "displayName"),_factionName];
     } forEach (configProperties [missionConfigFile >> "CfgLoadouts","isClass _x"]);
 
 } else {
-    // Then configFile
-    {
+    // Then configFile {
         private _category = toLower (getText (_x >> "category"));
         if (_category == "") then {_category = "Other";};
         if (_activeFactionCategory == _category) then {
@@ -46,8 +43,7 @@ if (_activeFactionCategory == "mission") then {
 
 //Alphabetical sort.
 _factions sort true;
-
-{
+ {
     _x params ["_displayName","_configName"];
     private _players = 0;
     // Mission factioni class overrides so show 0 if configFile class is of same name.

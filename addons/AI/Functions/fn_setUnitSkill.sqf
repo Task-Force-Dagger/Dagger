@@ -59,8 +59,7 @@ if !(isNil "tfd_AI_AimingAccuracy") then {
     ];
 };
 
-
-{
+ {
     if (_x < 0) then {_x = 0 };
     if (_x > 1) then {_x = 1 };
 } foreach _skillv;
@@ -70,9 +69,7 @@ private _units = call {
     if ((typeName _target) isEqualTo "ARRAY") exitWith { _target };
     [_target];
 };
-
-{
+ {
     _a = _x;
-    _b = _skillv select _forEachIndex;
-    {_x setSkill [_a, _b]; true } count _units;
+    _b = _skillv select _forEachIndex; {_x setSkill [_a, _b]; true } count _units;
 } forEach _skillt;

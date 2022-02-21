@@ -7,15 +7,13 @@ params ["_ctrlCheckBox", "_onlyPresent"];
 private _factions = [];
 
 if (_onlyPresent isEqualTo 1) then {
-    private _missionFactionsFound = [];
-    {
+    private _missionFactionsFound = []; {
         private _faction = _x getVariable [QEGVAR(assigngear,faction), ""];
         if !(_faction isEqualTo "") then {
             _missionFactionsFound pushBackUnique toLower _faction;
         };
     } forEach allPlayers;
-
-    {
+ {
         private _displayName = getText (missionConfigFile >> "CfgLoadouts" >> _x >> "displayName");
         private _fromMissionConfig = 1;
         if (_displayName isEqualTo "") then {
@@ -26,13 +24,11 @@ if (_onlyPresent isEqualTo 1) then {
         _factions pushBack [_displayName, _x, _fromMissionConfig];
     } forEach _missionFactionsFound;
 } else {
-    private _missionConfigFactions = [];
-    {
+    private _missionConfigFactions = []; {
         _missionConfigFactions pushBack toLower configName _x;
         _factions pushBack [getText (_x >> "displayName"), configName _x, 1];
     } forEach ("true" configClasses (missionConfigFile >> "CfgLoadouts"));
-
-    {
+ {
         if !((toLower configName _x) in _missionConfigFactions) then {
             _factions pushBack [getText (_x >> "displayName"), configName _x, 0];
         };
@@ -41,8 +37,7 @@ if (_onlyPresent isEqualTo 1) then {
 
 _factions sort true;
 
-private _ctrlComboFaction = _ctrlCheckBox getVariable [QGVAR(association), controlNull];
-{
+private _ctrlComboFaction = _ctrlCheckBox getVariable [QGVAR(association), controlNull]; {
     _x params ["_displayName", "_className", "_fromMissionConfig"];
     if (_fromMissionConfig isEqualTo 1) then {
         _displayName = format ["%1 *", _displayName];

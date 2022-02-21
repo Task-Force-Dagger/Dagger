@@ -9,8 +9,7 @@ private _occluderText = switch (_checkboxIdc) do {
     case IDC_TFD_ADMINMENU_ENDM_CUSTOM: { "Using Custom Ending" };
     default { "..." };
 };
-
-{
+ {
     (_display displayCtrl _x) ctrlSetText _occluderText;
 } forEach IDCS_TFD_ADMINMENU_ENDM_OCCLUDERS;
 
@@ -22,8 +21,7 @@ private _useFromMission = (_checkboxIdc isEqualTo IDC_TFD_ADMINMENU_ENDM_FROMMIS
 (_display displayCtrl IDC_TFD_ADMINMENU_ENDM_OCCLUDER_LU) ctrlShow !_useFromMission;
 
 private _useSideSpecific = (_checkboxIdc isEqualTo IDC_TFD_ADMINMENU_ENDM_SIDESPECIFIC);
-(_display displayCtrl IDC_TFD_ADMINMENU_ENDM_SIDESPECIFIC) cbSetChecked _useSideSpecific;
-{
+(_display displayCtrl IDC_TFD_ADMINMENU_ENDM_SIDESPECIFIC) cbSetChecked _useSideSpecific; {
     (_display displayCtrl _x) ctrlEnable _useSideSpecific;
 } forEach IDCS_TFD_ADMINMENU_ENDM_SIDESPECIFIC;
 (_display displayCtrl IDC_TFD_ADMINMENU_ENDM_OCCLUDER_R) ctrlEnable !_useSideSpecific;

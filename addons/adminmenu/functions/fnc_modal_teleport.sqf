@@ -28,8 +28,7 @@ _ctrlMap ctrlAddEventHandler ["mouseButtonClick", {
         (_ctrlMap getVariable [QGVAR(association), controlNull]) ctrlSetText (["Enable Teleport", "Disable Teleport"] select GVAR(utility_teleport_toggle));
 
         private _numPlayers = count GVAR(utilityData);
-
-        { // swap vehicle crew with their vehicle
+ { // swap vehicle crew with their vehicle
             if (!isNull objectParent _x) then {
                 GVAR(utilityData) set [_forEachIndex, objectParent _x];
             };
@@ -108,13 +107,11 @@ _ctrlMap ctrlAddEventHandler ["mouseButtonClick", {
 }];
 _ctrlMap ctrlAddEventHandler ["draw", {
     params ["_ctrlMap"];
-    if ((missionNamespace getVariable [QGVAR(utility_teleport_drawEnemy), 0]) == 1) then {
-        {
+    if ((missionNamespace getVariable [QGVAR(utility_teleport_drawEnemy), 0]) == 1) then { {
             _ctrlMap drawIcon ["\a3\ui_f\data\Map\Markers\Military\dot_CA.paa", (side _x) call FUNC(sideToColor), getPos _x, 24, 24, 0];
         } forEach allUnits;
     } else {
-        private _pos = [];
-        {
+        private _pos = []; {
             if ((side _x) isEqualTo (side player)) then {
                 _pos = getPos _x;
                 _ctrlMap drawIcon ["\a3\ui_f\data\Map\Markers\Military\dot_CA.paa", [0,0,0,1], _pos, 24, 24, 0];

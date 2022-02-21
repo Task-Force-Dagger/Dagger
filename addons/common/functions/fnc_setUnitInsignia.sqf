@@ -35,8 +35,7 @@ private _selectionIndex = -1;
 private _uniformClass = getText (configFile >> "CfgWeapons" >> (uniform _unit) >> "ItemInfo" >> "uniformClass");
 private _material = getText (configFile >> "CfgUnitInsignia" >> _insignia >> "material");
 private _texture = getText (configFile >> "CfgUnitInsignia" >> _insignia >> "texture");
-
-{
+ {
     if (_x == "insignia") exitWith {_selectionIndex = _forEachIndex;};
 } foreach getArray (configFile >> "CfgVehicles" >> _uniformClass >> "hiddenSelections");
 

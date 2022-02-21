@@ -26,8 +26,7 @@ if ([_unit] call FUNC(chestpack) isEqualTo "") exitWith {[]};
 _mags = [];
 
 // this could be replaced by a 'select {count _x > 2}' and then 'apply' to change
-// the order but I guess iterating two times is slower than just one forEach
-{
+// the order but I guess iterating two times is slower than just one forEach {
     if (count _x isEqualTo 3) then { // sort out magazines
         _x params ["_item", "_amount", "_ammo"];
 

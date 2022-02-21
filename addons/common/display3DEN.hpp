@@ -3,21 +3,16 @@ class ctrlControlsGroupNoScrollbars;
 class ctrlCheckboxToolbar;
 class Separator1;
 
-class display3den
-{
-    class Controls
-    {
-        class MenuStrip : ctrlMenuStrip
-        {
-            class Items
-            {
+class display3den {
+    class Controls {
+        class MenuStrip: ctrlMenuStrip {
+            class Items {
                 items[] += {PREFIX};
                 class PREFIX {
                     text = "TFD";
                     items[] = {"TFD_Documentation"};
                 };
-                class TFD_Documentation
-                {
+                class TFD_Documentation {
                     text = "TFD Docs"; // engine adds ... to links
                     data = "HelpFeedback";
                     picture = "\a3\3DEN\Data\Controls\ctrlMenu\link_ca.paa";
@@ -26,26 +21,23 @@ class display3den
                 };
             };
         };
-        class Toolbar : ctrlControlsGroupNoScrollbars{
+        class Toolbar: ctrlControlsGroupNoScrollbars {
             class Controls {
-                class Separator3: Separator1
-                {
+                class Separator3: Separator1 {
                     colorBackground[]={0,0,0,0.5};
                     x="33.5 *     (    5 * (pixelW * pixelGrid *     0.50))";
                     y="1 * (pixelH * pixelGrid *     0.50)";
                     w="pixelW";
                     h="(    5 * (pixelH * pixelGrid *     0.50))";
                 };
-                class TFD_Toolbar_Controls : ctrlControlsGroupNoScrollbars {
+                class TFD_Toolbar_Controls: ctrlControlsGroupNoScrollbars {
                     idc=-1;
                     x="34.5 * (5 * (pixelW * pixelGrid *     0.50))";
                     y="1 * (pixelH * pixelGrid *     0.50)";
                     w="5 *     (    5 * (pixelW * pixelGrid *     0.50))";
                     h="(    5 * (pixelH * pixelGrid *     0.50))";
-                    class Controls
-                    {
-                        class Garrison: ctrlCheckboxToolbar
-                        {
+                    class Controls {
+                        class Garrison: ctrlCheckboxToolbar {
                             idc=-1;
                             onCheckedChanged=QUOTE(GVAR(Garrison) = !GVAR(Garrison));
                             onLoad="uiNamespace setVariable [""tfd_common_GarrisonControl"",_this select 0]; tfd_common_Garrison = false";

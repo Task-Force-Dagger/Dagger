@@ -33,8 +33,7 @@
         localize "STR_TFD_Interactions_CBA_Category_core"
     ],
     true,
-    1,
-    {}
+    1, {}
 ] call CBA_fnc_addSetting;
 
 // -------------------------------------------------------------------------------------------------
@@ -53,8 +52,7 @@
         localize "STR_TFD_Interactions_CBA_Category_TapShoulder"
     ],
     false,
-    1,
-    {}
+    1, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -69,8 +67,7 @@
         localize "STR_TFD_Interactions_CBA_Category_TapShoulder"
     ],
     true,
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 // -------------------------------------------------------------------------------------------------
@@ -96,8 +93,7 @@
         ], 
         2
     ],
-    1,
-    {}
+    1, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -119,8 +115,7 @@
         ], 
         1
     ],
-    1,
-    {}
+    1, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -142,8 +137,7 @@
         ], 
         0
     ],
-    1,
-    {}
+    1, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -158,8 +152,7 @@
         localize "STR_TFD_Interactions_CBA_Category_Backpacks"
     ],
     true,
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 // -------------------------------------------------------------------------------------------------
@@ -185,8 +178,7 @@
         ], 
         1
     ],
-    1,
-    {}
+    1, {}
 ] call CBA_fnc_addSetting;
 
 [
@@ -201,8 +193,7 @@
         localize "STR_TFD_Interactions_CBA_Category_Gear"
     ],
     true,
-    0,
-    {}
+    0, {}
 ] call CBA_fnc_addSetting;
 
 // -------------------------------------------------------------------------------------------------

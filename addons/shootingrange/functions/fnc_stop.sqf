@@ -25,16 +25,14 @@
 
 params ["_controller", "_controllers", "_name", "_targets", "_targetsInvalid", ["_success", false], ["_score", 0], ["_maxScore", 0], ["_timeElapsed", 0]];
 
-// Set targets to original
-{
+// Set targets to original {
     _x setDamage 0;
     [_x, 0] call FUNC(animateTarget); // Up
     _x setVariable [QGVAR(hit), nil];
     _x setVariable [QGVAR(stayDown), false, true]; // Enable automatic pop-ups
 } forEach (_targets + _targetsInvalid);
 
-// Set variables
-{
+// Set variables {
     _x setVariable [QGVAR(running), false, true];
     _x setVariable [QGVAR(starter), nil, true];
 } forEach _controllers;

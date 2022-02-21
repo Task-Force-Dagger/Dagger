@@ -9,15 +9,13 @@ private _dialogResult = [
     [
         ["EDIT", "Size", "150"],
         ["EDIT", "Duration", "0"]
-    ],
-    {
+    ], {
         params ["_results", "_args"];
 
         _args params ["_pos"];
 
         _procResults = [];
-
-        {
+ {
             // Process number inputs and make sure they're integers
             _value = round (parseNumber _x);
             _procResults pushBack _value;
@@ -29,8 +27,7 @@ private _dialogResult = [
         ];
 
         [_size, _duration, _pos] remoteExec ["tfd_fnc_SafeZone", 0];
-    },
-    {},
+    }, {},
     [_pos]
 ] call zen_dialog_fnc_create;
 

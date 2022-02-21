@@ -70,18 +70,15 @@ if (count _buildings == 0) exitWith {
 
 private _buildingsIndexes = [];
 
-if (_topDownFilling) then {
-    {
+if (_topDownFilling) then { {
         private _buildingPos = (_x buildingPos -1) select { !(_x in _excludes) };
 
-        // Those reverse are necessary, as dumb as it is there's no better way to sort those subarrays in sqf
-        {
+        // Those reverse are necessary, as dumb as it is there's no better way to sort those subarrays in sqf {
             reverse _x;
         } forEach _buildingPos;
 
         _buildingPos sort false;
-
-        {
+ {
             reverse _x;
         } forEach _buildingPos;
 
@@ -92,8 +89,7 @@ if (_topDownFilling) then {
         };
 
     } forEach _buildings;
-} else {
-    {
+} else { {
         if(_maxFill > 0) then {
             _buildingsIndexes pushBack ((((_x buildingPos -1) select { !(_x in _excludes) }) call BIS_fnc_arrayShuffle) select [0,_maxFill]);
         } else {
@@ -102,14 +98,12 @@ if (_topDownFilling) then {
     } forEach _buildings;
 };
 
-// Remove buildings without positions
-{
+// Remove buildings without positions {
     _buildingsIndexes deleteAt (_buildingsIndexes find _x);
 } forEach (_buildingsIndexes select {count _x == 0});
 
 // Warn the user that there's not enough positions to place all units
-private _count = 0;
-{_count = _count + count _x;} forEach _buildingsIndexes;
+private _count = 0; {_count = _count + count _x;} forEach _buildingsIndexes;
 private _leftOverAICount = (count _unitsArray) - _count;
 if (_leftOverAICount > 0) then {
     diag_log "[derp_fnc_AIOccupyBuilding] Warning: not enough positions to place all units";
@@ -200,8 +194,7 @@ switch (_fillingType) do {
         };
     };
 };
-
-{
+ {
     _x disableAI "AUTOCOMBAT";
     _x disableAI "PATH";
     if !(dynamicSimulationEnabled (group _x)) then {(group _x) enableDynamicSimulation true;};

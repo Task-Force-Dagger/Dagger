@@ -6,13 +6,11 @@ if (EGVAR(common,aceFinger)) then {
     [
         LLSTRING(DisplayName),
         QGVAR(pointVehicle),
-        [LLSTRING(Key_PointVehicle), LLSTRING(Key_PointVehicle_Description)],
-        {
+        [LLSTRING(Key_PointVehicle), LLSTRING(Key_PointVehicle_Description)], {
             if (!GVAR(vehicleEnabled)) exitWith {false};
 
             _this call FUNC(keyPressVehicle) // return
-        },
-        {},
+        }, {},
         _keybind
     ] call CBA_fnc_addKeybind;
 

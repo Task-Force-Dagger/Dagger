@@ -8,8 +8,7 @@
 
 params ["_groupName", "_position", "_faction", "_selectedRespawnGroup", "_markerType", "_markerColor", "_markerName", "_halo", "_side"];
 
-// Loop through each proposed client for respawn.
-{
+// Loop through each proposed client for respawn. {
     if (_halo) then {
         _position = _position vectorAdd [10,0,0]; // do position transofmration
     } else {

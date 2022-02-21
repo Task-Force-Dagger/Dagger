@@ -82,15 +82,13 @@ private _dialogResult = [
         ["EDIT", "Max. Heavy Vehicles", ["0"]],
         ["EDIT", "Min. Random Vehicles", ["0"]],
         ["EDIT", "Max. Random Vehicles", ["0"]]
-    ],
-    {
+    ], {
         params ["_results", "_args"];
 
         _args params ["_pos"];
 
         _procResults = [];
-
-        {
+ {
             _value = _x;
 
             // Process number inputs and make sure they're integers
@@ -138,8 +136,7 @@ private _dialogResult = [
             [_vehheavyMin, _vehheavyMax],
             [_vehrandMin, _vehrandMax]
         ] remoteExec ["tfd_fnc_SpawnAI", 2];
-    },
-    {},
+    }, {},
     [_pos]
 ] call zen_dialog_fnc_create;
 

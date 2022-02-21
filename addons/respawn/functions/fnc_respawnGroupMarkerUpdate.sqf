@@ -2,8 +2,7 @@
 
 // Goes through GVAR(respawnedGroupsMarkerData), ensuring all groups already have markers.
 if (isNil QGVAR(respawnedGroupsMarkerData)) exitWith {};
-
-{
+ {
     //Check if Group already has a group marker.
     if (!isNil (_x select 0)) then {
         private _found = false;

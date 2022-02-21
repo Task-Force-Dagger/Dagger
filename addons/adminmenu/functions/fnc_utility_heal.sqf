@@ -1,12 +1,10 @@
 #include "\z\tfd\addons\adminmenu\script_component.hpp"
 
-if (!isNil "ace_medical_treatment_fnc_fullHeal") then {
-    {
+if (!isNil "ace_medical_treatment_fnc_fullHeal") then { {
         [player, _x] call ace_medical_treatment_fnc_fullHeal;
         (format ["[TFD Admin Menu] Your health was restored by '%1'", profileName]) remoteExec ["systemChat", _x];
     } forEach GVAR(utilityData);
-} else {
-    {
+} else { {
         _x setDamage 0;
     } forEach GVAR(utilityData);
 };

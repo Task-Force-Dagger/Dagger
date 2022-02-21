@@ -19,8 +19,7 @@ params ["_texts"];
 TRACE_1("Texts",_texts);
 
 // Compile texts into one localized string
-private _text = "";
-{
+private _text = ""; {
     if (_x isEqualType "") then {
         if (_x select [0, 4] == "STR_") then {
             _x = localize _x;

@@ -1,20 +1,13 @@
 #include "\a3\3DEN\UI\macros.inc"
 #include "\a3\3DEN\UI\resincl.inc"
 
-class Cfg3den
-{
-    class Mission
-    {
-        class Scenario
-        {
-            class AttributeCategories
-            {
-                class Presentation
-                {
-                    class Attributes
-                    {
-                        class GVAR(introText)
-                        {
+class Cfg3den {
+    class Mission {
+        class Scenario {
+            class AttributeCategories {
+                class Presentation {
+                    class Attributes {
+                        class GVAR(introText) {
                             property = QGVAR(introText);
                             displayName = "Display intro text";
                             tooltip = "Display some intro text shortly after the game loads.";
@@ -28,8 +21,7 @@ class Cfg3den
             };
         };
     };
-    class Attributes
-    {
+    class Attributes {
         class CheckboxNumber;
         class None {
             idc = -1;
@@ -83,12 +75,9 @@ class Cfg3den
             onVideoStopped = "";
         };
     };
-    class Object
-    {
-        class Draw
-        {
-            class 3D
-            {
+    class Object {
+        class Draw {
+            class 3D {
 
                 fadeDistance = "(getObjectViewDistance select 0)";
             };

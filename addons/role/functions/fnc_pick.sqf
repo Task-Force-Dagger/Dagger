@@ -30,12 +30,9 @@ if (isDedicated) exitWith {};
 private _TFDmakecom = [
     "TFDmakecom",
     "Communications",
-    "",
-    {
+    "", {
         player call TFD_role_fnc_makecom;
-    },
-    {true},
-    {},
+    }, {true}, {},
     [_area]
 ] call ACE_interact_menu_fnc_createAction;
 
@@ -45,12 +42,9 @@ private _TFDmakecom = [
 private _TFDmakeeng = [
     "TFDmakeeng",
     "Engineer",
-    "",
-    {
+    "", {
         player call TFD_role_fnc_makeeng;
-    },
-    {true},
-    {},
+    }, {true}, {},
     [_area]
 ] call ACE_interact_menu_fnc_createAction;
 
@@ -60,12 +54,9 @@ private _TFDmakeeng = [
 private _TFDmakemed = [
     "TFDmakemed",
     "Medic",
-    "",
-    {
+    "", {
         player call TFD_role_fnc_makemed;
-    },
-    {true},
-    {},
+    }, {true}, {},
     [_area]
 ] call ACE_interact_menu_fnc_createAction;
 
@@ -76,12 +67,9 @@ private _TFDmakemed = [
 private _TFDmakewep = [
     "TFDmakewep",
     "Weapons",
-    "",
-    {
+    "", {
         player call TFD_role_fnc_makewep;
-    },
-    {true},
-    {},
+    }, {true}, {},
     [_area]
 ] call ACE_interact_menu_fnc_createAction;
 

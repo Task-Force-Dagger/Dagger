@@ -2,8 +2,7 @@
 
 private _given = [];
 private _had = [];
-
-{
+ {
     if (isNull (getAssignedCuratorLogic _x)) then {
         _x remoteExec [QFUNC(makeZeusServer), 2];
         _given pushBack _x;

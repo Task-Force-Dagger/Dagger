@@ -1,18 +1,13 @@
-class CfgWorlds
-{
+class CfgWorlds {
     class DefaultWorld;
-    class CAWorld: DefaultWorld
-    {
-        class Grid{};
+    class CAWorld: DefaultWorld {
+        class Grid {};
     };
-    class Altis: CAWorld
-    {
-        class Grid: Grid
-        {
+    class Altis: CAWorld {
+        class Grid: Grid {
             offsetX = 0;
             offsetY = 30720;
-            class Zoom1
-            {
+            class Zoom1 {
                 zoomMax = 0.005;
                 format = "XY";
                 formatX = "0000";
@@ -20,8 +15,7 @@ class CfgWorlds
                 stepX = 10;
                 stepY = -10;
             };
-            class Zoom2
-            {
+            class Zoom2 {
                 zoomMax = 0.05;
                 format = "XY";
                 formatX = "000";
@@ -29,8 +23,7 @@ class CfgWorlds
                 stepX = 100;
                 stepY = -100;
             };
-            class Zoom3
-            {
+            class Zoom3 {
                 zoomMax = 1;
                 format = "XY";
                 formatX = "00";
@@ -40,12 +33,9 @@ class CfgWorlds
             };
         };
     };
-    class Chernarus: CAWorld
-    {
-        class Grid: Grid
-        {
-            class Zoom1
-            {
+    class Chernarus: CAWorld {
+        class Grid: Grid {
+            class Zoom1 {
                 zoomMax=0.0049999999;
                 format="XY";
                 formatX="0000";
@@ -53,8 +43,7 @@ class CfgWorlds
                 stepX=10;
                 stepY=-10;
             };
-            class Zoom2
-            {
+            class Zoom2 {
                 zoomMax=0.050000001;
                 format="XY";
                 formatX="000";
@@ -62,8 +51,7 @@ class CfgWorlds
                 stepX=100;
                 stepY=-100;
             };
-            class Zoom3
-            {
+            class Zoom3 {
                 zoomMax=1;
                 format="XY";
                 formatX="00";
@@ -73,12 +61,9 @@ class CfgWorlds
             };
         };
     };
-    class Sara: CAWorld
-    {
-        class Grid: Grid
-        {
-            class Zoom1
-            {
+    class Sara: CAWorld {
+        class Grid: Grid {
+            class Zoom1 {
                 zoomMax=0.0049999999;
                 format="XY";
                 formatX="0000";
@@ -86,8 +71,7 @@ class CfgWorlds
                 stepX=10;
                 stepY=-10;
             };
-            class Zoom2
-            {
+            class Zoom2 {
                 zoomMax=0.050000001;
                 format="XY";
                 formatX="000";
@@ -95,8 +79,7 @@ class CfgWorlds
                 stepX=100;
                 stepY=-100;
             };
-            class Zoom3
-            {
+            class Zoom3 {
                 zoomMax=1;
                 format="XY";
                 formatX="00";
@@ -106,12 +89,9 @@ class CfgWorlds
             };
         };
     };
-    class Takistan: CAWorld
-    {
-        class Grid: Grid
-        {
-            class Zoom1
-            {
+    class Takistan: CAWorld {
+        class Grid: Grid {
+            class Zoom1 {
                 zoomMax=0.0049999999;
                 format="XY";
                 formatX="0000";
@@ -119,8 +99,7 @@ class CfgWorlds
                 stepX=10;
                 stepY=-10;
             };
-            class Zoom2
-            {
+            class Zoom2 {
                 zoomMax=0.050000001;
                 format="XY";
                 formatX="000";
@@ -128,8 +107,7 @@ class CfgWorlds
                 stepX=100;
                 stepY=-100;
             };
-            class Zoom3
-            {
+            class Zoom3 {
                 zoomMax=1;
                 format="XY";
                 formatX="00";
@@ -139,14 +117,11 @@ class CfgWorlds
             };
         };
     };
-    class Malden: CAWorld
-    {
-        class Grid: Grid
-        {
+    class Malden: CAWorld {
+        class Grid: Grid {
             offsetX=0;
             offsetY=12800;
-            class Zoom1
-            {
+            class Zoom1 {
                 zoomMax=0.0049999999;
                 format="XY";
                 formatX="0000";
@@ -154,8 +129,7 @@ class CfgWorlds
                 stepX=10;
                 stepY=-10;
             };
-            class Zoom2
-            {
+            class Zoom2 {
                 zoomMax=0.050000001;
                 format="XY";
                 formatX="000";
@@ -163,8 +137,7 @@ class CfgWorlds
                 stepX=100;
                 stepY=-100;
             };
-            class Zoom3
-            {
+            class Zoom3 {
                 zoomMax=1;
                 format="XY";
                 formatX="00";
@@ -174,12 +147,9 @@ class CfgWorlds
             };
         };
     };
-    class Stratis: CAWorld
-    {
-        class Grid: Grid
-        {
-            class Zoom1
-            {
+    class Stratis: CAWorld {
+        class Grid: Grid {
+            class Zoom1 {
                 zoomMax=0.0049999999;
                 format="XY";
                 formatX="0000";
@@ -187,8 +157,7 @@ class CfgWorlds
                 stepX=10;
                 stepY=-10;
             };
-            class Zoom2
-            {
+            class Zoom2 {
                 zoomMax=0.050000001;
                 format="XY";
                 formatX="000";
@@ -196,8 +165,7 @@ class CfgWorlds
                 stepX=100;
                 stepY=-100;
             };
-            class Zoom3
-            {
+            class Zoom3 {
                 zoomMax=1;
                 format="XY";
                 formatX="00";
@@ -207,12 +175,9 @@ class CfgWorlds
             };
         };
     };
-    class Tanoa: CAWorld
-    {
-        class Grid: Grid
-        {
-            class Zoom1
-            {
+    class Tanoa: CAWorld {
+        class Grid: Grid {
+            class Zoom1 {
                 zoomMax=0.0049999999;
                 format="XY";
                 formatX="0000";
@@ -220,8 +185,7 @@ class CfgWorlds
                 stepX=10;
                 stepY=-10;
             };
-            class Zoom2
-            {
+            class Zoom2 {
                 zoomMax=0.050000001;
                 format="XY";
                 formatX="000";
@@ -229,8 +193,7 @@ class CfgWorlds
                 stepX=100;
                 stepY=-100;
             };
-            class Zoom3
-            {
+            class Zoom3 {
                 zoomMax=1;
                 format="XY";
                 formatX="00";
@@ -240,12 +203,9 @@ class CfgWorlds
             };
         };
     };
-    class Enoch: CAWorld
-    {
-        class Grid: Grid
-        {
-            class Zoom1
-            {
+    class Enoch: CAWorld {
+        class Grid: Grid {
+            class Zoom1 {
                 zoomMax=0.0049999999;
                 format="XY";
                 formatX="0000";
@@ -253,8 +213,7 @@ class CfgWorlds
                 stepX=10;
                 stepY=-10;
             };
-            class Zoom2
-            {
+            class Zoom2 {
                 zoomMax=0.050000001;
                 format="XY";
                 formatX="000";
@@ -262,8 +221,7 @@ class CfgWorlds
                 stepX=100;
                 stepY=-100;
             };
-            class Zoom3
-            {
+            class Zoom3 {
                 zoomMax=1;
                 format="XY";
                 formatX="00";

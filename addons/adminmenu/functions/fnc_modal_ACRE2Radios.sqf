@@ -17,14 +17,12 @@ _ctrlLabelRadioGroup ctrlSetPosition [0, (1.1 * TFD_ADMINMENU_STD_HEIGHT), 0.5 *
 _ctrlLabelRadioGroup ctrlCommit 0;
 _ctrlLabelRadioGroup ctrlSetText "Radios with the same (number) postfix are compatible";
 
-private _radios = [];
-{
+private _radios = []; {
     _radios append (_x select 0);
 } forEach EGVAR(acre2,radioCoreSettings);
 private _radioCtrls = [];
 private _radioCtrlsY = 2.2 * TFD_ADMINMENU_STD_HEIGHT;
-
-{
+ {
     private _radio = _x;
     private _radioGroup = (EGVAR(acre2,radioCoreSettings) findIf {_radio in (_x select 0)}) + 1; // arbitrary index to identify what group of radios it's compatible with
 
@@ -76,8 +74,7 @@ if (!isNil QEGVAR(acre2,networksWithRadioChannels)) then {
     _networkCtrls pushBack _ctrlListNetwork;
     _ctrlListNetwork ctrlSetPosition [0.5 * _ctrlGrpWidth, _radioCtrlsY, (0.5 * _ctrlGrpWidth) - (0.1 * TFD_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - _radioCtrlsY - (2 * TFD_ADMINMENU_STD_HEIGHT)];
     _ctrlListNetwork ctrlCommit 0;
-
-    {
+ {
         _x params ["_conditions"];
 
         private _netId = _forEachIndex + 1;

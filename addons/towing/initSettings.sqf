@@ -6,8 +6,7 @@ if (EGVAR(common,aceTowing)) then {
         [LSTRING(AddToHeavyDutyVehicles), LSTRING(AddToHeavyDutyVehicles_Description)],
         COMPONENT_NAME,
         true,
-        1,
-        {},
+        1, {},
         true
     ] call CBA_fnc_addSetting;
 
@@ -17,8 +16,7 @@ if (EGVAR(common,aceTowing)) then {
         [LSTRING(AddToCars), LSTRING(AddToCars_Description)],
         COMPONENT_NAME,
         false,
-        1,
-        {},
+        1, {},
         true
     ] call CBA_fnc_addSetting;
 };

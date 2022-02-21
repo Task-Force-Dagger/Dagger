@@ -79,5 +79,4 @@ call {
   ];
  };
 };
-
-{_container addItemCargoGlobal _x} foreach _ContainerItems;
+ {_container addItemCargoGlobal _x} foreach _ContainerItems;

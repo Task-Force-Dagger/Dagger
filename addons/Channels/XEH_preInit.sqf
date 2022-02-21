@@ -6,8 +6,7 @@
     ["Global Text", "Allow players to use Global Text Channel and draw on map."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -19,8 +18,7 @@
     ["Global Voice", "Allow players to speak in Global Voice Channel."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -32,8 +30,7 @@
     ["Global Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     COMPONENT_NAME,
     [0, 300, 0, 0],
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -45,8 +42,7 @@
     ["Side Text", "Allow players to use Side Text Channel and draw on map."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -58,8 +54,7 @@
     ["Side Voice", "Allow players to speak in Side Voice Channel."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -71,8 +66,7 @@
     ["Side Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     COMPONENT_NAME,
     [0, 300, 0, 0],
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -84,8 +78,7 @@
     ["Command Text", "Allow players to use Command Text Channel and draw on map."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -97,8 +90,7 @@
     ["Command Voice", "Allow players to speak in Command Voice Channel."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -110,8 +102,7 @@
     ["Command Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     COMPONENT_NAME,
     [0, 300, 0, 0],
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -123,8 +114,7 @@
     ["Group Text", "Allow players to use Group Text Channel and draw on map."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -136,8 +126,7 @@
     ["Group Voice", "Allow players to speak in Group Voice Channel."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -149,8 +138,7 @@
     ["Group Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     COMPONENT_NAME,
     [0, 300, 0, 0],
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -162,8 +150,7 @@
     ["Vehicle Text", "Allow players to use Vehicle Text Channel and draw on map."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -175,8 +162,7 @@
     ["Vehicle Voice", "Allow players to speak in Vehicle Voice Channel."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -188,8 +174,7 @@
     ["Vehicle Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     COMPONENT_NAME,
     [0, 300, 0, 0],
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -201,8 +186,7 @@
     ["Direct Text", "Allow players to use Direct Text Channel and draw on map."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -214,8 +198,7 @@
     ["Direct Voice", "Allow players to speak in Direct Voice Channel."],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;
@@ -227,8 +210,7 @@
     ["Direct Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     COMPONENT_NAME,
     [0, 300, 0, 0],
-    true,
-    {
+    true, {
 
     }
 ] call CBA_fnc_addSetting;

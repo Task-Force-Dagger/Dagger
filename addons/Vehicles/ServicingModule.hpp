@@ -1,5 +1,4 @@
-class TFD_ModuleServicing: Module_F
-{
+class TFD_ModuleServicing: Module_F {
     scope = 2;
     displayName = "Vehicle Servicing";
     icon = "\z\tfd\addons\media\images\icons\Vehicle Service.paa";
@@ -10,12 +9,10 @@ class TFD_ModuleServicing: Module_F
     isTriggerActivated = 0;
     isDisposable = 0;
     is3den = 0;
-    class Attributes: AttributesBase
-    {
-        class ModuleDescription: ModuleDescription{};
+    class Attributes: AttributesBase {
+        class ModuleDescription: ModuleDescription {};
     };
-    class ModuleDescription: ModuleDescription
-    {
+    class ModuleDescription: ModuleDescription {
         description[] = {
             "Sync this module to an object to create a Repair Facility within that location.",
             "The module will repair, refuel and rearm any vehicle after a set time delay.",

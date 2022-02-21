@@ -14,8 +14,7 @@
  *
  * Public: No
  */
-
-{
+ {
     [QGVAR(start), [_x], _x] call CBA_fnc_targetEvent;
 } forEach (allPlayers select {[_x] call FUNC(canSpectate)});
 

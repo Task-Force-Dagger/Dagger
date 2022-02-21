@@ -7,8 +7,7 @@
     ["Zeus Module - AI Spawn - East", "Enable the Spawn AI - East Zeus module for use with ZEN"],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
         params ["_value"];
         if ((!isClass (configFile >> "CfgPatches" >> "zen_main")) || (!_value)) exitWith {};
 
@@ -22,8 +21,7 @@
     ["Zeus Module - AI Spawn - Independent", "Enable the Spawn AI - Independent Zeus module for use with ZEN"],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
         params ["_value"];
         if ((!isClass (configFile >> "CfgPatches" >> "zen_main")) || (!_value)) exitWith {};
 
@@ -37,8 +35,7 @@
     ["Zeus Module - AI Spawn - West", "Enable the Spawn AI - West Zeus module for use with ZEN"],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
         params ["_value"];
         if ((!isClass (configFile >> "CfgPatches" >> "zen_main")) || (!_value)) exitWith {};
 
@@ -53,8 +50,7 @@
     ["Zeus Module - AI Spawn - Civilian", "Enable the Spawn AI Civilians Zeus module for use with ZEN"],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
         params ["_value"];
         if ((!isClass (configFile >> "CfgPatches" >> "zen_main")) || (!_value)) exitWith {};
 
@@ -69,8 +65,7 @@
     ["Zeus Module - Safe Zone", "Enable the Safe Zone Zeus module for use with ZEN"],
     COMPONENT_NAME,
     true,
-    true,
-    {
+    true, {
         params ["_value"];
         if ((!isClass (configFile >> "CfgPatches" >> "zen_main")) || (!_value)) exitWith {};
 
@@ -85,8 +80,7 @@
     ["Zeus Module - Medical Dummy", "Enable the Medical Dummy Zeus module for use with ZEN"],
     COMPONENT_NAME,
     false,
-    true,
-    {
+    true, {
         params ["_value"];
         if ((!isClass (configFile >> "CfgPatches" >> "zen_main")) || (!_value)) exitWith {};
 

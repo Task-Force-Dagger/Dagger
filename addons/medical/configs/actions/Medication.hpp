@@ -45,7 +45,7 @@ class TFD_Epinephrine: TFD_Morphine {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class Naloxone : TFD_Morphine {
+class Naloxone: TFD_Morphine {
     displayName="Naloxone 1.6mg/4mL";
     displayNameProgress="Injecting Naloxone";
     icon="\z\tfd\addons\media\images\icon\VPN.paa";
@@ -58,7 +58,7 @@ class Naloxone : TFD_Morphine {
     litter[] = {{}};
 };
 
-class Fentanyl: TFD_Morphine{
+class Fentanyl: TFD_Morphine {
     displayName="Fentanyl 100mcg/2mL";
     displayNameProgress="Injecting Fentanyl";
     icon = "\z\tfd\addons\media\images\icon\VPN.paa";
@@ -71,7 +71,7 @@ class Fentanyl: TFD_Morphine{
     litter[] = {{}};
 };
 
-class Ketamine_6mg : TFD_Morphine {
+class Ketamine_6mg: TFD_Morphine {
     displayName="Ketamine 6mg/2mL";
     displayNameProgress="Injecting Ketamine 6mg/2mL";
     icon = "\z\tfd\addons\media\images\icon\VPN.paa";
@@ -85,7 +85,7 @@ class Ketamine_6mg : TFD_Morphine {
     litter[] = {{}};
 };
 
-class Ketamine_200mg : TFD_Morphine {
+class Ketamine_200mg: TFD_Morphine {
     displayName="Ketamine 200mg/2mL";
     displayNameProgress="Injecting Ketamine 200mg/2mL";
     icon = "\z\tfd\addons\media\images\icon\VPN.paa";
@@ -101,12 +101,12 @@ class Ketamine_200mg : TFD_Morphine {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-class NonVPNMedication : TFD_Morphine {
+class NonVPNMedication: TFD_Morphine {
     condition = "";
     callbackSuccess = "";
 };
 
-class Tetra : NonVPNMedication {
+class Tetra: NonVPNMedication {
     displayName="Tetracycline 250mg";
     displayNameProgress="Giving Tetracycline";
     icon="\z\tfd\addons\media\images\icon\tetra.paa";
@@ -118,7 +118,7 @@ class Tetra : NonVPNMedication {
     };
 };
 
-class Apap : NonVPNMedication {
+class Apap: NonVPNMedication {
     displayName="Paracetemol 1g";
     displayNameProgress="Giving Paracetemol 1g";
     icon="\z\tfd\addons\media\images\icon\apap.paa";
@@ -132,7 +132,6 @@ class Apap : NonVPNMedication {
         "Head"
     };
     treatmentTime=1;
-    litter[]={
-        {"All","",{"TFD_ApapLitter"}}
+    litter[]={ {"All","",{"TFD_ApapLitter"}}
     };
 };

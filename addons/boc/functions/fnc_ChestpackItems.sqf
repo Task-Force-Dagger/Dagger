@@ -23,8 +23,7 @@ if (isNull _unit) exitWith {[]};
 if ([_unit] call FUNC(chestpack) isEqualTo "") exitWith {[]};
 
 _items = [];
-
-{
+ {
     _x params ["_item", "_amount"];
 
     if (count _x < 3 || _returnMags) then {

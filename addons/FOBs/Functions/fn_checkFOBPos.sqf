@@ -38,17 +38,14 @@ _compArray = call (compile format ["call TFD_fnc_%1", _type]);
 _objects = [_pos, _dir, _compArray, 0, true] call TFD_fnc_objectsMapper;
 
 // Properly align the objects with the ground etc, only works with ACE for now...
-if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
-    {
+if (isClass (configFile >> "CfgPatches" >> "ace_main")) then { {
         _x call ace_common_fnc_fixPosition;
     } forEach _objects;
 };
 
 
 // Delete the preview objects after some time
-[
-    {
-        {
+[ { {
             deleteVehicle _x;
         } forEach _this;
     },
