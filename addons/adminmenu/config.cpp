@@ -41,4 +41,4 @@ class GVAR(authorized_players) {
 #include "CfgDebriefing.hpp"
 #include "CfgEventHandlers.hpp"
 #include "autotest.hpp"
-#include "gui\adminmenu.hpp"
+#include "gui\adminMenu.hpp"
