@@ -46,7 +46,8 @@ fn_removeGroupFromLang = {
         _value = _value - [_curSel];
         _group set3denAttribute ["TFD_BabelLanguages",str _value];
     };
-    // do units {
+    // do units 
+    {
         [_channel, _x] call fn_removeUnitFromLang;
     } forEach (units _group);
 };
@@ -67,7 +68,8 @@ switch _mode do {
                 ["Greek",[resistance]]
             ];
         } else {
-            //Deserialize number to side. {
+            //Deserialize number to side. 
+            {
                 _x params ["","_conditions"]; {
                     if (_x isEqualType 0) then {
                         _conditions set [_forEachIndex, (_x call TFD_common_fnc_numToSide)];
@@ -445,7 +447,8 @@ switch _mode do {
                         };
                     } forEach (_condition);
                 
-                    //remove groups {
+                    //remove groups 
+                    {
                         [_curSel, _x] call fn_removeGroupFromLang;
                     } forEach (allGroups select {side _x == _entity});
                 };

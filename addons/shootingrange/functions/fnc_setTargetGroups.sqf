@@ -56,7 +56,8 @@ private _numTargetsInvalid = count _targetsInvalid;
 
 TRACE_2("Target Groups",_targetGroups,_targetInvalidGroups);
 
-// Set targets groups on targets {
+// Set targets groups on targets 
+{
     private _targetGroup = _x;
     private _targetInvalidGroup = _targetInvalidGroups select _forEachIndex; {
         _x setVariable [QGVAR(targetGroup), _targetGroup];

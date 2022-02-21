@@ -36,6 +36,7 @@ private _newTaskState = switch (_finishType) do {
 // Call code
 call compile (_taskNamespace getVariable [format ["on%1Code", _finishType], ""]);
 
-// Raise events {
+// Raise events 
+{
     [_x] call CBA_fnc_serverEvent;
 } forEach (_taskNamespace getVariable [format ["on%1Events", _finishType], []]);

@@ -12,7 +12,8 @@ lbClear _ctrlSpectatorListBox; {
     private _deadPlayer = _x;
 
 
-    //Check if already selected and thus in the selected respawn listBox. {
+    //Check if already selected and thus in the selected respawn listBox. 
+    {
         if (_deadPlayer == (_x select 1)) exitWith {
             _found = true;  
         };

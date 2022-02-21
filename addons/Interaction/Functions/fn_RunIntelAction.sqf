@@ -21,7 +21,8 @@ _texture = _object getvariable ["RscAttributeDiaryRecord_texture",""];
 _recipients = _object getvariable ["recipients",west];
 _persistent = if (isnil "_recipients") then {_recipients = _caller; false} else {true};
 
-//--- Call scripted event handlers {
+//--- Call scripted event handlers 
+{
     [[_x,"intelObjectFound",[_x,_caller,_object]],"bis_fnc_callscriptedeventhandler",_x] call bis_fnc_mp;
 } foreach (objectcurators _object);
 [_object,"intelObjectFound",[_object,_caller]] call bis_fnc_callscriptedeventhandler;

@@ -23,7 +23,8 @@ private _debugConsole = _display displayCtrl IDC_RSCDEBUGCONSOLE_RSCDEBUGCONSOLE
 private _basePositionRow1 = ctrlPosition (_display displayCtrl IDC_RSCDEBUGCONSOLE_BUTTONANIMATIONS);
 private _basePositionRow2 = ctrlPosition (_display displayCtrl IDC_RSCDEBUGCONSOLE_BUTTONGUI);
 
-// Create buttons in bottom row {
+// Create buttons in bottom row 
+{
     _x params ["_text", "_tooltip", "_code"];
     TRACE_3("adding debug console button", _text, _tooltip, _code);
 

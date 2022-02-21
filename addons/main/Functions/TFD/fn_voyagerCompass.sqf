@@ -337,7 +337,8 @@ fnc_showCompass = {
   waitUntil {ncMarkerVisibility == 1;};
 
   while {true} do {
-    /// create user array [marker] {
+    /// create user array [marker] 
+    {
       if !(_x in currentMarkers) then {
         _a = toArray _x;
         _a resize 15;
@@ -347,7 +348,8 @@ fnc_showCompass = {
       };
     } forEach allMapMarkers;
     ///
-    /// create double array ([marker], [idc,marker]) {
+    /// create double array ([marker], [idc,marker]) 
+    {
       if !(_x in currentMarkers) then {
         _display = uiNamespace getVariable "RscTitleDisplayEmpty";
         _index = allUserMarkers find _x;
@@ -374,7 +376,8 @@ fnc_showCompass = {
     } forEach allUserMarkers;
     ///
 
-    /// delete IF marker from [idc,marker] aint alive anymore {
+    /// delete IF marker from [idc,marker] aint alive anymore 
+    {
       if !(_x in allMapMarkers) then {
         allUserMarkers = allUserMarkers - [_x];
         currentMarkers = currentMarkers - [_x];

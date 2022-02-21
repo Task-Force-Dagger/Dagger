@@ -75,7 +75,8 @@ if !(_content isEqualType []) then {
 
 private _composition = [];
 
-// create structured text composition {
+// create structured text composition 
+{
     _composition pushBack lineBreak;
 
     _x params [

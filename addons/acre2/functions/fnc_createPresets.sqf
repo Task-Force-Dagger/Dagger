@@ -39,7 +39,8 @@ tfd_acre2_radioBasenameToSettingsIdx = {
 
 private _sharedRadioChannelListing = [];
 
-//TODO Preserve shared channel indexes. {
+//TODO Preserve shared channel indexes. 
+{
     
     private _radioPresetChannelList = (_x select 1); //_radioPresetSetting = _x;
     private _radioPresetSettingIndex = _forEachIndex;
@@ -48,7 +49,9 @@ private _sharedRadioChannelListing = [];
     private _channelsProcessed = GVAR(radioCoreSettings) apply {[]}; // This will store channels, binned by radio type.
 
     //Add this entry to the channel list.
-    //for "_i" from 1 to (count _radioPresetSetting)-1 do { {
+    //for "_i" from 1 to (count _radioPresetSetting)-1 do 
+    { 
+        {
         private _channelEntry = _x;
         private _radio = (_channelEntry select 2);
         private _coreRadioIdx = [_radio] call tfd_acre2_radioBasenameToSettingsIdx;

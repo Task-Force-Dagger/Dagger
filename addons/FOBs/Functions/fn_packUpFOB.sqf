@@ -29,7 +29,8 @@ if !(_object getVariable ["TFD_PortableFOB_Deployed", false]) exitWith {
     systemChat "FOB has to be deployed first!";
 };
 
-// delete composition objects {
+// delete composition objects 
+{
     deleteVehicle _x;
 } forEach (_object getVariable ["TFD_PortableFOB_Objects", []]);
 
@@ -41,7 +42,8 @@ _respawnPos call BIS_fnc_removeRespawnPosition;
 _object setVariable ["TFD_PortableFOB_Deployed", false, true];
 _object setVariable ["TFD_PortableFOB_Pos", [0, 0, 0], true];
 
-// unhide terrain {
+// unhide terrain 
+{
     if !(isNull _x) then {
         _x hideObjectGlobal false;
         _x allowDamage true;

@@ -30,7 +30,8 @@ if (current3denOperation != "MoveItems") exitWith {};
     if (count GVAR(posIdxs) == 0) exitWith {};
     _building = _building select 0;
     do3denAction "Undo"; // Undo movement
-    collect3denHistory { // Easy CtrlZ undo {
+    collect3denHistory { // Easy CtrlZ undo 
+    {
             if (_forEachIndex > (count GVAR(posIdxs))) exitWith {};
             private _pos = (_building buildingPos (GVAR(posIdxs) select _forEachIndex));
             _x set3denAttribute ["position",_pos];

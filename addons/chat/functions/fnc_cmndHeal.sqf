@@ -27,7 +27,8 @@ switch (toLower _name) do {
         CURUNIT setDamage 0;
         systemChat "TFD: Healed";
     };
-    case "all": { // Heal everyone {
+    case "all": { // Heal everyone 
+    {
             if !(isNil "ace_medical_treatment_fnc_fullHeal") then {
                 [_x, _x] call ace_medical_treatment_fnc_fullHeal;
             };

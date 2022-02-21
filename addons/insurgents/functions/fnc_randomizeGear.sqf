@@ -38,7 +38,8 @@ if (random 1 <= CHANCE_FACEWEAR) then {
 _unit forceAddUniform selectRandom RANDOM_GEAR(uniforms);
 _unit addVest selectRandom RANDOM_GEAR(vests);
 
-// add basic gear to the uniform {
+// add basic gear to the uniform 
+{
     _unit addItemToUniform _x;
 } forEach ["FirstAidKit", "HandGrenade", "SmokeShell"];
 

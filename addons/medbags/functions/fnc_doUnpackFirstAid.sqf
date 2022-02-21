@@ -47,7 +47,10 @@ if (isNull _unit) exitWith {};
     
     [
         2,
-        [], { TFD_MEDICAL_SUPPLIES_UNPACK_SUCCESS = true; }, { TFD_MEDICAL_SUPPLIES_UNPACK_FAILURE = true; }, {ocalize "Unpack Boo Boo Bag....",
+        [], 
+        { TFD_MEDICAL_SUPPLIES_UNPACK_SUCCESS = true; }, 
+        { TFD_MEDICAL_SUPPLIES_UNPACK_FAILURE = true; }, 
+        localize "Unpack Boo Boo Bag....",
         {true},
         ["isNotInside", "isNotSitting", "isNotSwimming"]
     ] call ACE_common_fnc_progressBar;
@@ -69,10 +72,7 @@ if (isNull _unit) exitWith {};
     };
     
     if (TFD_MEDICAL_SUPPLIES_UNPACK_FAILURE) exitWith {
-        
         [_unit, QGVAR(Medical_FirstAid_Open_1)] call TFD_common_fnc_stop3dSound;
-        
-        
     };
     
 };

@@ -56,7 +56,8 @@ if (isTFD) then {
 
     } forEach _hunters;
 
-    // Cleanup groups no longer used. {
+    // Cleanup groups no longer used. 
+    {
         if (count (units _x) == 0) then {deleteGroup _x;};
     } forEach (_oldGroups - [grpNull]);
 

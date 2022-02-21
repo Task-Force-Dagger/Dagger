@@ -49,7 +49,8 @@ fn_removeGroupFromChannel = {
         _value = _value - [_curSel];
         _group set3denAttribute ["TFD_Channellist",str _value];
     };
-    // do units {
+    // do units 
+    {
         [_channel, _x] call fn_removeUnitFromChannel;
     } forEach (units _group);
 };
@@ -77,7 +78,8 @@ fn_networkTreeHandleKey = {
             } forEach _condition;
             _channel set [0,_condition - [-1]];
         } forEach RadioChannelArray;
-        //nullify all attributes {
+        //nullify all attributes 
+        {
             set3denAttributes [[units _x, "TFD_Network", -1], [[_x],"TFD_Network", -1]];
             set3denAttributes [[units _x, "TFD_Channellist", "[]"], [[_x],"TFD_Channellist", "[]"], [[_x],"TFD_ChannellistLeader", "[]"]];
         } forEach (cacheAllPlayerGroups select {side _x == _thing});
@@ -100,7 +102,8 @@ fn_networkTreeHandleKey = {
             _channel params ["_condition"];
             _channel set [0,_condition - [_thing,_side]];
         } forEach RadioChannelArray;
-        //nullify all attributes {
+        //nullify all attributes 
+        {
             set3denAttributes [[units _x, "TFD_Network", -1], [[_x],"TFD_Network", -1]];
             set3denAttributes [[units _x, "TFD_Channellist", "[]"], [[_x],"TFD_Channellist", "[]"], [[_x],"TFD_ChannellistLeader", "[]"]];
         } forEach (cacheAllPlayerGroups select {(faction (leader _x)) == _thing});
@@ -176,14 +179,16 @@ switch _mode do {
             //RadioChannelArray = call compile ("tfdMissionAcreAttributes" get3denMissionAttribute "TFD_AcreSettings");
         };
 
-        //Deserialize: Convert nums to side from {
+        //Deserialize: Convert nums to side from 
+        {
             private _network = _x;
             _network params ["_conditions", "_channels"]; {
                 if (_x isEqualType 0) then {
                     _conditions set [_forEachIndex,(_x call TFD_common_fnc_numToSide)];
                 };
             } forEach (_conditions); {
-                private _condition = _x select 3; // condition {
+                private _condition = _x select 3; // condition 
+                {
                     if (_x isEqualType 0) then {
                         _condition set [_forEachIndex,(_x call TFD_common_fnc_numToSide)];
                     };
@@ -278,7 +283,8 @@ switch _mode do {
                     _conditions set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                 };
             } forEach (_conditions); {
-                private _condition = _x select 3; // condition {
+                private _condition = _x select 3; // condition 
+                {
                     if (_x isEqualType east) then {
                         _condition set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                     };
@@ -736,7 +742,8 @@ switch _mode do {
                 };
                 _entity set3denAttribute ["TFD_Channellist",str _value];
             } forEach (_units + _groups);
-            // Cycle through groups to remove leader. {
+            // Cycle through groups to remove leader. 
+            {
                 private _entity = _x;
                 private _list = (_entity get3denAttribute "TFD_ChannellistLeader") params [["_value",[]]];
                 if (_value isEqualType "") then {
@@ -918,7 +925,8 @@ switch _mode do {
                         };
                     } forEach (_condition);
                 
-                    //remove groups {
+                    //remove groups 
+                    {
                         [_curSel, _x] call fn_removeGroupFromChannel;
                     } forEach (allGroups select {side _x == _entity});
                 };
@@ -951,7 +959,8 @@ switch _mode do {
                     _conditions set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                 };
             } forEach (_conditions); {
-                private _condition = _x select 3; // condition {
+                private _condition = _x select 3; // condition 
+                {
                     if (_x isEqualType east) then {
                         _condition set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                     };

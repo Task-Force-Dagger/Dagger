@@ -33,7 +33,8 @@ private _allTasks = []; {
 // Remove duplicates
 _allTasks = _allTasks arrayIntersect _allTasks;
 
-// And cancel them all. {
+// And cancel them all. 
+{
     [_x, "Canceled"] call FUNC(finishTask);
 } forEach _allTasks;
 

@@ -30,11 +30,13 @@ _holder addBackpackCargoGlobal [_chestpack, 1];
 _backpack = firstBackpack _holder;
 clearAllItemsFromBackpack _backpack;
 
-//add items {
+//add items 
+{
     _backpack addItemCargoGlobal [_x, 1];
 } forEach _chestpackitems;
 
-//add magazines {
+//add magazines 
+{
     _backpack addMagazineAmmoCargo [(_x select 0), (_x select 2), (_x select 1)];
 } forEach _chestpackmags;
 

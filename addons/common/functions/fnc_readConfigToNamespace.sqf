@@ -30,7 +30,8 @@ if (_namespace isEqualTo objNull) then {
 };
 
 // Get item properties
-// Read config values for found properties {
+// Read config values for found properties 
+{
     private _value = switch (true) do {
         case (isNumber _x): {getNumber _x};
         case (isText _x): {getText _x};

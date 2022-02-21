@@ -48,7 +48,8 @@ _parentAction = [
 _npAction = [
     "openNotepad",
     "Open Notepad",
-    "", // see if this looks nice or not TODO {
+    "", // see if this looks nice or not TODO 
+    {
             _this spawn {
             params ["_target", "_caller"];
 
@@ -65,7 +66,8 @@ _npAction = [
 
 [player, 1, ["ACE_SelfActions", "CueCardAction"], _npAction] call ace_interact_menu_fnc_addActionToObject;
 
-// Add Cue Card Actions {
+// Add Cue Card Actions 
+{
 
     _x params [
         "_texture",
@@ -80,7 +82,8 @@ _npAction = [
     _action = [
         _id,
         _title,
-        _texture, // see if this looks nice or not TODO {
+        _texture, // see if this looks nice or not TODO 
+        {
             _this spawn {
                 params ["_target", "_caller", "_data"];
 

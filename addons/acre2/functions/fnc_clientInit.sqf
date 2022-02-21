@@ -23,7 +23,8 @@ if (!alive player) exitWith {};
     private _unitGroup = group _unit;
     if (getMissionConfigValue ['TFD_AcreBabelEnabled',false]) then {
         //Determine which languages we should speak
-        //Check Side/Faction conditions {
+        //Check Side/Faction conditions 
+        {
             _x params ["","_conditions"];
             private _langIdx = _forEachIndex;
             if ([_unit, _conditions] call EFUNC(common,evaluateCondArray)) then {
@@ -246,7 +247,8 @@ if (!alive player) exitWith {};
  {_unit removeItem _x;} forEach ([] call acre_api_fnc_getCurrentRadioList);
 
 
-            // Allocate new radios. {
+            // Allocate new radios. 
+            {
                 if (_unit canAdd _x) then {
                     _unit addItem _x;
                 } else {

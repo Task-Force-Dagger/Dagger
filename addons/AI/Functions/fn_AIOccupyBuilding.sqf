@@ -73,7 +73,8 @@ private _buildingsIndexes = [];
 if (_topDownFilling) then { {
         private _buildingPos = (_x buildingPos -1) select { !(_x in _excludes) };
 
-        // Those reverse are necessary, as dumb as it is there's no better way to sort those subarrays in sqf {
+        // Those reverse are necessary, as dumb as it is there's no better way to sort those subarrays in sqf 
+        {
             reverse _x;
         } forEach _buildingPos;
 
@@ -98,7 +99,8 @@ if (_topDownFilling) then { {
     } forEach _buildings;
 };
 
-// Remove buildings without positions {
+// Remove buildings without positions 
+{
     _buildingsIndexes deleteAt (_buildingsIndexes find _x);
 } forEach (_buildingsIndexes select {count _x == 0});
 

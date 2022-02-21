@@ -50,7 +50,8 @@ for "_i" from 1 to _amount do {
     
     _added = false;
     
-    // ADD TO CONTAINER {
+    // ADD TO CONTAINER 
+    {
         switch (_x) do {
             case 0: {
                 if ( (_unit canAdd _item) && (!_added) ) then {

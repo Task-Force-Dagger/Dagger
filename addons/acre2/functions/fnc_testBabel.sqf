@@ -37,7 +37,8 @@ if (getmissionconfigvalue ["TFD_AcreBabelEnabled",false]) then {
             if IS_STRING(_groupCond) then { _groupCond = call compile _groupCond; };
 
             if (_groupCond isEqualTo []) then {
-                // Check the unit conditions {
+                // Check the unit conditions 
+                {
                     private _unit = _x;
                     TRACE_1("Autotest checking babel",_unit);
                     private _unitCond = _unit getVariable ["TFD_BabelLanguages", []];

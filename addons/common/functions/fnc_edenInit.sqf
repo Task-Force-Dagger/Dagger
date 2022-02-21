@@ -53,7 +53,8 @@ GVAR(edenMouseZchangedIdx) = ((findDisplay 313) displayAddEventHandler ["mouseZc
     };
 }]);
 
-// Some stuff for hiding map objects { { _x hideObjectGlobal false } forEach (_x getVariable [QGVAR(intersections),[]]);
+// Some stuff for hiding map objects 
+{ { _x hideObjectGlobal false } forEach (_x getVariable [QGVAR(intersections),[]]);
 
     private _ints = [];
     _ints append lineIntersectsObjs [AGLToASL(_x modelToWorld [-2,0,0]), AGLToASL(_x modelToWorld [2,0,0]), objNull, _x, true, 32];

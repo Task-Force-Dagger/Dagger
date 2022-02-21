@@ -52,7 +52,8 @@ TRACE_2("Body Inventory",_items,_weapons);
     _bodybag addItemCargoGlobal [_x, 1];
 } forEach _items;
 
-// Weapons with preset attachments and no non-preset parent will get attachments duplicated {
+// Weapons with preset attachments and no non-preset parent will get attachments duplicated 
+{
     private _weaponNonPreset = [_x] call CBA_fnc_getNonPresetClass;
     if (_weaponNonPreset == "") then {
         _weaponNonPreset = _x;

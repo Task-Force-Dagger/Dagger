@@ -25,13 +25,15 @@ private _playerFactions = [] call CBA_fnc_hashCreate; {
 } forEach allPlayers;
 
 if (_activeFactionCategory == "mission") then {
-    // use missionConfigFile {
+    // use missionConfigFile 
+    {
         private _factionName = (toLower(configName _x));
         _factions pushBackUnique [getText(_x >> "displayName"),_factionName];
     } forEach (configProperties [missionConfigFile >> "CfgLoadouts","isClass _x"]);
 
 } else {
-    // Then configFile {
+    // Then configFile 
+    {
         private _category = toLower (getText (_x >> "category"));
         if (_category == "") then {_category = "Other";};
         if (_activeFactionCategory == _category) then {

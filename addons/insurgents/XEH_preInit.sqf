@@ -22,7 +22,8 @@ private _configFile = configFile >> QGVAR(gear); {
                     GVAR(randomGear) set [_key, _items];
                 };
 
-                // add and filter unavilable classes {
+                // add and filter unavilable classes 
+                {
                     if (!isNull (_x call CBA_fnc_getItemConfig)) then {
                         LOG_1("Adding '%1' to random gear pool",_x);
                         // we allow duplicates so chance of certain item can be increased by having them more times in arrays

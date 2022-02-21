@@ -1,4 +1,4 @@
-// add setting for all gear from settings {
+{
     private _class = configName _x;
     [
         GEAR_SETTING(_class),

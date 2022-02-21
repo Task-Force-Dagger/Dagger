@@ -140,7 +140,8 @@ _targets = _targets select { !isNull _x };
 TRACE_2("Targets All",_targetsAll,_targets);
 
 
-// Set up default configuration and interactions {
+// Set up default configuration and interactions 
+{
     _x setVariable [QGVAR(targets), _targets];
     _x setVariable [QGVAR(targetsInvalid), _targetsInvalid];
     if (_x getVariable [QGVAR(duration), 0] == 0) then {
@@ -299,7 +300,8 @@ if (_mode == 4) then {
     // Prepare target groups
     [_targetsAll, _targetsInvalid, _triggerMarkers] call FUNC(setTargetGroups);
 
-    // Set up triggers {
+    // Set up triggers 
+    {
         if !(_x in _triggerMarkersSet) then {
             private _trigger = _x;
 
@@ -333,7 +335,8 @@ if (_mode == 4) then {
 };
 
 
-// Set up targets {
+// Set up targets 
+{
     _x setVariable [QGVAR(targets), _targets];
     _x setVariable [QGVAR(targetsInvalid), _targetsInvalid];
     _x setVariable [QGVAR(controllers), _controllers];

@@ -36,7 +36,8 @@ _taskCreateArray call BIS_fnc_taskCreate;
 // Call onShowCode
 call compile (_taskNamespace getVariable ["onShowCode", ""]);
 
-// Raise onShowEvents {
+// Raise onShowEvents 
+{
     [_x] call CBA_fnc_serverEvent;
 } forEach (_taskNamespace getVariable ["onShowEvents", []]);
 

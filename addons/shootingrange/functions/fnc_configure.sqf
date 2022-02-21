@@ -87,7 +87,8 @@ if (_allTargetsNewControllers isEqualTo [] || {!(_allTargetsNewControllers isEqu
 };
 
 
-// Set data {
+// Set data 
+{
     _x setVariable [QGVAR(targetsRuntime), _targetsNew];
     _x setVariable [QGVAR(targetsInvalidRuntime), _targetsInvalidNew];
 } forEach _allTargetsOld;

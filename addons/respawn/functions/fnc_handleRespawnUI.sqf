@@ -90,7 +90,8 @@ switch _input do {
             };
         } forEach (configProperties [configFile >> "CfgLoadouts", "isClass _x"]);
 
-        // Combine array for sorting. { _factionCategories set [_forEachIndex,[_x,_factionCategoryPlayerCounts select _forEachIndex]]} forEach _factionCategories;
+        // Combine array for sorting. 
+        { _factionCategories set [_forEachIndex,[_x,_factionCategoryPlayerCounts select _forEachIndex]]} forEach _factionCategories;
 
         // Sort Alphabetically.
         _factionCategories sort true;
@@ -304,13 +305,15 @@ switch _input do {
         } forEach (allPlayers);
 
         if (_activeFactionCategory == "mission") then {
-            // use missionConfigFile {
+            // use missionConfigFile 
+            {
                 private _factionName = (toLower(configName _x));
                 _factions pushBackUnique [getText(_x >> "displayName"),_factionName];
             } forEach (configProperties [missionConfigFile >> "CfgLoadouts","isClass _x"]);
 
         } else {
-            // Then configFile {
+            // Then configFile 
+            {
                 private _category = toLower (getText (_x >> "category"));
                 if (_category == "") then {_category = "Other";};
                 if (_activeFactionCategory == _category) then {
@@ -381,7 +384,8 @@ switch _input do {
         lbClear _ctrlDeadListBox; {
             private _found = false;
             private _deadPlayer = _x;
-            //Check if already selected and thus in the selected respawn listBox. {
+            //Check if already selected and thus in the selected respawn listBox. 
+            {
                 if (_deadPlayer == (_x select 1)) exitWith {
                     _found = true;  
                 };

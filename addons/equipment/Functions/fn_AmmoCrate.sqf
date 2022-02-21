@@ -50,7 +50,8 @@ _magazineTypeS = getarray (configfile >> "CfgWeapons" >> _x >>"magazines");
 
 //Fills box with given content
 
-//systemChat format ["Weps %1 Mags %2 Box %3", str _allPlayerWeapons, str _allMagazinesType, str _box]; {
+//systemChat format ["Weps %1 Mags %2 Box %3", str _allPlayerWeapons, str _allMagazinesType, str _box]; 
+{
 _do= _box addMagazineCargoGlobal [_x, _Ammount];
 1
 } forEach _allMagazinesType;
