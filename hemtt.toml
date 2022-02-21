@@ -1,0 +1,31 @@
+name = "TFD"
+prefix = "tfd"
+author = "tfd"
+template = "cba"
+mainprefix = "z"
+folder_optionals = true
+
+files = [
+    "mod.cpp",
+    "README.md",
+    "LICENSE",
+    "extras/addons",
+    "extras/keys",
+    "AUTHORS.txt",
+    "tfd.paa",
+    "itfd.paa"
+    ]
+
+exclude = ["*.psd", "*.png", "*.tga"]
+
+
+modname = "{{name}}"
+key_name = "{{prefix}}_{{version}}"
+
+
+releasebuild = [
+    "@zip tfd_v{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
+]
+
+[header_exts]
+version = "{{git \"id 8\"}}"

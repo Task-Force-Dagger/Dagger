@@ -1,0 +1,1 @@
+#include "\z\tfd\addons\common\script_component.hpp"

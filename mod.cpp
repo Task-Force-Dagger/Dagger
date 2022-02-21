@@ -1,0 +1,10 @@
+name = "Tfd";
+picture = "tfd_card_1024.paa";
+description = "Tfd Mod";
+logo = "tfd_card_1024.paa";
+logoOver = "tfd_card_1024.paa";
+tooltip = "Tfd Mod";
+tooltipOwned = "Project Template Weee";
+overview = "Tfd Custom Mod";
+author = "YonV";
+overviewPicture = "tfd_card_512.paa";
