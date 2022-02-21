@@ -9,8 +9,7 @@ if !(is3den) exitWith {};
 private _topCtrl = (((findDisplay 313) displayCtrl 1021) controlsGroupCtrl 1039) controlsGroupCtrl 1049;
 if (isNull _topCtrl) exitWith {};
 
-private ["_i", "_faction", "_factionIcon"];
-{
+private ["_i", "_faction", "_factionIcon"]; {
     for "_i" from 0 to ((_x tvCount []) - 1) do {
         _faction = _x tvData [_i];
 

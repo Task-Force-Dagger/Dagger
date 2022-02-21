@@ -1,5 +1,4 @@
-Vcm_Settings = 
-{
+Vcm_Settings =  {
 	/*
 		ADDITIONAL COMMANDS
 		(group this) setVariable ["VCM_NOFLANK",true]; //This command will stop the AI squad from executing advanced movement maneuvers.

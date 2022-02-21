@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="TFD">
+    <Package name="RatelMarker">
+        <Key ID="STR_TFD_RatelMarker_DisplayName">
+            <Original>RATEL Marker</Original>
+            <Spanish>Marcador RATEL</Spanish>
+            <German>RATEL Markierer</German>
+            <French>Marqueur RATEL</French>
+        </Key>
+        <Key ID="STR_TFD_RatelMarker_Open">
+            <Original>Open RATEL Marker</Original>
+            <Spanish>Abril Marcador RATEL</Spanish>
+            <German>RATEL Markierer öffnen</German>
+            <French>Ouvrir marqueur RATEL</French>
+        </Key>
+        <Key ID="STR_TFD_RatelMarker_InvalidCoordinates">
+            <Original>Invalid Coordinates!</Original>
+            <Spanish>Coordenadas Inválidas!</Spanish>
+            <German>Ungültige Koordinaten!</German>
+            <French>Mauvaises coordonés</French>
+        </Key>
+        <Key ID="STR_TFD_RatelMarker_MarkerCreated">
+            <Original>RATEL Marker Created (Open Map to Focus)</Original>
+            <Spanish>Marcador RATEL Creado (Abrir Mapa para Centrarse)</Spanish>
+            <German>RATEL Markierung erstellt (Karte öffnen um zu zentrieren)</German>
+            <French>Balise RATEL crée (Ouvrir la carte pour focaliser)</French>
+        </Key>
+        <Key ID="STR_TFD_RatelMarker_QRM_Create">
+            <Original>Create Quick Reference Marker</Original>
+        </Key>
+        <Key ID="STR_TFD_RatelMarker_QRM_Mode">
+            <Original>Quick Reference Marker Mode</Original>
+        </Key>
+        <Key ID="STR_TFD_RatelMarker_QRM_VehiclePos">
+            <Original>Vehicle Position</Original>
+        </Key>
+        <Key ID="STR_TFD_RatelMarker_QRM_ViewPos">
+            <Original>View Position</Original>
+        </Key>
+        <Key ID="STR_TFD_RatelMarker_QRM_Error">
+            <Original>Could not create Quick Reference Marker</Original>
+        </Key>
+    </Package>
+</Project>

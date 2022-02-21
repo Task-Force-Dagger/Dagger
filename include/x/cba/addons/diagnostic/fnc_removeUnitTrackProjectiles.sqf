@@ -44,8 +44,7 @@ if (_arrayIndex >= 0) then {
     if (count GVAR(projectileTrackedUnits) == 0) then {
         [GVAR(projectileDrawHandle)] call CBA_fnc_removePerFrameHandler;
 
-        // someone could remove the unit while the projectiles are still being tracked
-        {
+        // someone could remove the unit while the projectiles are still being tracked {
             if (!(isNil {_x})) then {
                 private _handle = _x select 0;
                 [_handle] call CBA_fnc_removePerFrameHandler;

@@ -1,0 +1,1 @@
+#include "\z\tfd\addons\flags\script_component.hpp"

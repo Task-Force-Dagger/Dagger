@@ -30,11 +30,9 @@ class CfgFunctions {
         };
     };
 
-    class CHVD
-    {
+    class CHVD {
         tag = "CHVD";
-        class script
-        {
+        class script {
             file = "z\tfd\addons\main\Functions\CHVD";
             class onSliderChange {};
             class onLBSelChanged {};

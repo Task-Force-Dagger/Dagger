@@ -18,8 +18,7 @@ player addEventHandler ["GetInMan", {
             private _vehicle = assignedVehicle player;
             private _weap = currentWeapon vehicle player;
             private _name = format ["<t size='1.1' color='#FFFFFF'>%1</t><br/>", getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "DisplayName")];
-
-            {
+ {
                 _x params ["_unit", "_role", "_cargoIndex", "_turretPath", "_personTurret"];
 
                 if (_role isEqualTo "driver") then {

@@ -1,0 +1,13 @@
+PREP(adjustTime);
+PREP(adjustTimeLocal);
+PREP(disable);
+PREP(enable);
+PREP(onPlayerKilled);
+PREP(onPlayerRespawn);
+PREP(toggle);
+PREP(respawnDrawMapIcons);
+PREP(respawnGroupMarkerUpdate);
+PREP(respawnLocalClient);
+PREP(respawnWaveServer);
+PREP(handleRespawnUI);
+PREP(loadGear);

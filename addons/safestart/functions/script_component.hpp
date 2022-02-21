@@ -1,0 +1,1 @@
+#include "\z\tfd\addons\safestart\script_component.hpp"

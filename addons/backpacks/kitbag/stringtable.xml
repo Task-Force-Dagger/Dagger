@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+	
+	<!-- ####################################################################################### -->
+	<Package name="tfd_Backpacks">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Backpacks_Kitbag">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFD_Backpacks_Kitbag_Title">
+				<Original>TFD Backpacks Carryall</Original>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_Author">
+				<Original>TFD-Team</Original>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_URL">
+				<Original>https://purplesmoke.info</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Kitbag">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_BLACK">
+				<Original>[TFD] Kitbag (Black)</Original>
+				<German>Seesack (Schwarz)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_BLACK_MEDIC">
+				<Original>[TFD] Kitbag (Black MED)</Original>
+				<German>Seesack (Schwarz MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_BW_D">
+				<Original>[TFD] Kitbag (BW Tropic)</Original>
+				<German>Seesack (BW Tropen)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_BW_D_MEDIC">
+				<Original>[TFD] Kitbag (BW Tropic MED)</Original>
+				<German>Seesack (BW Tropen MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_BW_W">
+				<Original>[TFD] Kitbag (BW Camo)</Original>
+				<German>Seesack (BW Fleck)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_BW_W_MEDIC">
+				<Original>[TFD] Kitbag (BW Camo MED)</Original>
+				<German>Seesack (BW Fleck MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_COYOTE">
+				<Original>[TFD] Kitbag (Coyote)</Original>
+				<German>Seesack (Coyote)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_COYOTE_MEDIC">
+				<Original>[TFD] Kitbag (Coyote MED)</Original>
+				<German>Seesack (Coyote MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_GREEN_DARK">
+				<Original>[TFD] Kitbag (Green Dark)</Original>
+				<German>Seesack (Grün Dunkel)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_GREEN_DARK_MEDIC">
+				<Original>[TFD] Kitbag (Green Dark MED)</Original>
+				<German>Seesack (Grün Dunkel MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_GREEN_DGTL">
+				<Original>[TFD] Kitbag (Green Digital)</Original>
+				<German>Seesack (Grün Digital)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_GREEN_DGTL_MEDIC">
+				<Original>[TFD] Kitbag (Green Digital MED)</Original>
+				<German>Seesack (Grün Digital MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_GREEN_RNGR">
+				<Original>[TFD] Kitbag (Green Ranger)</Original>
+				<German>Seesack (Grün Ranger)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_GREEN_RNGR_MEDIC">
+				<Original>[TFD] Kitbag (Green Ranger MED)</Original>
+				<German>Seesack (Grün Ranger MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_HEX_CAMO">
+				<Original>[TFD] Kitbag (Hex Camo)</Original>
+				<German>Seesack (Hex Camo)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_HEX_CAMO_MEDIC">
+				<Original>[TFD] Kitbag (Hex Camo MED)</Original>
+				<German>Seesack (Hex Camo MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_HEX_GREEN">
+				<Original>[TFD] Kitbag (Hex Green)</Original>
+				<German>Seesack (Hex Grün)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_HEX_GREEN_MEDIC">
+				<Original>[TFD] Kitbag (Hex Green MED)</Original>
+				<German>Seesack (Hex Grün MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_MARPAT_D">
+				<Original>[TFD] Kitbag (MARPAT-D)</Original>
+				<German>Seesack (MARPAT-D)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_MARPAT_D_MEDIC">
+				<Original>[TFD] Kitbag (MARPAT-D MED)</Original>
+				<German>Seesack (MARPAT-D MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_MARPAT_W">
+				<Original>[TFD] Kitbag (MARPAT-W)</Original>
+				<German>Seesack (MARPAT-W)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_MARPAT_W_MEDIC">
+				<Original>[TFD] Kitbag (MARPAT-W MED)</Original>
+				<German>Seesack (MARPAT-W MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_MTP">
+				<Original>[TFD] Kitbag (MTP)</Original>
+				<German>Seesack (MTP)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_MTP_MEDIC">
+				<Original>[TFD] Kitbag (MTP MED)</Original>
+				<German>Seesack (MTP MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_OCP">
+				<Original>[TFD] Kitbag (OCP)</Original>
+				<German>Seesack (OCP)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_OCP_MEDIC">
+				<Original>[TFD] Kitbag (OCP MED)</Original>
+				<German>Seesack (OCP MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_UCP">
+				<Original>[TFD] Kitbag (UCP)</Original>
+				<German>Seesack (UCP)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_UCP_MEDIC">
+				<Original>[TFD] Kitbag (UCP MED)</Original>
+				<German>Seesack (UCP MED)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_WDL">
+				<Original>[TFD] Kitbag (Wood Classic)</Original>
+				<German>Seesack (Wald Klassisch)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_Kitbag_01_WDL_MEDIC">
+				<Original>[TFD] Kitbag (Wood Classic MED)</Original>
+				<German>Seesack (Wald Klassisch MED)</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+	</Package>
+	<!-- ####################################################################################### -->
+	
+</Project>

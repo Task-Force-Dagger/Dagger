@@ -4,13 +4,11 @@ switch (_logic getVariable ["TFDUnits",-1]) do {
     case (-1): {
         _units append allUnits;
     };
-    case (0): {
-        {
+    case (0): { {
           _units append crew vehicle _x;
         } forEach synchronizedObjects _logic;
     };
-    case (1): {
-        {
+    case (1): { {
           _units append units _x;
         } foreach synchronizedObjects _logic;
     };

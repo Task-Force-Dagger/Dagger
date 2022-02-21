@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="TFD">
+    <Package name="HeavyLifter">
+        <Key ID="STR_TFD_HeavyLifter_Helper">
+            <Original>Heavy Duty Hooks</Original>
+            <Spanish>Ganchos</Spanish>
+            <German>Schwerlasthaken</German>
+            <French>Crochets à haute résistance</French>
+        </Key>
+        <Key ID="STR_TFD_HeavyLifter_Attach">
+            <Original>Attach Hooks</Original>
+            <Spanish>Fijar Ganchos</Spanish>
+            <German>Schwerlasthaken befestigen</German>
+            <French>Attacher les crochets</French>
+        </Key>
+        <Key ID="STR_TFD_HeavyLifter_Detach">
+            <Original>Detach Hooks</Original>
+            <Spanish>Soltar Ganchos</Spanish>
+            <German>Schwerlasthaken lösen</German>
+            <French>Détfdher les crochets</French>
+        </Key>
+        <Key ID="STR_TFD_HeavyLifter_Attaching">
+            <Original>Attaching Hooks ...</Original>
+            <Spanish>Fijando Ganchos ...</Spanish>
+            <German>Befestige Schwerlasthaken...</German>
+            <French>Attachage des crochets...</French>
+        </Key>
+        <Key ID="STR_TFD_HeavyLifter_Detaching">
+            <Original>Detaching Hooks ...</Original>
+            <Spanish>Soltando Ganchos ...</Spanish>
+            <German>Löse Schwerlasthaken...</German>
+            <French>Détfdhage des crochets...</French>
+        </Key>
+        <Key ID="STR_TFD_HeavyLifter_Attached">
+            <Original>Hooks Attached</Original>
+            <Spanish>Ganchos Fijados</Spanish>
+            <German>Schwerlasthaken befestigt</German>
+            <French>Crochets attachés</French>
+        </Key>
+        <Key ID="STR_TFD_HeavyLifter_Detached">
+            <Original>Hooks Detached</Original>
+            <Spanish>Ganchos Sueltos</Spanish>
+            <German>Schwerlasthaken gelöst</German>
+            <French>Crochets détfdhés</French>
+        </Key>
+    </Package>
+</Project>

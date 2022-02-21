@@ -5,8 +5,7 @@ player setVariable ["TFD_VehCamLockHandle", -1];
 _getInEHId = player addEventHandler ["GetInMan", {
         params ["_unit", "_role", "_vehicle", "_turret"];
 
-        _handle = [
-            {
+        _handle = [ {
                 if ((toUpper cameraView) isEqualTo "EXTERNAL" && {player != vehicle player}) then {
                     player switchCamera "INTERNAL";
                 };

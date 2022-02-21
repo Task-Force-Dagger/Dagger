@@ -15,8 +15,7 @@
 #define CMD_EXECUTE       -5
 
 #ifdef _CONFIG
-enum
-{
+enum {
 // note: this CMD should be if possible organized as is menu
 // (items from the same menu together)
 // this makes searching much easier
@@ -254,16 +253,14 @@ CMD_FIRE_AT_POSITION_AMMO // same as CMD_FIRE_AT_POSITION_AUTO but with custom m
 };
 
 /// In-game UI hiding animation type
-enum HideType
-{
+enum HideType {
   HTNone, // no animation
   HTFade, // fade in / fade out
   HTMoveLeft, // move from / to the left
   HTMoveRight // move from / to the right
 };
 
-enum
-{
+enum {
   SPTPlain,
   SPTPercents
 };

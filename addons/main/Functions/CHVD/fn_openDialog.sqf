@@ -8,12 +8,10 @@ if (isNull (findDisplay 2900)) then {
 
 disableSerialization;
 CHVD_loadingDialog = true;
-
-{
+ {
     ctrlSetText _x;
 } forEach [[1006, str round CHVD_foot],[1007, str round CHVD_footObj],[1013, str round CHVD_car],[1014, str round CHVD_carObj],[1017, str round CHVD_air],[1018, str round CHVD_airObj],[1400, str CHVD_footTerrain],[1401, str CHVD_carTerrain],[1402, str CHVD_airTerrain]];
-
-{
+ {
     sliderSetRange [_x select 0, 0, _x select 2];
     sliderSetRange [_x select 3, 0, (_x select 5) min (_x select 1)];
     sliderSetSpeed [_x select 0, 500, 500];
@@ -21,8 +19,7 @@ CHVD_loadingDialog = true;
     sliderSetPosition [_x select 0, _x select 1];
     sliderSetPosition [_x select 3, (_x select 4) min (_x select 1)];
 } forEach [[1900,CHVD_foot,TFD_Main_ViewDistanceMaxDistance,1901,CHVD_footObj,TFD_Main_ViewDistanceMaxObjectDistance],[1902,CHVD_car,TFD_Main_ViewDistanceMaxDistance,1903,CHVD_carObj,TFD_Main_ViewDistanceMaxObjectDistance],[1904,CHVD_air,TFD_Main_ViewDistanceMaxDistance,1905,CHVD_airObj,TFD_Main_ViewDistanceMaxObjectDistance]];
-
-{
+ {
     _ctrl = ((findDisplay 2900) displayCtrl (_x select 0));
     
     _textDisabled = if (isLocalized "STR_chvd_disabled") then {localize "STR_chvd_disabled"} else {"Disabled"};
@@ -42,8 +39,7 @@ CHVD_loadingDialog = true;
         format ["[_this select 1, '%1',%2,%3,%4] call CHVD_fnc_onLBSelChanged_syncmode", _x select 1, _x select 2, _x select 3, _x select 4]
     ];
 } forEach [[1404,"foot",1410,1901,1007], [1406,"car",1409,1903,1014], [1408,"air",1411,1905,1018]];
-
-{
+ {
     _ctrl = _x select 0;
     _mode = call compile ("CHVD_" + (_x select 1) + "SyncMode");
 
@@ -63,8 +59,7 @@ CHVD_loadingDialog = true;
         format ["[_this select 0, '%1',%2,%3] call CHVD_fnc_onEBinput_syncmode", _x select 1, _x select 2, _x select 3]
     ];
 } forEach [[1410,"foot",1901,1007], [1409,"car",1903,1014], [1411,"air",1905,1018]];
-
-{
+ {
     _ctrl = ((findDisplay 2900) displayCtrl (_x select 0));
     if (TFD_Main_ViewDistanceNoGrass) then {
         _textLow = if (isLocalized "STR_chvd_low") then {localize "STR_chvd_low"} else {"Low"};
@@ -86,8 +81,7 @@ CHVD_loadingDialog = true;
         _ctrl lbSetCurSel (_sel - 1);
     };
 } forEach [[1500,CHVD_footTerrain],[1501,CHVD_carTerrain],[1502,CHVD_airTerrain]];
-
-{
+ {
     _ctrl = ((findDisplay 2900) displayCtrl (_x select 0));
     _handle = _ctrl ctrlSetEventHandler ["LBSelChanged", 
         format ["[_this select 1, '%1', %2] call CHVD_fnc_onLBSelChanged", _x select 1, _x select 2]

@@ -8,8 +8,7 @@
     [player ,"NoVoice"] remoteExec ["setSpeaker",0,true];
     
     call TFD_fnc_PlayerAddActions;
-    
-    {_x addCuratorEditableObjects [[player],FALSE];} count allCurators;
+     {_x addCuratorEditableObjects [[player],FALSE];} count allCurators;
 
 
 if (isNil { player getVariable "StartingPos"; } ) then {

@@ -13,7 +13,7 @@
 
 #define LOGO_PATH "\z\tfd\addons\media\images\tfd.paa"
 
-#define URL https://arma.wiki/
+#define URL "https://arma.wiki"
 #define NAME TFD
 
 // MINIMAL REQUIRED VERSIONS

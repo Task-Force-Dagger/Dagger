@@ -42,8 +42,7 @@ private _soundObject = objNull;
 
 if (_soundClass != "") then {
     
-    if (count _soundArray > 0) then {
-        {
+    if (count _soundArray > 0) then { {
             if ((_x select 0) == _soundClass) then {
                 _soundObject = (_x select 1);
                 _soundInUse = true;
@@ -65,8 +64,7 @@ if (_soundClass != "") then {
     
 } else {
     
-    if (count _soundArray > 0) then {
-        {
+    if (count _soundArray > 0) then { {
             
             private _sndClass = (_x select 0);
             private _sndObject = (_x select 1);

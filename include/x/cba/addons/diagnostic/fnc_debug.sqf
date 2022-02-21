@@ -33,8 +33,7 @@ Author:
 
 private _fnc_splitLines = {
     private _return = [];
-
-    {
+ {
         private _string = _x;
 
         while {count _string > 0} do {
@@ -86,21 +85,18 @@ if (_useChat) then {
     if (time < 1) then {
         _message spawn {
             uiSleep 1;
-
-            {
+ {
                 GVAR(logic) globalChat _x;
             } forEach _this;
         };
-    } else {
-        {
+    } else { {
             GVAR(logic) globalChat _x;
         } forEach _message;
     };
 };
 
 // print in rpt-log
-if (_useLog) then {
-    {
+if (_useLog) then { {
         diag_log text _x;
     } forEach _message;
 };

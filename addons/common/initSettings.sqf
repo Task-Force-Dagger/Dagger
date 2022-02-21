@@ -5,8 +5,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_safemode")) then {
         "Enable ACE Weapon Safety on mission start",
         COMPONENT_NAME,
         true,
-        0,
-        {},
+        0, {},
         true
     ] call CBA_fnc_addSetting;
 };

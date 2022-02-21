@@ -18,14 +18,11 @@ if (isTFD) then {
 };
 
 // TODO - Remove if added to ST HUD.
-[{!isNil "STHud_GetName"},
-{
-    STHud_GetName =
-    {
+[{!isNil "STHud_GetName"}, {
+    STHud_GetName = {
         params ["_unit", "_fullName"];
         private _value = _unit getVariable ["sth_name", []];
-        if ((count(_value) isEqualTo 0) || {!(isPlayer(_unit) isEqualTo (_value select 0))}) then
-        {
+        if ((count(_value) isEqualTo 0) || {!(isPlayer(_unit) isEqualTo (_value select 0))}) then {
             private _newName = name (_unit);
             if (_newName != "") then {
                 _value = [isPlayer(_unit), _newName, _unit call STHud_GetName_Short];
@@ -39,12 +36,10 @@ if (isTFD) then {
             _unit setVariable ["sth_name", _value, false];
         };
 
-        if (_fullName) then
-        {
+        if (_fullName) then {
             _value select 1;
         }
-        else
-        {
+        else {
             _value select 2;
         };
     };

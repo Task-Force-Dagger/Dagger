@@ -1,7 +1,6 @@
 params ["_value"];
 if (_value) then {
-    [{time > 5 && {player == player}},
-    {[] spawn {
+    [{time > 5 && {player == player}}, {[] spawn {
         if !(hasInterface) exitWith {};
         private _msg = (getPos player) call BIS_fnc_locationDescription;
         _msg = _msg + format ['<br/>%1/%2/%3', (date select 0), (date select 1), (date select 2)];

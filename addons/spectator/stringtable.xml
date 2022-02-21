@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="TFD">
+    <Package name="Spectator">
+        <Key ID="STR_TFD_Spectator_DisplayName">
+            <Original>Tfd - Spectator</Original>
+            <Polish>Tfd - Obserwator</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_Enabled">
+            <Original>Enable spectator</Original>
+            <Polish>Włącz obserwatora</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_Enabled_Description">
+            <Original>Enables spectator for dead players</Original>
+            <Polish>Włącza obserwatora martwym graczom</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_Unconscious">
+            <Original>Unconscious</Original>
+            <Polish>Nieprzytomni</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_AllowUnconscious">
+            <Original>Allow unconscious</Original>
+            <Polish>Obserwator dla nieprzytomnych</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_AllowUnconscious_Description">
+            <Original>Enables spectator also for unconscious players. Requires enabling spectator.</Original>
+            <Polish>Włącza obserwatora także nieprzytomnym graczom. Wymaga włączenia obserwatora.</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_UnconsciousDelay">
+            <Original>Unconscious spectator delay</Original>
+            <Polish>Opóźnienie obserwatora dla nieprzytomnych</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_UnconsciousDelay_Description">
+            <Original>How much time must pass before unconscious players get spectator.</Original>
+            <Polish>Ile czasu musi upłynąć nim nieprzytomni gracze dostaną obserwatora.</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_Sides">
+            <Original>Sides available for spectating</Original>
+            <Polish>Dostępne strony do obserwowania</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_Sides_Description">
+            <Original>Spectator will be able to see and track units from given sides.</Original>
+            <Polish>Obserwator będzie mógł widzieć i śledzić jednostki wybranych stron.</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_Friendly">
+            <Original>Friendly</Original>
+            <Polish>Sojusznicze</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_Own">
+            <Original>Player side</Original>
+            <Polish>Strona gracza</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_CivilianSide">
+            <Original>Allow civilian spectating</Original>
+            <Polish>Pozwól obserwować cywili</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_CivilianSide_Description">
+            <Original>Allows tracking units from civilian side.</Original>
+            <Polish>Pozwala obserwować jednostki strony cywilnej.</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_AllowAI">
+            <Original>Allow AI spectating</Original>
+            <Polish>Pozwól obserwować AI</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_AllowAI_Description">
+            <Original>Allows tracking AI units from whitelisted sides.</Original>
+            <Polish>Pozwala obserwować jednostki AI z dozwolonych stron.</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_FreeCamera">
+            <Original>Allow free camera</Original>
+            <Polish>Pozwól na wolną kamerę</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_FreeCamera_Description">
+            <Original>Allows spectator to move his camera freely.</Original>
+            <Polish>Pozwala obserwatorowi dowolnie poruszać kamerą.</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_TPPCamera">
+            <Original>Allow TPP Camera</Original>
+            <Polish>Pozwól na trzecioosobową kamerę</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_TPPCamera_Description">
+            <Original>Allows spectator to use third person camera.</Original>
+            <Polish>Pozwala obserwatorowi używać kamery trzecioosobowej.</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_State_Alive">
+            <Original>You're not dead (yet).</Original>
+            <Polish>Nie jesteś martwy (jeszcze).</Polish>
+        </Key>
+        <Key ID="STR_TFD_Spectator_State_Dead">
+            <Original>You're dead.</Original>
+            <Polish>Jesteś martwy.</Polish>
+        </Key>
+    </Package>
+</Project>

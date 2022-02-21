@@ -1,6 +1,5 @@
 params ["_arr"];
-private _text = "";
-{
+private _text = ""; {
     private _t = _x;
     if(!(_t isEqualType "")) then {_t = str _x};
     if(_t != "") then {

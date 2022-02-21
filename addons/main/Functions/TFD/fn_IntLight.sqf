@@ -310,10 +310,8 @@ if (isNil {IL_lastchange}) then { IL_lastchange = 0; };
 // functions
 IL_fnc_inList = {
     _found = false;
-    _index = -1;
-    {
-        _types = _x select 0;
-        {
+    _index = -1; {
+        _types = _x select 0; {
             if (_this isKindOf _x) exitWith { _found = true; };
         } forEach _types;
         if _found exitWith {_index = _forEachIndex;};
@@ -323,8 +321,7 @@ IL_fnc_inList = {
 
 IL_fnc_returnTurretUnits = {
     _peeps = [];
-    _turrets = allTurrets [_this,false];
-    {
+    _turrets = allTurrets [_this,false]; {
         if (!isNull (_this turretUnit _x)) then {_peeps pushBack (_this turretUnit _x)};
     }forEach _turrets;
     _peeps;
@@ -432,8 +429,7 @@ IL_fnc_addAction = {
                     if (IL_Red_On_Always) then { _veh setVariable ['IL_override',nil,true]; };
                     player setUserActionText[IL_action,IL_text_ON];
                     if (count IL_lights > 0) then {
-                        if (IL_Debug) then {player sideChat format ['removing lights because lights are off %1',str IL_lights];};
-                        {
+                        if (IL_Debug) then {player sideChat format ['removing lights because lights are off %1',str IL_lights];}; {
                             IL_lights = IL_lights - [_x];
                             deleteVehicle _x;
                         } forEach IL_lights;
@@ -449,8 +445,7 @@ IL_fnc_addAction = {
             };
         } else {
             if (count IL_lights > 0) then {
-                if (IL_Debug) then {player sideChat format ['removing lights because you are not in a vehicle %1',str IL_lights];};
-                {
+                if (IL_Debug) then {player sideChat format ['removing lights because you are not in a vehicle %1',str IL_lights];}; {
                     IL_lights = IL_lights - [_x];
                     deleteVehicle _x;
                 } forEach IL_lights;
@@ -485,8 +480,7 @@ IL_fnc_addAction = {
                 _lights set [1,_lighters];
             };
 
-            if (!isNil {_lightamount}) then {
-                {
+            if (!isNil {_lightamount}) then { {
                 _x set [1,IL_c_green];
                 _lights set [_forEachIndex,_x];
                 }forEach _lights;

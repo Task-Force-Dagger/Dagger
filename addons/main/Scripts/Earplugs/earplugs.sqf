@@ -18,15 +18,11 @@ if (YAINA_F_PlugsIn isEqualTo true) then {
         "z\tfd\addons\main\Scripts\Earplugs\plugs_out.paa",
         "z\tfd\addons\main\Scripts\Earplugs\plugs_out.paa",
         "_target == _this",
-        "true",
-        {},
-        {},
-        {   
+        "true", {}, {}, {   
             YAINA_F_PlugsIn = false;
             [] execVM "z\tfd\addons\main\Scripts\Earplugs\earplugs.sqf";
             ["<img image='z\tfd\addons\main\Scripts\Earplugs\plugs_out.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Removed</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
-        },
-        {},
+        }, {},
         [],
         0.5,
         -91,
@@ -45,15 +41,11 @@ if (YAINA_F_PlugsIn isEqualTo false) then {
         "z\tfd\addons\main\Scripts\Earplugs\plugs_in.paa",
         "z\tfd\addons\main\Scripts\Earplugs\plugs_in.paa",
         "_target == _this",
-        "true",
-        {},
-        {},
-        {   
+        "true", {}, {}, {   
             YAINA_F_PlugsIn = true;
             [] execVM "z\tfd\addons\main\Scripts\Earplugs\earplugs.sqf";
             ["<img image='z\tfd\addons\main\Scripts\Earplugs\plugs_in.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Fitted</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
-        },
-        {},
+        }, {},
         [],
         0.5,
         -91,
