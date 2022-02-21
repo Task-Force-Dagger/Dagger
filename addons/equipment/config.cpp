@@ -50,7 +50,7 @@ class CfgFunctions {
     #include "CfgFunctions.hpp"
 };
 
-#include "Cfg3den.hpp"
+#include "Cfg3DEN.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "jr_classes.hpp"
