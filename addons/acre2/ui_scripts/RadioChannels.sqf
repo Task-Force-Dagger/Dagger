@@ -2,10 +2,10 @@
 
 params ["_mode",["_params",[]]];
 
-#include "\a3\3DEN\UI\dikCodes.inc"
+#include "\a3\3den\UI\dikCodes.inc"
 
-// with uiNamespace do {     set3denMissionAttributes [["tfdMissionAcreAttributes","TFD_AcreSettings",str RadioChannelArray]];    };
-// with uiNamespace do {     set3denMissionAttributes [["tfdMissionAcreAttributes","TFD_AcreSettings","[]"]];    };
+// with uiNamespace do {     set3DENMissionAttributes [["teamworkMissionAcreAttributes","TFD_AcreSettings",str RadioChannelArray]];    };
+// with uiNamespace do {     set3DENMissionAttributes [["teamworkMissionAcreAttributes","TFD_AcreSettings","[]"]];    };
 
 #define EDIT_CHANNEL_IDCS [313201,313202,313203,313204,313205,313206,313207,313208,313209,313210,313211,313212]
 #define BEHIND_EDIT_CHANNELS_IDCS [189437,101]
@@ -15,41 +15,41 @@ params ["_mode",["_params",[]]];
 fn_removeUnitFromChannel = {
     params ["_channel", "_unit"];
     
-    _list = (_unit get3denAttribute "TFD_Channellist") params ["_value"];
+    _list = (_unit get3DENAttribute "TFD_Channellist") params ["_value"];
     if (_value isEqualType []) then {
         //Is default do nothing
-        //_unit set3denAttribute ["TFD_Channellist",str []];
+        //_unit set3DENAttribute ["TFD_Channellist",str []];
     } else {
         _value = call compile _value;
         _value = _value - [_channel];
-        _unit set3denAttribute ["TFD_Channellist",str _value];
+        _unit set3DENAttribute ["TFD_Channellist",str _value];
     };
 };
 
 fn_removeGroupFromChannel = {
     params ["_channel", "_group"];
 
-    _list = (_group get3denAttribute "TFD_ChannellistLeader") params ["_value"];
+    _list = (_group get3DENAttribute "TFD_ChannellistLeader") params ["_value"];
     if (_value isEqualType []) then {
         //Is Default do nothing
-        //_group set3denAttribute ["TFD_ChannellistLeader",str []];
+        //_group set3DENAttribute ["TFD_ChannellistLeader",str []];
     } else {
         _value = call compile _value;
         _value = _value - [_curSel];
-        _group set3denAttribute ["TFD_ChannellistLeader",str _value];
+        _group set3DENAttribute ["TFD_ChannellistLeader",str _value];
     };
 
     
-    _list = (_group get3denAttribute "TFD_Channellist") params ["_value"];
+    _list = (_group get3DENAttribute "TFD_Channellist") params ["_value"];
     if (_value isEqualType []) then {
         //is default do nothing
-        //_group set3denAttribute ["TFD_Channellist",str []];
+        //_group set3DENAttribute ["TFD_Channellist",str []];
     } else {
         _value = call compile _value;
         _value = _value - [_curSel];
-        _group set3denAttribute ["TFD_Channellist",str _value];
+        _group set3DENAttribute ["TFD_Channellist",str _value];
     };
-    // do units 
+    // do units
     {
         [_channel, _x] call fn_removeUnitFromChannel;
     } forEach (units _group);
@@ -64,9 +64,11 @@ fn_networkTreeHandleKey = {
     private _thing = RadioNetwork_data select (_ctrlTree tvValue _location);
 
     if (_thing isEqualType west) then {
-        private _sideNum = _thing call TFD_common_fnc_sideToNum; {
+        private _sideNum = _thing call TFD_common_fnc_sideToNum;
+        {
             private _channel = _x;
-            _channel params ["_condition"]; {
+            _channel params ["_condition"];
+            {
                 if (_x isEqualTo _thing) then {
                     _condition set [_forEachIndex,-1];
                 };
@@ -78,10 +80,10 @@ fn_networkTreeHandleKey = {
             } forEach _condition;
             _channel set [0,_condition - [-1]];
         } forEach RadioChannelArray;
-        //nullify all attributes 
+        //nullify all attributes
         {
-            set3denAttributes [[units _x, "TFD_Network", -1], [[_x],"TFD_Network", -1]];
-            set3denAttributes [[units _x, "TFD_Channellist", "[]"], [[_x],"TFD_Channellist", "[]"], [[_x],"TFD_ChannellistLeader", "[]"]];
+            set3DENAttributes [[units _x, "TFD_Network", -1], [[_x],"TFD_Network", -1]];
+            set3DENAttributes [[units _x, "TFD_Channellist", "[]"], [[_x],"TFD_Channellist", "[]"], [[_x],"TFD_ChannellistLeader", "[]"]];
         } forEach (cacheAllPlayerGroups select {side _x == _thing});
 
         if (_networkNumber <= (count RadioChannelArray)) then {
@@ -97,15 +99,16 @@ fn_networkTreeHandleKey = {
         
         private _sideNum = getNumber (configfile >> "CfgFactionClasses" >> _thing >> "side");
         private _side = _sideNum call TFD_common_fnc_numToSide;
- {
+
+        {
             private _channel = _x;
             _channel params ["_condition"];
             _channel set [0,_condition - [_thing,_side]];
         } forEach RadioChannelArray;
-        //nullify all attributes 
+        //nullify all attributes
         {
-            set3denAttributes [[units _x, "TFD_Network", -1], [[_x],"TFD_Network", -1]];
-            set3denAttributes [[units _x, "TFD_Channellist", "[]"], [[_x],"TFD_Channellist", "[]"], [[_x],"TFD_ChannellistLeader", "[]"]];
+            set3DENAttributes [[units _x, "TFD_Network", -1], [[_x],"TFD_Network", -1]];
+            set3DENAttributes [[units _x, "TFD_Channellist", "[]"], [[_x],"TFD_Channellist", "[]"], [[_x],"TFD_ChannellistLeader", "[]"]];
         } forEach (cacheAllPlayerGroups select {(faction (leader _x)) == _thing});
         
         if (_networkNumber <= (count RadioChannelArray)) then {
@@ -120,29 +123,31 @@ fn_networkTreeHandleKey = {
     if (_thing isEqualType grpNull) then {
         private _faction = toLower (faction (leader _thing));
         private _sideNum = getNumber (configfile >> "CfgFactionClasses" >> _faction >> "side");
-        private _side = _sideNum call TFD_common_fnc_numToSide; {
+        private _side = _sideNum call TFD_common_fnc_numToSide;
+        {
             private _channel = _x;
             _channel params ["_condition"];
             _channel set [0,_condition - [_faction, _side]];
         } forEach RadioChannelArray;
         
-        set3denAttributes [[units _thing, "TFD_Network", -1],
+        set3DENAttributes [[units _thing, "TFD_Network", -1],
             [[_thing],"TFD_Network",(_networkNumber-1)]];
-        set3denAttributes [[units _thing, "TFD_Channellist", "[]"], [[_thing],"TFD_Channellist", "[]"], [[_thing],"TFD_Channellist", "[]"], [[_thing],"TFD_ChannellistLeader", "[]"]];
+        set3DENAttributes [[units _thing, "TFD_Channellist", "[]"], [[_thing],"TFD_Channellist", "[]"], [[_thing],"TFD_Channellist", "[]"], [[_thing],"TFD_ChannellistLeader", "[]"]];
 
     };
     if (_thing isEqualType objNull) then {
         private _faction = toLower (faction (leader (group _thing)));
         private _sideNum = getNumber (configfile >> "CfgFactionClasses" >> _faction >> "side");
-        private _side = _sideNum call TFD_common_fnc_numToSide; {
+        private _side = _sideNum call TFD_common_fnc_numToSide;
+        {
             private _channel = _x;
             _channel params ["_condition"];
             _channel set [0,_condition - [_faction, _side]];
         } forEach RadioChannelArray;
         
-        set3denAttributes [[[_thing],"TFD_Network", (_networkNumber-1)],
+        set3DENAttributes [[[_thing],"TFD_Network", (_networkNumber-1)],
             [[group _thing],"TFD_Network",-1]];
-        set3denAttributes [[[_thing], "TFD_Channellist", "[]"], [[group _thing],"TFD_Channellist", "[]"], [[group _thing],"TFD_ChannellistLeader", "[]"]];
+        set3DENAttributes [[[_thing], "TFD_Channellist", "[]"], [[group _thing],"TFD_Channellist", "[]"], [[group _thing],"TFD_ChannellistLeader", "[]"]];
         
     };
     
@@ -161,7 +166,7 @@ switch _mode do {
         _playableUnits pushBackUnique player;
         cacheAllPlayerGroups = allGroups select {{_x in _playableUnits} count (units _x) > 0};
         
-        RadioChannelArray = ("TFD_MissionAcre2Attributes" get3denMissionAttribute "TFD_AcreSettings");
+        RadioChannelArray = ("TFD_MissionAcre2Attributes" get3DENMissionAttribute "TFD_AcreSettings");
         if (RadioChannelArray isEqualType "") then { RadioChannelArray = call compile RadioChannelArray;};
         if (isNil "RadioChannelArray") then {
             /*RadioChannelArray = [
@@ -176,18 +181,20 @@ switch _mode do {
                                     [["blu_g_f"],[]]
                                 ];*/
             RadioChannelArray = [];
-            //RadioChannelArray = call compile ("tfdMissionAcreAttributes" get3denMissionAttribute "TFD_AcreSettings");
+            //RadioChannelArray = call compile ("teamworkMissionAcreAttributes" get3DENMissionAttribute "TFD_AcreSettings");
         };
 
-        //Deserialize: Convert nums to side from 
+        //Deserialize: Convert nums to side from
         {
             private _network = _x;
-            _network params ["_conditions", "_channels"]; {
+            _network params ["_conditions", "_channels"];
+            {
                 if (_x isEqualType 0) then {
                     _conditions set [_forEachIndex,(_x call TFD_common_fnc_numToSide)];
                 };
-            } forEach (_conditions); {
-                private _condition = _x select 3; // condition 
+            } forEach (_conditions);
+            {
+                private _condition = _x select 3; // condition
                 {
                     if (_x isEqualType 0) then {
                         _condition set [_forEachIndex,(_x call TFD_common_fnc_numToSide)];
@@ -213,9 +220,11 @@ switch _mode do {
         _ctrlTree = _ctrlGroup controlsGroupCtrl 189438;
         _ctrlTree ctrladdeventhandler ["keyDown",{with uinamespace do {['keydown',[RadioChannels_ctrlGroup,_this select 1,_this select 2,_this select 3],objnull] call RadioChannels_script;};}];
 
-         {
+        
+        {
             (_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
-        } forEach (EDIT_CHANNEL_IDCS); {
+        } forEach (EDIT_CHANNEL_IDCS);
+        {
             (_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
         } forEach (BEHIND_EDIT_CHANNELS_IDCS);
         
@@ -276,14 +285,17 @@ switch _mode do {
     };
     case "attributeSave": {
     
-        private _array = + (uiNamespace getVariable "RadioChannelArray"); {
+        private _array = + (uiNamespace getVariable "RadioChannelArray");
+        {
             private _network = _x;
-            _network params ["_conditions", "_channels"]; {
+            _network params ["_conditions", "_channels"];
+            {
                 if (_x isEqualType east) then {
                     _conditions set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                 };
-            } forEach (_conditions); {
-                private _condition = _x select 3; // condition 
+            } forEach (_conditions);
+            {
+                private _condition = _x select 3; // condition
                 {
                     if (_x isEqualType east) then {
                         _condition set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
@@ -305,7 +317,8 @@ switch _mode do {
         if (RadioCurrentNetwork < count RadioChannelArray) then {
             (RadioChannelArray select RadioCurrentNetwork) params ["","_channels"];
             _ctrlChannelList lnbSetColumnsPos [0,0.005,0.33];
-             {
+            
+            {
                 _hasChannels = true;
                 _x params ["_shortName", "_longName", "_radioClassname", "_condition", "_shared"];
 
@@ -354,7 +367,7 @@ switch _mode do {
         
         fn_channelTreeProcessUnit = {
             params ["_ctrlTree", "_treeRoot", "_giveRadio", "_unit"];        
-            private _roleDesc = ((_x get3denAttribute "description") select 0);
+            private _roleDesc = ((_x get3DENAttribute "description") select 0);
             
             private _color = (side _unit) call TFD_common_fnc_sideToColor;
             
@@ -366,18 +379,18 @@ switch _mode do {
             _ctrlTree tvSetValue [_location, RadioNetworkChannel_data pushBack _unit];            
             private _icon = getText (configFile >> "CfgVehicleIcons" >> getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "icon"));
             if (_icon == "") then {
-                _icon = "\a3\3DEN\Data\Cfg3den\Object\iconPlayer_ca.paa"; //default player icon
+                _icon = "\a3\3DEN\Data\Cfg3DEN\Object\iconPlayer_ca.paa"; //default player icon
             };
             _ctrlTree tvSetPicture [_location,_icon];
             _ctrlTree tvSetPictureColor [_location, _color];
                 
                         
             if (!_giveRadio) then {
-                private _unitChanList = (_unit get3denAttribute "TFD_Channellist") select 0;
+                private _unitChanList = (_unit get3DENAttribute "TFD_Channellist") select 0;
                 if (_unitChanList isEqualType "") then {
                     _unitChanList = call compile _unitChanList;
                 };
-                //private _unitChanList = (call compile ((_unit get3denAttribute "TFD_Channellist") select 0));
+                //private _unitChanList = (call compile ((_unit get3DENAttribute "TFD_Channellist") select 0));
                 if (RadioCurrentNetworkChannel in _unitChanList) then {
                     _giveRadio = true;
                 }; 
@@ -403,7 +416,7 @@ switch _mode do {
             private _location = _treeRoot + [_grpIdx];
             private _grpIcon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
             
-            //Found in (configfile >> "Cfg3den" >> "Group" >> "Draw" >> "textureCivilian")
+            //Found in (configfile >> "Cfg3DEN" >> "Group" >> "Draw" >> "textureCivilian")
             call {
                 if (_side == west) exitWith { _grpIcon = "\a3\Ui_f\data\Map\Markers\NATO\b_unknown.paa";};
                 if (_side == east) exitWith { _grpIcon = "\a3\Ui_f\data\Map\Markers\NATO\o_unknown.paa"; };
@@ -417,14 +430,14 @@ switch _mode do {
             
             private _giveLeader = false;
             if (!_giveRadio) then {
-                private _grpChanList = (_group get3denAttribute "TFD_Channellist") select 0;
+                private _grpChanList = (_group get3DENAttribute "TFD_Channellist") select 0;
                 if (_grpChanList isEqualType "") then {
                     _grpChanList = call compile _grpChanList;
                 };
                 if (RadioCurrentNetworkChannel in _grpChanList) then {
                     _giveRadio = true;
                 } else {
-                    _grpChanList = (_group get3denAttribute "TFD_ChannellistLeader") select 0;
+                    _grpChanList = (_group get3DENAttribute "TFD_ChannellistLeader") select 0;
                     if (_grpChanList isEqualType "") then {
                         _grpChanList = call compile _grpChanList;
                     };
@@ -435,7 +448,8 @@ switch _mode do {
             };
             
             
-            private _gaveSomeoneARadio = false; {
+            private _gaveSomeoneARadio = false;
+            {
                 if ([_ctrlTree, _location, _giveRadio, _x] call fn_channelTreeProcessUnit != 3) then { 
                     _gaveSomeoneARadio = true;
                 };
@@ -483,7 +497,8 @@ switch _mode do {
             private _factionImg = getText (configfile >> "CfgFactionClasses" >> _faction >> "icon");
             _ctrlTree tvSetPicture [_location, _factionImg];
             
-            private _gaveSomeoneARadio = false;             {
+            private _gaveSomeoneARadio = false;            
+            {
                 if ([_ctrlTree, _location, _giveRadio, _x] call fn_channelTreeProcessGroup != 3) then {
                     _gaveSomeoneARadio = true;
                 };
@@ -507,7 +522,8 @@ switch _mode do {
             _returnCode
         };
         
-        private _sides = []; {
+        private _sides = [];
+        {
             private _condition = _x;
             if (_x isEqualType east) then {    
                 private _side = _x;
@@ -524,10 +540,12 @@ switch _mode do {
                     };
                     
                     //Collect factions for side.
-                    _factions = []; {
+                    _factions = [];
+                    {
                         _factions pushBackUnique (toLower (faction (leader _x)));
                     } forEach (cacheAllPlayerGroups select {(side _x) == _side});
-                    private _gaveSomeoneARadio = false; {
+                    private _gaveSomeoneARadio = false;
+                    {
                         if ([_ctrlTree, _location, _giveRadio, _x] call fn_channelTreeProcessFaction != 3) then { _gaveSomeoneARadio = true; };
                     } forEach _factions;
                     
@@ -549,14 +567,16 @@ switch _mode do {
             };
         } forEach _conditions;
 
-         {
+        
+        {
             private _group = _x;
             if (_sides find (side _group) == -1) then {
                 if (_sides find (toLower faction (leader _group)) == -1) then {
-                    if (((_group get3denAttribute "TFD_Network") select 0) == RadioCurrentNetwork) then {
+                    if (((_group get3DENAttribute "TFD_Network") select 0) == RadioCurrentNetwork) then {
                         [_ctrlTree, [], false, _x] call fn_channelTreeProcessGroup;
-                    } else { {
-                            if (((_x get3denAttribute "TFD_Network") select 0) == RadioCurrentNetwork) then {
+                    } else {
+                        {
+                            if (((_x get3DENAttribute "TFD_Network") select 0) == RadioCurrentNetwork) then {
                                 [_ctrlTree, [], false, _x] call fn_channelTreeProcessUnit;
                             };
                         } forEach (units _group);
@@ -578,16 +598,19 @@ switch _mode do {
         RadioNetwork_data = [];
         
         _sides = [];
-        _factions = []; {
+        _factions = [];
+        {
             private _group = _x;
             private _side = (side _x);
             private _color = _side call TFD_common_fnc_sideToColor;
             
             private _sideIdx = _sides find _side;
             private _networkNumber = -1;
-            scopeName "condSideSearch"; {
+            scopeName "condSideSearch";
+            {
                 _x params ["_condition"];
-                private _sideNum = _forEachIndex; {
+                private _sideNum = _forEachIndex;
+                {
                     if (_side isEqualTo _x) then {
                         _networkNumber = _sideNum;
                         breakTo "condSideSearch";
@@ -621,9 +644,11 @@ switch _mode do {
             private _factionIdx = _sideFactions find _faction;
             
             
-            if (_networkNumber == -1) then { {
+            if (_networkNumber == -1) then {
+                {
                     _x params ["_condition"];
-                    private _sideNum = _forEachIndex; {
+                    private _sideNum = _forEachIndex;
+                    {
                         if (_faction isEqualTo _x) then {
                             _networkNumber = _sideNum;
                             breakTo "condSideSearch"; // quits to main scope not a problem.
@@ -652,7 +677,7 @@ switch _mode do {
             private _grpIdx = _ctrlTree tvAdd [ [_sideIdx, _factionIdx],groupID _x];
             private _grpIcon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
             
-            //Found in (configfile >> "Cfg3den" >> "Group" >> "Draw" >> "textureCivilian")
+            //Found in (configfile >> "Cfg3DEN" >> "Group" >> "Draw" >> "textureCivilian")
             call {
                 if (_side == west) exitWith { _grpIcon = "\a3\Ui_f\data\Map\Markers\NATO\b_unknown.paa";};
                 if (_side == east) exitWith { _grpIcon = "\a3\Ui_f\data\Map\Markers\NATO\o_unknown.paa"; };
@@ -667,23 +692,24 @@ switch _mode do {
             if (_networkNumber != -1) then {
                 _ctrlTree tvSetPictureRight [[_sideIdx, _factionIdx, _grpIdx], (_networkNumber+1) call TFD_common_fnc_numToTexture];
             } else {
-                _networkNumber = (_group get3denAttribute "TFD_Network") select 0;
+                _networkNumber = (_group get3DENAttribute "TFD_Network") select 0;
                 if (_networkNumber != -1) then {
                     _ctrlTree tvSetPictureRight [[_sideIdx, _factionIdx, _grpIdx], (_networkNumber+1) call TFD_common_fnc_numToTexture];
                 };
             };
             
-            private _preUnitNetworkNumber = _networkNumber; {
+            private _preUnitNetworkNumber = _networkNumber;
+            {
                 _networkNumber = _preUnitNetworkNumber;
                 
-                private _roleDesc = ((_x get3denAttribute "description") select 0);
+                private _roleDesc = ((_x get3DENAttribute "description") select 0);
                 if (_roleDesc == "") then {
                     _roleDesc =    getText (configfile >> "CfgVehicles" >> (typeOf _x) >> "displayName");
                 };
                 private _unitIdx = _ctrlTree tvAdd [ [_sideIdx, _factionIdx, _grpIdx], _roleDesc];
                 private _icon = getText (configFile >> "CfgVehicleIcons" >> getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "icon"));
                 if (_icon == "") then {
-                    _icon = "\a3\3DEN\Data\Cfg3den\Object\iconPlayer_ca.paa"; //default player icon
+                    _icon = "\a3\3DEN\Data\Cfg3DEN\Object\iconPlayer_ca.paa"; //default player icon
                 };
                 _ctrlTree tvSetPicture [[_sideIdx, _factionIdx, _grpIdx, _unitIdx],_icon];
                 _ctrlTree tvSetPictureColor [[_sideIdx, _factionIdx, _grpIdx, _unitIdx], _color];
@@ -692,7 +718,7 @@ switch _mode do {
                 if (_networkNumber != -1) then {
                     _ctrlTree tvSetPictureRight [[_sideIdx, _factionIdx, _grpIdx, _unitIdx], (_networkNumber+1) call TFD_common_fnc_numToTexture];
                 } else {
-                    _networkNumber = (_x get3denAttribute "TFD_Network") select 0;
+                    _networkNumber = (_x get3DENAttribute "TFD_Network") select 0;
                     if (_networkNumber != -1) then {
                         _ctrlTree tvSetPictureRight [[_sideIdx, _factionIdx, _grpIdx, _unitIdx], (_networkNumber+1) call TFD_common_fnc_numToTexture];
                     };
@@ -725,27 +751,10 @@ switch _mode do {
             _radioChannels deleteAt _curSel;
             // Update all channel lists for units/groups on same preset.
             private _units = allUnits select {([_x] call TFD_acre2_fnc_unitToPreset) == RadioCurrentNetwork};
-            private _groups = []; {_groups pushBackUnique (group _x);} forEach _units; {
-                private _entity = _x;
-                private _list = (_entity get3denAttribute "TFD_Channellist") params [["_value",[]]];
-                if (_value isEqualType "") then {
-                    _value = call compile _value;
-                };
-                _value = _value - [_curSel]; // Remove current channel.
-                // Decrement channel numbers above.
-                _value = _value apply {
-                    if (_x > _curSel) then {
-                        _x - 1;
-                    } else {
-                        _x;
-                    }
-                };
-                _entity set3denAttribute ["TFD_Channellist",str _value];
-            } forEach (_units + _groups);
-            // Cycle through groups to remove leader. 
+            private _groups = []; {_groups pushBackUnique (group _x);} forEach _units;
             {
                 private _entity = _x;
-                private _list = (_entity get3denAttribute "TFD_ChannellistLeader") params [["_value",[]]];
+                private _list = (_entity get3DENAttribute "TFD_Channellist") params [["_value",[]]];
                 if (_value isEqualType "") then {
                     _value = call compile _value;
                 };
@@ -758,7 +767,25 @@ switch _mode do {
                         _x;
                     }
                 };
-                _entity set3denAttribute ["TFD_ChannellistLeader",str _value];
+                _entity set3DENAttribute ["TFD_Channellist",str _value];
+            } forEach (_units + _groups);
+            // Cycle through groups to remove leader.
+            {
+                private _entity = _x;
+                private _list = (_entity get3DENAttribute "TFD_ChannellistLeader") params [["_value",[]]];
+                if (_value isEqualType "") then {
+                    _value = call compile _value;
+                };
+                _value = _value - [_curSel]; // Remove current channel.
+                // Decrement channel numbers above.
+                _value = _value apply {
+                    if (_x > _curSel) then {
+                        _x - 1;
+                    } else {
+                        _x;
+                    }
+                };
+                _entity set3DENAttribute ["TFD_ChannellistLeader",str _value];
             } forEach _groups;
 
             ["refreshChannelList"] call RadioChannels_script;
@@ -768,9 +795,11 @@ switch _mode do {
     case "channelAddClick": {
         with uiNamespace do {
             if (RadioCurrentNetwork >= count RadioChannelArray) exitWith {};
-             {
+            
+            {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
-            } forEach (EDIT_CHANNEL_IDCS); {
+            } forEach (EDIT_CHANNEL_IDCS);
+            {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
             
@@ -790,9 +819,11 @@ switch _mode do {
                                 
             private _radioChannels = (RadioChannelArray select RadioCurrentNetwork) select 1;
             (_radioChannels select _curSel) params ["_shortName", "_longName", "_radio", "", "_shared"];
-             {
+            
+            {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
-            } forEach (EDIT_CHANNEL_IDCS); {
+            } forEach (EDIT_CHANNEL_IDCS);
+            {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
             
@@ -828,18 +859,22 @@ switch _mode do {
                 _radioChannels pushBack _newChanData;
             };
             
-            ["refreshChannelList"] call RadioChannels_script; {
+            ["refreshChannelList"] call RadioChannels_script;
+            {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
-            } forEach (EDIT_CHANNEL_IDCS); {
+            } forEach (EDIT_CHANNEL_IDCS);
+            {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
             ["save"] call RadioChannels_script;
         };
     };
     case "channelDelClickCancel": {
-        with uiNamespace do { {
+        with uiNamespace do {
+            {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow false;
-            } forEach (EDIT_CHANNEL_IDCS); {
+            } forEach (EDIT_CHANNEL_IDCS);
+            {
                 (RadioChannels_ctrlGroup controlsGroupCtrl _x) ctrlShow true;
             } forEach (BEHIND_EDIT_CHANNELS_IDCS);
         };
@@ -859,13 +894,13 @@ switch _mode do {
                 _condition pushBackUnique _entity;
             } else {
                 if (_entity isEqualType grpNull or _entity isEqualType objNull) then {
-                    _list = (_entity get3denAttribute "TFD_Channellist") params ["_value"];
+                    _list = (_entity get3DENAttribute "TFD_Channellist") params ["_value"];
                     if (_value isEqualType []) then {
-                        _entity set3denAttribute ["TFD_Channellist",str [_curSel]];
+                        _entity set3DENAttribute ["TFD_Channellist",str [_curSel]];
                     } else {
                         _value = call compile _value;
                         _value pushBackUnique _curSel;
-                        _entity set3denAttribute ["TFD_Channellist",str _value];
+                        _entity set3DENAttribute ["TFD_Channellist",str _value];
                     };
 
                 };
@@ -888,13 +923,13 @@ switch _mode do {
             private _condition = _radioChannel select 3;
             
             if (_entity isEqualType grpNull) then {
-                _list = (_entity get3denAttribute "TFD_ChannellistLeader") params ["_value"];
+                _list = (_entity get3DENAttribute "TFD_ChannellistLeader") params ["_value"];
                 if (_value isEqualType []) then {
-                    _entity set3denAttribute ["TFD_ChannellistLeader",str [_curSel]];
+                    _entity set3DENAttribute ["TFD_ChannellistLeader",str [_curSel]];
                 } else {
                     _value = call compile _value;
                     _value pushBackUnique _curSel;
-                    _entity set3denAttribute ["TFD_ChannellistLeader",str _value];
+                    _entity set3DENAttribute ["TFD_ChannellistLeader",str _value];
                 };
             };
             
@@ -917,7 +952,8 @@ switch _mode do {
                 _radioChannel set [3,_condition - [_entity]];
                 if (_entity isEqualType east) then {
                     //Find and remove matching faction groups
-                    private _sideNum = _entity call TFD_common_fnc_sideToNum; {
+                    private _sideNum = _entity call TFD_common_fnc_sideToNum;
+                    {
                         if (_x isEqualType "") then {
                             if (_sideNum == getNumber (configfile >> "CfgFactionClasses" >> _x >> "side")) then {
                                 _radioChannel set [3,_condition - [_x]];
@@ -925,13 +961,14 @@ switch _mode do {
                         };
                     } forEach (_condition);
                 
-                    //remove groups 
+                    //remove groups
                     {
                         [_curSel, _x] call fn_removeGroupFromChannel;
                     } forEach (allGroups select {side _x == _entity});
                 };
                 //Also remove faction.
-                if (_entity isEqualType "") then { {
+                if (_entity isEqualType "") then {
+                    {
                         [_curSel, _x] call fn_removeGroupFromChannel;
                     } forEach (allGroups select {faction (leader _x) == _entity});
                 };
@@ -952,14 +989,17 @@ switch _mode do {
     case "save": {
         //RadioChannelArray
 
-        private _array = + (uiNamespace getVariable "RadioChannelArray"); {
+        private _array = + (uiNamespace getVariable "RadioChannelArray");
+        {
             private _network = _x;
-            _network params ["_conditions", "_channels"]; {
+            _network params ["_conditions", "_channels"];
+            {
                 if (_x isEqualType east) then {
                     _conditions set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
                 };
-            } forEach (_conditions); {
-                private _condition = _x select 3; // condition 
+            } forEach (_conditions);
+            {
+                private _condition = _x select 3; // condition
                 {
                     if (_x isEqualType east) then {
                         _condition set [_forEachIndex, (_x call TFD_common_fnc_sideToNum)];
@@ -970,7 +1010,7 @@ switch _mode do {
         
         private _string = str _array;
         
-        set3denMissionAttributes [["tfdMissionAcreAttributes", "TFD_AcreSettings", _string]];
+        set3DENMissionAttributes [["teamworkMissionAcreAttributes", "TFD_AcreSettings", _string]];
     };
 };
 

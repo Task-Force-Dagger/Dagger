@@ -6847,6 +6847,12 @@ _ArsenalType = call {
             "USP_IHPS_COV_GRY_MC"
         ];
         _AvailableItems = [
+            "AUR_Rappel_Gear",
+            "AUR_Rappel_Rope_10",
+            "AUR_Rappel_Rope_20",
+            "AUR_Rappel_Rope_30",
+            "AUR_Rappel_Rope_50",
+            "AUR_Rappel_Rope_70",
             "TFD_VPN",
             "ACE_RangeTable_82mm",
             "USP_BAT_PVS31",
@@ -18885,6 +18891,12 @@ _ArsenalType = call {
             "rhsusf_bowman_cap"
         ];
         _AvailableItems = [
+            "AUR_Rappel_Gear",
+            "AUR_Rappel_Rope_10",
+            "AUR_Rappel_Rope_20",
+            "AUR_Rappel_Rope_30",
+            "AUR_Rappel_Rope_50",
+            "AUR_Rappel_Rope_70",
             "TFD_VPN",
             "ACE_RangeTable_82mm",
             "USP_BAT_PVS31",
@@ -26945,6 +26957,12 @@ _ArsenalType = call {
         ];
         _AvailableHeadgear = [];
         _AvailableItems = [
+            "AUR_Rappel_Gear",
+            "AUR_Rappel_Rope_10",
+            "AUR_Rappel_Rope_20",
+            "AUR_Rappel_Rope_30",
+            "AUR_Rappel_Rope_50",
+            "AUR_Rappel_Rope_70",
             "TFD_VPN",
             "ACE_RangeTable_82mm",
             "USP_BAT_PVS31",
@@ -30796,6 +30814,12 @@ _ArsenalType = call {
             "rhs_6b26_bala_green"
         ];
         _AvailableItems = [
+            "AUR_Rappel_Gear",
+            "AUR_Rappel_Rope_10",
+            "AUR_Rappel_Rope_20",
+            "AUR_Rappel_Rope_30",
+            "AUR_Rappel_Rope_50",
+            "AUR_Rappel_Rope_70",
             "TFD_VPN",
             "ACE_RangeTable_82mm",
             "USP_BAT_PVS31",

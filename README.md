@@ -28,7 +28,7 @@ This is the custom mod for Tfd
 Its based/inspired on/by the following projects;
 
 ##Its based on, and inspried by the following projects
-- https://github.com/ArmaForces/Mods  -  GNU GENERAL PUBLIC LICENSE
+- https://github.com/Task Force Dagger/Mods  -  GNU GENERAL PUBLIC LICENSE
 - https://github.com/AXEmod/AXE - GNU General Public License (GPLv3)
 - https://github.com/Theseus-Aegis/Mods - GNU General Public License (GPLv2).
 - https://github.com/last-resort-gaming/LRG-Fundamentals - MIT License

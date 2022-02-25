@@ -19,14 +19,15 @@ private _unitGroup = group _unit;
 private _ourPresetIndex = -1;
 private _unitCond = _unit getVariable ["TFD_Network",-1];
 private _groupCond = _unitGroup getVariable ["TFD_Network",-1];
-if (is3den) then {
-    _unitCond = (_unit get3denAttribute "TFD_Network") param [0,-1];
-    _groupCond = (_unitGroup get3denAttribute "TFD_Network") param [0,-1];
+if (is3DEN) then {
+    _unitCond = (_unit get3DENAttribute "TFD_Network") param [0,-1];
+    _groupCond = (_unitGroup get3DENAttribute "TFD_Network") param [0,-1];
 };
 
 private _networksWithRadioChannels = getMissionConfigValue ['TFD_AcreSettings', []];
 if (_networksWithRadioChannels isEqualType "") then { _networksWithRadioChannels = call compile _networksWithRadioChannels};
- {
+
+{
     private _radioPresetSetting = _x;
     private _radioPresetIdx = _forEachIndex;
     _radioPresetSetting params ["_conditions"];

@@ -22,5 +22,7 @@ class GVAR(CfgLoadingScreen) {
         LOADING_SCREEN_CLASS(AdobeStock_272813407,YonV);
         LOADING_SCREEN_CLASS(AdobeStock_275306051,YonV);
         LOADING_SCREEN_CLASS(AdobeStock_283924597,YonV);
+        LOADING_SCREEN_CLASS(AdobeStock_371890417,YonV);
+        LOADING_SCREEN_CLASS(AdobeStock_400370807,YonV);
     };
 };

@@ -39,7 +39,7 @@ tfd_acre2_radioBasenameToSettingsIdx = {
 
 private _sharedRadioChannelListing = [];
 
-//TODO Preserve shared channel indexes. 
+//TODO Preserve shared channel indexes.
 {
     
     private _radioPresetChannelList = (_x select 1); //_radioPresetSetting = _x;
@@ -49,9 +49,8 @@ private _sharedRadioChannelListing = [];
     private _channelsProcessed = GVAR(radioCoreSettings) apply {[]}; // This will store channels, binned by radio type.
 
     //Add this entry to the channel list.
-    //for "_i" from 1 to (count _radioPresetSetting)-1 do 
-    { 
-        {
+    //for "_i" from 1 to (count _radioPresetSetting)-1 do {
+    {
         private _channelEntry = _x;
         private _radio = (_channelEntry select 2);
         private _coreRadioIdx = [_radio] call tfd_acre2_radioBasenameToSettingsIdx;
@@ -76,13 +75,15 @@ private _sharedRadioChannelListing = [];
     ////// Put these processed channels into presets.
     private _presetName = format["tfd_preset%1",_radioPresetSettingIndex];
     private _frequency = 0; // Create variable for use.
-    private _channelName = ""; {
+    private _channelName = "";
+    {
         //Create Preset.
         private _radioSettingEntry = _x;
         private _radioSettingIndex = _forEachIndex;
         private _radioList = _radioSettingEntry select 0; // RadioList
         private _channelList = (_channelsProcessed select _forEachIndex);
-        // Create Presets.... {
+        // Create Presets....
+        {
             private _radioName = _x;
 
             private _return = [_radioName, (_radioSettingEntry select 5), _presetName] call acre_api_fnc_copyPreset; // tweak

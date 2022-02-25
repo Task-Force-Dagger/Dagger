@@ -22,7 +22,8 @@ if (getmissionconfigvalue ["TFD_AcreNetworkEnabled",false]) then {
 
     private _playerGroups = (playableUnits + [player]) apply {group _x};
     UNIQUE(_playerGroups);
- {
+
+    {
         // Check side/faction conditions
 
         private _grp = _x;
@@ -37,7 +38,7 @@ if (getmissionconfigvalue ["TFD_AcreNetworkEnabled",false]) then {
             if IS_STRING(_groupCond) then { _groupCond = call compile _groupCond; };
 
             if (_groupCond isEqualTo -1 || _groupCond > (count (_networksArray # 0)) - 1) then {
-                // Check the unit conditions 
+                // Check the unit conditions
                 {
                     private _unit = _x;
                     TRACE_1("Autotest checking Radio Networks",_unit);

@@ -334,8 +334,8 @@ force ace_pylons_enabledForZeus = true;
 force ace_pylons_enabledFromAmmoTrucks = true;
 force ace_pylons_rearmNewPylons = true;
 force ace_pylons_requireEngineer = false;
-force ace_pylons_requireToolkit = true;
-force ace_pylons_searchDistance = 25;
+force ace_pylons_requireToolkit = false;
+force ace_pylons_searchDistance = 45;
 force ace_pylons_timePerPylon = 5;
 
 // ACE Quick Mount
@@ -738,6 +738,37 @@ force lambs_main_radioWest = 500;
 force force SSL_DefaultParachute = "NonSteerable_Parachute_F";
 force force SSL_RequireParachute = true;
 force force SSL_ShowRopes = 2;
+
+// TCA BFT
+FORCE FORCE TCA_bft_groupMarkers_colorsBlacklist = "ColorBLUFOR, ColorOPFOR, ColorIndependent, ColorCivilian, ColorUNKNOWN, Default, ColorWEST, ColorEAST, ColorGUER, ColorCIV, Color1_FD_F, Color2_FD_F, Color3_FD_F, Color4_FD_F, Color5_FD_F, Color6_FD_F";
+FORCE FORCE TCA_bft_groupMarkers_defaultSetting = 2;
+FORCE FORCE TCAbft_groupMarkers_enabled = true;
+FORCE FORCE TCAbft_groupMarkers_fuzzOtherFactions = true;
+FORCE FORCE TCA_bft_groupMarkers_iconsBlacklist = "unknown, uav";
+FORCE FORCE TCAbft_groupMarkers_mapSettings_enabled = true;
+FORCE FORCE TCAbft_groupMarkers_markerShape = "a";
+FORCE FORCE TCA_bft_groupMarkers_nameOptions = "Black Squad, Blue Squad, Gold Squad, Green Squad, Grey Squad, Red Squad, Silver Squad";
+FORCE FORCE TCA_bft_groupMarkers_preferredColors = "ColorBlackS, ColorBlueS, ColorGoldS, ColorGreenS, ColorGreyS, ColorRedS, ColorSilverSBlack Squad, Blue Squad, Gold Squad, Green Squad, GrColorBlackS, ColorBlueS, ColorGoldS, ColorGreenS, ColorGreyS, ColorRedS, ColorSilverS";
+FORCE FORCE TCAbft_groupMarkers_preferredIcons = "inf, motor_inf, mech_inf, air, armor, recon";
+FORCE FORCE TCAbft_groupMarkers_trackingMode = "weightedAverage";
+FORCE FORCE TCAbft_groupMarkers_trailingCount = 5;
+FORCE FORCE TCAbft_groupMarkers_trailingMode = "weightedAverage";
+FORCE FORCE TCAbft_groupMarkers_trailingWeight = 0.75;
+FORCE FORCE TCAbft_groupMarkers_updateDelay = 5;
+
+// TCA Miscellaneous
+FORCE FORCE TCAmain_ClearBuildingMarkers_Channel = 0;
+FORCE FORCE TCAmain_ClearBuildingMarkers_Color = "ColorGreen";
+FORCE FORCE TCA_main_ClearBuildingMarkers_Enabled = true;
+FORCE FORCE TCAmain_LoadoutDiaryRecord_Enabled = false;
+FORCE FORCE TCAvehicles_showSpeedLimiterOptions = true;
+FORCE FORCE TCAvehicles_showSpeedLimiterWaitTime = 10;
+
+// TCA Unit markers
+FORCE FORCE TCAunitMarkers_unitMarkers_enabled = true;
+FORCE FORCE TCAunitMarkers_unitMarkers_markAI = true;
+FORCE FORCE TCAunitMarkers_unitMarkers_otherGroups = true;
+FORCE FORCE TCA_unitMarkers_unitMarkers_showToggle = false;
 
 // TFD
 tfd_common_weaponSafety = true;
