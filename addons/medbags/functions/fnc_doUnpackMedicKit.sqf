@@ -57,7 +57,7 @@ if (isNull _unit) exitWith {};
     
     if (TFD_MEDICAL_SUPPLIES_UNPACK_SUCCESS) exitWith {
         
-        _unit removeItem "tfd_medbags_MedicKit";
+        _unit removeItem "TFD_medbags_MedicKit";
         
         private _order = [3,1,2];
         private _overflow = false;
@@ -67,12 +67,8 @@ if (isNull _unit) exitWith {};
         [_unit, "ACE_packingBandage", 14, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "ACE_quikClot", 14, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "ACE_salineIV_500", 08, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "ACE_epinephrine", 10, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "ACE_morphine", 10, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "ACE_tourniquet", 08, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "kat_Painkiller", 06, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "ACE_adenosine", 04, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "ACE_atropine", 04, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "kat_chestSeal", 04, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "kat_larynx", 06, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "kat_guedel", 06, _order, _overflow] call tfd_common_fnc_addItem;
@@ -80,17 +76,12 @@ if (isNull _unit) exitWith {};
         [_unit, "kat_aatKit", 04, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "KAT_Empty_bloodIV_500", 04, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "ACE_fieldDressing", 06, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "kat_Painkiller", 02, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_Painkiller", 01, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "ACE_tourniquet", 04, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "ACE_EarPlugs", 01, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_shears", 01, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_cascard", 04, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_nargloves", 04, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_NDC", 04, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_notes", 04, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_Apap", 04, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_tetra", 04, _order, _overflow] call tfd_common_fnc_addItem;
-    
+        [_unit, "ACE_EarPlugs", 02, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_IO_FAST", 06, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_IV_16", 06, _order, _overflow] call tfd_common_fnc_addItem;
+
         _unit playActionNow "Stand";
         
     };

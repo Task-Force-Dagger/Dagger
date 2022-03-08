@@ -1,3 +1,4 @@
+#include "script_component.hpp"
 // Creator Actions
 [
     "TFD_CreatorActions_Master",

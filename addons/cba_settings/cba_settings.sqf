@@ -53,7 +53,6 @@ ace_arsenal_camInverted = false;
 force ace_arsenal_enableIdentityTabs = true;
 force ace_arsenal_enableModIcons = true;
 force ace_arsenal_EnableRPTLog = true;
-ace_arsenal_fontHeight = 4.5;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = true;
@@ -649,26 +648,28 @@ force kat_airway_Overstretch_time = 3;
 force kat_airway_probability_headturning = 50;
 force kat_airway_probability_obstruction = 15;
 force kat_airway_probability_occluded = 10;
-force kat_airway_string_exit = "keko_wasPunched";
 force kat_airway_TurnAround_time = 2;
 
 // KAT - ADV Medical: Breathing
-force kat_breathing_enable = true;
-force kat_breathing_hemopneumothoraxChance = 25;
-force kat_breathing_medLvl_Chestseal = 1;
-force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
-force kat_breathing_medLvl_Pulseoximeter = 0;
-force kat_breathing_pneumothorax = 25;
-force kat_breathing_pneumothorax_hardcore = false;
-force kat_breathing_pneumothoraxDamageThreshold = 0.4;
-force kat_breathing_spo2_big_value = 30;
+kat_breathing_enable = true;
+kat_breathing_enable_selfChestseal = 1;
+kat_breathing_hemopneumothoraxChance = 15;
+kat_breathing_medLvl_Chestseal = 1;
+kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
+kat_breathing_medLvl_Pulseoximeter = 0;
+kat_breathing_pneumothorax = 15;
+force kat_breathing_pneumothorax_hardcore = true;
+kat_breathing_pneumothoraxDamageThreshold = 0.4;
 force kat_breathing_SpO2_dieActive = false;
-force kat_breathing_SpO2_dieValue = 29.7444;
-force kat_breathing_spo2_small_value = 20;
-force kat_breathing_Stable_spo2 = 80.25;
-force kat_breathing_tensionhemothorax_hardcore = false;
+force kat_breathing_SpO2_dieValue = 50.0671;
+kat_breathing_SpO2_MultiplyNegative = 1;
+kat_breathing_SpO2_MultiplyPositive = 1;
+kat_breathing_Stable_spo2 = 85;
+force kat_breathing_tensionhemothorax_hardcore = true;
 
 // KAT - ADV Medical: Circulation
+force kat_circulation_AdvRhythm = true;
+force kat_circulation_bloodGroups = true;
 force kat_circulation_AED_BeepsAndCharge = true;
 force kat_circulation_blood_drawTime_250ml = 25;
 force kat_circulation_blood_drawTime_500ml = 50;
@@ -689,6 +690,19 @@ force kat_circulation_useLocation_AED = 0;
 
 // KAT - ADV Medical: Misc
 force kat_misc_enable = true;
+
+// KAT - ADV Medical: Pharmacy
+force kat_pharma_carbonateActive = true;
+force kat_pharma_enable = true;
+force kat_pharma_IOestablish = 7;
+force kat_pharma_IVdrop = 600;
+force kat_pharma_IVestablish = 7;
+force kat_pharma_IVmedic = 1;
+force kat_pharma_IVreuse = false;
+force kat_pharma_naloxoneActive = true;
+force kat_pharma_PushTime = 7;
+force kat_pharma_Reorient_successChance = 25;
+force kat_pharma_txaActive = true;
 
 // LAMBS Danger
 force lambs_danger_cqbRange = 60;

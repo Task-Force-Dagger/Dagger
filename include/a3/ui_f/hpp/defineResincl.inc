@@ -2,7 +2,7 @@
 #define _RESINCL_HPP
 
 /*******************/
-/*  Tfdtical menu  */
+/*  TFDtical menu  */
 /*******************/
 
 // Menu commands

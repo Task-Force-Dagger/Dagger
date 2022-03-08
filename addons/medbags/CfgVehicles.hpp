@@ -10,11 +10,10 @@ class CfgVehicles {
         
         class ACE_SelfActions {
             class ACE_Equipment {
-                
                 class GVAR(Medical_Supplies_Action_FirstAid) {
-                    displayName = "Unpack Boo Boo Bag";
-                    condition = "[_player] call TFD_medbags_fnc_canUnpackFirstAid";
-                    statement = "[_player] call TFD_medbags_fnc_doUnpackFirstAid";
+                    displayName = "Unpack IFAK";
+                    condition = "[_player] call tfd_medbags_fnc_canUnpackFirstAid";
+                    statement = "[_player] call tfd_medbags_fnc_doUnpackFirstAid";
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     icon = QPATHTOF(data\icons\medical_cross_ex_ca.paa);
                     showDisabled = 0;
@@ -22,8 +21,17 @@ class CfgVehicles {
                 
                 class GVAR(Medical_Supplies_Action_MedicKit) {
                     displayName = "Unpack Medic Bag";
-                    condition = "[_player] call TFD_medbags_fnc_canUnpackMedicKit";
-                    statement = "[_player] call TFD_medbags_fnc_doUnpackMedicKit";
+                    condition = "[_player] call tfd_medbags_fnc_canUnpackMedicKit";
+                    statement = "[_player] call tfd_medbags_fnc_doUnpackMedicKit";
+                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    icon = QPATHTOF(data\icons\medical_cross_ex_ca.paa);
+                    showDisabled = 0;
+                };
+
+                class GVAR(Medical_Supplies_Action_Trauma) {
+                    displayName = "Unpack Trauma Kit";
+                    condition = "[_player] call tfd_medbags_fnc_canUnpackTrauma";
+                    statement = "[_player] call tfd_medbags_fnc_doUnpackTrauma";
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     icon = QPATHTOF(data\icons\medical_cross_ex_ca.paa);
                     showDisabled = 0;
@@ -31,16 +39,24 @@ class CfgVehicles {
 
                 class GVAR(Medical_Supplies_Action_DrugKit) {
                     displayName = "Unpack Drug Kit";
-                    condition = "[_player] call TFD_medbags_fnc_canUnpackDrugKit";
-                    statement = "[_player] call TFD_medbags_fnc_doUnpackDrugKit";
+                    condition = "[_player] call tfd_medbags_fnc_canUnpackDrugKit";
+                    statement = "[_player] call tfd_medbags_fnc_doUnpackDrugKit";
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     icon = QPATHTOF(data\icons\medical_cross_ex_ca.paa);
                     showDisabled = 0;
                 };
-                
             };
         };
-        
+        // class ACE_MainActions {
+        //     class GVAR(Medical_Supplies_Action_Take) {
+        //         displayName = "Take IFAK";
+        //         condition = "[_player] call tfd_medbags_fnc_canTake";
+        //         statement = "[(_player, _target)] call tfd_medbags_fnc_doTake";
+        //         exceptions[] = {"isNotInside", "isNotSitting"};
+        //         icon = QPATHTOF(data\icons\medical_cross_ex_ca.paa);
+        //         showDisabled = 0;
+        //     };
+        // };
     };
 
     // MEDICAL SUPPLIES
@@ -51,7 +67,7 @@ class CfgVehicles {
         scopeArsenal = 2;
         scopeCurator = 2;
         author = QAUTHOR;
-        displayName = "Boo Boo Bag";
+        displayName = "IFAK";
         editorPreview = QPATHTOF(data\previews\firstaid.jpg);
         vehicleClass = "Items";
         class TransportItems {
@@ -70,6 +86,20 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems {
             name = GVAR(MedicKit); 
+            count = 1; 
+        };
+    };
+    
+    class GVAR(Item_Trauma): Item_Base_F {
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        author = QAUTHOR;
+        displayName = "Trauma Kit";
+        editorPreview = QPATHTOF(data\previews\medickit.jpg);
+        vehicleClass = "Items";
+        class TransportItems {
+            name = GVAR(Trauma); 
             count = 1; 
         };
     };

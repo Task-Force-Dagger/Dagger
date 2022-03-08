@@ -10,7 +10,7 @@ class CfgWeapons {
     class GVAR(FirstAid): ACE_ItemCore {
         scope = 2;
         author = QAUTHOR;
-        displayName = "Boo Boo Bag";
+        displayName = "IFAK";
         descriptionShort = "Contains material for first aid";
         editorPreview = QPATHTOF(data\previews\firstaid.jpg);
         picture = QPATHTOF(data\ui\firstaid_ca.paa);
@@ -34,6 +34,21 @@ class CfgWeapons {
         mapSize = 0.015;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 48;
+        };
+    };
+
+    class GVAR(Trauma): ACE_ItemCore {
+        scope = 2;
+        author = QAUTHOR;
+        displayName = "Trauma Kit";
+        descriptionShort = "Contains materials for medics";
+        editorPreview = QPATHTOF(data\previews\medickit.jpg);
+        picture = QPATHTOF(data\ui\medickit_ca.paa);
+        model = "\a3\props_f_orange\humanitarian\camps\firstaidkit_01_closed_f.p3d";
+        icon = "iconObject_1x1";
+        mapSize = 0.015;
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 68;
         };
     };
 
