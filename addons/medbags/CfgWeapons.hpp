@@ -18,7 +18,7 @@ class CfgWeapons {
         icon = "iconObject_1x1";
         mapSize = 0.015;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 8;
+            mass = 4;
         };
     };
     
@@ -33,7 +33,7 @@ class CfgWeapons {
         icon = "iconObject_1x1";
         mapSize = 0.015;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 48;
+            mass = 24;
         };
     };
 
@@ -48,7 +48,7 @@ class CfgWeapons {
         icon = "iconObject_1x1";
         mapSize = 0.015;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 68;
+            mass = 40;
         };
     };
 
@@ -63,7 +63,7 @@ class CfgWeapons {
         icon = "iconObject_1x1";
         mapSize = 0.015;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 28;
+            mass = 12;
         };
     };
     

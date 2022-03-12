@@ -20,8 +20,8 @@ class Cfg3den {
                     w = "80 * (pixelW * pixelGrid * 0.50)";
                     h = "5 * (pixelH * pixelGrid * 0.50)";
                     rows = 1;
-                    columns = 4;
-                    strings[] = {"None", "CAN", "US", "Winter", "Incognito"};
+                    columns = 5;
+                    strings[] = {"None", "CAN", "US", "Wint", "Incog"};
                 };
             };
         };

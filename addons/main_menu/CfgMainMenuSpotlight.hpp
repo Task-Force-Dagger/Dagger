@@ -2,7 +2,7 @@
 class CfgMainMenuSpotlight {
 
     class GVAR(server1) {
-        text = CSTRING(SpotlightJoin);
+        text = "Task Force Dagger Operations";
         textIsQuote = 0;
         picture = QUOTE(\z\tfd\addons\media\images\tfd.paa);
         action = QUOTE(_this call (uiNamespace getVariable QQFUNC(join)));
@@ -10,7 +10,7 @@ class CfgMainMenuSpotlight {
         condition = QUOTE(true);
     };
     class GVAR(server2) {
-        text = CSTRING(SpotlightJoin);
+        text = "Task Force Dagger Training";
         textIsQuote = 0;
         picture = QUOTE(\z\tfd\addons\media\images\tfd.paa);
         action = QUOTE(_this call (uiNamespace getVariable QQFUNC(joint)));

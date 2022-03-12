@@ -6,6 +6,7 @@ class CfgVehicles {
     class vtx_MH60M_DAP;
     class GVAR(uh60M): vtx_MH60M {
         scope=2;
+        scopeCurator = 2;
         hiddenSelectionsTextures[]= {
             "",  //DNU (Do not Use)
             "",  //DNU 
@@ -37,6 +38,7 @@ class CfgVehicles {
     };
     class GVAR(uh60M_dap): vtx_MH60M_DAP {
         scope=2;
+        scopeCurator = 2;
         hiddenSelectionsTextures[]= {
             "",  //DNU (Do not Use)
             "",  //DNU 

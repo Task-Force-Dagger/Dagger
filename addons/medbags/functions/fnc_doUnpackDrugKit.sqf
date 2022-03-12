@@ -60,7 +60,7 @@ if (isNull _unit) exitWith {};
         _unit removeItem "tfd_medbags_DrugKit";
         
         private _order = [3,1,2];
-        private _overflow = false;
+        private _overflow = true;
         
         [_unit, "kat_TXA", 10, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "kat_amiodarone", 10, _order, _overflow] call tfd_common_fnc_addItem;

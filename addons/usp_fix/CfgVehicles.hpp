@@ -142,4 +142,28 @@ class CfgVehicles {
     class USP_45L_RUCKSACK: Bag_Base {
         maximumLoad=500;
     };
+    class USP_ZIPON_PANEL: Bag_Base {
+        maximumLoad = 220;
+    };
+    class USP_PACK_BREACHER: Bag_Base {
+        maximumLoad = 200;
+    };
+    class USP_PACK_FASTHAWK: Bag_Base {
+        maximumLoad = 200;
+    };
+    class USP_TACTICAL_PACK: Bag_Base {
+        maximumLoad = 240;
+    };
+    class USP_HYDROPACK: Bag_Base {
+        maximumLoad = 120;
+    };
+    class USP_PACK_POINTMAN: Bag_Base {
+        maximumLoad = 200;
+    };
+    class USP_PACK_HYDRATION: Bag_Base {
+        maximumLoad = 180;
+    };
+    class USP_PACK_FASTHAWK: Bag_Base {
+        maximumLoad = 200;
+    };
 };

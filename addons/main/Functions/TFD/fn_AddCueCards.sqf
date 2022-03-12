@@ -38,81 +38,68 @@ _cueCardsData = [
         "z\tfd\addons\media\images\cuecards\salute.paa",
         "Salute Report Card"
     ],
-    // 4 - Contact Report Card
-    [
-        "z\tfd\addons\media\images\cuecards\salute.paa",
-        "Salute Report Card"
-    ],
-
-    //  5 - FAC rotary Request Card
+    //  4 - FAC rotary Request Card
     [
         "z\tfd\addons\media\images\cuecards\rotary.paa",
         "FAC Rotary Request Card"
     ],
 
-    //  6 - FAC fixed wing Orders Card
+    //  5 - FAC fixed wing Orders Card
     [
         "z\tfd\addons\media\images\cuecards\jtac.paa",
         "FAC Fixed Wing Request Card"
     ],
 
-    //  7 - FAC hlz
+    //  6 - FAC hlz
     [
         "z\tfd\addons\media\images\cuecards\alz.paa",
         "HLZ Request Card"
     ],
 
-    //  8 - FAC alz
+    //  7 - FAC alz
     [
         "z\tfd\addons\media\images\cuecards\hlz.paa",
         "ALZ Request Card"
     ],
+    //  8 - FAC gunship
+    [
+        "z\tfd\addons\media\images\cuecards\gunship.paa",
+        "Gunship Request Card"
+    ],
     //  9 - FAC gunship
-    [
-        "z\tfd\addons\media\images\cuecards\gunship.paa",
-        "Gunship Request Card"
-    ],
-
-    //  10 - FAC airdrop
-    [
-        "z\tfd\addons\media\images\cuecards\gunship.paa",
-        "Gunship Request Card"
-    ],
-
-    //  11 - FAC gunship
     [
         "z\tfd\addons\media\images\cuecards\airdrop.paa",
         "Airdrop Request Card"
     ],
 
-    //  12 - checkin
+    //  10 - checkin
     [
         "z\tfd\addons\media\images\cuecards\aircheckin.paa",
         "Aircraft Checkin Card"
     ],
 
-    //  13 - medical
+    //  11 - medical
     [
         "z\tfd\addons\media\images\cuecards\medband.paa",
         "Medical SmartCard Bandages"
     ],
 
-    //  14 -
+    //  12 -
     [
         "z\tfd\addons\media\images\cuecards\medbloodloss.paa",
         "Medical SmartCard Blood Loss"
     ],
-    //  15 - 
+    //  13 - 
     [
         "z\tfd\addons\media\images\cuecards\medwound.paa",
         "Medical SmartCard Wounds"
     ],
-    //  16 - 
+    //  14 - 
     [
         "z\tfd\addons\media\images\cuecards\cararrest.paa",
         "Medical SmartCard Cardiac Arrest"
     ],
-    //  17 - 
+    //  15 - 
     [
         "z\tfd\addons\media\images\cuecards\drugs.paa",
         "Medical SmartCard Drugs"

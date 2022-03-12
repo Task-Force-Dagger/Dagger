@@ -1,7 +1,7 @@
 // TFD - Role
-force Roles_comm = """76561198044349202"",76561198068887342"",76561198146167881"",""76561197981161711"",""76561198000002705"",""76561199077449084"",""76561198056906379""";
-force Roles_eng = """76561198044349202"",76561198068887342"",76561198146167881"",76561197981161711"",""76561199077449084"",""76561198056906379""";
-force Roles_medic = """76561198044349202"",76561198068887342"",76561198146167881"",76561197981161711"",""76561198000002705"",""76561199077449084"",""76561198056906379""";
+force Roles_comm = """76561198045995390"",""76561198044349202"",76561198068887342"",76561198146167881"",""76561197981161711"",""76561198000002705"",""76561199077449084"",""76561198056906379""";
+force Roles_eng = """76561198045995390"",""76561198044349202"",76561198068887342"",76561198146167881"",76561197981161711"",""76561199077449084"",""76561198056906379""";
+force Roles_medic = """76561198045995390"",""76561198044349202"",76561198068887342"",76561198146167881"",76561197981161711"",""76561198000002705"",""76561199077449084"",""76561198056906379""";
 force Roles_srcomm = "";
 force Roles_sreng = """76561198000002705""";
 force Roles_srmedic = """76561198000002705""";
@@ -10,7 +10,7 @@ force Roles_srmedic = """76561198000002705""";
 force ranks_captain = """76561197981161711"",""76561198068887342""";
 force ranks_colonel = "";
 force ranks_corporal = "";
-force ranks_lieutenant = "";
+force ranks_lieutenant = """76561198045995390""";
 force ranks_major = """76561198056906379"",""76561198146167881""";
 force ranks_sergeant = """76561198000002705""";
 
@@ -236,7 +236,7 @@ ace_maptools_rotateModifierKey = 1;
 
 // ACE Medical
 force ace_medical_ai_enabledFor = 2;
-force ace_medical_AIDamageThreshold = 1;
+force ace_medical_AIDamageThreshold = 1.5;
 force ace_medical_bleedingCoefficient = 0.1;
 force ace_medical_blood_bloodLifetime = 900;
 force ace_medical_blood_enabledFor = 2;
@@ -264,7 +264,7 @@ force ace_medical_statemachine_fatalInjuriesPlayer = 2;
 force ace_medical_treatment_advancedBandages = 2;
 force ace_medical_treatment_advancedDiagnose = 1;
 force ace_medical_treatment_advancedMedication = true;
-force ace_medical_treatment_allowBodyBagUnconscious = true;
+force ace_medical_treatment_allowBodyBagUnconscious = false;
 force ace_medical_treatment_allowLitterCreation = true;
 force ace_medical_treatment_allowSelfIV = 1;
 force ace_medical_treatment_allowSelfPAK = 1;

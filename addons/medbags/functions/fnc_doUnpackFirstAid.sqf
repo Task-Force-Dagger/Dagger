@@ -62,10 +62,10 @@ if (isNull _unit) exitWith {};
         _unit removeItem "tfd_medbags_FirstAid";
         
         private _order = [1,3,2];
-        private _overflow = false;
+        private _overflow = true;
         
         [_unit, "ACE_fieldDressing", 8, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "ACE_quikClot", 4, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "ACE_quikClot", 8, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "kat_Painkiller", 1, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "ACE_tourniquet", 4, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "ACE_EarPlugs", 1, _order, _overflow] call tfd_common_fnc_addItem;
