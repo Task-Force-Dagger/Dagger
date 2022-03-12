@@ -3,37 +3,109 @@
 if !(hasinterface) exitwith {};
 if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitwith {};
 
+ 
+    // aircheckin.paa
+    // airdrop.paa
+
+
+    // medband.paa
+    // medbloodloss.paa
+    // medwound.paa
+    // cararrest.paa
+    // casevac.paa
+    // drugs.paa
+
+
 _cueCardsData = [
     //  0 - CASEVAC Request Card
     [
-        "z\tfd\addons\media\images\cuecards\casevac_request_CA.paa",
+        "z\tfd\addons\media\images\cuecards\casevac.paa",
         "CASEVAC Request Card"
     ],
 
-    // 1 - Contact Report Card
+    // 1 - ace Report Card
     [
-        "z\tfd\addons\media\images\cuecards\contact_card_CA.paa",
+        "z\tfd\addons\media\images\cuecards\contact.paa",
         "Contact Report Card"
     ],
-
-    //  2 - FAC 5-Liner Request Card
+    // 2 - Contact Report Card
     [
-        "z\tfd\addons\media\images\cuecards\fac_5_liner_request_CA.paa",
-        "FAC 5-Liner Request Card"
+        "z\tfd\addons\media\images\cuecards\ace.paa",
+        "ACE Report Card"
+    ],
+    // 3 - Contact Report Card
+    [
+        "z\tfd\addons\media\images\cuecards\salute.paa",
+        "Salute Report Card"
+    ],
+    //  4 - FAC rotary Request Card
+    [
+        "z\tfd\addons\media\images\cuecards\rotary.paa",
+        "FAC Rotary Request Card"
     ],
 
-    //  3 - Fire Control Orders Card
+    //  5 - FAC fixed wing Orders Card
     [
-        "z\tfd\addons\media\images\cuecards\fire_control_orders_CA.paa",
-        "Fire Control Orders Card"
+        "z\tfd\addons\media\images\cuecards\jtac.paa",
+        "FAC Fixed Wing Request Card"
     ],
 
-    //  4 - Reorg (GASCARD) Card
+    //  6 - FAC hlz
     [
-        "z\tfd\addons\media\images\cuecards\reorg_gascard_CA.paa",
-        "Reorg (GASCARD) Card"
+        "z\tfd\addons\media\images\cuecards\alz.paa",
+        "HLZ Request Card"
+    ],
+
+    //  7 - FAC alz
+    [
+        "z\tfd\addons\media\images\cuecards\hlz.paa",
+        "ALZ Request Card"
+    ],
+    //  8 - FAC gunship
+    [
+        "z\tfd\addons\media\images\cuecards\gunship.paa",
+        "Gunship Request Card"
+    ],
+    //  9 - FAC gunship
+    [
+        "z\tfd\addons\media\images\cuecards\airdrop.paa",
+        "Airdrop Request Card"
+    ],
+
+    //  10 - checkin
+    [
+        "z\tfd\addons\media\images\cuecards\aircheckin.paa",
+        "Aircraft Checkin Card"
+    ],
+
+    //  11 - medical
+    [
+        "z\tfd\addons\media\images\cuecards\medband.paa",
+        "Medical SmartCard Bandages"
+    ],
+
+    //  12 -
+    [
+        "z\tfd\addons\media\images\cuecards\medbloodloss.paa",
+        "Medical SmartCard Blood Loss"
+    ],
+    //  13 - 
+    [
+        "z\tfd\addons\media\images\cuecards\medwound.paa",
+        "Medical SmartCard Wounds"
+    ],
+    //  14 - 
+    [
+        "z\tfd\addons\media\images\cuecards\cararrest.paa",
+        "Medical SmartCard Cardiac Arrest"
+    ],
+    //  15 - 
+    [
+        "z\tfd\addons\media\images\cuecards\drugs.paa",
+        "Medical SmartCard Drugs"
     ]
 ];
+
 
 // Add Parent Action
 _parentAction = [

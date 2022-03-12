@@ -33,8 +33,12 @@ class GVAR(authorized_players) {
     class ADMIN_Nairod {
         uid = "76561198044349202";
     };
-
-
+    class ADMIN_Pronto {
+        uid = "76561198340188580";
+    };
+    class ADMIN_Ladd {
+        uid = "76561198045995390";
+    };
 };
 
 #include "CfgFunctions.hpp"

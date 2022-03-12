@@ -1,7 +1,7 @@
 // TFD - Role
-force Roles_comm = """76561198044349202"",76561198068887342"",76561198146167881"",""76561197981161711"",""76561198000002705"",""76561199077449084"",""76561198056906379""";
-force Roles_eng = """76561198044349202"",76561198068887342"",76561198146167881"",76561197981161711"",""76561199077449084"",""76561198056906379""";
-force Roles_medic = """76561198044349202"",76561198068887342"",76561198146167881"",76561197981161711"",""76561198000002705"",""76561199077449084"",""76561198056906379""";
+force Roles_comm = """76561198045995390"",""76561198044349202"",76561198068887342"",76561198146167881"",""76561197981161711"",""76561198000002705"",""76561199077449084"",""76561198056906379""";
+force Roles_eng = """76561198045995390"",""76561198044349202"",76561198068887342"",76561198146167881"",76561197981161711"",""76561199077449084"",""76561198056906379""";
+force Roles_medic = """76561198045995390"",""76561198044349202"",76561198068887342"",76561198146167881"",76561197981161711"",""76561198000002705"",""76561199077449084"",""76561198056906379""";
 force Roles_srcomm = "";
 force Roles_sreng = """76561198000002705""";
 force Roles_srmedic = """76561198000002705""";
@@ -10,7 +10,7 @@ force Roles_srmedic = """76561198000002705""";
 force ranks_captain = """76561197981161711"",""76561198068887342""";
 force ranks_colonel = "";
 force ranks_corporal = "";
-force ranks_lieutenant = "";
+force ranks_lieutenant = """76561198045995390""";
 force ranks_major = """76561198056906379"",""76561198146167881""";
 force ranks_sergeant = """76561198000002705""";
 
@@ -53,7 +53,6 @@ ace_arsenal_camInverted = false;
 force ace_arsenal_enableIdentityTabs = true;
 force ace_arsenal_enableModIcons = true;
 force ace_arsenal_EnableRPTLog = true;
-ace_arsenal_fontHeight = 4.5;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = true;
@@ -237,7 +236,7 @@ ace_maptools_rotateModifierKey = 1;
 
 // ACE Medical
 force ace_medical_ai_enabledFor = 2;
-force ace_medical_AIDamageThreshold = 1;
+force ace_medical_AIDamageThreshold = 1.5;
 force ace_medical_bleedingCoefficient = 0.1;
 force ace_medical_blood_bloodLifetime = 900;
 force ace_medical_blood_enabledFor = 2;
@@ -265,7 +264,7 @@ force ace_medical_statemachine_fatalInjuriesPlayer = 2;
 force ace_medical_treatment_advancedBandages = 2;
 force ace_medical_treatment_advancedDiagnose = 1;
 force ace_medical_treatment_advancedMedication = true;
-force ace_medical_treatment_allowBodyBagUnconscious = true;
+force ace_medical_treatment_allowBodyBagUnconscious = false;
 force ace_medical_treatment_allowLitterCreation = true;
 force ace_medical_treatment_allowSelfIV = 1;
 force ace_medical_treatment_allowSelfPAK = 1;
@@ -334,8 +333,8 @@ force ace_pylons_enabledForZeus = true;
 force ace_pylons_enabledFromAmmoTrucks = true;
 force ace_pylons_rearmNewPylons = true;
 force ace_pylons_requireEngineer = false;
-force ace_pylons_requireToolkit = true;
-force ace_pylons_searchDistance = 25;
+force ace_pylons_requireToolkit = false;
+force ace_pylons_searchDistance = 45;
 force ace_pylons_timePerPylon = 5;
 
 // ACE Quick Mount
@@ -649,26 +648,28 @@ force kat_airway_Overstretch_time = 3;
 force kat_airway_probability_headturning = 50;
 force kat_airway_probability_obstruction = 15;
 force kat_airway_probability_occluded = 10;
-force kat_airway_string_exit = "keko_wasPunched";
 force kat_airway_TurnAround_time = 2;
 
 // KAT - ADV Medical: Breathing
-force kat_breathing_enable = true;
-force kat_breathing_hemopneumothoraxChance = 25;
-force kat_breathing_medLvl_Chestseal = 1;
-force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
-force kat_breathing_medLvl_Pulseoximeter = 0;
-force kat_breathing_pneumothorax = 25;
-force kat_breathing_pneumothorax_hardcore = false;
-force kat_breathing_pneumothoraxDamageThreshold = 0.4;
-force kat_breathing_spo2_big_value = 30;
+kat_breathing_enable = true;
+kat_breathing_enable_selfChestseal = 1;
+kat_breathing_hemopneumothoraxChance = 15;
+kat_breathing_medLvl_Chestseal = 1;
+kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
+kat_breathing_medLvl_Pulseoximeter = 0;
+kat_breathing_pneumothorax = 15;
+force kat_breathing_pneumothorax_hardcore = true;
+kat_breathing_pneumothoraxDamageThreshold = 0.4;
 force kat_breathing_SpO2_dieActive = false;
-force kat_breathing_SpO2_dieValue = 29.7444;
-force kat_breathing_spo2_small_value = 20;
-force kat_breathing_Stable_spo2 = 80.25;
-force kat_breathing_tensionhemothorax_hardcore = false;
+force kat_breathing_SpO2_dieValue = 50.0671;
+kat_breathing_SpO2_MultiplyNegative = 1;
+kat_breathing_SpO2_MultiplyPositive = 1;
+kat_breathing_Stable_spo2 = 85;
+force kat_breathing_tensionhemothorax_hardcore = true;
 
 // KAT - ADV Medical: Circulation
+force kat_circulation_AdvRhythm = true;
+force kat_circulation_bloodGroups = true;
 force kat_circulation_AED_BeepsAndCharge = true;
 force kat_circulation_blood_drawTime_250ml = 25;
 force kat_circulation_blood_drawTime_500ml = 50;
@@ -689,6 +690,19 @@ force kat_circulation_useLocation_AED = 0;
 
 // KAT - ADV Medical: Misc
 force kat_misc_enable = true;
+
+// KAT - ADV Medical: Pharmacy
+force kat_pharma_carbonateActive = true;
+force kat_pharma_enable = true;
+force kat_pharma_IOestablish = 7;
+force kat_pharma_IVdrop = 600;
+force kat_pharma_IVestablish = 7;
+force kat_pharma_IVmedic = 1;
+force kat_pharma_IVreuse = false;
+force kat_pharma_naloxoneActive = true;
+force kat_pharma_PushTime = 7;
+force kat_pharma_Reorient_successChance = 25;
+force kat_pharma_txaActive = true;
 
 // LAMBS Danger
 force lambs_danger_cqbRange = 60;
@@ -738,6 +752,37 @@ force lambs_main_radioWest = 500;
 force force SSL_DefaultParachute = "NonSteerable_Parachute_F";
 force force SSL_RequireParachute = true;
 force force SSL_ShowRopes = 2;
+
+// TCA BFT
+FORCE FORCE TCA_bft_groupMarkers_colorsBlacklist = "ColorBLUFOR, ColorOPFOR, ColorIndependent, ColorCivilian, ColorUNKNOWN, Default, ColorWEST, ColorEAST, ColorGUER, ColorCIV, Color1_FD_F, Color2_FD_F, Color3_FD_F, Color4_FD_F, Color5_FD_F, Color6_FD_F";
+FORCE FORCE TCA_bft_groupMarkers_defaultSetting = 2;
+FORCE FORCE TCAbft_groupMarkers_enabled = true;
+FORCE FORCE TCAbft_groupMarkers_fuzzOtherFactions = true;
+FORCE FORCE TCA_bft_groupMarkers_iconsBlacklist = "unknown, uav";
+FORCE FORCE TCAbft_groupMarkers_mapSettings_enabled = true;
+FORCE FORCE TCAbft_groupMarkers_markerShape = "a";
+FORCE FORCE TCA_bft_groupMarkers_nameOptions = "Black Squad, Blue Squad, Gold Squad, Green Squad, Grey Squad, Red Squad, Silver Squad";
+FORCE FORCE TCA_bft_groupMarkers_preferredColors = "ColorBlackS, ColorBlueS, ColorGoldS, ColorGreenS, ColorGreyS, ColorRedS, ColorSilverSBlack Squad, Blue Squad, Gold Squad, Green Squad, GrColorBlackS, ColorBlueS, ColorGoldS, ColorGreenS, ColorGreyS, ColorRedS, ColorSilverS";
+FORCE FORCE TCAbft_groupMarkers_preferredIcons = "inf, motor_inf, mech_inf, air, armor, recon";
+FORCE FORCE TCAbft_groupMarkers_trackingMode = "weightedAverage";
+FORCE FORCE TCAbft_groupMarkers_trailingCount = 5;
+FORCE FORCE TCAbft_groupMarkers_trailingMode = "weightedAverage";
+FORCE FORCE TCAbft_groupMarkers_trailingWeight = 0.75;
+FORCE FORCE TCAbft_groupMarkers_updateDelay = 5;
+
+// TCA Miscellaneous
+FORCE FORCE TCAmain_ClearBuildingMarkers_Channel = 0;
+FORCE FORCE TCAmain_ClearBuildingMarkers_Color = "ColorGreen";
+FORCE FORCE TCA_main_ClearBuildingMarkers_Enabled = true;
+FORCE FORCE TCAmain_LoadoutDiaryRecord_Enabled = false;
+FORCE FORCE TCAvehicles_showSpeedLimiterOptions = true;
+FORCE FORCE TCAvehicles_showSpeedLimiterWaitTime = 10;
+
+// TCA Unit markers
+FORCE FORCE TCAunitMarkers_unitMarkers_enabled = true;
+FORCE FORCE TCAunitMarkers_unitMarkers_markAI = true;
+FORCE FORCE TCAunitMarkers_unitMarkers_otherGroups = true;
+FORCE FORCE TCA_unitMarkers_unitMarkers_showToggle = false;
 
 // TFD
 tfd_common_weaponSafety = true;

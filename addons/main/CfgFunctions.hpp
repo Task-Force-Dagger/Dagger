@@ -15,7 +15,6 @@ class CfgFunctions {
             class Logs {};
             class PilotCheck {};
             class QSRepackMags {};
-            // class TFARSettings {PostInit = 1;};
             class VanillaFatigue {};
             class FindReplaceString {};
             class FindInArrayMap {};

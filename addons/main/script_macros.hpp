@@ -22,7 +22,7 @@
 
 // ACE3 reference macros
 #define ACE_PREFIX ace
-
+#define ACE_ADDON(module) DOUBLES(ACE_PREFIX,module)
 #define ACEGVAR(module,var)         TRIPLES(ACE_PREFIX,module,var)
 #define QACEGVAR(module,var)        QUOTE(ACEGVAR(module,var))
 

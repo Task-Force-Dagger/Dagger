@@ -50,7 +50,7 @@ if (isNull _unit) exitWith {};
         [], 
         { TFD_MEDICAL_SUPPLIES_UNPACK_SUCCESS = true; }, 
         { TFD_MEDICAL_SUPPLIES_UNPACK_FAILURE = true; }, 
-        localize "Unpack Boo Boo Bag....",
+        localize "Unpack IFAK....",
         {true},
         ["isNotInside", "isNotSitting", "isNotSwimming"]
     ] call ACE_common_fnc_progressBar;
@@ -62,13 +62,21 @@ if (isNull _unit) exitWith {};
         _unit removeItem "tfd_medbags_FirstAid";
         
         private _order = [1,3,2];
-        private _overflow = false;
+        private _overflow = true;
         
-        [_unit, "ACE_fieldDressing", 6, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "ACE_fieldDressing", 8, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "ACE_quikClot", 8, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "kat_Painkiller", 1, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "ACE_tourniquet", 2, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "ACE_tourniquet", 4, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "ACE_EarPlugs", 1, _order, _overflow] call tfd_common_fnc_addItem;
-        
+        [_unit, "kat_chestSeal", 1, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_aatKit", 1, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "ACE_salineIV_500", 1, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_larynx", 1, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_guedel", 1, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_TXA", 1, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_IV_16", 1, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_IO_FAST", 1, _order, _overflow] call tfd_common_fnc_addItem;
     };
     
     if (TFD_MEDICAL_SUPPLIES_UNPACK_FAILURE) exitWith {

@@ -8,7 +8,9 @@ GVAR(playerManagement_players) = [];
 GVAR(playerManagement_selected) = [];
 
 if (isTFD) then {
-    [ {time > 5 && [] call FUNC(isAuthorized)}, {
+    [
+        {time > 5 && [] call FUNC(isAuthorized)},
+        {
             _this call FUNC(resyncLog);
 
             GVAR(endedEH) = addMissionEventHandler ["Ended", {
@@ -36,7 +38,8 @@ if (isTFD) then {
             }];
         },
         clientOwner,
-        30, // Timeout after 30 seconds {}
+        30, // Timeout after 30 seconds
+        {}
     ] call CBA_fnc_waitUntilAndExecute;
 
 };

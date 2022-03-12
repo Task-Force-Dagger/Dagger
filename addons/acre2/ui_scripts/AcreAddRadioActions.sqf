@@ -20,13 +20,14 @@ switch _mode do {
         _ctrlList = _ctrlGroup controlsGroupCtrl 101;
         _ctrlList ctrladdeventhandler ["lbdblclick",{with uinamespace do {["listModify",[ctrlparentcontrolsgroup (_this select 0),+1],objnull] call AcreAddRadioActions_script;};}];
         
-        TFD_AcreAddRadioActions_Array = ("TFD_MissionAcre2Attributes" get3denMissionAttribute "TFD_AcreAddRadioActions");
+        TFD_AcreAddRadioActions_Array = ("TFD_MissionAcre2Attributes" get3DENMissionAttribute "TFD_AcreAddRadioActions");
         if (TFD_AcreAddRadioActions_Array isEqualType "") then {
             TFD_AcreAddRadioActions_Array = call compile TFD_AcreAddRadioActions_Array;
         };
         
         lnbclear _ctrlList;
-        _ctrlList lnbSetColumnsPos [0.1,0.2]; {
+        _ctrlList lnbSetColumnsPos [0.1,0.2];
+        {
             _weaponCfg = configfile >> "cfgWeapons" >> _x;
             _displayName = gettext (_weaponCfg >> "displayName");
             _picture = gettext (_weaponCfg >> "picture");
@@ -52,7 +53,8 @@ switch _mode do {
             TFD_AcreAddRadioActions_Array pushBackUnique _radio;
         };
         lnbclear _ctrlList;
-        _ctrlList lnbSetColumnsPos [0.1,0.2]; {
+        _ctrlList lnbSetColumnsPos [0.1,0.2];
+        {
             _weaponCfg = configfile >> "cfgWeapons" >> _x;
             _displayName = gettext (_weaponCfg >> "displayName");
             _picture = gettext (_weaponCfg >> "picture");

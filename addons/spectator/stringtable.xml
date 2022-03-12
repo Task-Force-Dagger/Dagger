@@ -2,8 +2,8 @@
 <Project name="TFD">
     <Package name="Spectator">
         <Key ID="STR_TFD_Spectator_DisplayName">
-            <Original>Tfd - Spectator</Original>
-            <Polish>Tfd - Obserwator</Polish>
+            <Original>TFD - Spectator</Original>
+            <Polish>TFD - Obserwator</Polish>
         </Key>
         <Key ID="STR_TFD_Spectator_Enabled">
             <Original>Enable spectator</Original>

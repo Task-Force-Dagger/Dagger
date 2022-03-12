@@ -13,7 +13,8 @@ files = [
     "extras/keys",
     "AUTHORS.txt",
     "tfd.paa",
-    "itfd.paa"
+    "itfd.paa",
+    "tfd-patach.paa"
     ]
 
 exclude = ["*.psd", "*.png", "*.tga"]
@@ -21,11 +22,44 @@ exclude = ["*.psd", "*.png", "*.tga"]
 
 modname = "{{name}}"
 key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
+
+check = [
+    "!compile_scripts"
+]
+
+postbuild = [
+    "!remove_compiled_scripts"
+]
 
 releasebuild = [
-    "@zip tfd_v{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
+    "@zip @tfd_{{version}}"
 ]
 
 [header_exts]
 version = "{{git \"id 8\"}}"
+
+
+[scripts.compile_scripts]
+steps_windows = [
+    "echo 'Compile Arma Scripts'",
+    "ArmaScriptCompiler.exe"
+]
+
+steps_linux = [
+    "echo 'Compiling Arma Scripts does not work yet on Linux'"
+]
+only_release = true
+show_output = false
+
+[scripts.remove_compiled_scripts]
+steps_windows = [
+    "echo 'remove Compiled Scripts'",
+    "powershell -Command Remove-Item './addons/*' -Recurse -Include *.sqfc"
+]
+steps_linux = [
+    "echo 'Compiling Arma Scripts does not work yet on Linux'"
+]
+only_release = true
+show_output = true

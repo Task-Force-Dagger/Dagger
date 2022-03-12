@@ -1,241 +1,326 @@
-class cfgLoadouts {
-    class West {
-        class BLU_F {
-            class baseMan {
+class cfgLoadouts
+{
+    class West
+    {
+        class BLU_F
+        {
+            class baseMan
+            {
                 radios[] = {};
             };
-            class rifleman {
-                radios[] = {"ACRE_PRC343"};
+            class rifleman
+            {
+                radios[] = {};
             };
-            class sl {
-                radios[] += {"ACRE_PRC148"};
+            class sl
+            {
+                radios[] += {};
             };
-            class mmgag {
-                radios[] += {"ACRE_PRC148"};
+            class mmgag
+            {
+                radios[] += {};
             };
-            class hmgag {
-                radios[] += {"ACRE_PRC148"};
+            class hmgag
+            {
+                radios[] += {};
             };
-            class matag {
-                radios[] += {"ACRE_PRC148"};
+            class matag
+            {
+                radios[] += {};
             };
-            class hatag {
-                radios[] += {"ACRE_PRC148"};
+            class hatag
+            {
+                radios[] += {};
             };
-            class mtrag {
-                radios[] += {"ACRE_PRC148"};
+            class mtrag
+            {
+                radios[] += {};
             };
-            class samg {
-                radios[] += {"ACRE_PRC148"};
+            class samg
+            {
+                radios[] += {};
             };
-            class sp {
-                radios[] += {"ACRE_PRC148"};
+            class sp
+            {
+                radios[] += {};
             };
-            class vc {
-                radios[] += {"ACRE_PRC148"};
+            class vc
+            {
+                radios[] += {};
             };
-            class pp {
-                radios[] += {"ACRE_PRC148"};
+            class pp
+            {
+                radios[] += {};
             };
         };
-        class BLU_G_F {
-            class baseMan {
+        class BLU_G_F
+        {
+            class baseMan
+            {
                 radios[] = {};
             };
-            class rifleman {
-                radios[] = {"ACRE_PRC343"};
-            };
-            class sl {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class mmgag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class hmgag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class matag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class hatag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class mtrag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class samg {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class sp {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class vc {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class pp {
-                radios[] += {"ACRE_PRC148"};
-            };
-        };
-    };
-    class East {
-        class OPF_F {
-            class baseMan {
+            class rifleman
+            {
                 radios[] = {};
             };
-            class rifleman {
-                radios[] = {"ACRE_PRC343"};
+            class sl
+            {
+                radios[] += {};
             };
-            class sl {
-                radios[] += {"ACRE_PRC148"};
+            class mmgag
+            {
+                radios[] += {};
             };
-            class mmgag {
-                radios[] += {"ACRE_PRC148"};
+            class hmgag
+            {
+                radios[] += {};
             };
-            class hmgag {
-                radios[] += {"ACRE_PRC148"};
+            class matag
+            {
+                radios[] += {};
             };
-            class matag {
-                radios[] += {"ACRE_PRC148"};
+            class hatag
+            {
+                radios[] += {};
             };
-            class hatag {
-                radios[] += {"ACRE_PRC148"};
+            class mtrag
+            {
+                radios[] += {};
             };
-            class mtrag {
-                radios[] += {"ACRE_PRC148"};
+            class samg
+            {
+                radios[] += {};
             };
-            class samg {
-                radios[] += {"ACRE_PRC148"};
+            class sp
+            {
+                radios[] += {};
             };
-            class sp {
-                radios[] += {"ACRE_PRC148"};
+            class vc
+            {
+                radios[] += {};
             };
-            class vc {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class pp {
-                radios[] += {"ACRE_PRC148"};
-            };
-        };
-        class OPF_G_F {
-            class baseMan {
-                radios[] = {};
-            };
-            class rifleman {
-                radios[] = {"ACRE_PRC343"};
-            };
-            class sl {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class mmgag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class hmgag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class matag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class hatag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class mtrag {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class samg {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class sp {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class vc {
-                radios[] += {"ACRE_PRC148"};
-            };
-            class pp {
-                radios[] += {"ACRE_PRC148"};
+            class pp
+            {
+                radios[] += {};
             };
         };
     };
-    class Resistance {
-        class IND_F {
-            class baseMan {
+    class East
+    {
+        class OPF_F
+        {
+            class baseMan
+            {
                 radios[] = {};
             };
-            class rifleman {
-                radios[] = {"ACRE_PRC343"};
+            class rifleman
+            {
+                radios[] = {};
             };
-            class sl {
-                radios[] += {"ACRE_PRC148"};
+            class sl
+            {
+                radios[] += {};
             };
-            class mmgag {
-                radios[] += {"ACRE_PRC148"};
+            class mmgag
+            {
+                radios[] += {};
             };
-            class hmgag {
-                radios[] += {"ACRE_PRC148"};
+            class hmgag
+            {
+                radios[] += {};
             };
-            class matag {
-                radios[] += {"ACRE_PRC148"};
+            class matag
+            {
+                radios[] += {};
             };
-            class hatag {
-                radios[] += {"ACRE_PRC148"};
+            class hatag
+            {
+                radios[] += {};
             };
-            class mtrag {
-                radios[] += {"ACRE_PRC148"};
+            class mtrag
+            {
+                radios[] += {};
             };
-            class samg {
-                radios[] += {"ACRE_PRC148"};
+            class samg
+            {
+                radios[] += {};
             };
-            class sp {
-                radios[] += {"ACRE_PRC148"};
+            class sp
+            {
+                radios[] += {};
             };
-            class vc {
-                radios[] += {"ACRE_PRC148"};
+            class vc
+            {
+                radios[] += {};
             };
-            class pp {
-                radios[] += {"ACRE_PRC148"};
+            class pp
+            {
+                radios[] += {};
             };
         };
-        class IND_G_F {
-            class baseMan {
+        class OPF_G_F
+        {
+            class baseMan
+            {
                 radios[] = {};
             };
-            class rifleman {
-                radios[] = {"ACRE_PRC343"};
+            class rifleman
+            {
+                radios[] = {};
             };
-            class sl {
-                radios[] += {"ACRE_PRC148"};
+            class sl
+            {
+                radios[] += {};
             };
-            class mmgag {
-                radios[] += {"ACRE_PRC148"};
+            class mmgag
+            {
+                radios[] += {};
             };
-            class hmgag {
-                radios[] += {"ACRE_PRC148"};
+            class hmgag
+            {
+                radios[] += {};
             };
-            class matag {
-                radios[] += {"ACRE_PRC148"};
+            class matag
+            {
+                radios[] += {};
             };
-            class hatag {
-                radios[] += {"ACRE_PRC148"};
+            class hatag
+            {
+                radios[] += {};
             };
-            class mtrag {
-                radios[] += {"ACRE_PRC148"};
+            class mtrag
+            {
+                radios[] += {};
             };
-            class samg {
-                radios[] += {"ACRE_PRC148"};
+            class samg
+            {
+                radios[] += {};
             };
-            class sp {
-                radios[] += {"ACRE_PRC148"};
+            class sp
+            {
+                radios[] += {};
             };
-            class vc {
-                radios[] += {"ACRE_PRC148"};
+            class vc
+            {
+                radios[] += {};
             };
-            class pp {
-                radios[] += {"ACRE_PRC148"};
+            class pp
+            {
+                radios[] += {};
             };
         };
     };
-    class Civilian {
-        class CIV_F {
-            class baseMan {
+    class Resistance
+    {
+        class IND_F
+        {
+            class baseMan
+            {
+                radios[] = {};
+            };
+            class rifleman
+            {
+                radios[] = {};
+            };
+            class sl
+            {
+                radios[] += {};
+            };
+            class mmgag
+            {
+                radios[] += {};
+            };
+            class hmgag
+            {
+                radios[] += {};
+            };
+            class matag
+            {
+                radios[] += {};
+            };
+            class hatag
+            {
+                radios[] += {};
+            };
+            class mtrag
+            {
+                radios[] += {};
+            };
+            class samg
+            {
+                radios[] += {};
+            };
+            class sp
+            {
+                radios[] += {};
+            };
+            class vc
+            {
+                radios[] += {};
+            };
+            class pp
+            {
+                radios[] += {};
+            };
+        };
+        class IND_G_F
+        {
+            class baseMan
+            {
+                radios[] = {};
+            };
+            class rifleman
+            {
+                radios[] = {};
+            };
+            class sl
+            {
+                radios[] += {};
+            };
+            class mmgag
+            {
+                radios[] += {};
+            };
+            class hmgag
+            {
+                radios[] += {};
+            };
+            class matag
+            {
+                radios[] += {};
+            };
+            class hatag
+            {
+                radios[] += {};
+            };
+            class mtrag
+            {
+                radios[] += {};
+            };
+            class samg
+            {
+                radios[] += {};
+            };
+            class sp
+            {
+                radios[] += {};
+            };
+            class vc
+            {
+                radios[] += {};
+            };
+            class pp
+            {
+                radios[] += {};
+            };
+        };
+    };
+    class Civilian
+    {
+        class CIV_F
+        {
+            class baseMan
+            {
                 radios[] = {};
             };
         };

@@ -23,7 +23,7 @@ if (!alive player) exitWith {};
     private _unitGroup = group _unit;
     if (getMissionConfigValue ['TFD_AcreBabelEnabled',false]) then {
         //Determine which languages we should speak
-        //Check Side/Faction conditions 
+        //Check Side/Faction conditions
         {
             _x params ["","_conditions"];
             private _langIdx = _forEachIndex;
@@ -37,7 +37,8 @@ if (!alive player) exitWith {};
         if (_groupCond isEqualType "") then { _groupCond = call compile _groupCond; };
         private _unitCond = _unit getVariable ["TFD_BabelLanguages", []];
         if (_unitCond isEqualType "") then { _unitCond = call compile _unitCond; };
- {
+
+        {
             private _langId = format["tw_lang%1", _x];
             _languagesToSpeak pushBackUnique _langId;
         } forEach (_groupCond + _unitCond);
@@ -50,7 +51,8 @@ if (!alive player) exitWith {};
         };
 
         //Babel Briefing
-        _ltext = _ltext + "<font size='16'>BABEL - LANGUAGES</font><br/>Languages spoken in this area:<br/>"; {
+        _ltext = _ltext + "<font size='16'>BABEL - LANGUAGES</font><br/>Languages spoken in this area:<br/>";
+        {
             _x params ["_langKey", "_langName"];
             if (_forEachIndex != 0) then {_ltext = _ltext + ", "; };
             if (_langKey in _languagesToSpeak) then {
@@ -88,7 +90,8 @@ if (!alive player) exitWith {};
     private _groupVarLeaderChannelList = _unitGroup getVariable ["TFD_ChannellistLeader", []];
     if (_groupVarLeaderChannelList isEqualType "") then { _groupVarLeaderChannelList = call compile _groupVarLeaderChannelList; };
 
-    private _isGroupLeader = (leader _unitGroup == _unit); {
+    private _isGroupLeader = (leader _unitGroup == _unit);
+    {
         private _radioPresetSetting = _x;
         private _radioPresetIdx = _forEachIndex;
         _radioPresetSetting params ["_conditions"];
@@ -103,10 +106,13 @@ if (!alive player) exitWith {};
             //uses these presets.
             _ourPresetIndex = _radioPresetIdx;
 
-            _presetName = format["tfd_preset%1",_ourPresetIndex]; {
-                _x params ["_radioList"]; { [_x, _presetName] call acre_api_fnc_setPreset; } forEach (_radioList);
+            _presetName = format["tfd_preset%1",_ourPresetIndex];
+            {
+                _x params ["_radioList"];
+                { [_x, _presetName] call acre_api_fnc_setPreset; } forEach (_radioList);
             } forEach GVAR(radioCoreSettings);
- {
+
+            {
                 _x params ["", "", "_radio", ["_chanConditions",[]]];
 
                 private _unitOnThisChannel = false;
@@ -162,18 +168,21 @@ if (!alive player) exitWith {};
 
 
 
-    private _text = "<br/><font size='16'>RADIO CHANNEL LISTING</font>"; {
+    private _text = "<br/><font size='16'>RADIO CHANNEL LISTING</font>";
+    {
         private _radioSettingsIndex = _forEachIndex;
         if (count (_channelsProcessed select _radioSettingsIndex) > 0) then { // If at least one channel is defined.
             _text = _text + "<br/>For: ";
             _radioFreqInfo = _x;
             _radioList = _radioFreqInfo select 0;
-            _radio = (_radioList select 0); {
+            _radio = (_radioList select 0);
+            {
                 if (_forEachIndex != 0) then {_text = _text + ", "; };
                 _text = _text + getText (configfile >> "CfgWeapons" >> _x >> "displayName");
             } forEach _radioList;
             _text = _text + ":<br/>";
- {
+
+            {
                 private _chanNum = _forEachIndex +1;
                 private _frequency = [_radio, _presetName, _chanNum, "frequencyTX"] call acre_api_fnc_getPresetChannelField;
                 if (_frequency >= 1000) then {
@@ -189,7 +198,8 @@ if (!alive player) exitWith {};
                 _defaultRadio = (_x select 2);
                 if (_x select ((count _x) -1 )) then { // if player is supposet to be on this channel
                     // Match radio to number...
-                    private _radioFndIdx = -1; {
+                    private _radioFndIdx = -1;
+                    {
                         if (_radioFndIdx != -1) exitWith {};
                         _radioID = _forEachIndex;
                         if (!(_radioID in _usedRadioIndexs)) then {
@@ -217,7 +227,8 @@ if (!alive player) exitWith {};
         };
     } forEach GVAR(radioCoreSettings);
 
-    private _myRadiosText = "<br/><br/><font size='16'>MY ASSIGNED RADIOS</font><br/>"; {
+    private _myRadiosText = "<br/><br/><font size='16'>MY ASSIGNED RADIOS</font><br/>";
+    {
         _color = [_forEachIndex] call EFUNC(common,numToColor);
         _myRadiosText = _myRadiosText + format["<font color='%1'>%2</font><br/>",_color,getText (configfile >> "CfgWeapons" >> _x >> "displayName")];
     } forEach _radiosToGive;
@@ -244,10 +255,11 @@ if (!alive player) exitWith {};
             // Wait for existing radios to finish initalization.
             if ("ItemRadio" in (items _unit + assignedItems _unit)) exitWith {};
             if (!([] call acre_api_fnc_isInitialized)) exitWith {};
- {_unit removeItem _x;} forEach ([] call acre_api_fnc_getCurrentRadioList);
+
+            {_unit removeItem _x;} forEach ([] call acre_api_fnc_getCurrentRadioList);
 
 
-            // Allocate new radios. 
+            // Allocate new radios.
             {
                 if (_unit canAdd _x) then {
                     _unit addItem _x;
@@ -271,7 +283,8 @@ if (!alive player) exitWith {};
 
                         //Create addAction to give radio.
                         private _radioName = getText (configfile >> "CfgWeapons" >> _x >> "displayName");
-                        private _actionID = _unit addAction [format ["<t color='#3375D6'>[Radios] Give myself a %1 radio</t>",_radioName], {
+                        private _actionID = _unit addAction [format ["<t color='#3375D6'>[Radios] Give myself a %1 radio</t>",_radioName],
+                        {
                             private _radioToGive = (_this select 3) select 0;
                             private _unit = (_this select 0);
                             if (_unit canAdd _radioToGive) then {
@@ -293,13 +306,16 @@ if (!alive player) exitWith {};
             } forEach _radiosToGive;
 
             // Setup Radio channels properly and provide the addActions.
-            [{([] call acre_api_fnc_isInitialized)}, {
+            [{([] call acre_api_fnc_isInitialized)},
+            {
                 params ["_unit", "_assignedRadioChannels"];
 
                 private _usedRadioIndexs = [];
-                private _radioList = [] call acre_api_fnc_getCurrentRadioList; {
+                private _radioList = [] call acre_api_fnc_getCurrentRadioList;
+                {
                     private _radioName = _x;
-                    private _baseRadio = [_x] call acre_api_fnc_getBaseRadio; {
+                    private _baseRadio = [_x] call acre_api_fnc_getBaseRadio;
+                    {
                         _x params ["_xBaseRadio", "_chanNum"];
                         if (!(_forEachIndex in _usedRadioIndexs)) then {
                             if (_baseRadio == _xBaseRadio) then {
@@ -314,7 +330,8 @@ if (!alive player) exitWith {};
 
 
                 // Give addActions to addRadios.
-                if (!isNil QGVAR(radioAddActions)) then { {
+                if (!isNil QGVAR(radioAddActions)) then {
+                    {
                         private _actionid_action = _unit addAction [format["<t color='#c3d633'>[Radios] Give myself a %1 radio (check your inventory for space)</t>",getText (configfile >> "CfgWeapons" >> _x >> "displayName")],
                                                             format["if ((_this select 0) canAdd '%1') then { (_this select 0) addItem '%1'; (_this select 0) removeAction (_this select 2); } else { systemChat '[TFD ACRE2] No space for radios'; };",_x],0,0,false,true,"","(_target == _this)"];
                         [_actionid_action,_unit] spawn {

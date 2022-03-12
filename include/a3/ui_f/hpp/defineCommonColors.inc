@@ -98,7 +98,7 @@
 #define IGUI_ERROR_RGB			IGUI_ERROR_RGB_R,	IGUI_ERROR_RGB_G,	IGUI_ERROR_RGB_B
 #define IGUI_ERROR_COLOR		{IGUI_ERROR_RGB,IGUI_ERROR_RGB_A}
 
-//--- IGUI Tfdtical ping color
+//--- IGUI TFDtical ping color
 #define IGUI_TFDTPING_RGB_R		"(profilenamespace getvariable ['IGUI_TFDTPING_RGB_R',1.0])"
 #define IGUI_TFDTPING_RGB_G		"(profilenamespace getvariable ['IGUI_TFDTPING_RGB_G',0.8])"
 #define IGUI_TFDTPING_RGB_B		"(profilenamespace getvariable ['IGUI_TFDTPING_RGB_B',0.2])"

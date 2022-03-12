@@ -10,5 +10,7 @@ ADMIN_Apollo,
 ADMIN_Mullins,
 ADMIN_Grizzly,
 ADMIN_Lidstone,
-ADMIN_Nairod
+ADMIN_Nairod,
+ADMIN_Pronto,
+ADMIN_ladd
 };

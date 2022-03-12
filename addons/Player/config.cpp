@@ -20,3 +20,13 @@ class CfgFunctions {
     #include "CfgFunctions.hpp"
 };
 
+class CfgImprecision {
+    class Primary {
+        verticalRadius = 0.15; 
+        horizontalRadius = 0.025; 
+    };
+    class Secondary {
+        verticalRadius = 0.025;
+        horizontalRadius = 0.15;
+    };
+};

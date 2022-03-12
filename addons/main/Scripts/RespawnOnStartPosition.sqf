@@ -18,8 +18,3 @@ if (isNil { player getVariable "StartingPos"; } ) then {
     player setPosATL (player getVariable ["StartingPos", getPosATL player]);
     player setDir (player getVariable ["StartingDir", 0]);
 };
-
-if (TFD_Main_Earplugs) then {
-
-    [] execVM "z\tfd\addons\main\Scripts\Earplugs\earplugs.sqf";
-};

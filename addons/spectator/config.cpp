@@ -9,7 +9,7 @@ class CfgPatches {
         requiredAddons[] = {
             "tfd_common"
         };
-        author = "Tfd";
+        author = QAUTHOR;
         VERSION_CONFIG;
     };
 };

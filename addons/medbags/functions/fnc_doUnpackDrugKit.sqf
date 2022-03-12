@@ -60,15 +60,20 @@ if (isNull _unit) exitWith {};
         _unit removeItem "tfd_medbags_DrugKit";
         
         private _order = [3,1,2];
-        private _overflow = false;
+        private _overflow = true;
         
-        [_unit, "tfd_medical_VPN", 24, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_epinephrine", 4, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_fentanyl", 4, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_ketamine", 8, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_morphine", 4, _order, _overflow] call tfd_common_fnc_addItem;
-        [_unit, "tfd_medical_naloxone", 4, _order, _overflow] call tfd_common_fnc_addItem;
-    
+        [_unit, "kat_TXA", 10, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_amiodarone", 10, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_atropine", 10, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_lidocaine", 10, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_naloxone", 10, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_nitroglycerin", 10, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_norepinephrine", 10, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "kat_phenylephrine", 10, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "ACE_epinephrine", 10, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "ACE_morphine", 16, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "ACE_adenosine", 8, _order, _overflow] call tfd_common_fnc_addItem;
+
         _unit playActionNow "Stand";
         
     };

@@ -8,7 +8,6 @@ class cfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        /* Require CBA and all components below */
         requiredAddons[] = {
             "A3_UI_F",
             "cba_main",
@@ -33,3 +32,4 @@ class cfgPatches {
 #include "CfgMarkers.hpp"
 #include "radio.hpp"
 #include "CfgEden.hpp"
+#include "CfgSkeletons.hpp"

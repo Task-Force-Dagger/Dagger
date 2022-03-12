@@ -1,7 +1,9 @@
 #include "script_component.hpp"
 
-class cfgPatches {
-    class ADDON {
+class cfgPatches
+{
+    class ADDON
+    {
         name = COMPONENT_NAME;
         author = "Snippers";
         url = "http://www.teamonetactical.com";

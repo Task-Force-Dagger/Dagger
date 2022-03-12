@@ -26,9 +26,9 @@ if (isNil "CBA_fnc_log") then {
 // Disable Enchanced Multiplayer Menu for compatiblity with this script
 uiNamespace setVariable ["EMM_multiplayerMenu_enabled", false];
 
-INFO("Auto joining to Task Force Dagger server");
+INFO("Auto joining to Task Force Dagger Operations Server");
 
-GVAR(serverAddress) = "server.Task Force Dagger.com";
+GVAR(serverAddress) = "172.93.103.5";
 GVAR(serverPort) = "2302";
 GVAR(joinTimeout) = diag_tickTime + 5;
 
