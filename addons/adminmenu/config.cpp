@@ -39,6 +39,9 @@ class GVAR(authorized_players) {
     class ADMIN_Ladd {
         uid = "76561198045995390";
     };
+    class ADMIN_whale {
+        uid = "76561198986288919";
+    };
 };
 
 #include "CfgFunctions.hpp"

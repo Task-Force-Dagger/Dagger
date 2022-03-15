@@ -299,11 +299,11 @@ force ace_medical_treatment_woundReopenChance = 0;
 force ace_medical_treatment_woundStitchTime = 5;
 
 // ACE Nightvision
-force ace_nightvision_aimDownSightsBlur = 0;
-force ace_nightvision_disableNVGsWithSights = false;
-force ace_nightvision_effectScaling = 0;
-force ace_nightvision_fogScaling = 0;
-force ace_nightvision_noiseScaling = 0;
+force ace_nightvision_aimDownSightsBlur = 0; 
+force ace_nightvision_disableNVGsWithSights = false; 
+force ace_nightvision_effectScaling = 0.9; 
+force ace_nightvision_fogScaling = 0; 
+force ace_nightvision_noiseScaling = 0.1; 
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -420,7 +420,7 @@ force ace_viewdistance_viewDistanceOnFoot = 0;
 // ACE View Restriction
 force acex_viewrestriction_mode = 3;
 force acex_viewrestriction_modeSelectiveAir = 0;
-force acex_viewrestriction_modeSelectiveFoot = 1;
+force acex_viewrestriction_modeSelectiveFoot = 0;
 force acex_viewrestriction_modeSelectiveLand = 0;
 force acex_viewrestriction_modeSelectiveSea = 0;
 force acex_viewrestriction_preserveView = true;
