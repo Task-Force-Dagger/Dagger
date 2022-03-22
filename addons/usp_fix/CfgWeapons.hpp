@@ -4,8 +4,8 @@ class CfgWeapons {
     class Uniform_Base;
     class VestItem;
     class Vest_NoCamo_Base {
-		class ItemInfo: VestItem {};
-	};
+        class ItemInfo: VestItem {};
+    };
     class UniformItem: InventoryItem_Base_F {};
     class HeadgearItem: InventoryItem_Base_F {};
     class H_HelmetB: ItemCore {

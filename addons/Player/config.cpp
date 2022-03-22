@@ -7,7 +7,16 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
+        requiredAddons[] = {
+            "A3_UI_F","cba_main",
+            "cba_xeh",
+            "acre_sys_core",
+            "acre_api",
+            "acre_sys_signal",
+            "acre_sys_prc117f",
+            "acre_sys_prc148",
+            "acre_sys_prc343"
+        };
         VERSION_CONFIG;
         authors[] = {"MitchJC"};
         weapons[] = {};
@@ -16,9 +25,7 @@ class CfgPatches {
 
 #include "Cfg3DEN.hpp"
 
-class CfgFunctions {
-    #include "CfgFunctions.hpp"
-};
+#include "CfgEventHandlers.hpp"
 
 class CfgImprecision {
     class Primary {

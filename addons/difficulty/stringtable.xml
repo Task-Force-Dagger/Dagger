@@ -2,7 +2,7 @@
 <Project name="TFD">
     <Package name="Difficulty">
         <Key ID="STR_TFD_Difficulty_DifficultyName">
-            <English>6thSFG</English>
+            <English>TFD</English>
         </Key>
         <Key ID="STR_TFD_Difficulty_DifficultyDescription">
             <English>Custom Task Force Dagger settings.</English>

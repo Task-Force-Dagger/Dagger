@@ -24,4 +24,19 @@ params ["_newUnit", "_oldUnit"];
 // Reset time elapsed counter
 GVAR(timeElapsed) = 0;
 
+// Fixing warning spam from ambientLife. Also, if I hear "Look a bunny!" one more bloody time...
+sleep 0.2;
+enableEnvironment [false, true];
+
+////////////////////////////////////////////////////////////////////////////////
+// Shut the hell up  - Mute Orders and Reports						 //
+////////////////////////////////////////////////////////////////////////////////
+
+{_x setSpeaker "NoVoice"} forEach playableUnits;
+
+enableSentences false;
+
+call TFD_fnc_PlayerAddActions;
+player call TFD_Player_fnc_setupPlayer;
+
 nil

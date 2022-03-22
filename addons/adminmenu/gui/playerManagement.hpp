@@ -104,16 +104,16 @@ class Controls {
         h = "1 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
     };
     
-    class ButtonACRE2Languages: ButtonSelectAll {
-        idc = IDC_TFD_ADMINMENU_PMAN_ACRELANGUAGES;
-        text = "ACRE2 Languages";
-        onButtonClick = QUOTE([ARR_2(QUOTE(QFUNC(modal_ACRE2Languages)),ctrlText (_this select 0))] call FUNC(modal););
-        y = "5.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-    };
-    class ButtonACRE2Radios: ButtonSelectAll {
-        idc = IDC_TFD_ADMINMENU_PMAN_ACRERADIOS;
-        text = "ACRE2 Radios";
-        onButtonClick = QUOTE([ARR_2(QUOTE(QFUNC(modal_ACRE2Radios)),ctrlText (_this select 0))] call FUNC(modal););
+    // class Buttoncplay2Languages: ButtonSelectAll {
+    //     idc = IDC_TFD_ADMINMENU_PMAN_CONFIGPLAYER;
+    //     text = "1 Config Player";
+    //     onButtonClick = QUOTE([ARR_2(QUOTE("TFD_Player_fnc_ConfigPlayer"),ctrlText (_this select 0))] call FUNC(modal););
+    //     y = "5.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+    // };
+    class ButtonsplayRadios: ButtonSelectAll {
+        idc = IDC_TFD_ADMINMENU_PMAN_SETUPPLAYER;
+        text = "ReSetup Player";
+        onButtonClick = QUOTE([ARR_2(QUOTE("TFD_Player_fnc_setupPlayer"),ctrlText (_this select 0))] call FUNC(modal););
         y = "6.6 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
     };
     class ButtonAssignGear: ButtonSelectAll {

@@ -32,6 +32,17 @@
 #define ACELSTRING(module,string)   QUOTE(TRIPLES(STR,DOUBLES(ACE_PREFIX,module),string))
 #define ACECSTRING(module,string)   QUOTE(TRIPLES($STR,DOUBLES(ACE_PREFIX,module),string))
 
+#define GVAR(var1) DOUBLES(ADDON,var1)
+#define EGVAR(var1,var2) TRIPLES(PREFIX,var1,var2)
+#define QGVAR(var1) QUOTE(GVAR(var1))
+#define QEGVAR(var1,var2) QUOTE(EGVAR(var1,var2))
+#define QQGVAR(var1) QUOTE(QGVAR(var1))
+#define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))
+
+#define GVARMAIN(var1) GVARMAINS(PREFIX,var1)
+#define QGVARMAIN(var1) QUOTE(GVARMAIN(var1))
+#define QQGVARMAIN(var1) QUOTE(QGVARMAIN(var1))
+
 // TFD macros
 #define IS_MOD_LOADED(modclass)     (isClass (configFile >> "CfgPatches" >> #modclass))
 
@@ -41,7 +52,6 @@
 
 // TFD Debug macros
 #include "\z\tfd\addons\main\script_debug.hpp"
-
 
 #define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
     weapon = #WEAPON; \
@@ -210,3 +220,11 @@ class _xx_##id { \
 
 #define MAGAZINES_DESC "Magazines"
 
+// ACRE functions
+#ifdef DEBUG_ACRE_API
+    #define ACRE_FUNC(var1) {if (QUOTE(var1) != QUOTE(isInitialized)) then {INFO_2("API call %1 with %2", QUOTE(DOUBLES(acre_api_fnc,var1)), _this);}; _this call DOUBLES(acre_api_fnc,var1);}
+    #define ACRE_QFUNC(var1) QUOTE(DOUBLES(acre_api_fnc,var1))
+#else
+    #define ACRE_FUNC(var1) DOUBLES(acre_api_fnc,var1)
+    #define ACRE_QFUNC(var1) QUOTE(DOUBLES(acre_api_fnc,var1))
+#endif
