@@ -132,6 +132,6 @@
         [_x, "BOLO", _channel, "frequencyRX", _freq] call ACRE_FUNC(setPresetChannelField);
         [_x, "BOLO", _channel, "frequencyTX", _freq] call ACRE_FUNC(setPresetChannelField);
     } forEach [RADIO_MR];
-} forEach GVAR(channelLabelsTR_MR);
+} forEach GVAR(channelLabelsHQ_MR);
 
 

@@ -59,7 +59,7 @@ if (isNull _unit) exitWith {};
         
         _unit removeItem "TFD_medbags_MedicKit";
         
-        private _order = [3,1,2];
+        private _order = [3,0,2];
         private _overflow = true;
         
         [_unit, "ACE_fieldDressing", 18, _order, _overflow] call tfd_common_fnc_addItem;

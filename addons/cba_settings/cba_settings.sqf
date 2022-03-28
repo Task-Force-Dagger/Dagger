@@ -7,7 +7,7 @@ force Roles_sreng = """76561198000002705""";
 force Roles_srmedic = """76561198000002705""";
 
 // TFD - Rank
-force ranks_captain = """76561197981161711"",""76561198068887342""";
+force ranks_captain = """76561197981161711"",""76561198068887342"",""76561198355757876""";
 force ranks_colonel = "";
 force ranks_corporal = "";
 force ranks_lieutenant = """76561198045995390""";
@@ -395,7 +395,7 @@ force ace_microdagr_mapDataAvailable = 2;
 force ace_microdagr_waypointPrecision = 3;
 ace_optionsmenu_showNewsOnMainMenu = true;
 force ace_overpressure_distanceCoefficient = 1;
-force ace_parachute_failureChance = 0.12411;
+force ace_parachute_failureChance = 0.2;
 force ace_parachute_hideAltimeter = true;
 force ace_tagging_quickTag = 3;
 
@@ -896,22 +896,22 @@ force tfd_bodybag_destroyChance = 20;
 
 // TFD - Channels
 force tfd_Channels_CommandDuration = 0;
-force tfd_Channels_CommandText = false;
+force tfd_Channels_CommandText = true;
 force tfd_Channels_CommandVoice = false;
 force tfd_Channels_DirectDuration = 0;
 force tfd_Channels_DirectText = true;
 force tfd_Channels_DirectVoice = false;
 force tfd_Channels_GlobalDuration = 0;
-force tfd_Channels_GlobalText = false;
+force tfd_Channels_GlobalText = true;
 force tfd_Channels_GlobalVoice = false;
 force tfd_Channels_GroupDuration = 0;
-force tfd_Channels_GroupText = false;
+force tfd_Channels_GroupText = true;
 force tfd_Channels_GroupVoice = false;
 force tfd_Channels_SideDuration = 0;
-force tfd_Channels_SideText = false;
+force tfd_Channels_SideText = true;
 force tfd_Channels_SideVoice = false;
 force tfd_Channels_VehicleDuration = 0;
-force tfd_Channels_VehicleText = false;
+force tfd_Channels_VehicleText = true;
 force tfd_Channels_VehicleVoice = false;
 
 // TFD - Chat
@@ -968,7 +968,7 @@ force TFD_Main_LockCamVehicle = false;
 force TFD_Main_Logging = true;
 force TFD_Main_MapIcons = true;
 force TFD_Main_MaydayAccess = 2;
-force TFD_Main_PilotCheck = true;
+force TFD_Main_PilotCheck = false;
 force TFD_Main_QSMagRepack = false;
 force TFD_Main_VehicleCrewList = true;
 force TFD_Main_ViewDistanceMaxDistance = 10000;

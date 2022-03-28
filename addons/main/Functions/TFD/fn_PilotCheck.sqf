@@ -85,8 +85,9 @@ player addEventHandler [
 
         if ((_vehicle isKindOf "Air") && !(_vehicle isKindOf "ParachuteBase")) then {
             if ((_playerPos isEqualTo "driver") && !(player getUnitTrait "Pilot")) exitwith {
-                moveOut _unit1;
-                playSound "Denied";
+                 [ format [hint_TFD_default, "Unlicensed Pilot has taken control of an aircraft", _unit1] ] call tfd_fnc_hint;
+                // moveOut _unit1;
+                // playSound "Denied";
             };
         };
     }
