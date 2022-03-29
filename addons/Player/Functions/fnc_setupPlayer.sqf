@@ -54,7 +54,7 @@ if !(hasInterface) exitWith {};
         call TFD_role_fnc_role;
 
         //=========== Patches
-        [player, _TFD_Section] call TFD_fnc_Patches;
+       // [player, _TFD_Section] call TFD_fnc_Patches;
 
         [ format [hint_TFD_default, "Hooah"] ] call tfd_fnc_hint;
 },[player]] call CBA_fnc_waitUntilAndExecute;
