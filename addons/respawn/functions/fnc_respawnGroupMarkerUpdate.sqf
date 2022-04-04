@@ -23,7 +23,7 @@ if (isNil QGVAR(respawnedGroupsMarkerData)) exitWith {};
             };
 
             if (_toAdd) then {
-               // private _markerTexture = ((GVAR(respawnMenuMarkers) select (_x select 2)) select 0);
+                //private _markerTexture = ((GVAR(respawnMenuMarkers) select (_x select 2)) select 0);
                 //private _markerColorRGB = (GVAR(respawnMenuMarkerColours) select (_x select 3)) select 0;
                 //private _size = [28,28];
                 

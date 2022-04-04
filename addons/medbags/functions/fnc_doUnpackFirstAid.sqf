@@ -61,7 +61,7 @@ if (isNull _unit) exitWith {};
         
         _unit removeItem "tfd_medbags_FirstAid";
         
-        private _order = [1,3,2];
+        private _order = [1,2,3];
         private _overflow = true;
         
         [_unit, "ACE_fieldDressing", 8, _order, _overflow] call tfd_common_fnc_addItem;
@@ -77,6 +77,7 @@ if (isNull _unit) exitWith {};
         [_unit, "kat_TXA", 1, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "kat_IV_16", 1, _order, _overflow] call tfd_common_fnc_addItem;
         [_unit, "kat_IO_FAST", 1, _order, _overflow] call tfd_common_fnc_addItem;
+        [_unit, "ACE_splint", 02, _order, _overflow] call tfd_common_fnc_addItem;
     };
     
     if (TFD_MEDICAL_SUPPLIES_UNPACK_FAILURE) exitWith {

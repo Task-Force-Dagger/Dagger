@@ -29,3 +29,8 @@
 #else
     #define COMPONENT_NAME QUOTE(TFD - COMPONENT)
 #endif
+
+// Radio Macros
+#define RADIO_SR "ACRE_PRC148"
+#define RADIO_MR "ACRE_PRC152"
+#define RADIO_LR "ACRE_PRC117F"

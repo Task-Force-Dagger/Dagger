@@ -7,7 +7,7 @@ force Roles_sreng = """76561198000002705""";
 force Roles_srmedic = """76561198000002705""";
 
 // TFD - Rank
-force ranks_captain = """76561197981161711"",""76561198068887342""";
+force ranks_captain = """76561197981161711"",""76561198068887342"",""76561198355757876""";
 force ranks_colonel = "";
 force ranks_corporal = "";
 force ranks_lieutenant = """76561198045995390""";
@@ -236,7 +236,7 @@ ace_maptools_rotateModifierKey = 1;
 
 // ACE Medical
 force ace_medical_ai_enabledFor = 2;
-force ace_medical_AIDamageThreshold = 1.5;
+force ace_medical_AIDamageThreshold = .65;
 force ace_medical_bleedingCoefficient = 0.1;
 force ace_medical_blood_bloodLifetime = 900;
 force ace_medical_blood_enabledFor = 2;
@@ -253,7 +253,7 @@ force ace_medical_ivFlowRate = 2;
 force ace_medical_limping = 1;
 force ace_medical_painCoefficient = 1;
 force ace_medical_painUnconsciousChance = 0.1;
-force ace_medical_playerDamageThreshold = 3.5;
+force ace_medical_playerDamageThreshold = 2.5;
 force ace_medical_spontaneousWakeUpChance = 0.55;
 force ace_medical_spontaneousWakeUpEpinephrineBoost = 20;
 force ace_medical_statemachine_AIUnconsciousness = true;
@@ -299,11 +299,11 @@ force ace_medical_treatment_woundReopenChance = 0;
 force ace_medical_treatment_woundStitchTime = 5;
 
 // ACE Nightvision
-force ace_nightvision_aimDownSightsBlur = 0;
-force ace_nightvision_disableNVGsWithSights = false;
-force ace_nightvision_effectScaling = 0;
-force ace_nightvision_fogScaling = 0;
-force ace_nightvision_noiseScaling = 0;
+force ace_nightvision_aimDownSightsBlur = 0; 
+force ace_nightvision_disableNVGsWithSights = false; 
+force ace_nightvision_effectScaling = 0.9; 
+force ace_nightvision_fogScaling = 0; 
+force ace_nightvision_noiseScaling = 0.1; 
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -395,7 +395,7 @@ force ace_microdagr_mapDataAvailable = 2;
 force ace_microdagr_waypointPrecision = 3;
 ace_optionsmenu_showNewsOnMainMenu = true;
 force ace_overpressure_distanceCoefficient = 1;
-force ace_parachute_failureChance = 0.12411;
+force ace_parachute_failureChance = 0.2;
 force ace_parachute_hideAltimeter = true;
 force ace_tagging_quickTag = 3;
 
@@ -409,6 +409,51 @@ ace_vehicles_hideEjectAction = true;
 force ace_vehicles_keepEngineRunning = false;
 force ace_vehicles_speedLimiterStep = 5;
 
+// ACE Vehicle Medical
+force MIRA_Vehicle_Medical_CacheInterval = 0.4;
+force MIRA_Vehicle_Medical_EnableAVM = true;
+force MIRA_Vehicle_Medical_EnableIncapacitated = true;
+force MIRA_Vehicle_Medical_EnableStable = true;
+force MIRA_Vehicle_Medical_EnableSupportKAT = true;
+force MIRA_Vehicle_Medical_EnableUnstable = true;
+force MIRA_Vehicle_Medical_Incapacitated_CanUnloadAll = true;
+force MIRA_Vehicle_Medical_Incapacitated_ShowCount = true;
+force MIRA_Vehicle_Medical_Stable_ShowCount = true;
+force MIRA_Vehicle_Medical_Stable_ThresholdLowBP = 80;
+force MIRA_Vehicle_Medical_Stable_ThresholdLowHR = 50;
+force MIRA_Vehicle_Medical_Stable_TrackFractures = true;
+force MIRA_Vehicle_Medical_Stable_TrackIV = true;
+force MIRA_Vehicle_Medical_Stable_TrackLowBP = true;
+force MIRA_Vehicle_Medical_Stable_TrackLowHR = true;
+force MIRA_Vehicle_Medical_Stable_TrackNeedsBandage = true;
+force MIRA_Vehicle_Medical_Stable_TrackSplints = true;
+force MIRA_Vehicle_Medical_Stable_TrackStitchableWounds = true;
+force MIRA_Vehicle_Medical_Stable_TrackTourniquets = true;
+force MIRA_Vehicle_Medical_Unstable_DogtagsDeadOnly = true;
+force MIRA_Vehicle_Medical_Unstable_ShowCount = true;
+force MIRA_Vehicle_Medical_Unstable_TakeDogtags = true;
+force MIRA_Vehicle_Medical_Unstable_ThresholdLowBP = 80;
+force MIRA_Vehicle_Medical_Unstable_ThresholdLowHR = 50;
+force MIRA_Vehicle_Medical_Unstable_TrackAirwayBlocked = true;
+force MIRA_Vehicle_Medical_Unstable_TrackAllPneumothorax = true;
+force MIRA_Vehicle_Medical_Unstable_TrackBleeding = true;
+force MIRA_Vehicle_Medical_Unstable_TrackCardiacArrest = true;
+force MIRA_Vehicle_Medical_Unstable_TrackDead = true;
+force MIRA_Vehicle_Medical_Unstable_TrackIV = true;
+force MIRA_Vehicle_Medical_Unstable_TrackLegFractures = true;
+force MIRA_Vehicle_Medical_Unstable_TrackLegSplints = true;
+force MIRA_Vehicle_Medical_Unstable_TrackLowBP = true;
+force MIRA_Vehicle_Medical_Unstable_TrackLowHR = true;
+force MIRA_Vehicle_Medical_Unstable_TrackSpO2 = true;
+force MIRA_Vehicle_Medical_Unstable_TrackUnconscious = true;
+force MIRA_Vehicle_Medical_Vehicles_EnableCar = true;
+force MIRA_Vehicle_Medical_Vehicles_EnableHelicopter = true;
+force MIRA_Vehicle_Medical_Vehicles_EnablePlane = true;
+force MIRA_Vehicle_Medical_Vehicles_EnableShip = true;
+force MIRA_Vehicle_Medical_Vehicles_EnableTank = true;
+MIRA_Vehicle_Medical_VERSION = false;
+force MIRA_Vehicle_Medical_WarnViewingDead = true;
+
 // ACE View Distance Limiter
 force ace_viewdistance_enabled = false;
 force ace_viewdistance_limitViewDistance = 10000;
@@ -420,7 +465,7 @@ force ace_viewdistance_viewDistanceOnFoot = 0;
 // ACE View Restriction
 force acex_viewrestriction_mode = 3;
 force acex_viewrestriction_modeSelectiveAir = 0;
-force acex_viewrestriction_modeSelectiveFoot = 1;
+force acex_viewrestriction_modeSelectiveFoot = 0;
 force acex_viewrestriction_modeSelectiveLand = 0;
 force acex_viewrestriction_modeSelectiveSea = 0;
 force acex_viewrestriction_preserveView = true;
@@ -491,6 +536,13 @@ acre_sys_list_HintTextFont = "RobotoCondensed";
 acre_sys_zeus_zeusCanSpectate = true;
 acre_sys_zeus_zeusCommunicateViaCamera = true;
 acre_sys_zeus_zeusDefaultVoiceSource = false;
+
+// Advanced Urban Rappelling
+AUR_ADVANCED_RAPPELING_ITEMS_NEEDED = 0;
+AUR_ADVANCED_RAPPELING_NEW_ACTION = false;
+AUR_ADVANCED_RAPPELING_NEW_ACTION_TIME = 3;
+AUR_ADVANCED_RAPPELING_ROPES_HANDLING = 0;
+AUR_ADVANCED_RAPPELING_VELOCITY = 1;
 
 // AIME Ammo Type Menu
 UPSL_aime_change_ammo_setting_ammo_class = true;
@@ -595,6 +647,31 @@ force ctab_core_uav_mode = 1;
 force ctab_core_useAceMicroDagr = true;
 force ctab_core_useArmaMarker = true;
 force ctab_core_useMils = false;
+
+// Enhanced Movement Rework
+force force emr_main_allowMidairClimbing = true;
+force force emr_main_animSpeedCoef = 1;
+force force emr_main_animSpeedStaminaCoef = 0.4;
+force force emr_main_climbingEnabled = true;
+force force emr_main_climbOnDuty = 0.1;
+force force emr_main_climbOverDuty = 0.1;
+force force emr_main_dropDuty = 0.7;
+force force emr_main_dropViewElevation = -0.7;
+force force emr_main_enableWalkableSurface = true;
+force force emr_main_enableWeightCheck = true;
+force force emr_main_hintType = 2;
+force force emr_main_jumpDuty = 0.1;
+force force emr_main_jumpingEnabled = true;
+force force emr_main_jumpingLoadCoefficient = 1;
+force force emr_main_jumpVelocity = 3.4;
+force force emr_main_maxClimbHeight = 2.97716;
+force force emr_main_maxDropHeight = 6;
+force force emr_main_maxWeightClimb1 = 175;
+force force emr_main_maxWeightClimb2 = 162.5;
+force force emr_main_maxWeightClimb3 = 150;
+force force emr_main_maxWeightJump = 175;
+force force emr_main_preventHighVaulting = false;
+force force emr_main_staminaCoefficient = 0.1;
 
 // GRAD Trenches
 force grad_trenches_functions_allowBigEnvelope = true;
@@ -754,21 +831,21 @@ force force SSL_RequireParachute = true;
 force force SSL_ShowRopes = 2;
 
 // TCA BFT
-FORCE FORCE TCA_bft_groupMarkers_colorsBlacklist = "ColorBLUFOR, ColorOPFOR, ColorIndependent, ColorCivilian, ColorUNKNOWN, Default, ColorWEST, ColorEAST, ColorGUER, ColorCIV, Color1_FD_F, Color2_FD_F, Color3_FD_F, Color4_FD_F, Color5_FD_F, Color6_FD_F";
-FORCE FORCE TCA_bft_groupMarkers_defaultSetting = 2;
-FORCE FORCE TCAbft_groupMarkers_enabled = true;
-FORCE FORCE TCAbft_groupMarkers_fuzzOtherFactions = true;
-FORCE FORCE TCA_bft_groupMarkers_iconsBlacklist = "unknown, uav";
-FORCE FORCE TCAbft_groupMarkers_mapSettings_enabled = true;
-FORCE FORCE TCAbft_groupMarkers_markerShape = "a";
-FORCE FORCE TCA_bft_groupMarkers_nameOptions = "Black Squad, Blue Squad, Gold Squad, Green Squad, Grey Squad, Red Squad, Silver Squad";
-FORCE FORCE TCA_bft_groupMarkers_preferredColors = "ColorBlackS, ColorBlueS, ColorGoldS, ColorGreenS, ColorGreyS, ColorRedS, ColorSilverSBlack Squad, Blue Squad, Gold Squad, Green Squad, GrColorBlackS, ColorBlueS, ColorGoldS, ColorGreenS, ColorGreyS, ColorRedS, ColorSilverS";
-FORCE FORCE TCAbft_groupMarkers_preferredIcons = "inf, motor_inf, mech_inf, air, armor, recon";
-FORCE FORCE TCAbft_groupMarkers_trackingMode = "weightedAverage";
-FORCE FORCE TCAbft_groupMarkers_trailingCount = 5;
-FORCE FORCE TCAbft_groupMarkers_trailingMode = "weightedAverage";
-FORCE FORCE TCAbft_groupMarkers_trailingWeight = 0.75;
-FORCE FORCE TCAbft_groupMarkers_updateDelay = 5;
+// FORCE FORCE TCA_bft_groupMarkers_colorsBlacklist = "ColorBLUFOR, ColorOPFOR, ColorIndependent, ColorCivilian, ColorUNKNOWN, Default, ColorWEST, ColorEAST, ColorGUER, ColorCIV, Color1_FD_F, Color2_FD_F, Color3_FD_F, Color4_FD_F, Color5_FD_F, Color6_FD_F";
+// FORCE FORCE TCA_bft_groupMarkers_defaultSetting = 2;
+// FORCE FORCE TCAbft_groupMarkers_enabled = true;
+// FORCE FORCE TCAbft_groupMarkers_fuzzOtherFactions = true;
+// FORCE FORCE TCA_bft_groupMarkers_iconsBlacklist = "unknown, uav";
+// FORCE FORCE TCAbft_groupMarkers_mapSettings_enabled = true;
+// FORCE FORCE TCAbft_groupMarkers_markerShape = "a";
+// FORCE FORCE TCA_bft_groupMarkers_nameOptions = "Black Squad, Blue Squad, Gold Squad, Green Squad, Grey Squad, Red Squad, Silver Squad";
+// FORCE FORCE TCA_bft_groupMarkers_preferredColors = "ColorBlackS, ColorBlueS, ColorGoldS, ColorGreenS, ColorGreyS, ColorRedS, ColorSilverSBlack Squad, Blue Squad, Gold Squad, Green Squad, GrColorBlackS, ColorBlueS, ColorGoldS, ColorGreenS, ColorGreyS, ColorRedS, ColorSilverS";
+// FORCE FORCE TCAbft_groupMarkers_preferredIcons = "inf, motor_inf, mech_inf, air, armor, recon";
+// FORCE FORCE TCAbft_groupMarkers_trackingMode = "weightedAverage";
+// FORCE FORCE TCAbft_groupMarkers_trailingCount = 5;
+// FORCE FORCE TCAbft_groupMarkers_trailingMode = "weightedAverage";
+// FORCE FORCE TCAbft_groupMarkers_trailingWeight = 0.75;
+// FORCE FORCE TCAbft_groupMarkers_updateDelay = 5;
 
 // TCA Miscellaneous
 FORCE FORCE TCAmain_ClearBuildingMarkers_Channel = 0;
@@ -786,55 +863,6 @@ FORCE FORCE TCA_unitMarkers_unitMarkers_showToggle = false;
 
 // TFD
 tfd_common_weaponSafety = true;
-
-// TFD - acre
-force force tfd_acre_addArsenalCategory = false;
-force force tfd_acre_babel = true;
-force tfd_acre_CIVChannelName1 = "Channel 1 name";
-force tfd_acre_CIVChannelName10 = "Channel 10 name";
-force tfd_acre_CIVChannelName2 = "Channel 2 name";
-force tfd_acre_CIVChannelName3 = "Channel 3 name";
-force tfd_acre_CIVChannelName4 = "Channel 4 name";
-force tfd_acre_CIVChannelName5 = "Channel 5 name";
-force tfd_acre_CIVChannelName6 = "Channel 6 name";
-force tfd_acre_CIVChannelName7 = "Channel 7 name";
-force tfd_acre_CIVChannelName8 = "Channel 8 name";
-force tfd_acre_CIVChannelName9 = "Channel 9 name";
-force tfd_acre_EASTChannelName1 = "Channel 1 name";
-force tfd_acre_EASTChannelName10 = "Channel 10 name";
-force tfd_acre_EASTChannelName2 = "Channel 2 name";
-force tfd_acre_EASTChannelName3 = "Channel 3 name";
-force tfd_acre_EASTChannelName4 = "Channel 4 name";
-force tfd_acre_EASTChannelName5 = "Channel 5 name";
-force tfd_acre_EASTChannelName6 = "Channel 6 name";
-force tfd_acre_EASTChannelName7 = "Channel 7 name";
-force tfd_acre_EASTChannelName8 = "Channel 8 name";
-force tfd_acre_EASTChannelName9 = "Channel 9 name";
-force force tfd_acre_enabled = true;
-force tfd_acre_GUERChannelName1 = "Channel 1 name";
-force tfd_acre_GUERChannelName10 = "Channel 10 name";
-force tfd_acre_GUERChannelName2 = "Channel 2 name";
-force tfd_acre_GUERChannelName3 = "Channel 3 name";
-force tfd_acre_GUERChannelName4 = "Channel 4 name";
-force tfd_acre_GUERChannelName5 = "Channel 5 name";
-force tfd_acre_GUERChannelName6 = "Channel 6 name";
-force tfd_acre_GUERChannelName7 = "Channel 7 name";
-force tfd_acre_GUERChannelName8 = "Channel 8 name";
-force tfd_acre_GUERChannelName9 = "Channel 9 name";
-force force tfd_acre_perSideChannelNames = true;
-force force tfd_acre_perSideRadios = true;
-force force tfd_acre_startBppVolume = 2;
-force force tfd_acre_startLeaderVolume = 2;
-force force tfd_acre_WESTChannelName1 = "HQ/CROSS NET";
-force force tfd_acre_WESTChannelName10 = "JOINT NET 02";
-force force tfd_acre_WESTChannelName2 = "USASOC NET";
-force force tfd_acre_WESTChannelName3 = "CANSOFCOM NET";
-force force tfd_acre_WESTChannelName4 = "AIR2GND NET";
-force force tfd_acre_WESTChannelName5 = "JSOW FLIGHT NET";
-force force tfd_acre_WESTChannelName6 = "CAS NET 01";
-force force tfd_acre_WESTChannelName7 = "CAS NET 02";
-force force tfd_acre_WESTChannelName8 = "CAS NET 03";
-force force tfd_acre_WESTChannelName9 = "JOINT NET 01";
 
 // TFD - adminmenu
 tfd_adminmenu_endLogToRPT = false;
@@ -868,22 +896,22 @@ force tfd_bodybag_destroyChance = 20;
 
 // TFD - Channels
 force tfd_Channels_CommandDuration = 0;
-force tfd_Channels_CommandText = false;
+force tfd_Channels_CommandText = true;
 force tfd_Channels_CommandVoice = false;
 force tfd_Channels_DirectDuration = 0;
 force tfd_Channels_DirectText = true;
 force tfd_Channels_DirectVoice = false;
 force tfd_Channels_GlobalDuration = 0;
-force tfd_Channels_GlobalText = false;
+force tfd_Channels_GlobalText = true;
 force tfd_Channels_GlobalVoice = false;
 force tfd_Channels_GroupDuration = 0;
-force tfd_Channels_GroupText = false;
+force tfd_Channels_GroupText = true;
 force tfd_Channels_GroupVoice = false;
 force tfd_Channels_SideDuration = 0;
-force tfd_Channels_SideText = false;
+force tfd_Channels_SideText = true;
 force tfd_Channels_SideVoice = false;
 force tfd_Channels_VehicleDuration = 0;
-force tfd_Channels_VehicleText = false;
+force tfd_Channels_VehicleText = true;
 force tfd_Channels_VehicleVoice = false;
 
 // TFD - Chat
@@ -940,10 +968,8 @@ force TFD_Main_LockCamVehicle = false;
 force TFD_Main_Logging = true;
 force TFD_Main_MapIcons = true;
 force TFD_Main_MaydayAccess = 2;
-force TFD_Main_PilotCheck = true;
+force TFD_Main_PilotCheck = false;
 force TFD_Main_QSMagRepack = false;
-force TFD_Main_TFARTerrainInterference = 1;
-force TFD_Main_TFARTransmitRange = 2.5;
 force TFD_Main_VehicleCrewList = true;
 force TFD_Main_ViewDistanceMaxDistance = 10000;
 force TFD_Main_ViewDistanceMaxObjectDistance = 10000;
@@ -956,12 +982,8 @@ force TFD_medical_persistantReviveTimer = 720;
 // TFD - pointing
 force tfd_pointing_vehicleEnabled = true;
 
-
 // TFD - RATEL Marker
 force tfd_ratelmarker_QuickReferenceMarkerMode = 2;
-
-// TFD - remotesensors
-force tfd_remotesensors_enabled = true;
 
 // TFD - respawn
 force tfd_respawn_enabled = true;
@@ -976,7 +998,6 @@ force tfd_spectator_allowAIUnconscious = false;
 force tfd_spectator_allowUnconscious = false;
 force tfd_spectator_civilianSide = false;
 force tfd_spectator_civilianSideUnconscious = false;
-force tfd_spectator_enabled = false;
 force tfd_spectator_freeCamera = false;
 force tfd_spectator_freeCameraUnconscious = false;
 force tfd_spectator_sides = 1;

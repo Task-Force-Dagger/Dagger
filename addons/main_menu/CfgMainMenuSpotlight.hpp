@@ -17,7 +17,14 @@ class CfgMainMenuSpotlight {
         actionText = CSTRING(SpotlightHeader);
         condition = QUOTE(true);
     };
-
+    class GVAR(server3) {
+        text = "Task Force Dagger Events";
+        textIsQuote = 0;
+        picture = QUOTE(\z\tfd\addons\media\images\tfd.paa);
+        action = QUOTE(_this call (uiNamespace getVariable QQFUNC(joine)));
+        actionText = CSTRING(SpotlightHeader);
+        condition = QUOTE(true);
+    };
     delete ApexProtocol;
     delete BootCamp;
     delete EastWind;

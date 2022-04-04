@@ -50,7 +50,8 @@ GVAR(respawnMenuMarkers) = [
     ["\A3\ui_f\data\map\markers\nato\b_motor_inf.paa","APC/IFV","inf_mech"],
     ["\A3\ui_f\data\map\markers\nato\b_armor.paa","Armour","armor"],
     ["\A3\ui_f\data\map\markers\nato\b_air.paa","Heli","helo_cargo"],
-    ["\A3\ui_f\data\map\markers\nato\b_plane.paa","Airplane/Jet","fixedwing"]   
+    ["\A3\ui_f\data\map\markers\nato\b_plane.paa","Airplane/Jet","fixedwing"],
+    ["\mas_can_lite\flags\b_sof.paa","SOF","sof"]
 ];
 
 // Respawn Marker Colours

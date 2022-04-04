@@ -20,8 +20,8 @@ class Cfg3den {
                     w = "75 * (pixelW * pixelGrid * 0.50)";
                     h = "5 * (pixelH * pixelGrid * 0.50)";
                     rows = 1;
-                    columns = 5;
-                    strings[] = {"NotSet","HQ", "USASOC", "CANSOFCOM", "JSOW"};
+                    columns = 6;
+                    strings[] = {"NotSet","HQ", "USASOC", "CANSOFCOM", "JSOW", "TRAIN"};
                 };
             };
         };
@@ -36,7 +36,7 @@ class Cfg3den {
                         control = "GroupSelect";
                         displayName = "TFD Preset Group:";
                         tooltip = "Default Preset for Patches & TFAR Radio Frequencies.";
-                        expression = "[_this, _value] call TFD_fnc_ConfigPlayer;";
+                        expression = "[_this, _value] call TFD_Player_fnc_ConfigPlayer;";
                         typeName = "STRING";
                         condition = "objectBrain";
                         defaultValue = "-1";
