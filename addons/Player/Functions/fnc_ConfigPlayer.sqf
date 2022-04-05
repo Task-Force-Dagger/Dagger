@@ -25,8 +25,8 @@ Author:
 */
 
 params [
-    "_unit",
-    ["_Section", "Support"],
+    ["_unit", PLAYER],
+    ["_Section", "HQ"],
     ["_Traits", []],
     ["_Loadout", []]
 ];
@@ -41,28 +41,6 @@ call {
 };
 
 if (local _unit) then {
-    private ["_TFD_Network"];
-
-    call {
-            if (_Section == "HQ") exitwith {
-                    _TFD_Network = "HQ";
-            };
-            if (_Section == "USASOC") exitwith {
-                    _TFD_Network = "USASOC";
-            };
-            if (_Section == "CANSOFCOM") exitwith {
-                    _TFD_Network = "CANSOFCOM";
-            };
-            if (_Section == "JSOW") exitwith {
-                    _TFD_Network = "JSOW";
-            };
-            if (_Section == "BOLO") exitwith {
-                    _TFD_Network = "BOLO";
-            };
-    };
-    //=========== Set Section
-    _unit setVariable ["TFD_Section", _Section, true];
-    _unit setVariable ["TFD_Network", _Section, true];
 
         //========== Trait Config
     private _TraitsArray = call {

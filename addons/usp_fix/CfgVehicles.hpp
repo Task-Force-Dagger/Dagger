@@ -10,6 +10,7 @@ class CfgVehicles {
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
         mass=80;
+        maximumLoad=340;
     };
     class USP_TACTICAL_PACK_CCT2: Bag_Base {
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
@@ -18,6 +19,7 @@ class CfgVehicles {
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
         mass=80;
+        maximumLoad=340;
     };
     class USP_TACTICAL_PACK_CCT3: Bag_Base {
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
@@ -26,6 +28,7 @@ class CfgVehicles {
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
         mass=80;
+        maximumLoad=340;
     };
     class USP_TACTICAL_PACK_CCT4: Bag_Base {
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
@@ -34,6 +37,7 @@ class CfgVehicles {
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
         mass=80;
+        maximumLoad=340;
     };
     class USP_TACTICAL_PACK_CCT5: Bag_Base {
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
@@ -42,6 +46,7 @@ class CfgVehicles {
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
         mass=80;
+        maximumLoad=340;
     };
     class USP_TACTICAL_PACK_CCT6: Bag_Base {
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
@@ -50,6 +55,7 @@ class CfgVehicles {
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
         mass=80;
+        maximumLoad=340;
     };
     class USP_TACTICAL_PACK_CCT7: Bag_Base {
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
@@ -58,6 +64,7 @@ class CfgVehicles {
         tf_dialog="rt1523g_radio_dialog";
         tf_subtype="digital_lr";
         mass=80;
+        maximumLoad=340;
     };
     class USP_TACTICAL_PACK_CCT8: Bag_Base {
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
@@ -67,6 +74,7 @@ class CfgVehicles {
         tf_subtype="digital_lr";
         mass=80;
     };
+    maximumLoad=340;
     class USP_PATROL_PACK: Bag_Base {
         maximumLoad=440;
     };

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+	
+	<!-- ####################################################################################### -->
+	<Package name="tfd_Backpacks">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Backpacks_RadioBag">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFD_Backpacks_RadioBag_Title">
+				<Original>TFD Backpacks RadioBag</Original>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_Author">
+				<Original>TFD-Team</Original>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_URL">
+				<Original>https://purplesmoke.info</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="RadioBag">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_BLACK">
+				<Original>[Tfd] Radio Pack (Black)</Original>
+				<German>Funkrucksack (Schwarz)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_ou">
+				<Original>[Tfd] Radio Pack (Urban)</Original>
+				<German>Funkrucksack (Urban)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_trop">
+				<Original>[Tfd] Radio Pack (Tropic)</Original>
+				<German>Funkrucksack (BW Fleck)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_COYOTE">
+				<Original>[Tfd] Radio Pack (Coyote)</Original>
+				<German>Funkrucksack (Coyote)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_GREEN_DARK">
+				<Original>[Tfd] Radio Pack (Green Dark)</Original>
+				<German>Funkrucksack (Grün Dunkel)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_GREEN_DGTL">
+				<Original>[Tfd] Radio Pack (Green Digital)</Original>
+				<German>Funkrucksack (Grün Digital)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_GREEN_RNGR">
+				<Original>[Tfd] Radio Pack (Green Ranger)</Original>
+				<German>Funkrucksack (Grün Ranger)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_HEX_CAMO">
+				<Original>[Tfd] Radio Pack (Hex Camo)</Original>
+				<German>Funkrucksack (Hex Camo)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_HEX_GREEN">
+				<Original>[Tfd] Radio Pack (Hex Green)</Original>
+				<German>Funkrucksack (Hex Grün)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_MARPAT_D">
+				<Original>[Tfd] Radio Pack (MARPAT-D)</Original>
+				<German>Funkrucksack (MARPAT-D)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_MARPAT_W">
+				<Original>[Tfd] Radio Pack (MARPAT-W)</Original>
+				<German>Funkrucksack (MARPAT-W)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_MTP">
+				<Original>[Tfd] Radio Pack (MTP)</Original>
+				<German>Funkrucksack (MTP)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_OCP">
+				<Original>[Tfd] Radio Pack (OCP)</Original>
+				<German>Funkrucksack (OCP)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_UCP">
+				<Original>[Tfd] Radio Pack (UCP)</Original>
+				<German>Funkrucksack (UCP)</German>
+			</Key>
+			<Key ID="STR_TFD_Backpacks_RadioBag_02_WDL">
+				<Original>[Tfd] Radio Pack (Woodland)</Original>
+				<German>Funkrucksack (Waldtarn)</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+	</Package>
+	<!-- ####################################################################################### -->
+	
+</Project>

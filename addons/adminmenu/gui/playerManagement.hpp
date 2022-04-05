@@ -110,18 +110,18 @@ class Controls {
     //     onButtonClick = QUOTE([ARR_2(QUOTE("TFD_Player_fnc_ConfigPlayer"),ctrlText (_this select 0))] call FUNC(modal););
     //     y = "5.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
     // };
-    class ButtonsplayRadios: ButtonSelectAll {
-        idc = IDC_TFD_ADMINMENU_PMAN_SETUPPLAYER;
-        text = "ReSetup Player";
-        onButtonClick = QUOTE([ARR_2(QUOTE("TFD_Player_fnc_setupPlayer"),ctrlText (_this select 0))] call FUNC(modal););
-        y = "6.6 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-    };
-    class ButtonAssignGear: ButtonSelectAll {
-        idc = IDC_TFD_ADMINMENU_PMAN_ASSIGNGEAR;
-        text = "Assign Gear";
-        onButtonClick = QUOTE([ARR_2(QUOTE(QFUNC(modal_assignGear)),ctrlText (_this select 0))] call FUNC(modal););
-        y = "7.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-    };
+    // class ButtonsplayRadios: ButtonSelectAll {
+    //     idc = IDC_TFD_ADMINMENU_PMAN_SETUPPLAYER;
+    //     text = "ReSetup Player";
+    //     onButtonClick = QUOTE([ARR_2(QUOTE("TFD_Player_fnc_setupPlayer"),ctrlText (_this select 0))] call FUNC(modal););
+    //     y = "6.6 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+    // };
+    // class ButtonAssignGear: ButtonSelectAll {
+    //     idc = IDC_TFD_ADMINMENU_PMAN_ASSIGNGEAR;
+    //     text = "Assign Gear";
+    //     onButtonClick = QUOTE([ARR_2(QUOTE(QFUNC(modal_assignGear)),ctrlText (_this select 0))] call FUNC(modal););
+    //     y = "7.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+    // };
     class ButtonAssignTraits: ButtonSelectAll {
         idc = IDC_TFD_ADMINMENU_PMAN_ASSIGNTRAITS;
         text = "Assign Traits";

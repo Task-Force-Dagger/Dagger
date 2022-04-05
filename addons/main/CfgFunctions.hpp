@@ -26,6 +26,7 @@ class CfgFunctions {
             class DLog {};
             class ObjectsMapper {};
             class IntLight {};
+            class Diary {};
         };
     };
 

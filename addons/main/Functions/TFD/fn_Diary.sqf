@@ -2,6 +2,44 @@
 
 if (!hasInterface) exitWith {};
 
+player createDiaryRecord ["Diary", ["Long Range Frequencies",
+"
+<br/><font face='PuristaLight' color='#ffcc00' font size='20' >**LISTENING ON AN UNAUTHORISED FREQUENCY IS STRICTLY PROHIBITED.**</font>
+<br/>
+<br/>Below is a list of the default Long Range Frequencies. Your role specific frequencies are set on your radio automatically. Ensure you're on the correct frequencies at all times.
+<br/>
+<br/><font face='PuristaLight' color='#ffcc00'> Channel: 1 - Frequency:51 Mhz -- C2</font>
+<br/><font face='PuristaLight' color='#6C8EBF'> Channel: 2 - Frequency:52 Mhz -- CANSOF Net</font>
+<br/><font face='PuristaLight' color='#B85450'> Channel: 3 - Frequency:53 Mhz -- USASOC Net</font>
+<br/><font face='PuristaLight' color='#00FF00'> Channel: 4 - Frequency:54 Mhz -- JSOW Net</font>
+<br/><font face='PuristaLight' color='#ffcc00'> Channel: 5 - Frequency:55 Mhz -- SPARE</font>
+<br/><font face='PuristaLight' color='#FF0000'> Channel: 6 - Frequency:56 Mhz -- CAS - Fires Net</font>
+<br/><font face='PuristaLight' color='#00FF00'> Channel: 7 - Frequency:57 Mhz -- Air Group Net</font> 
+<br/><font face='PuristaLight' color='#D60025'> Channel: 8 - Frequency:58 Mhz -- CROSSNET - Common on all radios</font>
+"
+]];
+
+
+player createDiaryRecord ["Diary", ["Short Range Frequencies",
+"
+<br/><font face='PuristaLight' color='#ffcc00' font size='20' >**LISTENING ON AN UNAUTHORISED FREQUENCY IS STRICTLY PROHIBITED.**</font>
+<br/>
+<br/>Below is a list of the default Short Range Frequencies. Your role specific frequencies are set on your radio automatically. Ensure you're on the correct frequencies at all times. 
+<br/>
+<br/><font face='PuristaLight' color='#ffcc00'> Channel: 1 - Frequency:101 Mhz 	-- SQUADNET 01</font>
+<br/><font face='PuristaLight' color='#fffc00'> Channel: 2 - Frequency:102 Mhz 	-- SQUADNET 02</font>
+<br/><font face='PuristaLight' color='#ffcc00'> Channel: 3 - Frequency:103 Mhz 	-- SQUADNET 03</font>
+<br/><font face='PuristaLight' color='#fffc00'> Channel: 4 - Frequency:104 Mhz 	-- SQUADNET 04</font>
+<br/><font face='PuristaLight' color='#ffcc00'> Channel: 5 - Frequency:105 Mhz 	-- SQUADNET 05</font>
+<br/><font face='PuristaLight' color='#fffc00'> Channel: 6 - Frequency:106 Mhz 	-- SQUADNET 06</font>
+<br/><font face='PuristaLight' color='#ffcc00'> Channel: 7 - Frequency:107 Mhz 	-- SQUADNET 07</font>
+<br/><font face='PuristaLight' color='#D60025'> Channel: 8 - Frequency:58 Mhz 	-- CROSSNET - Common on all radios</font>
+<br/>
+
+<br/>
+"
+]];
+
 player createDiarySubject ["Commands","Commands"];
 
 player createDiaryRecord ["Commands", ["Side Chat",

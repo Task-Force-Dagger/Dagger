@@ -9,7 +9,7 @@ class CfgVehicles {
                 control = "Checkbox";
                 typeName = "BOOL";
                 displayName = "Task Force Dagger: Config Zeus:";
-                tooltip = "Enable to allow this Zeus to have placed units use LRG AI Difficulty Settings (Settings - Addon Options)";
+                tooltip = "Enable to allow this Zeus to have placed units use TFD AI Difficulty Settings (Settings - Addon Options)";
                 expression = "if (_value isequalto true) then {[_this] call tfd_fnc_ConfigZeus;}";
                 condition = "logicModule";
                 defaultValue = "(true)";

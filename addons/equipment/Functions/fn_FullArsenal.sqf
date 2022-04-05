@@ -1152,6 +1152,19 @@ _ArsenalType = call {
             "muzzle_snds_G19"
         ];
         _AvailableBackpacks = [
+            "tfd_backpacks_RadioBag_01_WDL",
+            "tfd_backpacks_RadioBag_01_OUCAMO",
+            "tfd_backpacks_RadioBag_01_TROPIC",
+            "tfd_backpacks_RadioBag_01_MTP",
+            "tfd_backpacks_RadioBag_01_GHEX",
+            "tfd_backpacks_RadioBag_01_HEX",
+            "tfd_backpacks_RadioBag_01_BLACK",
+            "tfd_backpacks_kitbag_black_west",
+            "tfd_backpacks_kitbag_coyote_west",
+            "tfd_backpacks_kitbag_khaki_west",
+            "tfd_backpacks_kitbag_winter_west",
+            "TFC_tf_Mysteryranch_rt1523g_Mcam",
+            "TFC_tf_rt1523g_mcam",
             "dgr_pack30",
             "dgr_pack31",
             "dgr_pack32",
@@ -7694,6 +7707,8 @@ _ArsenalType = call {
             "H_mas_can_ach_b"
         ];
         _AvailableItems = [
+            "TFAR_anprc152",
+            "G_CBRN_M50",
             "tfd_medbags_Trauma",
             "kat_IO_FAST",
             "kat_IV_16",
@@ -14758,6 +14773,19 @@ _ArsenalType = call {
             "muzzle_snds_G19"
         ];
         _AvailableBackpacks = [
+            "tfd_backpacks_RadioBag_01_WDL",
+            "tfd_backpacks_RadioBag_01_OUCAMO",
+            "tfd_backpacks_RadioBag_01_TROPIC",
+            "tfd_backpacks_RadioBag_01_MTP",
+            "tfd_backpacks_RadioBag_01_GHEX",
+            "tfd_backpacks_RadioBag_01_HEX",
+            "tfd_backpacks_RadioBag_01_BLACK",
+            "tfd_backpacks_kitbag_black_west",
+            "tfd_backpacks_kitbag_coyote_west",
+            "tfd_backpacks_kitbag_khaki_west",
+            "tfd_backpacks_kitbag_winter_west",
+            "TFC_tf_Mysteryranch_rt1523g_Mcam",
+            "TFC_tf_rt1523g_mcam",
             "dgr_pack30",
             "dgr_pack31",
             "dgr_pack32",
@@ -21474,6 +21502,8 @@ _ArsenalType = call {
             "rhsusf_bowman_cap"
         ];
         _AvailableItems = [
+            "TFAR_anprc152",
+            "G_CBRN_M50",
             "tfd_medbags_Trauma",
             "kat_IO_FAST",
             "kat_IV_16",
@@ -28721,6 +28751,19 @@ _ArsenalType = call {
             "muzzle_snds_G19"
         ];
         _AvailableBackpacks = [
+            "tfd_backpacks_RadioBag_01_WDL",
+            "tfd_backpacks_RadioBag_01_OUCAMO",
+            "tfd_backpacks_RadioBag_01_TROPIC",
+            "tfd_backpacks_RadioBag_01_MTP",
+            "tfd_backpacks_RadioBag_01_GHEX",
+            "tfd_backpacks_RadioBag_01_HEX",
+            "tfd_backpacks_RadioBag_01_BLACK",
+            "tfd_backpacks_kitbag_black_west",
+            "tfd_backpacks_kitbag_coyote_west",
+            "tfd_backpacks_kitbag_khaki_west",
+            "tfd_backpacks_kitbag_winter_west",
+            "TFC_tf_Mysteryranch_rt1523g_Mcam",
+            "TFC_tf_rt1523g_mcam",
             "M9_Backpack",
             "WALK",
             "RATS",
@@ -30371,6 +30414,8 @@ _ArsenalType = call {
         ];
         _AvailableHeadgear = [];
         _AvailableItems = [
+            "TFAR_anprc152",
+            "G_CBRN_M50",
             "tfd_medbags_Trauma",
             "kat_IO_FAST",
             "kat_IV_16",
@@ -34247,6 +34292,19 @@ _ArsenalType = call {
             "rhsusf_acc_grip_m203_wd"
         ];
         _AvailableBackpacks = [
+            "tfd_backpacks_RadioBag_01_WDL",
+            "tfd_backpacks_RadioBag_01_OUCAMO",
+            "tfd_backpacks_RadioBag_01_TROPIC",
+            "tfd_backpacks_RadioBag_01_MTP",
+            "tfd_backpacks_RadioBag_01_GHEX",
+            "tfd_backpacks_RadioBag_01_HEX",
+            "tfd_backpacks_RadioBag_01_BLACK",
+            "tfd_backpacks_kitbag_black_west",
+            "tfd_backpacks_kitbag_coyote_west",
+            "tfd_backpacks_kitbag_khaki_west",
+            "tfd_backpacks_kitbag_winter_west",
+            "TFC_tf_Mysteryranch_rt1523g_Mcam",
+            "TFC_tf_rt1523g_mcam",
             "M9_Backpack",
             "WALK",
             "RATS",
@@ -40471,6 +40529,8 @@ _ArsenalType = call {
             "UK3CB_CW_US_B_LATE_H_OFF_Patrol_Cap_WDL_01"
         ];
         _AvailableItems = [
+            "TFAR_anprc152",
+            "G_CBRN_M50",
             "tfd_medbags_Trauma",
             "kat_IO_FAST",
             "kat_IV_16",

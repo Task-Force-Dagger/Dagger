@@ -36,6 +36,7 @@ Its based/inspired on/by the following projects;
 - https://github.com/BourbonWarfare/TFD - GNU General Public License (GPLv2).
 - https://github.com/quies-in-proelium/qipTPL - Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 - https://github.com/Katalam/KNB - GNU General Public License (GPLv3)
+- https://github.com/SzwedzikPL/SimpleSuppress/releases - MIT License
 
 
 you can find the TFD Version at https://github.com/devgru-tfd/TFDTeam

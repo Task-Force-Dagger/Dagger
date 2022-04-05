@@ -1,6 +1,6 @@
 ---
 name: Faction Template
-about: Use this template to submit a Faction for us to add to LRG Fundamentals. If
+about: Use this template to submit a Faction for us to add to TFD. If
   approved, faction will be added to the next update.
 title: Faction Template
 labels: Faction Template
