@@ -12,7 +12,7 @@ class CfgVehicles {
         author = QAUTHOR;
         // maximumLoad = 80;
         // mass = 160;
-        maximumLoad = 160; 
+        maximumLoad = 210; 
         mass = 121.2;
         transportMaxBackpacks = 1;
         transportMaxMagazines = 30;
