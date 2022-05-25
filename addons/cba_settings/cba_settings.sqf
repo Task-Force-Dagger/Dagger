@@ -299,11 +299,11 @@ force ace_medical_treatment_woundReopenChance = 0;
 force ace_medical_treatment_woundStitchTime = 5;
 
 // ACE Nightvision
-force ace_nightvision_aimDownSightsBlur = 0; 
-force ace_nightvision_disableNVGsWithSights = false; 
-force ace_nightvision_effectScaling = 0.9; 
-force ace_nightvision_fogScaling = 0; 
-force ace_nightvision_noiseScaling = 0.1; 
+force ace_nightvision_aimDownSightsBlur = 0;
+force ace_nightvision_disableNVGsWithSights = false;
+force ace_nightvision_effectScaling = 0.9;
+force ace_nightvision_fogScaling = 0;
+force ace_nightvision_noiseScaling = 0.1;
 force ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
@@ -1155,11 +1155,11 @@ FORCE tfar_radiocode_west = "_bluefor";
 FORCE tfar_radioCodesDisabled = false;
 force TFAR_SameLRFrequenciesForSide = true;
 force TFAR_SameSRFrequenciesForSide = true;
-force TFAR_setting_defaultFrequencies_lr_east = "";
-force TFAR_setting_defaultFrequencies_lr_independent = "";
+force TFAR_setting_defaultFrequencies_lr_east = "61,62,63,64,65,66,67,68,69";
+force TFAR_setting_defaultFrequencies_lr_independent = "71,72,73,74,75,76,77,78,79";
 force TFAR_setting_defaultFrequencies_lr_west = "51,52,53,54,55,56,57,58,59";
-force TFAR_setting_defaultFrequencies_sr_east = "";
-force TFAR_setting_defaultFrequencies_sr_independent = "";
+force TFAR_setting_defaultFrequencies_sr_east = "101,102,103,104,105,106,107,58";
+force TFAR_setting_defaultFrequencies_sr_independent = "101,102,103,104,105,106,107,58";
 force TFAR_setting_defaultFrequencies_sr_west = "101,102,103,104,105,106,107,58";
 force TFAR_setting_DefaultRadio_Airborne_east = "TFAR_mr6000l";
 force TFAR_setting_DefaultRadio_Airborne_Independent = "TFAR_anarc164";

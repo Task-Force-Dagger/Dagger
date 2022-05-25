@@ -191,6 +191,40 @@
     }; \
     class TransportWeapons {};
 
+#define DEPRECATE_CLASS(CLASS,BASE) class CLASS : BASE { \
+    scope = 1; \
+    scopeCurator = 0; \
+    scopeArsenal = 0; \
+    class Attributes { \
+        class GVAR(deprecated) { \
+            property = QGVAR(deprecated); \
+            control = "Checkbox"; \
+            displayName = QUOTE(Deprecated by 'BASE'); \
+            tooltip = QUOTE(This object has been deprecated. Use 'BASE' instead.); \
+            expression = "'BASE'"; \
+            typeName = "BOOL"; \
+            condition = "objectVehicle"; \
+            defaultValue = 1; \
+        }; \
+    }; \
+}
+
+#define DEPRECATE_CLASS_WITH_BASE(CLASS,BASE) class BASE; \
+DEPRECATE_CLASS(CLASS,BASE)
+
+#define HIDE_CLASS(CLASS,BASE) class CLASS : BASE { \
+    scope = 0; \
+    scopeCurator = 0; \
+    scopeArsenal = 0; \
+}
+
+#define HIDE_CLASS_WITH_BASE(CLASS,BASE) class BASE; \
+HIDE_CLASS(CLASS,BASE)
+
+#define PREVIEW(NAME) editorPreview = QPATHTOF(data\previews\GVAR(NAME).jpg)
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // LOADOUT DEFINES
 

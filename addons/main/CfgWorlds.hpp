@@ -4,6 +4,15 @@ class CfgWorlds {
         class Grid {};
     };
     class Altis: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
         class Grid: Grid {
             offsetX = 0;
             offsetY = 30720;
@@ -34,6 +43,15 @@ class CfgWorlds {
         };
     };
     class Chernarus: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
         class Grid: Grid {
             class Zoom1 {
                 zoomMax=0.0049999999;
@@ -62,6 +80,15 @@ class CfgWorlds {
         };
     };
     class Sara: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
         class Grid: Grid {
             class Zoom1 {
                 zoomMax=0.0049999999;
@@ -90,6 +117,15 @@ class CfgWorlds {
         };
     };
     class Takistan: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
         class Grid: Grid {
             class Zoom1 {
                 zoomMax=0.0049999999;
@@ -118,6 +154,15 @@ class CfgWorlds {
         };
     };
     class Malden: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
         class Grid: Grid {
             offsetX=0;
             offsetY=12800;
@@ -148,6 +193,15 @@ class CfgWorlds {
         };
     };
     class Stratis: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
         class Grid: Grid {
             class Zoom1 {
                 zoomMax=0.0049999999;
@@ -176,7 +230,17 @@ class CfgWorlds {
         };
     };
     class Tanoa: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
         class Grid: Grid {
+
             class Zoom1 {
                 zoomMax=0.0049999999;
                 format="XY";
@@ -204,6 +268,89 @@ class CfgWorlds {
         };
     };
     class Enoch: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
+        class Grid: Grid {
+            class Zoom1 {
+                zoomMax=0.0049999999;
+                format="XY";
+                formatX="0000";
+                formatY="0000";
+                stepX=10;
+                stepY=-10;
+            };
+            class Zoom2 {
+                zoomMax=0.050000001;
+                format="XY";
+                formatX="000";
+                formatY="000";
+                stepX=100;
+                stepY=-100;
+            };
+            class Zoom3 {
+                zoomMax=1;
+                format="XY";
+                formatX="00";
+                formatY="00";
+                stepX=1000;
+                stepY=-1000;
+            };
+        };
+    };
+        class Sara: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
+        class Grid: Grid {
+            class Zoom1 {
+                zoomMax=0.0049999999;
+                format="XY";
+                formatX="0000";
+                formatY="0000";
+                stepX=10;
+                stepY=-10;
+            };
+            class Zoom2 {
+                zoomMax=0.050000001;
+                format="XY";
+                formatX="000";
+                formatY="000";
+                stepX=100;
+                stepY=-100;
+            };
+            class Zoom3 {
+                zoomMax=1;
+                format="XY";
+                formatX="00";
+                formatY="00";
+                stepX=1000;
+                stepY=-1000;
+            };
+        };
+    };
+        class SefrouRamal: CAWorld {
+        class AmbientA3 {
+            class Radius40_60 {
+                class Species {
+                    class Snake_random_F {
+                        maxWorldCount = 0;
+                    };
+                };
+            };
+        };
         class Grid: Grid {
             class Zoom1 {
                 zoomMax=0.0049999999;
@@ -232,3 +379,6 @@ class CfgWorlds {
         };
     };
 };
+
+
+

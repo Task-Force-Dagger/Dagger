@@ -33,3 +33,4 @@ class cfgPatches {
 #include "radio.hpp"
 #include "CfgEden.hpp"
 #include "CfgSkeletons.hpp"
+#include "CfgVehicles.hpp"
